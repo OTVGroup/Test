@@ -29,14 +29,14 @@
       }
 
       /* Khi màn hình từ 0 đến 480px: giới hạn max-width là 420px */
-      @media screen and (max-width: 540px) {
+      @media screen and (max-width: 380px) {
         body {
-          width: 420px; /* Đảm bảo body không vượt quá max-width */
+          width: 360px; /* Đảm bảo body không vượt quá max-width */
         }
       }
 
       /* Khi màn hình lớn hơn 480px: body chiếm toàn bộ chiều rộng viewport */
-      @media screen and (min-width: 541px) {
+      @media screen and (min-width: 381px) {
         body {
           width: 100vw;
         }
@@ -607,3 +607,4 @@
     </script>
   </body>
 </html>
+
