@@ -38,7 +38,7 @@
       /* Cấu hình chung cho từng ngăn (section) */
       section {
         text-align: center; /* Căn giữa nội dung trong ngăn */
-        width: 100%; /* Bắt buộc để ngăn chiếm toàn bộ chiều ngang */
+        width: 380px; /* Bắt buộc để ngăn chiếm toàn bộ chiều ngang */
         box-sizing: border-box; /* Đảm bảo padding không làm vỡ bố cục */
       }
 
@@ -64,10 +64,10 @@
       }
 
       /* Ngăn 5: Footer */
-      footer {
-        background: #333; /* Màu đen đậm giúp phân biệt rõ footer */
-        color: white;
-        width: 100%;
+      #footer {
+        background: #121212;
+        color: #e4e4e4;
+        font-family: sans-serif;
       }
     </style>
   </head>
@@ -461,9 +461,7 @@
     </section> -->
 
     <!-- Footer -->
-    <footer
-      style="background: #121212; color: #e4e4e4; font-family: sans-serif"
-    >
+    <section id="footer">
       <div
         style="
           max-width: 1200px;
@@ -568,7 +566,7 @@
         <br />
         • Chịu trách nhiệm kỹ thuật: Võ Trường Thịnh
       </div>
-    </footer>
+    </section>
 
     <script>
       const channels = [
