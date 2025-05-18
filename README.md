@@ -1,7 +1,7 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Hân Hạnh Đồng Hành Cùng Bạn!." />
     <meta name="author" content="OTVGroup" />
     <meta
@@ -25,22 +25,19 @@
         background-color: #000000; /* Màu nền fallback khi ảnh không load */
         color: #000000; /* Màu chữ mặc định */
         user-select: none; /* Ngăn người dùng chọn văn bản (trải nghiệm cao cấp) */
-        width: 100%;
         margin: 0 auto;
       }
 
       /* Khi màn hình từ 0 đến 480px: giới hạn max-width là 420px */
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 540px) {
         body {
-          max-width: 420px;
-          width: 100%; /* Đảm bảo body không vượt quá max-width */
+          width: 420px; /* Đảm bảo body không vượt quá max-width */
         }
       }
 
       /* Khi màn hình lớn hơn 480px: body chiếm toàn bộ chiều rộng viewport */
-      @media screen and (min-width: 481px) {
+      @media screen and (min-width: 541px) {
         body {
-          max-width: 100vw;
           width: 100vw;
         }
       }
@@ -48,7 +45,6 @@
       section {
         text-align: center; /* Căn giữa nội dung trong ngăn */
         width: 100%; /* Bắt buộc để ngăn chiếm toàn bộ chiều ngang */
-        max-width: 100%;
         box-sizing: border-box; /* Đảm bảo padding không làm vỡ bố cục */
       }
 
@@ -78,7 +74,6 @@
         background: #333; /* Màu đen đậm giúp phân biệt rõ footer */
         color: white;
         width: 100%;
-        max-width: 100%;
       }
     </style>
   </head>
@@ -104,7 +99,7 @@
     </section>
 
     <!-- Ngăn 2: Event -->
-    <section id="event-streams" style="color: white; padding-top: 10px">
+    <section id="event-streams" style="color: white">
       <h2 style="text-align: center">🎬 Event Feed</h2>
       <p
         style="
@@ -132,7 +127,6 @@
           id="videosOTVChannel"
           style="
             width: 100%;
-            max-width: 100%;
             min-width: 360px;
             background: #1a1a1a;
             border-radius: 10px;
@@ -146,7 +140,6 @@
           id="videosOTVStory"
           style="
             width: 100%;
-            max-width: 100%;
             min-width: 360px;
             background: #1a1a1a;
             border-radius: 10px;
@@ -161,7 +154,6 @@
           id="videosOTVGaming"
           style="
             width: 100%;
-            max-width: 100%;
             min-width: 360px;
             background: #1a1a1a;
             border-radius: 10px;
@@ -178,7 +170,7 @@
       <img
         src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/498688443_122161872326552182_1695768090882699136_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=0G9mzZT3EaoQ7kNvwEnm-8A&_nc_oc=AdkqPWjqNCpr37r6IeT69RWPvMdHjb3GUktSfTiK3k5RneYwB4RIDNJdhldQKvo8QtE&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=mBODppp4OW_CB2Tnu4-qgA&oh=00_AfKS1FQmoPIwYS3PAJC7e8_80Eh8RQczoayWGVD3mXhseQ&oe=682F55AF"
         alt="Poster-OTVGroup"
-        style="width: 100%; max-width: 100%; height: auto"
+        style="width: 100%; height: auto"
       />
       <div
         style="
@@ -243,7 +235,7 @@
       <img
         src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/498592964_122139151082611769_2849224014646368616_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=pa05HYab5DMQ7kNvwHJoRzm&_nc_oc=Admix1GwyeLvcG5eTD12UWbjjSFqcEr-BdQkWmNgyu7zg89YHfYA-ltEoRxE9QYxizI&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=tdwfJIa9xixBq3_d0DEHhQ&oh=00_AfIDGb4u_BBNZUrUe2UGejBMlgujBSltj2FPyoJFd58jyw&oe=682F63DB"
         alt="Poster-OTISShop"
-        style="width: 100%; max-width: 100%; height: auto"
+        style="width: 100%; height: auto"
       />
       <div
         style="
@@ -322,7 +314,7 @@
       <img
         src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/492354735_122136206864661217_7949125846570999972_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=9JtBJrezoyYQ7kNvwFljtMQ&_nc_oc=AdkcRLilLHQRAX8juhvu07v4KWIlX5bQtW9i7ie7qNOpr-OVkCB7e21qmYW-CSIkRfg&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=oAEJ_wclS6cAVnTV-MLm4Q&oh=00_AfKZkGvsX0In-6JU5WeUCGuH41QJF8cduokoWcdtIlBHYg&oe=682F740D"
         alt="Poster-OTISStore"
-        style="width: 100%; max-width: 100%; height: auto"
+        style="width: 100%; height: auto"
       />
       <div
         style="
@@ -500,7 +492,7 @@
             <img
               src="https://i.pinimg.com/736x/40/05/9b/40059b9b00037529a0cad56eb5ae4d1d.jpg"
               alt="Donate Agribank"
-              style="width: 100%; max-width: 100%; border-radius: 8px"
+              style="width: 100%; border-radius: 8px"
             />
           </div>
 
@@ -508,7 +500,7 @@
             <img
               src="https://i.pinimg.com/736x/27/17/68/271768775d063a13b76b78bfb4b4befe.jpg"
               alt="Donate MoMo"
-              style="width: 100%; max-width: 100%; border-radius: 8px"
+              style="width: 100%; border-radius: 8px"
             />
           </div>
 
@@ -516,7 +508,7 @@
             <img
               src="https://i.pinimg.com/736x/15/81/ed/1581edcd2b862a72f316ce2b84cc0e15.jpg"
               alt="Donate Zalopay"
-              style="width: 100%; max-width: 100%; border-radius: 8px"
+              style="width: 100%; border-radius: 8px"
             />
           </div>
         </div>
