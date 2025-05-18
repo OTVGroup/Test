@@ -29,7 +29,7 @@
         color: #000000; /* Màu chữ mặc định */
         user-select: none; /* Ngăn người dùng chọn văn bản (trải nghiệm cao cấp) */
         margin: 0 auto;
-        width: 100vw;
+        width: 380px;
         overflow-x: hidden; /* Ẩn tràn ngang */
         box-sizing: border-box;
         touch-action: manipulation; /* Ngăn gesture zoom/double-tap */
