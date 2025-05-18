@@ -25,7 +25,15 @@
         background-color: #000000; /* Màu nền fallback khi ảnh không load */
         color: #000000; /* Màu chữ mặc định */
         user-select: none; /* Ngăn người dùng chọn văn bản (trải nghiệm cao cấp) */
-        width: 100vw;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      /* Responsive: Giới hạn chiều rộng tối đa và căn giữa trên thiết bị nhỏ */
+      @media screen and (max-width: 420px) {
+        body {
+          max-width: 420px;
+        }
       }
 
       /* Cấu hình chung cho từng ngăn (section) */
@@ -77,16 +85,17 @@
           box-shadow: 0 0 50px rgba(255, 255, 255, 0.519);
         "
       />
-      <h1>OTVGroup | Hân Hạnh Đồng Hành Cùng Bạn!</h1>
-      <!-- <form>
-        <input type="text" placeholder="Tìm kiếm nhanh" width="65vh" />
-        <button type="submit">Tìm kiếm</button>
-      </form> -->
+      <h1>
+        OTVGroup
+        <p style="text-align: center; font-size: 16px; color: #c9c9c9">
+          Hân Hạnh Đồng Hành Cùng Bạn!
+        </p>
+      </h1>
     </section>
 
     <!-- Ngăn 2: Event -->
-    <section id="event-streams" style="color: white">
-      <h2 style="text-align: center">🎬 Event Highlights</h2>
+    <section id="event-streams" style="color: white; padding-top: 10px">
+      <h2 style="text-align: center">🎬 Event Feed</h2>
       <p
         style="
           text-align: center;
@@ -95,7 +104,7 @@
           margin-bottom: 10px;
         "
       >
-        Swipe to explore our latest shows & YouTube livestreams.
+        Swipe to explore our latest shows.
       </p>
 
       <div
@@ -103,7 +112,7 @@
           display: flex;
           overflow-x: auto;
           gap: 20px;
-          padding: 10px 0;
+          padding: 10px 15px;
           scroll-snap-type: x mandatory;
           -webkit-overflow-scrolling: touch;
         "
@@ -152,19 +161,19 @@
     </section>
 
     <!-- Ngăn 3: OTVGroup -->
-    <img
-      src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/498688443_122161872326552182_1695768090882699136_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=0G9mzZT3EaoQ7kNvwEnm-8A&_nc_oc=AdkqPWjqNCpr37r6IeT69RWPvMdHjb3GUktSfTiK3k5RneYwB4RIDNJdhldQKvo8QtE&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=mBODppp4OW_CB2Tnu4-qgA&oh=00_AfKS1FQmoPIwYS3PAJC7e8_80Eh8RQczoayWGVD3mXhseQ&oe=682F55AF"
-      alt="Poster-OTVGroup"
-      style="width: 100%; height: auto"
-    />
     <section id="information">
+      <img
+        src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/498688443_122161872326552182_1695768090882699136_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=0G9mzZT3EaoQ7kNvwEnm-8A&_nc_oc=AdkqPWjqNCpr37r6IeT69RWPvMdHjb3GUktSfTiK3k5RneYwB4RIDNJdhldQKvo8QtE&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=mBODppp4OW_CB2Tnu4-qgA&oh=00_AfKS1FQmoPIwYS3PAJC7e8_80Eh8RQczoayWGVD3mXhseQ&oe=682F55AF"
+        alt="Poster-OTVGroup"
+        style="width: 100%; height: auto"
+      />
       <div
         style="
           display: flex;
           justify-content: center;
           gap: 15px;
           flex-wrap: wrap;
-          padding-top: 30px;
+          padding: 20px 15px;
         "
       >
         <div style="width: 100px; text-align: center">
@@ -217,19 +226,19 @@
     </section>
 
     <!-- Ngăn 4: OTISSHOP -->
-    <img
-      src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/498592964_122139151082611769_2849224014646368616_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=pa05HYab5DMQ7kNvwHJoRzm&_nc_oc=Admix1GwyeLvcG5eTD12UWbjjSFqcEr-BdQkWmNgyu7zg89YHfYA-ltEoRxE9QYxizI&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=tdwfJIa9xixBq3_d0DEHhQ&oh=00_AfIDGb4u_BBNZUrUe2UGejBMlgujBSltj2FPyoJFd58jyw&oe=682F63DB"
-      alt="Poster-OTISShop"
-      style="width: 100%; height: auto"
-    />
     <section id="information">
+      <img
+        src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/498592964_122139151082611769_2849224014646368616_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=pa05HYab5DMQ7kNvwHJoRzm&_nc_oc=Admix1GwyeLvcG5eTD12UWbjjSFqcEr-BdQkWmNgyu7zg89YHfYA-ltEoRxE9QYxizI&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=tdwfJIa9xixBq3_d0DEHhQ&oh=00_AfIDGb4u_BBNZUrUe2UGejBMlgujBSltj2FPyoJFd58jyw&oe=682F63DB"
+        alt="Poster-OTISShop"
+        style="width: 100%; height: auto"
+      />
       <div
         style="
           display: flex;
           justify-content: center;
           gap: 15px;
           flex-wrap: wrap;
-          padding-top: 30px;
+          padding: 20px 15px;
         "
       >
         <div style="width: 100px; text-align: center">
@@ -296,19 +305,19 @@
     </section>
 
     <!-- Ngăn 5: OTISSTORE -->
-    <img
-      src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/492354735_122136206864661217_7949125846570999972_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=9JtBJrezoyYQ7kNvwFljtMQ&_nc_oc=AdkcRLilLHQRAX8juhvu07v4KWIlX5bQtW9i7ie7qNOpr-OVkCB7e21qmYW-CSIkRfg&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=oAEJ_wclS6cAVnTV-MLm4Q&oh=00_AfKZkGvsX0In-6JU5WeUCGuH41QJF8cduokoWcdtIlBHYg&oe=682F740D"
-      alt="Poster-OTISStore"
-      style="width: 100%; height: auto"
-    />
     <section id="information">
+      <img
+        src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/492354735_122136206864661217_7949125846570999972_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=9JtBJrezoyYQ7kNvwFljtMQ&_nc_oc=AdkcRLilLHQRAX8juhvu07v4KWIlX5bQtW9i7ie7qNOpr-OVkCB7e21qmYW-CSIkRfg&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=oAEJ_wclS6cAVnTV-MLm4Q&oh=00_AfKZkGvsX0In-6JU5WeUCGuH41QJF8cduokoWcdtIlBHYg&oe=682F740D"
+        alt="Poster-OTISStore"
+        style="width: 100%; height: auto"
+      />
       <div
         style="
           display: flex;
           justify-content: center;
           gap: 15px;
           flex-wrap: wrap;
-          padding-top: 30px;
+          padding: 20px 15px;
         "
       >
         <div style="width: 100px; text-align: center">
@@ -538,18 +547,27 @@
       >
         © 2024 - 2025 Công Ty TNHH MTV OTVGroup
         <br />
-        • Địa chỉ: Phường Tân Chánh Hiệp, Quận 12, TP. Hồ Chí Minh
+        • Địa chỉ:
+        <a
+          href="https://maps.app.goo.gl/au8jubbPqSTZ8FjP7"
+          style="color: #007aff; text-decoration: none"
+        >
+          P.Tân Chánh Hiệp, Q.12, TP. Hồ Chí Minh
+        </a>
         <br />
         • Hotline:
-        <strong style="color: #e4e4e4">0329 022 431</strong>
-        • Email liên hệ:
+        <a href="tel=0329022431" style="color: #007aff; text-decoration: none">
+          0329 022 431
+        </a>
+        • Email:
         <a
           href="mailto:thinhkvtm2006@gmail.com"
           style="color: #007aff; text-decoration: none"
-          >thinhkvtm2006@gmail.com</a
         >
+          thinhkvtm2006@gmail.com
+        </a>
         <br />
-        • Người sáng lập & Chủ Doanh Nghiệp: Võ Trường Thịnh
+        • Chịu trách nhiệm kỹ thuật: Võ Trường Thịnh
       </div>
     </footer>
 
