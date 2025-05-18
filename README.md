@@ -1,7 +1,10 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta name="description" content="Hân Hạnh Đồng Hành Cùng Bạn!." />
     <meta name="author" content="OTVGroup" />
     <meta
@@ -26,21 +29,12 @@
         color: #000000; /* Màu chữ mặc định */
         user-select: none; /* Ngăn người dùng chọn văn bản (trải nghiệm cao cấp) */
         margin: 0 auto;
+        width: 100vw;
+        overflow-x: hidden; /* Ẩn tràn ngang */
+        box-sizing: border-box;
+        touch-action: manipulation; /* Ngăn gesture zoom/double-tap */
       }
 
-      /* Khi màn hình từ 0 đến 480px: giới hạn max-width là 420px */
-      @media screen and (max-width: 380px) {
-        body {
-          width: 360px; /* Đảm bảo body không vượt quá max-width */
-        }
-      }
-
-      /* Khi màn hình lớn hơn 480px: body chiếm toàn bộ chiều rộng viewport */
-      @media screen and (min-width: 381px) {
-        body {
-          width: 100vw;
-        }
-      }
       /* Cấu hình chung cho từng ngăn (section) */
       section {
         text-align: center; /* Căn giữa nội dung trong ngăn */
@@ -607,4 +601,3 @@
     </script>
   </body>
 </html>
-
