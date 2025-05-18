@@ -29,13 +29,21 @@
         margin: 0 auto;
       }
 
-      /* Responsive: Giới hạn chiều rộng tối đa và căn giữa trên thiết bị nhỏ */
-      @media screen and (max-width: 420px) {
+      /* Khi màn hình từ 0 đến 480px: giới hạn max-width là 420px */
+      @media screen and (max-width: 480px) {
         body {
           max-width: 420px;
+          width: 100%; /* Đảm bảo body không vượt quá max-width */
         }
       }
 
+      /* Khi màn hình lớn hơn 480px: body chiếm toàn bộ chiều rộng viewport */
+      @media screen and (min-width: 481px) {
+        body {
+          max-width: 100vw;
+          width: 100vw;
+        }
+      }
       /* Cấu hình chung cho từng ngăn (section) */
       section {
         text-align: center; /* Căn giữa nội dung trong ngăn */
