@@ -110,8 +110,8 @@
         style="
           display: flex;
           overflow-x: auto;
-          gap: 20px;
-          padding: 10px 15px;
+          gap: 0;
+          margin: 0 10px;
           scroll-snap-type: x mandatory;
           -webkit-overflow-scrolling: touch;
         "
@@ -123,7 +123,6 @@
             width: 100%;
             min-width: 360px;
             background: #1a1a1a;
-            border-radius: 10px;
             overflow: hidden;
             scroll-snap-align: start;
             color: #fff;
@@ -136,7 +135,6 @@
             width: 100%;
             min-width: 360px;
             background: #1a1a1a;
-            border-radius: 10px;
             overflow: hidden;
             scroll-snap-align: start;
             color: #fff;
@@ -150,7 +148,6 @@
             width: 100%;
             min-width: 360px;
             background: #1a1a1a;
-            border-radius: 10px;
             overflow: hidden;
             scroll-snap-align: start;
             color: #fff;
@@ -599,4 +596,3 @@
     </script>
   </body>
 </html>
-
