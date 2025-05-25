@@ -1,598 +1,957 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="description" content="Hân Hạnh Đồng Hành Cùng Bạn!." />
-    <meta name="author" content="OTVGroup" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Uy Tín Tạo Nên Thương Hiệu!" />
+    <meta name="author" content="OTISStore" />
     <meta
       name="image"
-      content="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
+      content="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
     />
-    <title>OTVGroup</title>
+    <title>OTISStore | Uy Tín Tạo Nên Thương Hiệu!</title>
     <link
       rel="icon"
       type="image/jpeg"
-      href="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
+      href="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
     />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-H6LM2XKZTS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-H6LM2XKZTS");
+    </script>
+
     <style>
-      /* Cấu hình chung cho toàn bộ trang */
       body {
-        font-family: Arial, sans-serif; /* Phông chữ hiện đại, dễ đọc */
+        font-family: Arial, sans-serif;
         display: flex;
-        flex-direction: column; /* Các phần tử con sắp xếp theo chiều dọc */
-        align-items: center; /* Căn giữa theo trục ngang */
-        justify-content: center; /* Căn giữa theo trục dọc */
-        background-color: #000000; /* Màu nền fallback khi ảnh không load */
-        color: #000000; /* Màu chữ mặc định */
-        user-select: none; /* Ngăn người dùng chọn văn bản (trải nghiệm cao cấp) */
-        margin: 0 auto;
-        width: 100vw;
-        overflow-x: hidden; /* Ẩn tràn ngang */
-        box-sizing: border-box;
-        touch-action: manipulation; /* Ngăn gesture zoom/double-tap */
-      }
-
-      /* Cấu hình chung cho từng ngăn (section) */
-      section {
-        text-align: center; /* Căn giữa nội dung trong ngăn */
-        width: 380px; /* Bắt buộc để ngăn chiếm toàn bộ chiều ngang */
-        box-sizing: border-box; /* Đảm bảo padding không làm vỡ bố cục */
-      }
-
-      /* Ngăn 1: Hero */
-      #hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
         background-color: #000000;
-        color: white; /* Nội dung màu trắng nổi bật trên ảnh nền */
+        color: #ffffff;
+        width: auto;
+        user-select: none;
       }
 
-      /* Ngăn 2: Thông Tin */
-      #event-streams {
-        background: #363636; /* Màu xám chủ đạo */
+      .header {
+        background-color: #000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2%;
+        padding: 15px;
+        z-index: 999;
       }
 
-      /* Ngăn 3: Youtube */
-      #information {
-        background: white; /* Màu trắng giúp nội dung nhẹ nhàng */
+      .header img {
+        cursor: pointer;
+        border-radius: 50%;
+        transition: transform 1s ease;
       }
 
-      /* Ngăn 4: Tin Mới */
-      #facebook-reels {
-        background: #e0f7fa; /* Xanh nhạt, thân thiện */
+      .container1,
+      .container2 {
+        position: fixed;
+        bottom: 10px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
       }
 
-      /* Ngăn 5: Footer */
-      #footer {
-        background: #121212;
-        color: #e4e4e4;
-        font-family: sans-serif;
+      .container1 {
+        left: 10px;
+      }
+
+      .container2 {
+        right: 10px;
+      }
+
+      .icon {
+        border-radius: 50%;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        transition: transform 1.5s ease;
+      }
+
+      .icon:active,
+      .header img:active {
+        transform: scale(1.2);
+        border-radius: 50%;
+      }
+
+      .icon img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .contact-Content {
+        position: fixed;
+        color: white;
+        background-color: #202020;
+        border-radius: 10px;
+        padding: 10px;
+        width: 95%;
+        max-width: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        display: none;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 1;
+      }
+
+      .contact-Content.active {
+        transform: translate(-50%, -50%) scale(1);
+        display: block;
+        z-index: 999;
+      }
+
+      .contact-Content img {
+        width: 75%;
+        margin: 10px 12.5% 0 12.5%;
+      }
+
+      .products {
+        margin-top: 17px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: auto;
+      }
+
+      .productss,
+      .productss0,
+      .productss1,
+      .productss2,
+      .productss3,
+      .productss4,
+      .productss5,
+      .productss6 {
+        width: 100%;
+        min-width: 320px;
+        height: auto;
+        padding: 2.5px 0;
+        text-align: center;
+        background-color: #252525;
+        font-size: 14px;
+      }
+
+      .productss0 {
+        background-color: #000;
+        height: 0;
+      }
+
+      .product {
+        background-color: #252525;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        align-items: center;
+        color: #ffffff;
+        width: auto;
+        box-sizing: border-box;
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      .product.hidden {
+        opacity: 0;
+        transform: translateY(0px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+      .product.active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+      .product-img {
+        display: flex; /* Kích hoạt Flexbox */
+        gap: 5px; /* Tạo khoảng cách giữa các phần tử */
+      }
+
+      .product-img > * {
+        flex: 1; /* Đảm bảo các phần tử có kích thước bằng nhau */
+      }
+
+      .product-img1,
+      .product-img2 {
+        height: auto;
+        position: relative;
+        display: inline-block;
+      }
+
+      .product-no {
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        font-size: 10px;
+        text-align: center;
+        justify-content: center;
+        text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+      }
+
+      .product-img1 .product-no {
+        top: 60px;
+      }
+      .product-img2 .product-no {
+        top: 125px;
+        background-color: #555555;
+      }
+
+      .product-img1 img {
+        width: 85px;
+        height: 85px;
+      }
+      .product-img2 img {
+        width: 140px;
+        height: 140px;
+      }
+
+      .product-name {
+        display: flex; /* Kích hoạt Flexbox */
+        flex-direction: row; /* Sắp xếp phần tử theo hàng ngang */
+        justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+        align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+        width: auto; /* Đảm bảo chỉ chiếm diện tích vừa đủ nội dung */
+        font-weight: bold;
+        height: 12px;
+        font-size: 10px;
+        gap: 1px;
+      }
+
+      .product-price {
+        color: #ff5733;
+      }
+
+      .product-pcs {
+        color: #ffd22d;
+      }
+
+      .arrow-btn1,
+      .arrow-btn6 {
+        cursor: pointer;
+        font-size: 28px;
+        font-weight: bold;
+        color: white;
+        width: 40px;
+        height: auto;
+        background-color: #00000000;
+        border-radius: 3px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        transition: background-color 0.5s, transform 0.5s;
+      }
+
+      .arrow-btn1:active,
+      .arrow-btn6:active {
+        border-radius: 3px;
+        box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.2);
+      }
+
+      /* Hiệu ứng phát sáng */
+      .glow-effect {
+        border-radius: 3px;
+        box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.805); /* Màu vàng phát sáng */
+      }
+
+      .home-button {
+        display: inline-flex;
+        align-items: center;
+        position: fixed;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        z-index: 1001;
+        background-color: #2e2e2e;
+        border-radius: 0% 0% 0% 10%;
+      }
+
+      .home-button a {
+        color: white;
+        bottom: 1px;
+        text-decoration: none;
+        font-size: 24px;
+      }
+      .home-button:hover {
+        background-color: #858585;
+        transform: scale(1.1);
+      }
+      .gallery {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: #000000;
+        z-index: 1000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow-x: auto; /* Cuộn dọc */
+        scroll-behavior: smooth; /* Cuộn mượt */
+        align-content: center;
+      }
+      .gallery img {
+        width: 80%;
+        height: auto;
+        box-shadow: 0 0 5px 5px rgb(125, 125, 125);
+        margin: 10px 10%;
       }
     </style>
   </head>
+  <div style="display: none">
+    <!-- Thẻ Tìm Kiếm -->
+    <h6>Nick KVTM</h6>
+    <h6>Mua acc KVTM</h6>
+    <h6>Bán acc KVTM</h6>
+    <h6>KVTM VIP</h6>
+    <h6>Acc KVTM rẻ nhất</h6>
+    <h6>KVTM full tài nguyên</h6>
+    <h6>Mua acc KVTM giá rẻ</h6>
+    <h6>Bán acc KVTM uy tín</h6>
+    <h6>Tặng acc KVTM</h6>
+    <h6>Cửa hàng acc KVTM</h6>
+    <h6>Nick Free Fire</h6>
+    <h6>Mua acc Free Fire</h6>
+    <h6>Bán acc Free Fire</h6>
+    <h6>Free Fire VIP</h6>
+    <h6>Acc Free Fire rẻ nhất</h6>
+    <h6>Free Fire full nhân vật</h6>
+    <h6>Acc Free Fire full skin</h6>
+    <h6>Mua acc Free Fire giá rẻ</h6>
+    <h6>Bán acc Free Fire uy tín</h6>
+    <h6>Tặng acc Free Fire</h6>
+    <h6>Cửa hàng acc Free Fire</h6>
+    <h6>Nick Clash of Clans</h6>
+    <h6>Mua acc Clash of Clans</h6>
+    <h6>Bán acc Clash of Clans</h6>
+    <h6>Clash of Clans VIP</h6>
+    <h6>Acc Clash of Clans rẻ nhất</h6>
+    <h6>Clash of Clans full tài nguyên</h6>
+    <h6>Acc Clash of Clans full cấp</h6>
+    <h6>Mua acc Clash of Clans giá rẻ</h6>
+    <h6>Bán acc Clash of Clans uy tín</h6>
+    <h6>Tặng acc Clash of Clans</h6>
+    <h6>Cửa hàng acc Clash of Clans</h6>
+    <h6>Nick Dragon City</h6>
+    <h6>Mua acc Dragon City</h6>
+    <h6>Bán acc Dragon City</h6>
+    <h6>Dragon City VIP</h6>
+    <h6>Acc Dragon City rẻ nhất</h6>
+    <h6>Dragon City full rồng</h6>
+    <h6>Acc Dragon City full tài nguyên</h6>
+    <h6>Mua acc Dragon City giá rẻ</h6>
+    <h6>Bán acc Dragon City uy tín</h6>
+    <h6>Tặng acc Dragon City</h6>
+    <h6>Cửa hàng acc Dragon City</h6>
+    <h6>Nick Liên Quân</h6>
+    <h6>Mua acc Liên Quân</h6>
+    <h6>Bán acc Liên Quân</h6>
+    <h6>Liên Quân VIP</h6>
+    <h6>Acc Liên Quân rẻ nhất</h6>
+    <h6>Liên Quân full tướng</h6>
+    <h6>Acc Liên Quân full skin</h6>
+    <h6>Mua acc Liên Quân giá rẻ</h6>
+    <h6>Bán acc Liên Quân uy tín</h6>
+    <h6>Tặng acc Liên Quân</h6>
+    <h6>Mua bán acc Liên Quân</h6>
+    <h6>Cửa hàng acc Liên Quân</h6>
+    <h6>Tài khoản</h6>
+    <h6>Nick</h6>
+    <h6>Mua ac</h6>
+    <h6>Bán acc</h6>
+    <h6>VIP</h6>
+    <h6>Giá rẻ</h6>
+    <h6>Full tài nguyên</h6>
+    <h6>Full nhân vật</h6>
+    <h6>Full skin</h6>
+    <h6>Cửa hàng acc</h6>
+    <h6>Cửa hàng uy tín</h6>
+    <h6>Tặng acc</h6>
+    <h6>Mua bán acc</h6>
+    <h6>Mùa mới</h6>
+    <h6>Cao thủ</h6>
+  </div>
   <body>
-    <!-- Giao Diện -->
-    <!-- Ngăn 1: Hero -->
-    <section id="hero">
+    <img
+      src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+      alt="Logo"
+      style="display: none"
+    />
+    <div class="home-button" onclick="infor('OFF')">
+      <a href="#" title="Go to Home">&#8962;</a>
+    </div>
+    <div class="header">
       <img
-        src="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
-        alt="Logo-OTVGroup"
-        height="150px"
-        style="
-          border-radius: 50%;
-          box-shadow: 0 0 50px rgba(255, 255, 255, 0.519);
-        "
+        src="https://i.pinimg.com/474x/39/2f/3a/392f3a868a6a44adb7b4514709941445.jpg"
+        alt="Logo Khu Vườn Trên Mây"
+        style="width: 40px; height: 40px"
+        onclick="filterProducts('kvtm')"
       />
-      <h1>
-        OTVGroup
-        <p style="text-align: center; font-size: 16px; color: #c9c9c9">
-          Hân Hạnh Đồng Hành Cùng Bạn!
+
+      <img
+        src="https://i.pinimg.com/474x/e1/14/f3/e114f324ca6461bb9b342f34292b60ad.jpg"
+        alt="Logo Liên Quân"
+        style="width: 40px; height: 40px"
+        onclick="filterProducts('lq')"
+      />
+
+      <img
+        src="https://i.pinimg.com/474x/8e/ae/cd/8eaecd44d50cf21bead6c2c9d540ceaf.jpg"
+        alt="Logo Clash of Clans"
+        style="width: 40px; height: 40px"
+        onclick="filterProducts('coc')"
+      />
+
+      <img
+        src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+        alt="Logo Home"
+        style="border: 2px solid rgb(255, 255, 255); width: 60px; height: 60px"
+        onclick="filterProducts('all')"
+      />
+
+      <img
+        src="https://i.pinimg.com/474x/4b/2f/39/4b2f39d773c23626002eb7eeaacaebd7.jpg"
+        alt="Logo Dragon City"
+        style="width: 40px; height: 40px"
+        onclick="filterProducts('dc')"
+      />
+
+      <img
+        src="https://i.pinimg.com/474x/bc/12/70/bc1270fbfd9b08f0a98cef6ead98dc7c.jpg"
+        alt="Logo Free Fire"
+        style="width: 40px; height: 40px"
+        onclick="filterProducts('ff')"
+      />
+
+      <img
+        src="https://i.pinimg.com/474x/a6/6e/d5/a66ed5d684d002c477014c942c803fde.jpg"
+        alt="Logo Khác"
+        style="width: 40px; height: 40px"
+        onclick="filterProducts('khac')"
+      />
+    </div>
+    <!-- Danh Sách Hiển Thị -->
+    <div class="products" id="product-list">
+      <!-- COMBO -->
+      <!-- <div class="productss1" id="kvtm">Combo</div> -->
+      <!-- COMBO -->
+
+      <div class="productss0" id="pd0"></div>
+
+      <!-- VP.KVTM -->
+      <!-- Sấy 0 -->
+      <!-- Nước Ép 0 -->
+      <!-- Vải 0 -->
+      <!-- Ngọc 0 -->
+      <!-- Tinh Dầu 0 -->
+      <!-- Trà 0 -->
+      <!-- Hoa Tươi 0 -->
+      <!-- Nước Hoa 0 -->
+      <!-- Túi Hương 0 -->
+      <!-- Vật Phẩm May 0 -->
+      <!-- Hạt Giống 0 -->
+      <!-- Bọ 0 -->
+      <!-- Vật Phẩm Khác 0 -->
+      <!-- Vàng & Vật Phẩm Sự Kiện 0 -->
+      <!-- VP.KVTM -->
+
+      <div class="productss0" id="pd0"></div>
+
+      <!-- ACC Game --><!-- Acc Khu Vườn Trên Mây 1 -->
+      <div class="productss1" id="kvtm">ACC Khu Vườn Trên Mây</div>
+      <div class="product kvtm">
+        <div class="product-img2">
+          <img
+            src="https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+            alt="KVTM"
+            onclick="infor('KVTM')"
+          />
+          <div class="product-no">KVTM</div>
+        </div>
+        <div class="product-name">
+          <div class="product-price">100k VNĐ</div>
+        </div>
+      </div>
+      <!-- Thẻ Game 2 -->
+      <div class="productss6" id="khac">Thẻ Game</div>
+      <div class="product khac">
+        <div class="product-img2">
+          <img
+            src="https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+            alt="Thẻ Garena"
+            onclick="infor('Thẻ Garena')"
+          />
+          <div class="product-no">Thẻ Garena</div>
+        </div>
+        <div class="product-name">
+          <div class="product-price">100k VNĐ</div>
+        </div>
+      </div>
+      <div class="product khac">
+        <div class="product-img2">
+          <img
+            src="https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+            alt="Thẻ Zing"
+            onclick="infor('Thẻ Zing')"
+          />
+          <div class="product-no">Thẻ Zing</div>
+        </div>
+        <div class="product-name">
+          <div class="product-price">100k VNĐ</div>
+        </div>
+      </div>
+      <!-- ACC Game -->
+
+      <!-- NỘI DUNG HIỂN THỊ -->
+      <div class="productss" id="Test1" style="display: none">
+        Không Có Mục Nào
+      </div>
+      <div class="productss" id="Test2" style="display: none">
+        Không Có Mục Nào
+      </div>
+      <div class="productss" id="Test3" style="display: none">
+        Không Có Mục Nào
+      </div>
+      <div class="productss" id="Test4" style="display: none">
+        Không Có Mục Nào
+      </div>
+      <div class="productss" id="Test5" style="display: none">
+        Không Có Mục Nào
+      </div>
+      <div class="productss" id="Test6" style="display: none">
+        Không Có Mục Nào
+      </div>
+    </div>
+
+    <!-- Nút Điều Hướng -->
+    <div class="container1">
+      <div id="arrowUp1" class="arrow-btn1" style="transform: rotate(-90deg)">
+        >
+      </div>
+      <div id="arrowDown1" class="arrow-btn1" style="transform: rotate(90deg)">
+        >
+      </div>
+    </div>
+    <div class="container1">
+      <div id="arrowUp6" class="arrow-btn6" style="transform: rotate(-90deg)">
+        >
+      </div>
+      <div id="arrowDown6" class="arrow-btn6" style="transform: rotate(90deg)">
+        >
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="icon" onclick="toggleContact('contact-Content')">
+        <img
+          src="https://i.pinimg.com/474x/42/bc/f8/42bcf85126a5757cd190602a4952db32.jpg"
+          alt="Content"
+        />
+      </div>
+      <div class="contact-Content" id="contact-Content">
+        <div style="text-align: center; width: 100%">
+          <div style="font-size: 18px; font-weight: 600">
+            Thông Tin Chi Tiết!
+          </div>
+          <button
+            style="
+              position: absolute;
+              right: 5px;
+              top: 3px;
+              background-color: #202020;
+              color: white;
+              border: none;
+            "
+            onclick="toggleContact('contact-Content')"
+          >
+            x
+          </button>
+          <button
+            class="order"
+            style="
+              position: absolute;
+              left: 10px;
+              top: 10px;
+              font-size: 14px;
+              background-color: #404040;
+              color: white;
+              border-radius: 2px;
+            "
+            onclick="sendMessageWithClipboard('');"
+          >
+            Liên Hệ
+          </button>
+        </div>
+        <img
+          src="https://i.pinimg.com/474x/b7/ff/a7/b7ffa7483252e829d97ce2978c82ce01.jpg"
+          alt="Hướng Dẫn"
+        />
+        <p style="text-align: center; font-size: 14px">
+          OTISStore | Uy Tín Tạo Nên Thương Hiệu!
         </p>
-      </h1>
-    </section>
-
-    <!-- Ngăn 2: Event -->
-    <section id="event-streams" style="color: white">
-      <h2 style="text-align: center">🎬 Event Feed</h2>
-      <p
-        style="
-          text-align: center;
-          font-size: 14px;
-          color: #aaa;
-          margin-bottom: 10px;
-        "
-      >
-        Swipe to explore our latest shows.
-      </p>
-
-      <div
-        style="
-          display: flex;
-          overflow-x: auto;
-          gap: 0;
-          margin: 0 10px;
-          scroll-snap-type: x mandatory;
-          -webkit-overflow-scrolling: touch;
-        "
-      >
-        <!-- OTVChannel -->
-        <div
-          id="videosOTVChannel"
-          style="
-            width: 100%;
-            min-width: 360px;
-            background: #1a1a1a;
-            overflow: hidden;
-            scroll-snap-align: start;
-            color: #fff;
-          "
-        ></div>
-        <!-- OTVStory -->
-        <div
-          id="videosOTVStory"
-          style="
-            width: 100%;
-            min-width: 360px;
-            background: #1a1a1a;
-            overflow: hidden;
-            scroll-snap-align: start;
-            color: #fff;
-          "
-        ></div>
-
-        <!-- OTVGaming -->
-        <div
-          id="videosOTVGaming"
-          style="
-            width: 100%;
-            min-width: 360px;
-            background: #1a1a1a;
-            overflow: hidden;
-            scroll-snap-align: start;
-            color: #fff;
-          "
-        ></div>
       </div>
-    </section>
+    </div>
 
-    <!-- Ngăn 3: OTVGroup -->
-    <section id="information">
+    <!-- Thông Tin --><!-- Acc Khu Vườn Trên Mây 1 -->
+    <div class="gallery" style="display: none" id="KVTM">
       <img
-        src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/498688443_122161872326552182_1695768090882699136_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=0G9mzZT3EaoQ7kNvwEnm-8A&_nc_oc=AdkqPWjqNCpr37r6IeT69RWPvMdHjb3GUktSfTiK3k5RneYwB4RIDNJdhldQKvo8QtE&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=mBODppp4OW_CB2Tnu4-qgA&oh=00_AfKS1FQmoPIwYS3PAJC7e8_80Eh8RQczoayWGVD3mXhseQ&oe=682F55AF"
-        alt="Poster-OTVGroup"
-        style="width: 100%; height: auto"
+        src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/492354735_122136206864661217_7949125846570999972_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=t4YCY0IsaDMQ7kNvwGbQhwZ&_nc_oc=AdmJOu-3jVS8-j3615CcfVUkWOcXfubWYXyHjn8CYw0y57KKrAZdx1aFJmAPUy2RpzY&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=kdhQM6XKI_wPVsF4j4KXDQ&oh=00_AfL6IM8U9mskCPWwEaxgDCQsYWhh-A44k5D28UICMUbKYA&oe=6838AE8D"
+        alt="KVTM"
       />
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          gap: 15px;
-          flex-wrap: wrap;
-          padding: 20px 15px;
-        "
-      >
-        <div style="width: 100px; text-align: center">
-          <a href="https://www.facebook.com/OtisVo586" target="_blank">
-            <img
-              src="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
-              width="80"
-              style="border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)"
-            />
-            <p>
-              <img
-                src="https://img.icons8.com/color/20/facebook-new.png"
-                style="vertical-align: middle; margin-right: 5px"
-              />Otis Võ
-            </p>
-          </a>
-        </div>
-        <div style="width: 100px; text-align: center">
-          <a href="https://www.youtube.com/@otvchannelvn" target="_blank">
-            <img
-              src="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
-              width="80"
-              style="border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)"
-            />
-            <p>
-              <img
-                src="https://img.icons8.com/color/20/youtube-play.png"
-                style="vertical-align: middle; margin-right: 5px"
-              />OTV Channel
-            </p>
-          </a>
-        </div>
-
-        <div style="width: 100px; text-align: center">
-          <a href="https://www.youtube.com/@otvstoryvn" target="_blank">
-            <img
-              src="https://i.pinimg.com/736x/09/44/f6/0944f6cacd07b3a164a82d62f02d2709.jpg"
-              width="80"
-              style="border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)"
-            />
-            <p>
-              <img
-                src="https://img.icons8.com/color/20/youtube-play.png"
-                style="vertical-align: middle; margin-right: 5px"
-              />OTV Story
-            </p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ngăn 4: OTISSHOP -->
-    <section id="information">
+    </div>
+    <!-- Thẻ Game 2 -->
+    <div class="gallery" style="display: none" id="Thẻ Garena">
       <img
-        src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/498592964_122139151082611769_2849224014646368616_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=pa05HYab5DMQ7kNvwHJoRzm&_nc_oc=Admix1GwyeLvcG5eTD12UWbjjSFqcEr-BdQkWmNgyu7zg89YHfYA-ltEoRxE9QYxizI&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=tdwfJIa9xixBq3_d0DEHhQ&oh=00_AfIDGb4u_BBNZUrUe2UGejBMlgujBSltj2FPyoJFd58jyw&oe=682F63DB"
-        alt="Poster-OTISShop"
-        style="width: 100%; height: auto"
+        src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/492354735_122136206864661217_7949125846570999972_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=t4YCY0IsaDMQ7kNvwGbQhwZ&_nc_oc=AdmJOu-3jVS8-j3615CcfVUkWOcXfubWYXyHjn8CYw0y57KKrAZdx1aFJmAPUy2RpzY&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=kdhQM6XKI_wPVsF4j4KXDQ&oh=00_AfL6IM8U9mskCPWwEaxgDCQsYWhh-A44k5D28UICMUbKYA&oe=6838AE8D"
+        alt="Thẻ Garena"
       />
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          gap: 15px;
-          flex-wrap: wrap;
-          padding: 20px 15px;
-        "
-      >
-        <div style="width: 100px; text-align: center">
-          <a href="https://www.facebook.com/OtisSeller" target="_blank">
-            <img
-              src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-              width="80"
-              style="border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)"
-            />
-            <p>
-              <img
-                src="https://img.icons8.com/color/20/facebook-new.png"
-                style="vertical-align: middle; margin-right: 5px"
-              />OTISShop
-            </p>
-          </a>
-        </div>
-        <div style="width: 100px; text-align: center">
-          <a href="https://www.instagram.com/otisshopvn" target="_blank">
-            <img
-              src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-              width="80"
-              style="border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)"
-            />
-            <p>
-              <img
-                src="https://img.icons8.com/color/20/instagram-new.png"
-                style="vertical-align: middle; margin-right: 5px"
-              />OTISShop
-            </p>
-          </a>
-        </div>
-        <div style="width: 100px; text-align: center">
-          <a href="https://www.tiktok.com/@otisshop" target="_blank">
-            <img
-              src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-              width="80"
-              style="border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)"
-            />
-            <p>
-              <img
-                src="https://img.icons8.com/color/20/tiktok--v1.png"
-                style="vertical-align: middle; margin-right: 5px"
-              />OTISShop
-            </p>
-          </a>
-        </div>
-        <div style="width: 100px; text-align: center">
-          <a href="https://www.threads.net/@otisshopvn" target="_blank">
-            <img
-              src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-              width="80"
-              style="border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)"
-            />
-            <p>
-              <img
-                src="https://img.icons8.com/ios-filled/20/000000/threads.png"
-                style="vertical-align: middle; margin-right: 5px"
-              />OTISShop
-            </p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ngăn 5: OTISSTORE -->
-    <section id="information">
+    </div>
+    <div class="gallery" style="display: none" id="Thẻ Zing">
       <img
-        src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/492354735_122136206864661217_7949125846570999972_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=9JtBJrezoyYQ7kNvwFljtMQ&_nc_oc=AdkcRLilLHQRAX8juhvu07v4KWIlX5bQtW9i7ie7qNOpr-OVkCB7e21qmYW-CSIkRfg&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=oAEJ_wclS6cAVnTV-MLm4Q&oh=00_AfKZkGvsX0In-6JU5WeUCGuH41QJF8cduokoWcdtIlBHYg&oe=682F740D"
-        alt="Poster-OTISStore"
-        style="width: 100%; height: auto"
+        src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/492354735_122136206864661217_7949125846570999972_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=t4YCY0IsaDMQ7kNvwGbQhwZ&_nc_oc=AdmJOu-3jVS8-j3615CcfVUkWOcXfubWYXyHjn8CYw0y57KKrAZdx1aFJmAPUy2RpzY&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=kdhQM6XKI_wPVsF4j4KXDQ&oh=00_AfL6IM8U9mskCPWwEaxgDCQsYWhh-A44k5D28UICMUbKYA&oe=6838AE8D"
+        alt="Thẻ Zing"
       />
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          gap: 15px;
-          flex-wrap: wrap;
-          padding: 20px 15px;
-        "
-      >
-        <div style="width: 100px; text-align: center">
-          <a href="https://www.facebook.com/OtisGamerVN" target="_blank">
-            <img
-              src="https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
-              width="80"
-              style="border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)"
-            />
-            <p>
-              <img
-                src="https://img.icons8.com/color/20/facebook-new.png"
-                style="vertical-align: middle; margin-right: 5px"
-              />OTISStore
-            </p>
-          </a>
-        </div>
-
-        <div style="width: 100px; text-align: center">
-          <a href="https://www.youtube.com/@otisstorevn" target="_blank">
-            <img
-              src="https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
-              width="80"
-              style="border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)"
-            />
-            <p>
-              <img
-                src="https://img.icons8.com/color/20/youtube-play.png"
-                style="vertical-align: middle; margin-right: 5px"
-              />OTISSTORE
-            </p>
-          </a>
-        </div>
-      </div>
-
-      <!-- Video Youtube -->
-      <!-- <div
-        id="videos-container"
-        style="
-          display: flex;
-          flex-wrap: wrap;
-          gap: 15px;
-          justify-content: center;
-        "
-      >
-        <div id="videosOTVChannel" style="width: 360px"></div>
-        <div id="videosOTVStory" style="width: 360px"></div>
-        <div id="videosOTVGaming" style="width: 360px"></div>
-      </div> -->
-    </section>
-
-    <!-- Ngăn 4: Facebook -->
-    <!-- <section id="facebook-reels">
-      <h2>Facebook Videos</h2> -->
-
-    <!-- Nhúng reel hoặc bài viết Facebook -->
-    <!-- <div id="fb-root"></div>
-      <script
-        async
-        defer
-        crossorigin="anonymous"
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"
-      ></script> -->
-
-    <!-- Container chứa các post -->
-    <!-- <div
-        style="
-          display: flex;
-          flex-wrap: wrap;
-          gap: 15px;
-          justify-content: center;
-          max-width: 1200px;
-          margin: auto;
-        "
-      > -->
-    <!-- Bài 1 -->
-    <!-- <div
-          style="
-            width: 100%;
-            max-width: 360px;
-            aspect-ratio: 9 / 16;
-            border-radius: 8px;
-            box-sizing: border-box;
-            overflow: hidden;
-            position: relative;
-          "
-        >
-          <iframe
-            src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F672996332031027%2F&show_text=false&width=267&t=0"
-            style="width: 100%; height: 100%; border: none; overflow: hidden"
-            scrolling="no"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
-        </div> -->
-
-    <!-- Bài 2 -->
-    <!-- <div
-          style="
-            width: 100%;
-            max-width: 360px;
-            aspect-ratio: 9 / 16;
-            border-radius: 8px;
-            box-sizing: border-box;
-            overflow: hidden;
-            position: relative;
-          "
-        >
-          <iframe
-            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FOtisGamerVN%2Fvideos%2F2050806685329017%2F&show_text=false&width=560&t=0"
-            style="width: 100%; height: 100%; border: none; overflow: hidden"
-            scrolling="no"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
-        </div> -->
-
-    <!-- Bài 3 -->
-    <!-- <div
-          style="
-            width: 100%;
-            max-width: 360px;
-            aspect-ratio: 5/7;
-            border-radius: 8px;
-            box-sizing: border-box;
-            overflow: hidden;
-            position: relative;
-          "
-        >
-          <iframe
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FOtisSeller%2Fposts%2F122138746688611769&show_text=true&width=500"
-            style="width: 100%; height: 100%; border: none; overflow: hidden"
-            scrolling="no"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- Footer -->
-    <section id="footer">
-      <div
-        style="
-          max-width: 1200px;
-          margin: auto;
-          padding: 0 15px;
-          text-align: center;
-        "
-      >
-        <h3>Donate</h3>
-
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-          "
-        >
-          <div style="flex: 1 1 30%; max-width: 110px">
-            <img
-              src="https://i.pinimg.com/736x/40/05/9b/40059b9b00037529a0cad56eb5ae4d1d.jpg"
-              alt="Donate Agribank"
-              style="width: 100%; border-radius: 8px"
-            />
-          </div>
-
-          <div style="flex: 1 1 30%; max-width: 110px">
-            <img
-              src="https://i.pinimg.com/736x/27/17/68/271768775d063a13b76b78bfb4b4befe.jpg"
-              alt="Donate MoMo"
-              style="width: 100%; border-radius: 8px"
-            />
-          </div>
-
-          <div style="flex: 1 1 30%; max-width: 110px">
-            <img
-              src="https://i.pinimg.com/736x/15/81/ed/1581edcd2b862a72f316ce2b84cc0e15.jpg"
-              alt="Donate Zalopay"
-              style="width: 100%; border-radius: 8px"
-            />
-          </div>
-        </div>
-      </div>
-
-      <!-- Keyword SEO -->
-      <div
-        style="
-          max-width: 1200px;
-          margin: 20px auto 10px;
-          padding: 0 15px;
-          text-align: center;
-          font-size: 14px;
-          line-height: 1.5;
-          color: #bbb;
-        "
-      >
-        <strong>Mọi người cũng tìm kiếm:</strong><br />
-        OTVGroup | Otis Võ | OTISShop | OTISStore | Chill | Music | Tâm Sự | Tâm
-        Trạng | Tình Yêu | Cặp Đôi | Xu Hướng | Viral | Buồn | Hạnh Phúc | Cô
-        Đơn | Lofi | Remix | Vinahouse | Deephouse | Thịnh Hành | Mạng Xã Hội |
-        Thành Công | Thành Đạt | Tâm Hồn | Ký Ức | Lắng Đọng | Cảm Xúc | Nỗi Nhớ
-        | Yêu Thương | Tổn Thương | Vỡ Tan | Bình Yên | Giải Tỏa | Cô Độc | Vấp
-        Ngã | Tự Sự | Acoustic | Ballad | EDM | Hiphop | Rap Việt | Mashup |
-        V-pop | Cover | Live Session | Trending Song | Nhạc Buồn | Nhạc Tiktok |
-        Soundtrack | Melody | Vocal | Động Lực | Đam Mê | Khởi Nghiệp | Kinh
-        Doanh | Truyền Cảm Hứng | Yêu Bản Thân | Công Nghệ | Reaction | Bắt
-        Trend | Thịnh Hành Tiktok | Drama Showbiz | Viral Video
-      </div>
-
-      <!-- Info Legal -->
-      <div
-        style="
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 10px 15px;
-          text-align: center;
-          font-size: 13px;
-          color: #888;
-        "
-      >
-        © 2024 - 2025 Công Ty TNHH MTV OTVGroup
-        <br />
-        • Địa chỉ:
-        <a
-          href="https://maps.app.goo.gl/au8jubbPqSTZ8FjP7"
-          style="color: #007aff; text-decoration: none"
-        >
-          P.Tân Chánh Hiệp, Q.12, TP. Hồ Chí Minh
-        </a>
-        <br />
-        • Hotline:
-        <a href="tel=0329022431" style="color: #007aff; text-decoration: none">
-          0329 022 431
-        </a>
-        • Email:
-        <a
-          href="mailto:thinhkvtm2006@gmail.com"
-          style="color: #007aff; text-decoration: none"
-        >
-          thinhkvtm2006@gmail.com
-        </a>
-        <br />
-        • Chịu trách nhiệm kỹ thuật: Võ Trường Thịnh
-      </div>
-    </section>
+    </div>
+    <!-- Thông Tin -->
 
     <script>
-      const channels = [
-        { id: "UCv-PFwjDGSfgozwLVCJEv0w", target: "videosOTVChannel" }, // otvchannelvn
-        { id: "UC4UOBFi4HJHU_EhynZbrefw", target: "videosOTVStory" }, // otvstoryvn
-        { id: "UCM8xwnvLQ60wfEgduDRzRMg", target: "videosOTVGaming" }, // otvgamingvn
-      ];
+      function filterProducts(category) {
+        const products = document.querySelectorAll(".product");
+        const element0 = document.querySelectorAll('[id="pd0"]');
+        const element1 = document.querySelectorAll('[id="kvtm"]');
+        const element2 = document.querySelectorAll('[id="lq"]');
+        const element3 = document.querySelectorAll('[id="coc"]');
+        const element4 = document.querySelectorAll('[id="dc"]');
+        const element5 = document.querySelectorAll('[id="ff"]');
+        const element6 = document.querySelectorAll('[id="khac"]');
+        const arrow1 = document.querySelectorAll(".arrow-btn1");
+        const arrow6 = document.querySelectorAll(".arrow-btn6");
+        const Image0 = document.querySelector('img[alt="Logo Home"]');
+        const Image1 = document.querySelector(
+          'img[alt="Logo Khu Vườn Trên Mây"]'
+        );
+        const Image2 = document.querySelector('img[alt="Logo Liên Quân"]');
+        const Image3 = document.querySelector('img[alt="Logo Clash of Clans"]');
+        const Image4 = document.querySelector('img[alt="Logo Dragon City"]');
+        const Image5 = document.querySelector('img[alt="Logo Free Fire"]');
+        const Image6 = document.querySelector('img[alt="Logo Khác"]');
 
-      channels.forEach((channel) => {
-        fetch(
-          `https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            let latestVideo = data.items[0];
-            document.getElementById(channel.target).innerHTML = `
-                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/${
-                      latestVideo.guid.split(":")[2]
-                    }" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                    <h3>${latestVideo.title}</h3>
-                `;
-          })
-          .catch((error) => {
-            console.error("Lỗi tải video:", error);
-            document.getElementById(
-              channel.target
-            ).innerHTML = `<p>Không thể tải video.</p>`;
-          });
+        // Tìm tất cả các thẻ có class "product kvtm"
+        const product1 = document.querySelectorAll(".product.kvtm");
+        // Tìm thẻ có id="Test1"
+        const test1 = document.getElementById("Test1");
+        // Tìm tất cả các thẻ có class "product kvtm"
+        const product2 = document.querySelectorAll(".product.lq");
+        // Tìm thẻ có id="Test2"
+        const test2 = document.getElementById("Test2");
+        // Tìm tất cả các thẻ có class "product kvtm"
+        const product3 = document.querySelectorAll(".product.coc");
+        // Tìm thẻ có id="Test3"
+        const test3 = document.getElementById("Test3");
+        // Tìm tất cả các thẻ có class "product kvtm"
+        const product4 = document.querySelectorAll(".product.dc");
+        // Tìm thẻ có id="Test4"
+        const test4 = document.getElementById("Test4");
+        // Tìm tất cả các thẻ có class "product kvtm"
+        const product5 = document.querySelectorAll(".product.ff");
+        // Tìm thẻ có id="Test5"
+        const test5 = document.getElementById("Test5");
+        // Tìm tất cả các thẻ có class "product kvtm"
+        const product6 = document.querySelectorAll(".product.khac");
+        // Tìm thẻ có id="Test6"
+        const test6 = document.getElementById("Test6");
+        const delay = 50; // Thời gian delay giữa các phần tử
+        let index = 0; // Dùng để tạo hiệu ứng nổi lên lần lượt
+
+        // Hiện hoặc ẩn sản phẩm dựa trên category
+        products.forEach((product) => {
+          // Kiểm tra nếu sản phẩm phù hợp với bộ lọc
+          if (category === "all" || product.classList.contains(category)) {
+            product.style.display = "block";
+            product.classList.remove("hidden"); // Loại bỏ trạng thái ẩn nếu có
+
+            // Xóa hiệu ứng cũ và thêm lại hiệu ứng để làm mới
+            product.classList.remove("active");
+            setTimeout(() => {
+              product.classList.add("active");
+            }, delay * index++);
+          } else {
+            // Xử lý các sản phẩm không thuộc bộ lọc
+            product.classList.remove("active");
+            product.classList.add("hidden");
+            product.style.display = "none";
+          }
+
+          if (category === "all") {
+            Image0.classList.add("glow-effect");
+            element0.forEach((element0) => {
+              element0.style.display = "block";
+            });
+          } else {
+            Image0.classList.remove("glow-effect");
+            element0.forEach((element0) => {
+              element0.style.display = "none";
+            });
+          }
+
+          // Nếu category là "kvtm", hiển thị các phần tử có id="kvtm", arrowUp và arrowDown
+          if (category === "kvtm") {
+            element1.forEach((element1) => {
+              element1.style.display = "block";
+            });
+            arrow1.forEach((el) => {
+              el.style.display = "block";
+            });
+            Image1.classList.add("glow-effect");
+            // Nếu không có thẻ nào với class "product kvtm"
+            if (product1.length === 0) {
+              test1.style.display = "block"; // Hiển thị thẻ có id="Test1"
+            } else {
+              test1.style.display = "none"; // Ẩn thẻ có id="Test1"
+            }
+          } else {
+            // Ngược lại, ẩn các phần tử có id="kvtm", arrowUp1 và arrowDown1
+            element1.forEach((element1) => {
+              element1.style.display = "none";
+            });
+            arrow1.forEach((el) => {
+              el.style.display = "none";
+            });
+            Image1.classList.remove("glow-effect");
+            test1.style.display = "none"; // Ẩn thẻ có id="Test1"
+          }
+
+          if (category === "lq") {
+            element2.forEach((element2) => {
+              element2.style.display = "block";
+            });
+            Image2.classList.add("glow-effect");
+            // Nếu không có thẻ nào với class "product lq"
+            if (product2.length === 0) {
+              test2.style.display = "block"; // Hiển thị thẻ có id="Test2"
+            } else {
+              test2.style.display = "none"; // Ẩn thẻ có id="Test2"
+            }
+          } else {
+            element2.forEach((element2) => {
+              element2.style.display = "none";
+            });
+            Image2.classList.remove("glow-effect");
+            test2.style.display = "none"; // Ẩn thẻ có id="Test2"
+          }
+
+          if (category === "coc") {
+            element3.forEach((element3) => {
+              element3.style.display = "block";
+            });
+            Image3.classList.add("glow-effect");
+            // Nếu không có thẻ nào với class "product lq"
+            if (product3.length === 0) {
+              test3.style.display = "block"; // Hiển thị thẻ có id="Test3"
+            } else {
+              test3.style.display = "none"; // Ẩn thẻ có id="Test3"
+            }
+          } else {
+            element3.forEach((element3) => {
+              element3.style.display = "none";
+            });
+            Image3.classList.remove("glow-effect");
+            test3.style.display = "none"; // Ẩn thẻ có id="Test3"
+          }
+
+          if (category === "dc") {
+            element4.forEach((element4) => {
+              element4.style.display = "block";
+            });
+            Image4.classList.add("glow-effect");
+            // Nếu không có thẻ nào với class "product lq"
+            if (product4.length === 0) {
+              test4.style.display = "block"; // Hiển thị thẻ có id="Test4"
+            } else {
+              test4.style.display = "none"; // Ẩn thẻ có id="Test4"
+            }
+          } else {
+            element4.forEach((element4) => {
+              element4.style.display = "none";
+            });
+            Image4.classList.remove("glow-effect");
+            test4.style.display = "none"; // Ẩn thẻ có id="Test4"
+          }
+
+          if (category === "ff") {
+            element5.forEach((element5) => {
+              element5.style.display = "block";
+            });
+            Image5.classList.add("glow-effect");
+            // Nếu không có thẻ nào với class "product ff"
+            if (product5.length === 0) {
+              test5.style.display = "block"; // Hiển thị thẻ có id="Test5"
+            } else {
+              test5.style.display = "none"; // Ẩn thẻ có id="Test5"
+            }
+          } else {
+            element5.forEach((element5) => {
+              element5.style.display = "none";
+            });
+            Image5.classList.remove("glow-effect");
+            test5.style.display = "none"; // Ẩn thẻ có id="Test5"
+          }
+
+          // Nếu category là "khac", hiển thị các phần tử có id="khac", arrowUp2 và arrowDown6
+          if (category === "khac") {
+            element6.forEach((element6) => {
+              element6.style.display = "block";
+            });
+            arrow6.forEach((el) => {
+              el.style.display = "block";
+            });
+            Image6.classList.add("glow-effect");
+            // Nếu không có thẻ nào với class "product khac"
+            if (product6.length === 0) {
+              test6.style.display = "block"; // Hiển thị thẻ có id="Test6"
+            } else {
+              test6.style.display = "none"; // Ẩn thẻ có id="Test6"
+            }
+          } else {
+            // Ngược lại, ẩn các phần tử có id="khac", arrowUp và arrowDown
+            element6.forEach((element6) => {
+              element6.style.display = "none";
+            });
+            arrow6.forEach((el) => {
+              el.style.display = "none";
+            });
+            Image6.classList.remove("glow-effect");
+            test6.style.display = "none"; // Ẩn thẻ có id="Test6"
+          }
+        });
+      }
+
+      // Gọi function filterProducts với "all" để hiển thị tất cả sản phẩm khi DOM đã tải
+      document.addEventListener("DOMContentLoaded", () => {
+        filterProducts("all");
       });
+
+      let currentIndex1 = 0; // Vị trí phần tử hiện tại
+
+      document.getElementById("arrowUp1").addEventListener("click", () => {
+        const productss1 = document.querySelectorAll(".productss1");
+        if (currentIndex1 > 0) {
+          currentIndex1--;
+          navigateTo(productss1, currentIndex1);
+        }
+      });
+
+      document.getElementById("arrowDown1").addEventListener("click", () => {
+        const productss1 = document.querySelectorAll(".productss1");
+        if (currentIndex1 < productss1.length - 1) {
+          currentIndex1++;
+          navigateTo(productss1, currentIndex1);
+        }
+      });
+
+      let currentIndex6 = 0; // Vị trí phần tử hiện tại
+
+      document.getElementById("arrowUp6").addEventListener("click", () => {
+        const productss6 = document.querySelectorAll(".productss6");
+        if (currentIndex6 > 0) {
+          currentIndex6--;
+          navigateTo(productss6, currentIndex6);
+        }
+      });
+
+      document.getElementById("arrowDown6").addEventListener("click", () => {
+        const productss6 = document.querySelectorAll(".productss6");
+        if (currentIndex6 < productss6.length - 1) {
+          currentIndex6++;
+          navigateTo(productss6, currentIndex6);
+        }
+      });
+
+      function navigateTo(elements, index) {
+        elements[index].scrollIntoView({ behavior: "smooth", block: "center" });
+
+        // Làm nổi bật phần tử hiện tại
+        elements.forEach((el, i) => {
+          if (i === index) {
+            el.style.background = "#555555";
+          } else {
+            el.style.background = "#252525";
+          }
+        });
+      }
+
+      function sendMessageWithClipboard() {
+        try {
+          var url = "https://m.me/61569836535180";
+          window.open(url, "_blank");
+        } catch (err) {
+          console.error("Không thể chuyển đến liên kết! : ", err);
+          alert("Đã xảy ra lỗi. Vui lòng thử lại.");
+        }
+      }
+
+      function toggleContact(contentID) {
+        var content = document.getElementById(contentID);
+        content.classList.toggle("active");
+      }
+
+      window.onload = function () {
+        const content = document.getElementById("contact-Content");
+        content.classList.add("active");
+      };
+
+      function infor(ID) {
+        let contents = document.querySelectorAll(".gallery"); // Lấy tất cả phần tử có class 'gallery'
+        let element = document.getElementById(ID); // Lấy phần tử có ID được gọi
+        if (ID === "OFF") {
+          // Nếu ID là "OFF", ẩn tất cả các phần tử
+          contents.forEach(function (content) {
+            content.style.display = "none";
+          });
+        } else {
+          if (element.style.display === "none") {
+            // Nếu phần tử đang ẩn, hiển thị phần tử đó và ẩn tất cả các phần tử khác
+            contents.forEach(function (content) {
+              content.style.display = "none";
+            });
+            element.style.display = "block"; // Hiển thị phần tử đã chọn
+          } else {
+            // Nếu phần tử đang hiển thị, ẩn tất cả các phần tử
+            contents.forEach(function (content) {
+              content.style.display = "none";
+            });
+          }
+        }
+      }
     </script>
   </body>
 </html>
