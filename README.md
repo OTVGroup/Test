@@ -71,6 +71,7 @@
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         gap: 10px;
         padding: 20px;
+        justify-items: center; /* 👉 Canh giữa item trong mỗi ô */
       }
 
       /* Sản phẩm */
@@ -236,6 +237,7 @@
           grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
           gap: 10px;
           padding: 10px;
+          justify-items: center; /* 👉 Canh giữa item trong mỗi ô */
         }
 
         .contact-Content {
