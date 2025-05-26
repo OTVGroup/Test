@@ -42,7 +42,7 @@
       /* Header */
       .header {
         width: 100vw;
-        height: 70px;
+        height: 90px;
         background-color: #ffffff;
         position: fixed;
         top: 0;
@@ -55,7 +55,7 @@
       }
 
       .header img {
-        height: 80%;
+        height: 90%;
         border-radius: 50%;
         object-fit: contain;
       }
@@ -70,13 +70,13 @@
       .products {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 15px;
+        gap: 10px;
         padding: 20px;
       }
 
       /* Sản phẩm */
       .itemp {
-        width: 150px;
+        width: 160px;
         height: 70px;
         padding: 2.5px;
         background-color: #444;
@@ -95,7 +95,7 @@
       }
 
       .itemp-content {
-        width: 75px;
+        width: 85px;
         height: 65px;
         display: flex;
         flex-direction: column;
@@ -137,7 +137,7 @@
       }
 
       .time {
-        width: 53px;
+        width: 63px;
         height: 18px;
         border-radius: 2px;
         display: flex;
