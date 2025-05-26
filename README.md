@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -255,11 +254,417 @@
       />
     </div>
 
-    <div style="height: 70px"></div>
-
     <!-- Danh sách sản phẩm -->
     <div class="products" id="product-list">
       <!-- Sản phẩm sẽ được render ở đây -->
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemp">
+        <img
+          src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
+          alt="SP"
+        />
+        <div class="itemp-content">
+          <div class="name">SP1</div>
+
+          <div class="flex-row">
+            <div class="infor">No:</div>
+            <div class="no">x100</div>
+          </div>
+
+          <div class="flex-row">
+            <div class="infor">Price:</div>
+            <div class="price">10k</div>
+          </div>
+          <div class="flex-row">
+            <div class="time">17h45m</div>
+            <button>🛒</button>
+          </div>
+        </div>
+      </div>
+
       <div class="itemp">
         <img
           src="https://i.pinimg.com/474x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
