@@ -67,7 +67,7 @@
       }
 
       .header-content {
-        width: 100vw;
+        width: 100%;
         height: auto;
         min-height: 10px;
         background-color: #000000;
