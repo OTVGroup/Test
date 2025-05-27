@@ -387,7 +387,7 @@
     </div>
     <!-- Show VP - Khu Vườn Trên Mây -->
     <div class="products" id="product-items"></div>
-    <div style="width: 100vw; height: 5px; background-color: #343434"></div>
+    <div style="width: 100%; height: 5px; background-color: #343434"></div>
     <!-- Show ACC - Khu Vườn Trên Mây -->
     <div class="productss" id="product-items1"></div>
 
