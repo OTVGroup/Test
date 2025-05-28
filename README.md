@@ -71,6 +71,7 @@
       .header-section {
         width: calc(100% - 90px);
         min-width: 200px;
+        max-width: 720px;
         height: auto;
         gap: 5px;
         display: flex;
