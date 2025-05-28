@@ -614,48 +614,62 @@
           flex-wrap: wrap;
           justify-content: center;
           align-items: flex-start;
-          gap: 20px;
+          gap: 10px;
           text-align: left;
           max-width: 1000px;
           margin: auto;
         "
       >
         <!-- Hotline -->
-        <div style="flex: 1; min-width: 240px">
-          <div
-            style="
-              background: #222;
-              border: 1px solid #888;
-              border-radius: 6px;
-              padding: 10px;
-              display: flex;
-              align-items: center;
-              gap: 10px;
-            "
-          >
-            <div style="font-size: 24px; color: #ffcc00">📞</div>
-            <div>
-              <div style="color: #ffcc00; font-weight: bold">
-                Hotline: 0329 022 431
-              </div>
-              <div style="color: #fff; font-weight: bold">Admin: Otis Võ</div>
+        <div
+          style="
+            background: #222;
+            border: 1px solid #888;
+            flex: 1;
+            min-width: 240px;
+            border-radius: 6px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          "
+        >
+          <img
+            src="https://i.pinimg.com/736x/ba/6f/1d/ba6f1dcaebce3bef7a97cd4675c18cbf.jpg"
+            alt="hotline"
+            style="width: 35px; border-radius: 50%"
+          />
+          <div>
+            <div style="color: #ffcc00; font-weight: bold">
+              Hotline: 0329 022 431
             </div>
+            <div style="color: #fff; font-weight: bold">Admin: Otis Võ</div>
           </div>
         </div>
 
         <!-- Giao dịch -->
         <div
           style="
-            flex: 1;
-            min-width: 240px;
             background: #222;
             border: 1px solid #888;
+            flex: 1;
+            min-width: 240px;
             border-radius: 6px;
             padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
           "
         >
-          <b style="color: white">Phương Thức Giao Dịch</b> <br />
-          <span style="color: #fff">Trực Tiếp</span> – Cam Kết 100%
+          <img
+            src="https://i.pinimg.com/736x/95/66/98/9566980106d7b8592e066b2a887b0b97.jpg"
+            alt="change"
+            style="width: 35px; border-radius: 50%"
+          />
+          <div>
+            <b style="color: white">Phương Thức Giao Dịch</b> <br />
+            <span style="color: #fff">Trực Tiếp</span> – Cam Kết 100%
+          </div>
         </div>
 
         <!-- Liên kết MXH -->
