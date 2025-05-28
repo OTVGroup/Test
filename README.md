@@ -41,7 +41,7 @@
       /* Header */
       .header {
         width: 100vw;
-        height: 100px;
+        height: 90px;
         background-color: #ffffff;
         position: fixed;
         top: 0;
@@ -56,7 +56,7 @@
       }
 
       .header img {
-        height: 90px;
+        height: 70px;
         border-radius: 50%;
         object-fit: contain;
       }
@@ -69,7 +69,7 @@
       }
 
       .header-section {
-        width: calc(100% - 120px);
+        width: calc(100% - 90px);
         min-width: 200px;
         height: auto;
         gap: 5px;
@@ -361,7 +361,7 @@
 
       #video-container {
         max-width: 720px; /* Giới hạn chiều ngang tối đa */
-        width: 90%; /* Tự động co giãn theo màn hình */
+        width: 100%; /* Tự động co giãn theo màn hình */
         aspect-ratio: 16/9; /* Giữ đúng tỉ lệ video HD */
         display: flex;
         justify-content: center;
@@ -427,7 +427,7 @@
       </div>
     </div>
 
-    <div style="height: 20px"></div>
+    <!-- <div style="height: 20px"></div> -->
 
     <div id="video-container">
       <div id="video-player"></div>
