@@ -517,8 +517,8 @@
       />
     </div>
     <!-- Show VP - Khu Vườn Trên Mây -->
-    <!-- <div class="products" id="product-items"></div>
-    <div style="width: 100%; height: 5px; background-color: #343434"></div> -->
+    <div class="products" id="product-items"></div>
+    <!-- <div style="width: 100%; height: 5px; background-color: #343434"></div> -->
     <!-- Show ACC - Khu Vườn Trên Mây -->
     <!-- <div class="productss" id="product-items1"></div> -->
 
@@ -720,6 +720,14 @@
     <script>
       // VP - Khu Vườn Trên Mây
       const products = [
+        {
+          name: "Trà Sấy",
+          image:
+            "https://i.pinimg.com/474x/3a/cc/0f/3acc0fff30a54670af357237b0fc897d.jpg",
+          no: "x200",
+          price: "1k",
+          quantity: "",
+        },
         // VP.KVTM
         // Sấy 0
         // Nước Ép 0
@@ -949,17 +957,16 @@
 
       function sendMessage(data) {
         try {
-          const baseUrl = "https://www.messenger.com/t/488283351040349";
+          const pageId = "488283351040349";
+          let url = `https://m.me/${pageId}`; // Link Messenger chuẩn cho cả điện thoại & máy tính
 
           if (typeof data === "string" && data.trim() !== "") {
-            alert(`Đang gửi đơn hàng: ${data}`); // Thông báo UX
+            alert(`Đang gửi đơn hàng: ${data}`);
             const encodedMessage = encodeURIComponent(`Order: ${data}`);
-            const fullUrl = `${baseUrl}?text=${encodedMessage}`;
-            window.open(fullUrl, "_blank");
-          } else {
-            // Nếu không có data thì mở trang chat mặc định
-            window.open(baseUrl, "_blank");
+            url += `?text=${encodedMessage}`; // Gửi dữ liệu qua ref param (bên chatbot có thể xử lý)
           }
+
+          window.open(url, "_blank");
         } catch (err) {
           console.error("Không thể mở Messenger:", err);
           alert("Đã xảy ra lỗi. Vui lòng thử lại.");
