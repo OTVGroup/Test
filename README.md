@@ -958,7 +958,7 @@
       function sendMessage(data) {
         try {
           const pageId = "488283351040349";
-          let url = `https://m.me/${pageId}`; // Link Messenger chuẩn cho cả điện thoại & máy tính
+          let url = `https://www.messenger.com/t/${pageId}`; // Link Messenger chuẩn cho cả điện thoại & máy tính
 
           if (typeof data === "string" && data.trim() !== "") {
             alert(`Đang gửi đơn hàng: ${data}`);
