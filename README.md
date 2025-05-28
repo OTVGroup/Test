@@ -360,6 +360,11 @@
         color: #000000;
       }
 
+      .overlay-content img {
+        width: 65px;
+        height: 65px;
+      }
+
       #video-container {
         max-width: 720px; /* Giới hạn chiều ngang tối đa */
         width: 100%; /* Tự động co giãn theo màn hình */
@@ -518,6 +523,9 @@
     </div>
     <!-- Show VP - Khu Vườn Trên Mây -->
     <div class="products" id="product-items"></div>
+    <div style="width: 100%; height: 5px; background-color: #343434"></div>
+    <!-- Show COMBO - Khu Vườn Trên Mây -->
+    <div class="products" id="product-itemss"></div>
     <!-- <div style="width: 100%; height: 5px; background-color: #343434"></div> -->
     <!-- Show ACC - Khu Vườn Trên Mây -->
     <!-- <div class="productss" id="product-items1"></div> -->
@@ -595,7 +603,7 @@
     <!-- Footer -->
     <div
       style="
-        background: #0d0d0d;
+        background: #131313;
         color: #ccc;
         padding: 20px 15px;
         font-family: sans-serif;
@@ -669,7 +677,7 @@
           />
           <div>
             <b style="color: white">Phương Thức Giao Dịch</b> <br />
-            <span style="color: #fff">Trực Tiếp</span> – Cam Kết 100%
+            <span style="color: #fff">Trực Tiếp</span> – Uy Tín 100%
           </div>
         </div>
 
@@ -719,31 +727,7 @@
 
     <script>
       // VP - Khu Vườn Trên Mây
-      const products = [
-        {
-          name: "Trà Sấy",
-          image:
-            "https://i.pinimg.com/474x/3a/cc/0f/3acc0fff30a54670af357237b0fc897d.jpg",
-          no: "x200",
-          price: "1k",
-          quantity: "",
-        },
-        // VP.KVTM
-        // Sấy 0
-        // Nước Ép 0
-        // Vải 0
-        // Ngọc 0
-        // Tinh Dầu 0
-        // Trà 0
-        // Hoa Tươi 0
-        // Nước Hoa 0
-        // Túi Hương 0
-        // Vật Phẩm May 0
-        // Hạt Giống 0
-        // Bọ 0
-        // Vật Phẩm Khác 0
-        // Vàng & Vật Phẩm Sự Kiện 1
-      ];
+      const products = [];
       const container = document.getElementById("product-items");
       container.innerHTML = products
         .map(
@@ -768,19 +752,359 @@
         )
         .join("");
 
+      const productss = [
+        {
+          name: "CB.Vợt",
+          image:
+            "https://i.pinimg.com/736x/3f/db/13/3fdb13d11443042c1c61b2cf2e7b8082.jpg",
+          name1: "Vợt Trắng",
+          image1:
+            "https://i.pinimg.com/474x/cd/80/c0/cd80c01c223117492d6f11b31cbfb297.jpg",
+          no1: "40",
+          name2: "Vợt Xanh",
+          image2:
+            "https://i.pinimg.com/474x/4d/e1/3c/4de13ce0975519b0ab30911689682d37.jpg",
+          no2: "40",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Nâng Tầng",
+          image:
+            "https://i.pinimg.com/736x/ab/06/18/ab0618b2f3f52bf76751aff15d0ec7a8.jpg",
+          name1: "Keo D.Mây",
+          image1:
+            "https://i.pinimg.com/474x/88/a7/e4/88a7e40dc4c265cd76cf491c50aa16e4.jpg",
+          no1: "6",
+          name2: "Lọ N.Thần",
+          image2:
+            "https://i.pinimg.com/474x/95/f8/0a/95f80ae795637d540e04105123cd216b.jpg",
+          no2: "7",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Mít",
+          image:
+            "https://i.pinimg.com/736x/5e/b5/a0/5eb5a052951e40351ae71119b4113018.jpg",
+          name1: "Mít",
+          image1:
+            "https://i.pinimg.com/474x/c8/d4/74/c8d4743a5801357e670e039858ca4d04.jpg",
+          no1: "75",
+          name2: "Mít Sấy",
+          image2:
+            "https://i.pinimg.com/474x/3c/63/59/3c6359a8032cef802b8be4968941c97e.jpg",
+          no2: "75",
+          name3: "Sinh Tố Mít",
+          image3:
+            "https://i.pinimg.com/474x/d3/ee/32/d3ee320098453df46b882e405e4a1b5f.jpg",
+          no3: "75",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Dứa",
+          image:
+            "https://i.pinimg.com/736x/35/6a/de/356ade871bdd852893744006d5e01d47.jpg",
+          name1: "Dứa",
+          image1:
+            "https://i.pinimg.com/474x/a3/3e/fc/a33efcd72ff80a699778a2d5f7f6882a.jpg",
+          no1: "75",
+          name2: "Dứa Sấy",
+          image2:
+            "https://i.pinimg.com/474x/44/48/b1/4448b17a17ed37068a9b1dd5f07f85f5.jpg",
+          no2: "75",
+          name3: "Nước Dứa",
+          image3:
+            "https://i.pinimg.com/736x/f3/15/ae/f315aeb25f643210a486c2cad55a27cc.jpg",
+          no3: "75",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Xoài",
+          image:
+            "https://i.pinimg.com/736x/3c/9f/1c/3c9f1cb9c3137423f5dd967bef128b7b.jpg",
+          name1: "Xoài",
+          image1:
+            "https://i.pinimg.com/474x/ea/df/b2/eadfb2be03c048433f58f29084a952da.jpg",
+          no1: "75",
+          name2: "Xoài Sấy",
+          image2:
+            "https://i.pinimg.com/474x/d9/b3/b1/d9b3b10cdb34e0b97cd8b6b7b08c9c20.jpg",
+          no2: "75",
+          name3: "Sinh Tố Xoài",
+          image3:
+            "https://i.pinimg.com/474x/20/f4/2d/20f42d7c2acac57126e5806054068d53.jpg",
+          no3: "75",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Nho",
+          image:
+            "https://i.pinimg.com/736x/43/64/d2/4364d2e61b2dd4d45bf8c764dd6e04fd.jpg",
+          name1: "Nho",
+          image1:
+            "https://i.pinimg.com/474x/cb/d8/2c/cbd82c87ffbb674d04e60bbf852e0780.jpg",
+          no1: "45",
+          name2: "Nho Sấy",
+          image2:
+            "https://i.pinimg.com/474x/77/19/34/77193423f65343aef01b697688c12337.jpg",
+          no2: "45",
+          name3: "Nước Nho",
+          image3:
+            "https://i.pinimg.com/474x/fb/c9/ae/fbc9ae57da21c3821e3b45741a803d5d.jpg",
+          no3: "45",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Ngọc-1",
+          image:
+            "https://i.pinimg.com/736x/bf/20/50/bf2050c0b0b43c314c2366060a386f74.jpg",
+          name1: "Ngọc Đỏ",
+          image1:
+            "https://i.pinimg.com/474x/cd/d2/04/cdd204f58ab6b093a94617f692f91398.jpg",
+          no1: "33",
+          name2: "Ngọc X.Biển",
+          image2:
+            "https://i.pinimg.com/736x/00/99/27/009927a35caced1eaa1598e8d5149f32.jpg",
+          no2: "33",
+          name3: "Ngọc Vàng",
+          image3:
+            "https://i.pinimg.com/474x/bc/19/9c/bc199c0f7626e3ab3f6cc0babf75086e.jpg",
+          no3: "33",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Ngọc-2",
+          image:
+            "https://i.pinimg.com/736x/a2/3e/c4/a23ec4c2c7cbcf478fbeeea031758ab0.jpg",
+          name1: "Ngọc Tím",
+          image1:
+            "https://i.pinimg.com/474x/a7/ef/ca/a7efca33165c810e1c81f31263fd50db.jpg",
+          no1: "9",
+          name2: "Ngọc Cam",
+          image2:
+            "https://i.pinimg.com/474x/fa/4c/f6/fa4cf62cb997beb2d999646501971b08.jpg",
+          no2: "9",
+          name3: "Ngọc X.Lá",
+          image3:
+            "https://i.pinimg.com/474x/b0/37/3b/b0373bb243f8aaaa0c6e16bda1af4d68.jpg",
+          no3: "9",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Bọ-1",
+          image:
+            "https://i.pinimg.com/736x/ca/db/87/cadb8705ddc1ab633f5d00959fa7f48d.jpg",
+          name1: "Bọ Rùa",
+          image1:
+            "https://i.pinimg.com/474x/b5/59/07/b559076ad355aa4b1675ac55e08f165e.jpg",
+          no1: "27",
+          name2: "Ốc Sên",
+          image2:
+            "https://i.pinimg.com/474x/ba/04/c8/ba04c8afd5021cb8cc55900cdb0d5c2b.jpg",
+          no2: "27",
+          name3: "Đom Đóm",
+          image3:
+            "https://i.pinimg.com/474x/6d/d7/db/6dd7dbdb030a5f337fa762378e8f07de.jpg",
+          no3: "27",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Bọ-2",
+          image:
+            "https://i.pinimg.com/736x/2b/70/d9/2b70d9d15c7bd6eeb814c09080b1e706.jpg",
+          name1: "Ong Mật",
+          image1:
+            "https://i.pinimg.com/474x/5f/0e/76/5f0e76aae9169c4663d9a8759fdf7bc0.jpg",
+          no1: "27",
+          name2: "Chuồn Chuồn",
+          image2:
+            "https://i.pinimg.com/474x/02/8e/0e/028e0e144ec65a0c0673da30de975976.jpg",
+          no2: "27",
+          name3: "Bươm Bướm",
+          image3:
+            "https://i.pinimg.com/474x/98/d4/b8/98d4b83c4711d7781c08618317219397.jpg",
+          no3: "27",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Thỏi",
+          image:
+            "https://i.pinimg.com/736x/68/51/ee/6851eede92a5ad3e0a5589c9933f9d49.jpg",
+          name1: "Thỏi Đồng",
+          image1:
+            "https://i.pinimg.com/474x/30/e9/10/30e910a6889550872608484b49942ae8.jpg",
+          no1: "30",
+          name2: "Thỏi Bạc",
+          image2:
+            "https://i.pinimg.com/474x/f9/8f/19/f98f198b25c78d9edddfee506f253856.jpg",
+          no2: "60",
+          name3: "Thỏi Vàng",
+          image3:
+            "https://i.pinimg.com/474x/3a/54/ad/3a54ade9144b0869933585794f7ab560.jpg",
+          no3: "45",
+          name4: "Thỏi B.Kim",
+          image4:
+            "https://i.pinimg.com/474x/7f/7a/2a/7f7a2a9dc91d6b8262a305782ff50e0b.jpg",
+          no4: "45",
+          price: "5k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Cám",
+          image:
+            "https://i.pinimg.com/736x/48/a9/f2/48a9f28a149120c1f5445e7340fc6da9.jpg",
+          name1: "Cám Gà",
+          image1:
+            "https://i.pinimg.com/474x/84/4f/09/844f09c991c8f830677e481208fbaf18.jpg",
+          no1: "540",
+          name2: "Cám Cừu",
+          image2:
+            "https://i.pinimg.com/474x/2d/fa/67/2dfa67fd37658939adfd696a0cd11c08.jpg",
+          no2: "540",
+          name3: "Cám Heo",
+          image3:
+            "https://i.pinimg.com/474x/a8/57/be/a857be4bb38f986a3879f10941b674ff.jpg",
+          no3: "540",
+          name4: "Cám Bò",
+          image4:
+            "https://i.pinimg.com/474x/fc/8e/2d/fc8e2d55c8e3b125d28eec5e62683f74.jpg",
+          no4: "540",
+          price: "10k",
+          quantity: "1",
+        },
+        {
+          name: "CB.Mùa Hè",
+          image:
+            "https://i.pinimg.com/736x/3e/08/00/3e08005b4a6df5d0dfa615174e74a85d.jpg",
+          name1: "VP. Kem",
+          image1:
+            "https://i.pinimg.com/474x/15/32/fc/1532fc9620e3cebcaa897498294a9e4a.jpg",
+          no1: "990",
+          name2: "VP. Kính",
+          image2:
+            "https://i.pinimg.com/474x/f7/4a/ca/f74aca49da4092b3ef935e2179d1c770.jpg",
+          no2: "660",
+          name3: "VP. Dừa",
+          image3:
+            "https://i.pinimg.com/474x/cf/dc/71/cfdc7156657b869915baf8cda120891b.jpg",
+          no3: "330",
+          price: "10k",
+          quantity: "1",
+        },
+      ];
+      const comboContainer = document.getElementById("product-itemss");
+      comboContainer.innerHTML = productss
+        .map((product) => {
+          const totalNo = [1, 2, 3, 4, 5].reduce((sum, i) => {
+            return sum + Number(product[`no${i}`] || 0);
+          }, 0);
+
+          return `
+      <div class="items">
+        <img src="${product.image}" alt="${product.name}" />
+        <div class="items-content">
+          <div class="name">${product.name}</div>
+          <div class="flex-row">
+            <div class="infor">SL:</div>
+            <div class="no">${totalNo}</div>
+          </div>
+          <div class="flex-row">
+            <div class="infor">Giá:</div>
+            <div class="price">${product.price}</div>
+          </div>
+          <div class="flex-row">
+            <div class="quantity">Còn: ${product.quantity}</div>
+            <button onclick="Overlay('${product.name}')">🔍</button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay" id="${product.name}">
+        <h2>Thông Tin Chi Tiết</h2>
+        <button style="left: 5px; background-color: #34ff19" onclick="sendMessage('${
+          product.name
+        } x${totalNo}')">🛒</button>  
+        <div class="overlay-content">
+          ${
+            product.image1
+              ? ` <img src="${product.image1}" alt="${product.name}" /><br>`
+              : ""
+          }
+          ${
+            product.name1
+              ? `<strong>${product.name1}: x${product.no1}</strong><br>`
+              : ""
+          }
+          <br>
+          ${
+            product.image2
+              ? ` <img src="${product.image2}" alt="${product.name}" /><br>`
+              : ""
+          }
+          ${
+            product.name2
+              ? `<strong>${product.name2}: x${product.no2}</strong><br>`
+              : ""
+          }
+          <br>
+          ${
+            product.image3
+              ? ` <img src="${product.image3}" alt="${product.name}" /><br>`
+              : ""
+          }
+          ${
+            product.name3
+              ? `<strong>${product.name3}: x${product.no3}</strong><br>`
+              : ""
+          }
+          <br>
+          ${
+            product.image4
+              ? ` <img src="${product.image4}" alt="${product.name}" /><br>`
+              : ""
+          }
+          ${
+            product.name4
+              ? `<strong>${product.name4}: x${product.no4}</strong><br>`
+              : ""
+          }
+          <br>
+          ${
+            product.image5
+              ? ` <img src="${product.image5}" alt="${product.name}" /><br>`
+              : ""
+          }
+          ${
+            product.name5
+              ? `<strong>${product.name5}: x${product.no5}</strong><br>`
+              : ""
+          }
+        </div>
+        <button style="right: 5px; background-color: #ff7676" onclick="Overlay('${
+          product.name
+        }')">x</button>
+      </div>
+    `;
+        })
+        .join("");
+
       // Danh sách ACC - Game
       const categories = [
-        {
-          id: 1,
-          name: "Khu Vườn Trên Mây",
-          products: [],
-        },
-        { id: 2, name: "Liên Quân Mobile", products: [] },
-        { id: 3, name: "Clash Of Clans", products: [] },
-        { id: 4, name: "Dragon City", products: [] },
-        { id: 5, name: "Free Fire", products: [] },
-        { id: 6, name: "Game Khác", products: [] },
-        { id: 7, name: "Thẻ Game", products: [] },
+        { id: 1, name: "Khu Vườn Trên Mây", productsss: [] },
+        { id: 2, name: "Liên Quân Mobile", productsss: [] },
+        { id: 3, name: "Clash Of Clans", productsss: [] },
+        { id: 4, name: "Dragon City", productsss: [] },
+        { id: 5, name: "Free Fire", productsss: [] },
+        { id: 6, name: "Game Khác", productsss: [] },
+        { id: 7, name: "Thẻ Game", productsss: [] },
       ];
 
       function generateProductHTML(product) {
@@ -806,9 +1130,9 @@
                 )
                 .join("\n")}
             </div>
-            <button style="left: 5px; background-color: #34ff19" onclick='sendMessage("${
+            <button style="left: 5px; background-color: #34ff19" onclick="sendMessage("${
               product.id
-            }")'>🛒</button>  
+            }")"">🛒</button>  
             <div class="overlay-content">${product.title}</div>
             <button style="right: 5px; background-color: #ff7676" onclick="Overlay('${
               product.id
@@ -821,8 +1145,8 @@
         const container = document.getElementById(
           `product-items${category.id}`
         );
-        if (container && category.products.length > 0) {
-          container.innerHTML = category.products
+        if (container && category.productsss.length > 0) {
+          container.innerHTML = category.productsss
             .map(generateProductHTML)
             .join("");
         }
@@ -957,8 +1281,7 @@
 
       function sendMessage(data) {
         try {
-          const pageId = "488283351040349";
-          let url = `https://www.messenger.com/t/${pageId}`; // Link Messenger chuẩn cho cả điện thoại & máy tính
+          let url = `https://www.messenger.com/t/488283351040349`; // Link Messenger chuẩn cho cả điện thoại & máy tính
 
           if (typeof data === "string" && data.trim() !== "") {
             alert(`Đang gửi đơn hàng: ${data}`);
