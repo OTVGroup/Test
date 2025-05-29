@@ -435,6 +435,12 @@
 
     <!-- <div style="height: 20px"></div> -->
 
+    <img
+      src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/492354735_122136206864661217_7949125846570999972_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=d7FcDJVJ4hkQ7kNvwFgFS73&_nc_oc=Adl5KpbCeVYHBAz2dlDcXSNffu4_hkpHUwBsY1nHQh1OIxCEIOT-_QA33TZGz9tBztM&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=fo2DJvuF5oz5KErp1P_snQ&oh=00_AfICKKvMGOe8Xs9nkjS3Noni1ioSVvXGPimlNP8RMmCKlg&oe=683DBC4D"
+      alt="Background"
+      style="width: 100%; aspect-ratio: 820/312"
+    />
+
     <div id="video-container">
       <div id="video-player"></div>
       <!-- Đây là nơi player YouTube được tạo vào -->
