@@ -435,12 +435,6 @@
 
     <!-- <div style="height: 20px"></div> -->
 
-    <img
-      src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/492354735_122136206864661217_7949125846570999972_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=d7FcDJVJ4hkQ7kNvwFgFS73&_nc_oc=Adl5KpbCeVYHBAz2dlDcXSNffu4_hkpHUwBsY1nHQh1OIxCEIOT-_QA33TZGz9tBztM&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=fo2DJvuF5oz5KErp1P_snQ&oh=00_AfICKKvMGOe8Xs9nkjS3Noni1ioSVvXGPimlNP8RMmCKlg&oe=683DBC4D"
-      alt="Background"
-      style="width: 100%; aspect-ratio: 820/312"
-    />
-
     <div id="video-container">
       <div id="video-player"></div>
       <!-- Đây là nơi player YouTube được tạo vào -->
@@ -758,6 +752,7 @@
         )
         .join("");
 
+      // COMBO - Khu Vườn Trên Mây
       const productss = [
         {
           name: "CB.Vợt",
@@ -774,238 +769,238 @@
           price: "1k",
           quantity: "1",
         },
-        {
-          name: "CB.Nâng Tầng",
-          image:
-            "https://i.pinimg.com/736x/ab/06/18/ab0618b2f3f52bf76751aff15d0ec7a8.jpg",
-          name1: "Keo D.Mây",
-          image1:
-            "https://i.pinimg.com/474x/88/a7/e4/88a7e40dc4c265cd76cf491c50aa16e4.jpg",
-          no1: "6",
-          name2: "Lọ N.Thần",
-          image2:
-            "https://i.pinimg.com/474x/95/f8/0a/95f80ae795637d540e04105123cd216b.jpg",
-          no2: "7",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Mít",
-          image:
-            "https://i.pinimg.com/736x/5e/b5/a0/5eb5a052951e40351ae71119b4113018.jpg",
-          name1: "Mít",
-          image1:
-            "https://i.pinimg.com/474x/c8/d4/74/c8d4743a5801357e670e039858ca4d04.jpg",
-          no1: "75",
-          name2: "Mít Sấy",
-          image2:
-            "https://i.pinimg.com/474x/3c/63/59/3c6359a8032cef802b8be4968941c97e.jpg",
-          no2: "75",
-          name3: "Sinh Tố Mít",
-          image3:
-            "https://i.pinimg.com/474x/d3/ee/32/d3ee320098453df46b882e405e4a1b5f.jpg",
-          no3: "75",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Dứa",
-          image:
-            "https://i.pinimg.com/736x/35/6a/de/356ade871bdd852893744006d5e01d47.jpg",
-          name1: "Dứa",
-          image1:
-            "https://i.pinimg.com/474x/a3/3e/fc/a33efcd72ff80a699778a2d5f7f6882a.jpg",
-          no1: "75",
-          name2: "Dứa Sấy",
-          image2:
-            "https://i.pinimg.com/474x/44/48/b1/4448b17a17ed37068a9b1dd5f07f85f5.jpg",
-          no2: "75",
-          name3: "Nước Dứa",
-          image3:
-            "https://i.pinimg.com/736x/f3/15/ae/f315aeb25f643210a486c2cad55a27cc.jpg",
-          no3: "75",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Xoài",
-          image:
-            "https://i.pinimg.com/736x/3c/9f/1c/3c9f1cb9c3137423f5dd967bef128b7b.jpg",
-          name1: "Xoài",
-          image1:
-            "https://i.pinimg.com/474x/ea/df/b2/eadfb2be03c048433f58f29084a952da.jpg",
-          no1: "75",
-          name2: "Xoài Sấy",
-          image2:
-            "https://i.pinimg.com/474x/d9/b3/b1/d9b3b10cdb34e0b97cd8b6b7b08c9c20.jpg",
-          no2: "75",
-          name3: "Sinh Tố Xoài",
-          image3:
-            "https://i.pinimg.com/474x/20/f4/2d/20f42d7c2acac57126e5806054068d53.jpg",
-          no3: "75",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Nho",
-          image:
-            "https://i.pinimg.com/736x/43/64/d2/4364d2e61b2dd4d45bf8c764dd6e04fd.jpg",
-          name1: "Nho",
-          image1:
-            "https://i.pinimg.com/474x/cb/d8/2c/cbd82c87ffbb674d04e60bbf852e0780.jpg",
-          no1: "45",
-          name2: "Nho Sấy",
-          image2:
-            "https://i.pinimg.com/474x/77/19/34/77193423f65343aef01b697688c12337.jpg",
-          no2: "45",
-          name3: "Nước Nho",
-          image3:
-            "https://i.pinimg.com/474x/fb/c9/ae/fbc9ae57da21c3821e3b45741a803d5d.jpg",
-          no3: "45",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Ngọc-1",
-          image:
-            "https://i.pinimg.com/736x/bf/20/50/bf2050c0b0b43c314c2366060a386f74.jpg",
-          name1: "Ngọc Đỏ",
-          image1:
-            "https://i.pinimg.com/474x/cd/d2/04/cdd204f58ab6b093a94617f692f91398.jpg",
-          no1: "33",
-          name2: "Ngọc X.Biển",
-          image2:
-            "https://i.pinimg.com/736x/00/99/27/009927a35caced1eaa1598e8d5149f32.jpg",
-          no2: "33",
-          name3: "Ngọc Vàng",
-          image3:
-            "https://i.pinimg.com/474x/bc/19/9c/bc199c0f7626e3ab3f6cc0babf75086e.jpg",
-          no3: "33",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Ngọc-2",
-          image:
-            "https://i.pinimg.com/736x/a2/3e/c4/a23ec4c2c7cbcf478fbeeea031758ab0.jpg",
-          name1: "Ngọc Tím",
-          image1:
-            "https://i.pinimg.com/474x/a7/ef/ca/a7efca33165c810e1c81f31263fd50db.jpg",
-          no1: "9",
-          name2: "Ngọc Cam",
-          image2:
-            "https://i.pinimg.com/474x/fa/4c/f6/fa4cf62cb997beb2d999646501971b08.jpg",
-          no2: "9",
-          name3: "Ngọc X.Lá",
-          image3:
-            "https://i.pinimg.com/474x/b0/37/3b/b0373bb243f8aaaa0c6e16bda1af4d68.jpg",
-          no3: "9",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Bọ-1",
-          image:
-            "https://i.pinimg.com/736x/ca/db/87/cadb8705ddc1ab633f5d00959fa7f48d.jpg",
-          name1: "Bọ Rùa",
-          image1:
-            "https://i.pinimg.com/474x/b5/59/07/b559076ad355aa4b1675ac55e08f165e.jpg",
-          no1: "27",
-          name2: "Ốc Sên",
-          image2:
-            "https://i.pinimg.com/474x/ba/04/c8/ba04c8afd5021cb8cc55900cdb0d5c2b.jpg",
-          no2: "27",
-          name3: "Đom Đóm",
-          image3:
-            "https://i.pinimg.com/474x/6d/d7/db/6dd7dbdb030a5f337fa762378e8f07de.jpg",
-          no3: "27",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Bọ-2",
-          image:
-            "https://i.pinimg.com/736x/2b/70/d9/2b70d9d15c7bd6eeb814c09080b1e706.jpg",
-          name1: "Ong Mật",
-          image1:
-            "https://i.pinimg.com/474x/5f/0e/76/5f0e76aae9169c4663d9a8759fdf7bc0.jpg",
-          no1: "27",
-          name2: "Chuồn Chuồn",
-          image2:
-            "https://i.pinimg.com/474x/02/8e/0e/028e0e144ec65a0c0673da30de975976.jpg",
-          no2: "27",
-          name3: "Bươm Bướm",
-          image3:
-            "https://i.pinimg.com/474x/98/d4/b8/98d4b83c4711d7781c08618317219397.jpg",
-          no3: "27",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Thỏi",
-          image:
-            "https://i.pinimg.com/736x/68/51/ee/6851eede92a5ad3e0a5589c9933f9d49.jpg",
-          name1: "Thỏi Đồng",
-          image1:
-            "https://i.pinimg.com/474x/30/e9/10/30e910a6889550872608484b49942ae8.jpg",
-          no1: "30",
-          name2: "Thỏi Bạc",
-          image2:
-            "https://i.pinimg.com/474x/f9/8f/19/f98f198b25c78d9edddfee506f253856.jpg",
-          no2: "60",
-          name3: "Thỏi Vàng",
-          image3:
-            "https://i.pinimg.com/474x/3a/54/ad/3a54ade9144b0869933585794f7ab560.jpg",
-          no3: "45",
-          name4: "Thỏi B.Kim",
-          image4:
-            "https://i.pinimg.com/474x/7f/7a/2a/7f7a2a9dc91d6b8262a305782ff50e0b.jpg",
-          no4: "45",
-          price: "5k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Cám",
-          image:
-            "https://i.pinimg.com/736x/48/a9/f2/48a9f28a149120c1f5445e7340fc6da9.jpg",
-          name1: "Cám Gà",
-          image1:
-            "https://i.pinimg.com/474x/84/4f/09/844f09c991c8f830677e481208fbaf18.jpg",
-          no1: "540",
-          name2: "Cám Cừu",
-          image2:
-            "https://i.pinimg.com/474x/2d/fa/67/2dfa67fd37658939adfd696a0cd11c08.jpg",
-          no2: "540",
-          name3: "Cám Heo",
-          image3:
-            "https://i.pinimg.com/474x/a8/57/be/a857be4bb38f986a3879f10941b674ff.jpg",
-          no3: "540",
-          name4: "Cám Bò",
-          image4:
-            "https://i.pinimg.com/474x/fc/8e/2d/fc8e2d55c8e3b125d28eec5e62683f74.jpg",
-          no4: "540",
-          price: "10k",
-          quantity: "1",
-        },
-        {
-          name: "CB.Mùa Hè",
-          image:
-            "https://i.pinimg.com/736x/3e/08/00/3e08005b4a6df5d0dfa615174e74a85d.jpg",
-          name1: "VP. Kem",
-          image1:
-            "https://i.pinimg.com/474x/15/32/fc/1532fc9620e3cebcaa897498294a9e4a.jpg",
-          no1: "990",
-          name2: "VP. Kính",
-          image2:
-            "https://i.pinimg.com/474x/f7/4a/ca/f74aca49da4092b3ef935e2179d1c770.jpg",
-          no2: "660",
-          name3: "VP. Dừa",
-          image3:
-            "https://i.pinimg.com/474x/cf/dc/71/cfdc7156657b869915baf8cda120891b.jpg",
-          no3: "330",
-          price: "10k",
-          quantity: "1",
-        },
+        // {
+        //   name: "CB.Nâng Tầng",
+        //   image:
+        //     "https://i.pinimg.com/736x/ab/06/18/ab0618b2f3f52bf76751aff15d0ec7a8.jpg",
+        //   name1: "Keo D.Mây",
+        //   image1:
+        //     "https://i.pinimg.com/474x/88/a7/e4/88a7e40dc4c265cd76cf491c50aa16e4.jpg",
+        //   no1: "6",
+        //   name2: "Lọ N.Thần",
+        //   image2:
+        //     "https://i.pinimg.com/474x/95/f8/0a/95f80ae795637d540e04105123cd216b.jpg",
+        //   no2: "7",
+        //   price: "1k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Mít",
+        //   image:
+        //     "https://i.pinimg.com/736x/5e/b5/a0/5eb5a052951e40351ae71119b4113018.jpg",
+        //   name1: "Mít",
+        //   image1:
+        //     "https://i.pinimg.com/474x/c8/d4/74/c8d4743a5801357e670e039858ca4d04.jpg",
+        //   no1: "75",
+        //   name2: "Mít Sấy",
+        //   image2:
+        //     "https://i.pinimg.com/474x/3c/63/59/3c6359a8032cef802b8be4968941c97e.jpg",
+        //   no2: "75",
+        //   name3: "Sinh Tố Mít",
+        //   image3:
+        //     "https://i.pinimg.com/474x/d3/ee/32/d3ee320098453df46b882e405e4a1b5f.jpg",
+        //   no3: "75",
+        //   price: "1k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Dứa",
+        //   image:
+        //     "https://i.pinimg.com/736x/35/6a/de/356ade871bdd852893744006d5e01d47.jpg",
+        //   name1: "Dứa",
+        //   image1:
+        //     "https://i.pinimg.com/474x/a3/3e/fc/a33efcd72ff80a699778a2d5f7f6882a.jpg",
+        //   no1: "75",
+        //   name2: "Dứa Sấy",
+        //   image2:
+        //     "https://i.pinimg.com/474x/44/48/b1/4448b17a17ed37068a9b1dd5f07f85f5.jpg",
+        //   no2: "75",
+        //   name3: "Nước Dứa",
+        //   image3:
+        //     "https://i.pinimg.com/736x/f3/15/ae/f315aeb25f643210a486c2cad55a27cc.jpg",
+        //   no3: "75",
+        //   price: "1k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Xoài",
+        //   image:
+        //     "https://i.pinimg.com/736x/3c/9f/1c/3c9f1cb9c3137423f5dd967bef128b7b.jpg",
+        //   name1: "Xoài",
+        //   image1:
+        //     "https://i.pinimg.com/474x/ea/df/b2/eadfb2be03c048433f58f29084a952da.jpg",
+        //   no1: "75",
+        //   name2: "Xoài Sấy",
+        //   image2:
+        //     "https://i.pinimg.com/474x/d9/b3/b1/d9b3b10cdb34e0b97cd8b6b7b08c9c20.jpg",
+        //   no2: "75",
+        //   name3: "Sinh Tố Xoài",
+        //   image3:
+        //     "https://i.pinimg.com/474x/20/f4/2d/20f42d7c2acac57126e5806054068d53.jpg",
+        //   no3: "75",
+        //   price: "1k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Nho",
+        //   image:
+        //     "https://i.pinimg.com/736x/43/64/d2/4364d2e61b2dd4d45bf8c764dd6e04fd.jpg",
+        //   name1: "Nho",
+        //   image1:
+        //     "https://i.pinimg.com/474x/cb/d8/2c/cbd82c87ffbb674d04e60bbf852e0780.jpg",
+        //   no1: "45",
+        //   name2: "Nho Sấy",
+        //   image2:
+        //     "https://i.pinimg.com/474x/77/19/34/77193423f65343aef01b697688c12337.jpg",
+        //   no2: "45",
+        //   name3: "Nước Nho",
+        //   image3:
+        //     "https://i.pinimg.com/474x/fb/c9/ae/fbc9ae57da21c3821e3b45741a803d5d.jpg",
+        //   no3: "45",
+        //   price: "1k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Ngọc-1",
+        //   image:
+        //     "https://i.pinimg.com/736x/bf/20/50/bf2050c0b0b43c314c2366060a386f74.jpg",
+        //   name1: "Ngọc Đỏ",
+        //   image1:
+        //     "https://i.pinimg.com/474x/cd/d2/04/cdd204f58ab6b093a94617f692f91398.jpg",
+        //   no1: "33",
+        //   name2: "Ngọc X.Biển",
+        //   image2:
+        //     "https://i.pinimg.com/736x/00/99/27/009927a35caced1eaa1598e8d5149f32.jpg",
+        //   no2: "33",
+        //   name3: "Ngọc Vàng",
+        //   image3:
+        //     "https://i.pinimg.com/474x/bc/19/9c/bc199c0f7626e3ab3f6cc0babf75086e.jpg",
+        //   no3: "33",
+        //   price: "1k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Ngọc-2",
+        //   image:
+        //     "https://i.pinimg.com/736x/a2/3e/c4/a23ec4c2c7cbcf478fbeeea031758ab0.jpg",
+        //   name1: "Ngọc Tím",
+        //   image1:
+        //     "https://i.pinimg.com/474x/a7/ef/ca/a7efca33165c810e1c81f31263fd50db.jpg",
+        //   no1: "9",
+        //   name2: "Ngọc Cam",
+        //   image2:
+        //     "https://i.pinimg.com/474x/fa/4c/f6/fa4cf62cb997beb2d999646501971b08.jpg",
+        //   no2: "9",
+        //   name3: "Ngọc X.Lá",
+        //   image3:
+        //     "https://i.pinimg.com/474x/b0/37/3b/b0373bb243f8aaaa0c6e16bda1af4d68.jpg",
+        //   no3: "9",
+        //   price: "1k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Bọ-1",
+        //   image:
+        //     "https://i.pinimg.com/736x/ca/db/87/cadb8705ddc1ab633f5d00959fa7f48d.jpg",
+        //   name1: "Bọ Rùa",
+        //   image1:
+        //     "https://i.pinimg.com/474x/b5/59/07/b559076ad355aa4b1675ac55e08f165e.jpg",
+        //   no1: "27",
+        //   name2: "Ốc Sên",
+        //   image2:
+        //     "https://i.pinimg.com/474x/ba/04/c8/ba04c8afd5021cb8cc55900cdb0d5c2b.jpg",
+        //   no2: "27",
+        //   name3: "Đom Đóm",
+        //   image3:
+        //     "https://i.pinimg.com/474x/6d/d7/db/6dd7dbdb030a5f337fa762378e8f07de.jpg",
+        //   no3: "27",
+        //   price: "1k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Bọ-2",
+        //   image:
+        //     "https://i.pinimg.com/736x/2b/70/d9/2b70d9d15c7bd6eeb814c09080b1e706.jpg",
+        //   name1: "Ong Mật",
+        //   image1:
+        //     "https://i.pinimg.com/474x/5f/0e/76/5f0e76aae9169c4663d9a8759fdf7bc0.jpg",
+        //   no1: "27",
+        //   name2: "Chuồn Chuồn",
+        //   image2:
+        //     "https://i.pinimg.com/474x/02/8e/0e/028e0e144ec65a0c0673da30de975976.jpg",
+        //   no2: "27",
+        //   name3: "Bươm Bướm",
+        //   image3:
+        //     "https://i.pinimg.com/474x/98/d4/b8/98d4b83c4711d7781c08618317219397.jpg",
+        //   no3: "27",
+        //   price: "1k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Thỏi",
+        //   image:
+        //     "https://i.pinimg.com/736x/68/51/ee/6851eede92a5ad3e0a5589c9933f9d49.jpg",
+        //   name1: "Thỏi Đồng",
+        //   image1:
+        //     "https://i.pinimg.com/736x/30/e9/10/30e910a6889550872708484b49942ae8.jpg",
+        //   no1: "30",
+        //   name2: "Thỏi Bạc",
+        //   image2:
+        //     "https://i.pinimg.com/474x/f9/8f/19/f98f198b25c78d9edddfee506f253856.jpg",
+        //   no2: "60",
+        //   name3: "Thỏi Vàng",
+        //   image3:
+        //     "https://i.pinimg.com/474x/3a/54/ad/3a54ade9144b0869933585794f7ab560.jpg",
+        //   no3: "45",
+        //   name4: "Thỏi B.Kim",
+        //   image4:
+        //     "https://i.pinimg.com/474x/7f/7a/2a/7f7a2a9dc91d6b8262a305782ff50e0b.jpg",
+        //   no4: "45",
+        //   price: "5k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Cám",
+        //   image:
+        //     "https://i.pinimg.com/736x/48/a9/f2/48a9f28a149120c1f5445e7340fc6da9.jpg",
+        //   name1: "Cám Gà",
+        //   image1:
+        //     "https://i.pinimg.com/474x/84/4f/09/844f09c991c8f830677e481208fbaf18.jpg",
+        //   no1: "540",
+        //   name2: "Cám Cừu",
+        //   image2:
+        //     "https://i.pinimg.com/474x/2d/fa/67/2dfa67fd37658939adfd696a0cd11c08.jpg",
+        //   no2: "540",
+        //   name3: "Cám Heo",
+        //   image3:
+        //     "https://i.pinimg.com/474x/a8/57/be/a857be4bb38f986a3879f10941b674ff.jpg",
+        //   no3: "540",
+        //   name4: "Cám Bò",
+        //   image4:
+        //     "https://i.pinimg.com/474x/fc/8e/2d/fc8e2d55c8e3b125d28eec5e62683f74.jpg",
+        //   no4: "540",
+        //   price: "10k",
+        //   quantity: "1",
+        // },
+        // {
+        //   name: "CB.Mùa Hè",
+        //   image:
+        //     "https://i.pinimg.com/736x/3e/08/00/3e08005b4a6df5d0dfa615174e74a85d.jpg",
+        //   name1: "VP. Kem",
+        //   image1:
+        //     "https://i.pinimg.com/474x/15/32/fc/1532fc9620e3cebcaa897498294a9e4a.jpg",
+        //   no1: "990",
+        //   name2: "VP. Kính",
+        //   image2:
+        //     "https://i.pinimg.com/474x/f7/4a/ca/f74aca49da4092b3ef935e2179d1c770.jpg",
+        //   no2: "660",
+        //   name3: "VP. Dừa",
+        //   image3:
+        //     "https://i.pinimg.com/474x/cf/dc/71/cfdc7156657b869915baf8cda120891b.jpg",
+        //   no3: "330",
+        //   price: "10k",
+        //   quantity: "1",
+        // },
       ];
       const comboContainer = document.getElementById("product-itemss");
       comboContainer.innerHTML = productss
@@ -1090,7 +1085,7 @@
           }
           ${
             product.name5
-              ? `<strong>${product.name5}: x${product.no5}</strong><br>`
+              ? `<strong>${product.name5}: x${product.no5}</strong>`
               : ""
           }
         </div>
