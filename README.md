@@ -37,6 +37,9 @@
         align-items: center;
         justify-content: center;
         background: linear-gradient(135deg, #3cd5ff, #ffffff);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
         color: #000000;
         user-select: none;
       }
