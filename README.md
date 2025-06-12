@@ -31,7 +31,6 @@
     <style>
       /* Cấu hình chung cho body */
       body {
-        font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,9 +38,6 @@
         background: linear-gradient(135deg, #3cd5ff, #ffffff);
         color: #000000;
         user-select: none;
-        width: 100vw;
-        padding: 0;
-        margin: 17.5px auto 22.5px auto;
       }
 
       /* .body-background {
@@ -53,12 +49,10 @@
 
       .body-background {
         position: absolute; /* 🎯 Nằm phía sau */
-        top: 0;
-        left: 0;
-        width: 100vw; /* 🎯 Tối đa bằng viewport width */
-        height: 100vh; /* 🎯 Bằng với body height (100vh) */
-        background: linear-gradient(135deg, #3cd5ff, #ffffff);
-        z-index: -1; /* 🎯 Đưa xuống phía sau */
+        top: 17.5px;
+        left: 5px;
+        width: calc(100vw - 23.5px); /* 🎯 Tối đa bằng viewport width */
+        height: calc(100vh - 10px); /* 🎯 Bằng với body height (100vh) */
         overflow-y: auto;
         display: flex;
         flex-direction: column;
@@ -71,6 +65,7 @@
       .header {
         position: fixed;
         top: 0;
+        z-index: 111;
         left: -50%;
         right: -50%; /* Đặt các icon từ dưới lên */
         display: flex;
@@ -655,18 +650,19 @@
       </div>
     </div>
 
-    <div class="body-background"></div>
-    <!-- Sản phẩm SHOPEE -->
-    <div class="SHOPEE">
-      <div class="product-row"></div>
-    </div>
-    <!-- Sản phẩm TIKTOK -->
-    <div class="TIKTOK">
-      <div class="product-row"></div>
-    </div>
-    <!-- Sản phẩm OTISShop -->
-    <div class="OTISShop">
-      <div class="product-row"></div>
+    <div class="body-background">
+      <!-- Sản phẩm SHOPEE -->
+      <div class="SHOPEE">
+        <div class="product-row"></div>
+      </div>
+      <!-- Sản phẩm TIKTOK -->
+      <div class="TIKTOK">
+        <div class="product-row"></div>
+      </div>
+      <!-- Sản phẩm OTISShop -->
+      <div class="OTISShop">
+        <div class="product-row"></div>
+      </div>
     </div>
 
     <!-- List Sản phẩm -->
