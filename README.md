@@ -128,7 +128,7 @@
       .OTISShop {
         display: flex;
         width: calc(100vw - 20px); /* Chiều rộng bằng 100% cha trừ 20px */
-        max-width: 1200px; /* Giới hạn tối đa cũng là 1920px */
+        max-width: 1920px; /* Giới hạn tối đa cũng là 1920px */
         margin: 0 auto; /* Căn giữa container theo chiều ngang */
         flex-direction: column; /* Sắp xếp các phần tử con theo chiều dọc */
         align-items: center; /* Căn giữa theo trục ngang */
@@ -139,7 +139,7 @@
       /* Grid sản phẩm */
       .product-row {
         width: 100%;
-        max-width: 1200px;
+        max-width: 1920px;
         margin: 0 auto;
         box-sizing: border-box;
         text-align: center;
