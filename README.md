@@ -2229,6 +2229,7 @@
               top: 7px;
               border-radius: 5px;
               border: none;
+              background-color: transparent;
             "
             onclick="toggleContact('contact-Content')"
           >
