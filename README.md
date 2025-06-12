@@ -69,7 +69,7 @@
         top: 120px;
         left: 5px;
         width: calc(100vw - 10px); /* 🎯 Tối đa bằng viewport width */
-        height: calc(100vh - 120px); /* 🎯 Bằng với body height (100vh) */
+        height: calc(100vh - 125px); /* 🎯 Bằng với body height (100vh) */
         overflow-y: auto;
         display: flex;
         flex-direction: column;
