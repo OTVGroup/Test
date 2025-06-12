@@ -31,6 +31,7 @@
     <style>
       /* Cấu hình chung cho body */
       body {
+        font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -40,19 +41,35 @@
         user-select: none;
       }
 
-      /* .body-background {
-        display: flex;
-        width: calc(100% - 10px);
-        height: calc(100% - 10px);
-        z-index: -1; 
-      } */
+      /* 🎯 Loại bỏ hoàn toàn không gian thanh cuộn */
+      html {
+        overflow: -moz-scrollbars-none; /* Firefox cũ */
+        scrollbar-width: none; /* Firefox mới */
+      }
+
+      body {
+        -ms-overflow-style: none; /* IE/Edge */
+      }
+
+      ::-webkit-scrollbar {
+        width: 0 !important; /* 🎯 Không chiếm không gian */
+        height: 0 !important;
+        display: none !important; /* 🎯 Ẩn hoàn toàn */
+      }
+
+      /* 🎯 Đảm bảo không có padding/margin cho thanh cuộn */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
       .body-background {
         position: absolute; /* 🎯 Nằm phía sau */
-        top: 17.5px;
+        top: 110px;
         left: 5px;
-        width: calc(100vw - 23.5px); /* 🎯 Tối đa bằng viewport width */
-        height: calc(100vh - 10px); /* 🎯 Bằng với body height (100vh) */
+        width: calc(100vw - 10px); /* 🎯 Tối đa bằng viewport width */
+        height: calc(100vh - 120px); /* 🎯 Bằng với body height (100vh) */
         overflow-y: auto;
         display: flex;
         flex-direction: column;
@@ -83,6 +100,7 @@
       .header img {
         width: 75px;
         height: auto;
+        box-shadow: 0px 0px 12px #000000;
         border-radius: 50%;
         object-fit: cover;
       }
@@ -90,14 +108,13 @@
       .header img:hover {
         transform: scale(1.05);
         transition: transform 0.5s ease;
-        box-shadow: 0px 0px 12px #000000;
       }
       .filter-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #63e2ffb1;
+        background-color: #36daff;
         border-radius: 7px;
         gap: 2px;
         padding: 2px;
@@ -520,7 +537,7 @@
           width: auto;
           height: auto;
           padding: 3px;
-          background-color: #ffffffa6;
+          background-color: #636363a6;
           align-items: center;
           justify-items: center;
           border-radius: 10px;
