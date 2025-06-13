@@ -398,18 +398,42 @@
         height: 65px;
       }
 
+      #post-container,
       #video-container {
         max-width: 480px;
         width: calc(100% - 20px);
-        aspect-ratio: 16/9; /* Giữ đúng tỉ lệ video HD */
         margin: 0 auto 10px auto;
+        height: 100%;
+        max-height: 300px;
         border-radius: 5px;
         position: relative;
         border: 2px solid red;
         display: flex;
         flex-direction: column;
         align-items: center;
-        aspect-ratio: 16 / 9; /* Áp tỉ lệ luôn cho container */
+      }
+
+      #post-container {
+        overflow-y: scroll; /* Bật cuộn dọc khi nội dung vượt khung */
+      }
+
+      #video-container {
+        aspect-ratio: 16/9; /* Giữ đúng tỉ lệ video HD */
+      }
+
+      #post-container iframe {
+        display: none;
+        width: 100%;
+        max-width: 480px;
+        border: none;
+        overflow: hidden;
+        border-radius: 5px;
+        transition: all 0.5s ease;
+      }
+
+      #post-container iframe.active {
+        display: block;
+        transform: scale(1);
       }
 
       @keyframes slideUp {
@@ -474,14 +498,79 @@
           justify-items: center;
         "
       >
+        <div id="post-container">
+          <iframe
+            src="https://www.facebook.com/plugins/post.php?href=POST_1&show_text=true&width=500"
+            width="500"
+            height="436"
+            style="border: none; overflow: hidden"
+            scrolling="yes"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+          <iframe
+            src="https://www.facebook.com/plugins/post.php?href=POST_2&show_text=true&width=500"
+            width="500"
+            height="436"
+            style="border: none; overflow: hidden"
+            scrolling="yes"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+          <iframe
+            src="https://www.facebook.com/plugins/post.php?href=POST_3&show_text=true&width=500"
+            width="500"
+            height="436"
+            style="border: none; overflow: hidden"
+            scrolling="yes"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+        </div>
+
         <div id="video-container"></div>
       </div>
+
+      <script
+        async
+        defer
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"
+      ></script>
+
+      <script>
+        const iframes = document.querySelectorAll("#post-container iframe");
+
+        let current = 0;
+        function showPost(index) {
+          iframes.forEach((iframe, i) => {
+            iframe.classList.remove("active");
+            if (i === index) {
+              iframe.classList.add("active");
+            }
+          });
+        }
+
+        function startSlideshow() {
+          setInterval(function () {
+            current = (current + 1) % iframes.length;
+            showPost(current);
+          }, 5000);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          showPost(0);
+          startSlideshow();
+        });
+      </script>
 
       <script>
         const channelId = "UCM8xwnvLQ60wfEgduDRzRMg";
         const fixedVideo = "Hm6MqHYRzcw"; // video cố định
         let playlist = [],
-          current = 0,
+          currentvideo = 0,
           player;
 
         // Load YouTube IFrame API
@@ -511,8 +600,8 @@
 
         function onPlayerStateChange(e) {
           if (e.data === YT.PlayerState.ENDED) {
-            current = (current + 1) % playlist.length;
-            player.loadVideoById(playlist[current]);
+            currentvideo = (currentvideo + 1) % playlist.length;
+            player.loadVideoById(playlist[currentvideo]);
           }
         }
 
@@ -525,7 +614,7 @@
 
         function createPlayer() {
           player = new YT.Player("video-container", {
-            videoId: playlist[current],
+            videoId: playlist[currentvideo],
             playerVars: {
               autoplay: 1,
               controls: 1,
