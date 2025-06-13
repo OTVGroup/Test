@@ -33,7 +33,6 @@
       body {
         font-family: "Segoe UI", sans-serif;
         background-color: #000000;
-        color: #ffffff;
         -ms-overflow-style: none; /* IE/Edge */
       }
 
@@ -68,7 +67,7 @@
 
         font-family: "Segoe UI", sans-serif;
         background-color: #000000;
-        color: #ffffff;
+        color: #000000;
       }
 
       /* Header */
@@ -82,7 +81,7 @@
         left: 0;
         right: 0;
         gap: 5px;
-        z-index: 999;
+        z-index: 997;
         padding: 5px;
         display: flex; /* dùng flexbox để căn giữa nội dung */
         align-items: center;
@@ -280,7 +279,7 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
-        z-index: 999;
+        z-index: 998;
       }
 
       .icon img {
@@ -300,14 +299,17 @@
         position: fixed;
         bottom: 80px;
         right: 20px;
-        width: 300px;
+        max-height: calc(100vh - 80px);
+        min-width: 240px;
+        max-width: 360px;
+        width: calc(100vw - 40px);
         gap: 10px;
         background-color: #1c1c1c;
         border: 1px solid #444;
         border-radius: 10px;
         padding: 15px;
         z-index: 1000;
-        animation: slideUp 0.4s ease-in-out;
+        animation: slideUp 0.5s ease-in-out;
       }
 
       .contact-Content.active {
@@ -340,13 +342,14 @@
 
       .overlay {
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Giúp căn chính tâm */
         width: 100vw;
         height: 100vh;
         background: #fff;
         display: none;
-        z-index: 9999;
+        z-index: 999;
 
         flex-direction: column;
         justify-content: center;
@@ -355,6 +358,7 @@
 
         overflow-y: auto; /* Cuộn dọc */
         scroll-behavior: smooth;
+        animation: slideshow 0.5s ease-in-out;
       }
 
       .overlay button {
@@ -383,8 +387,10 @@
       }
 
       .overlay-img img {
-        height: 180px;
-        width: 320px;
+        max-height: 270px;
+        height: auto;
+        max-width: 480px;
+        width: calc(100vw - 10px);
       }
 
       .overlay-content {
@@ -394,8 +400,8 @@
       }
 
       .overlay-content img {
-        width: 65px;
-        height: 65px;
+        width: 90px;
+        height: 90px;
       }
 
       #post-container,
@@ -424,7 +430,7 @@
         margin: auto 2.5px;
         position: absolute;
         font-size: 18px;
-        z-index: 999;
+        z-index: 998;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -491,17 +497,27 @@
         }
       }
 
+      @keyframes slideshow {
+        from {
+          transform: scale(0.8);
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+          top: 0;
+          left: 0;
+        }
+      }
+
       /* Responsive */
       @media (max-width: 600px) {
         .products,
         .productss {
           grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
           justify-items: center; /* 👉 Canh giữa item trong mỗi ô */
-        }
-
-        .contact-Content {
-          width: calc(90% - 40px);
-          bottom: 100px;
         }
       }
       html {
@@ -892,6 +908,15 @@
       </div>
     </div>
 
+    <div id="product-overlay"></div>
+    <div id="product-overlay1"></div>
+    <div id="product-overlay2"></div>
+    <div id="product-overlay3"></div>
+    <div id="product-overlay4"></div>
+    <div id="product-overlay5"></div>
+    <div id="product-overlay6"></div>
+    <div id="product-overlay7"></div>
+
     <script>
       // VP - Khu Vườn Trên Mây
       // const products = [];
@@ -1217,9 +1242,39 @@
                         <button onclick="Overlay('${combo.name}')">🔍</button>
                       </div>
                     </div>
-                  </div>
+                  </div>`;
+        })
+        .join("");
+      const containeroverlay = document.getElementById("product-overlay");
+      containeroverlay.innerHTML = productss
+        .map((combo) => {
+          // Tính tổng số lượng các item con
+          const items = [1, 2, 3, 4]
+            .map((i) => ({
+              image: combo[`image${i}`],
+              name: combo[`name${i}`],
+              no: combo[`no${i}`],
+            }))
+            .filter((item) => item.name); // chỉ lấy những item có dữ liệu
 
-                  <div class="overlay" id="${combo.name}">
+          const totalNo = items.reduce(
+            (sum, item) => sum + Number(item.no || 0),
+            0
+          );
+
+          const overlayItems = items
+            .map(
+              (item) => `
+              ${
+                item.image
+                  ? `<img src="${item.image}" alt="${item.name}" /><br>`
+                  : ""
+              }
+                 <strong>${item.name}: x${item.no}</strong><br><br>`
+            )
+            .join("");
+
+          return `<div class="overlay" id="${combo.name}">
                     <h2>Thông Tin Chi Tiết</h2>
                     <button style="left: 5px; background-color: #34ff19" onclick="sendMessage('${combo.name} x${totalNo}')">🛒</button>
                     <div class="overlay-content">${overlayItems}</div>
@@ -1238,6 +1293,7 @@
         { id: 6, name: "Game Khác", productsss: [] },
         { id: 7, name: "Thẻ Game", productsss: [] },
       ];
+
       function generateProductHTML(productsss) {
         return `
           <div class="itemss">
@@ -1251,6 +1307,10 @@
               </div>
             </div>
           </div>
+        `;
+      }
+      function generateOverlayHTML(productsss) {
+        return `
           <div class="overlay" id="${productsss.id}">
             <h2>Thông Tin Chi Tiết</h2>
             <div class="overlay-img">
@@ -1263,9 +1323,9 @@
                 )
                 .join("\n")}
             </div>
-            <button style="left: 5px; background-color: #34ff19" onclick="sendMessage("${
+            <button style="left: 5px; background-color: #34ff19" onclick="sendMessage('${
               productsss.id
-            }")"">🛒</button>  
+            } - ${productsss.price}')">🛒</button>  
             <div class="overlay-content">${productsss.title}</div>
             <button style="right: 5px; background-color: #ff7676" onclick="Overlay('${
               productsss.id
@@ -1277,30 +1337,34 @@
         const containersss = document.getElementById(
           `product-items${category.id}`
         );
+        const containeroverlays = document.getElementById(
+          `product-overlay${category.id}`
+        );
         if (containersss && category.productsss.length > 0) {
           containersss.innerHTML = category.productsss
             .map(generateProductHTML)
+            .join("");
+          containeroverlays.innerHTML = category.productsss
+            .map(generateOverlayHTML)
             .join("");
         }
       });
 
       // Mở Title Acc
-      function Overlay(ID) {
-        const contents = document.querySelectorAll(".overlay");
-        const target = document.getElementById(ID);
+      function Overlay(id) {
+        const overlays = document.querySelectorAll(".overlay");
+        const target = document.getElementById(id);
+        if (!target) return;
 
-        if (!target) {
-          console.warn("Không tìm thấy phần tử với ID:", ID);
-          return;
-        }
+        // Kiểm trực tiếp trước
+        const isVisible = target.style.display === "flex";
 
-        const currentDisplay = window.getComputedStyle(target).display;
-        console.log("Phần tử", ID, "hiện trạng display:", currentDisplay);
-
-        if (currentDisplay === "flex") {
+        if (isVisible) {
+          // Nếu đang mở -> đóng lại
           target.style.display = "none";
         } else {
-          contents.forEach((el) => (el.style.display = "none"));
+          // Nếu đang đóng -> đóng tất cả trước rồi mở cái cần xem
+          overlays.forEach((el) => (el.style.display = "none"));
           target.style.display = "flex";
         }
       }
