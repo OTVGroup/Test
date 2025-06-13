@@ -297,9 +297,9 @@
       .contact-Content {
         display: none;
         position: fixed;
-        bottom: 80px;
+        bottom: 90px;
         right: 20px;
-        max-height: calc(100vh - 80px);
+        max-height: calc(100vh - 110px);
         min-width: 240px;
         max-width: 360px;
         width: calc(100vw - 40px);
