@@ -420,10 +420,16 @@
       #post-container button {
         width: 15px;
         height: 25px;
+        border-radius: 2.5px;
         margin: auto 2.5px;
         position: absolute;
         font-size: 18px;
         z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        line-height: 1;
       }
 
       #post {
@@ -554,7 +560,6 @@
     <div class="post-content">
       <b>🎯THU MUA ACC KVTM - GIÁ TỐT | CHỐT DEAL NGAY!🔥</b>
       <b>🌿Acc Clone cắt xó? Không gì khó – đã có OTISStore!🔥</b>
-      </br>
       <a>📌 OTISStore thu mua Acc KVTM các loại:</a>
       <ul>
         <li>✅ Level 60+ (Kèm chậu / Không chậu đều nhận)</li>
@@ -571,9 +576,7 @@
       <a href="https://otvgroup.github.io/OTISStore.com.vn" target="_blank" rel="nofollow noopener">
         🌐 Website: https://otvgroup.github.io/OTISStore.com.vn
       </a>
-      </br>
       <b>✨ OTISSTORE - Uy Tín Tạo Nên Thương Hiệu!</b>
-      </br>
       <a>#OTISStore #OTVGroup #ShopAcc #MuaAcc #BanAcc #AccGame #AccClone #KVTM #KhuVuonTrenMay #ChotDeal #GiaoDichUyTin</a>
     </div>`,
         ];
