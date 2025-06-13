@@ -32,7 +32,6 @@
     <style>
       body {
         font-family: "Segoe UI", sans-serif;
-        min-width: 480px;
         background-color: #000000;
         color: #ffffff;
         -ms-overflow-style: none; /* IE/Edge */
@@ -58,11 +57,15 @@
       }
 
       .body-background {
-        margin: 100px auto 0 auto;
-        width: 100vw;
         position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%); /* dịch tâm khối về chính giữa */
+
+        width: 100vw;
         min-width: 480px;
         height: 100vh;
+
         font-family: "Segoe UI", sans-serif;
         background-color: #000000;
         color: #ffffff;
