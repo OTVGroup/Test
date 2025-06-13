@@ -467,11 +467,13 @@
       .post-content ul {
         list-style: none;
         margin-left: 10px;
+        margin-bottom: 0;
         padding: 0;
       }
 
       .post-content ul ul {
         margin-left: 20px;
+        margin-bottom: 0;
       }
 
       #video-container {
@@ -570,7 +572,7 @@
           </ul>
         </li>
       </ul>
-      <a>⚡Giao dịch trực tiếp – Giá tốt, chốt deal – Uy tín 100%!</a>
+      <a>⚡Giao dịch trực tiếp - Giá tốt, chốt deal - Uy tín 100%!</a>
       <a>💬 Inbox để nhận thông báo trong 1 nốt nhạc!</a>
       <a href="tel:0329022431">📞 Hotline: 0329 022 431</a>
       <a href="https://otvgroup.github.io/OTISStore.com.vn" target="_blank" rel="nofollow noopener">
