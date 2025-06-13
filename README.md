@@ -405,35 +405,36 @@
         margin: 0 auto 10px auto;
         height: 100%;
         max-height: 300px;
+        min-height: 180px;
         border-radius: 5px;
         position: relative;
         border: 2px solid red;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items: center; /* Căn giữa theo chiều dọc */
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        position: relative;
+        flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
       #post-container {
         overflow-y: scroll; /* Bật cuộn dọc khi nội dung vượt khung */
+        transition: all 0.5s ease;
+      }
+
+      #post {
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        transition: all 1s ease;
+        opacity: 0;
+      }
+
+      #post.active {
+        opacity: 1;
       }
 
       #video-container {
         aspect-ratio: 16/9; /* Giữ đúng tỉ lệ video HD */
-      }
-
-      #post-container iframe {
-        display: none;
-        width: 100%;
-        max-width: 480px;
-        border: none;
-        overflow: hidden;
-        border-radius: 5px;
-        transition: all 0.5s ease;
-      }
-
-      #post-container iframe.active {
-        display: block;
-        transform: scale(1);
       }
 
       @keyframes slideUp {
@@ -486,10 +487,11 @@
       <!-- <div style="height: 20px"></div> -->
       <div
         style="
-          width: 970px;
+          max-width: 970px;
+          width: 100%;
+          margin: auto;
           height: auto;
           display: grid;
-          margin: 0 auto;
           grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
           gap: 10px;
           justify-content: center;
@@ -498,72 +500,56 @@
           justify-items: center;
         "
       >
-        <div id="post-container">
-          <iframe
-            src="https://www.facebook.com/plugins/post.php?href=POST_1&show_text=true&width=500"
-            width="500"
-            height="436"
-            style="border: none; overflow: hidden"
-            scrolling="yes"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
-          <iframe
-            src="https://www.facebook.com/plugins/post.php?href=POST_2&show_text=true&width=500"
-            width="500"
-            height="436"
-            style="border: none; overflow: hidden"
-            scrolling="yes"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
-          <iframe
-            src="https://www.facebook.com/plugins/post.php?href=POST_3&show_text=true&width=500"
-            width="500"
-            height="436"
-            style="border: none; overflow: hidden"
-            scrolling="yes"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
-        </div>
-
         <div id="video-container"></div>
+        <div id="post-container">
+          <div id="post" class="fb-post" data-href=""></div>
+        </div>
       </div>
 
       <script
         async
         defer
         src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"
+        crossorigin="anonymous"
       ></script>
-
       <script>
-        const iframes = document.querySelectorAll("#post-container iframe");
+        // Danh sách post
+        const postURLs = [
+          "https://www.facebook.com/share/p/19FRMWb8ux/",
+          "https://www.facebook.com/share/p/19FRMWb8ux/",
+          "https://www.facebook.com/share/p/19FRMWb8ux/",
+        ];
 
-        let current = 0;
-        function showPost(index) {
-          iframes.forEach((iframe, i) => {
-            iframe.classList.remove("active");
-            if (i === index) {
-              iframe.classList.add("active");
-            }
-          });
+        const postContainer = document.getElementById("post-container");
+
+        if (postURLs.length === 0 && postContainer) {
+          postContainer.remove();
+        } else {
+          // Nếu có link thì tiếp tục khởi động
+          let current = 0;
+          const post = document.getElementById("post");
+
+          function showPost(url) {
+            post.classList.remove("active");
+
+            setTimeout(function () {
+              post.setAttribute("data-href", url);
+              FB.XFBML.parse(document.getElementById("post-container"));
+              setTimeout(function () {
+                post.classList.add("active");
+              }, 500);
+            }, 500);
+          }
+
+          window.fbAsyncInit = function () {
+            showPost(postURLs[current]);
+
+            setInterval(function () {
+              current = (current + 1) % postURLs.length;
+              showPost(postURLs[current]);
+            }, 5000);
+          };
         }
-
-        function startSlideshow() {
-          setInterval(function () {
-            current = (current + 1) % iframes.length;
-            showPost(current);
-          }, 5000);
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-          showPost(0);
-          startSlideshow();
-        });
       </script>
 
       <script>
