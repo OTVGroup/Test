@@ -410,27 +410,62 @@
         position: relative;
         border: 2px solid red;
         display: flex;
+        background: #ffffff;
         align-items: center; /* Căn giữa theo chiều dọc */
         justify-content: center; /* Căn giữa theo chiều ngang */
         position: relative;
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
-      #post-container {
-        overflow-y: scroll; /* Bật cuộn dọc khi nội dung vượt khung */
-        transition: all 0.5s ease;
+      #post-container button {
+        width: 15px;
+        height: 25px;
+        margin: auto 2.5px;
+        position: absolute;
+        font-size: 18px;
+        z-index: 999;
       }
 
       #post {
         width: 100%;
-        height: auto;
+        height: 100%;
+        font-size: 14px;
+        max-height: 300px;
         min-height: 180px;
-        transition: all 1s ease;
-        opacity: 0;
+        transition: color 1s ease, transform 1s ease, opacity 1s ease;
+        color: #000000;
+        gap: 5px;
+        padding: 5px 20px;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
-      #post.active {
-        opacity: 1;
+      #post img {
+        width: 100%;
+        border: 2px solid #000000;
+        height: auto;
+      }
+
+      .post-content {
+        width: 100%;
+        font-weight: 400;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Căn các items về phía trái */
+        text-align: left; /* Căn văn bản về phía trái */
+      }
+
+      .post-content ul {
+        list-style: none;
+        margin-left: 10px;
+        padding: 0;
+      }
+
+      .post-content ul ul {
+        margin-left: 20px;
       }
 
       #video-container {
@@ -502,54 +537,68 @@
       >
         <div id="video-container"></div>
         <div id="post-container">
-          <div id="post" class="fb-post" data-href=""></div>
+          <button id="prevBtn" style="left: 0">‹</button>
+          <div id="post" class="post">
+            <!-- Nội dung post sẽ được thay bằng JavaScript -->
+          </div>
+          <button id="nextBtn" style="right: 0">›</button>
         </div>
       </div>
 
-      <script
-        async
-        defer
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"
-        crossorigin="anonymous"
-      ></script>
       <script>
-        // Danh sách post
-        const postURLs = [
-          "https://www.facebook.com/share/p/19FRMWb8ux/",
-          "https://www.facebook.com/share/p/19FRMWb8ux/",
-          "https://www.facebook.com/share/p/19FRMWb8ux/",
+        // Danh sách các bài post
+        const posts = [
+          `
+    <img src="https://i.pinimg.com/736x/c6/22/17/c62217c09ff9a1638071f50ef48f02a3.jpg" alt="Image">
+      
+    <div class="post-content">
+      <b>🎯THU MUA ACC KVTM - GIÁ TỐT | CHỐT DEAL NGAY!🔥</b>
+      <b>🌿Acc Clone cắt xó? Không gì khó – đã có OTISStore!🔥</b>
+      </br>
+      <a>📌 OTISStore thu mua Acc KVTM các loại:</a>
+      <ul>
+        <li>✅ Level 60+ (Kèm chậu / Không chậu đều nhận)</li>
+        <li>✅ Sức chứa kho:
+          <ul>
+            <li> ■ Kho 1: > 500 slot ■ Kho 2: > 500 slot</li>
+            <li> ■ Kho 3: > 400 slot ■ Kho 4: > 400 slot</li>
+          </ul>
+        </li>
+      </ul>
+      <a>⚡Giao dịch trực tiếp – Giá tốt, chốt deal – Uy tín 100%!</a>
+      <a>💬 Inbox để nhận thông báo trong 1 nốt nhạc!</a>
+      <a href="tel:0329022431">📞 Hotline: 0329 022 431</a>
+      <a href="https://otvgroup.github.io/OTISStore.com.vn" target="_blank" rel="nofollow noopener">
+        🌐 Website: https://otvgroup.github.io/OTISStore.com.vn
+      </a>
+      </br>
+      <b>✨ OTISSTORE - Uy Tín Tạo Nên Thương Hiệu!</b>
+      </br>
+      <a>#OTISStore #OTVGroup #ShopAcc #MuaAcc #BanAcc #AccGame #AccClone #KVTM #KhuVuonTrenMay #ChotDeal #GiaoDichUyTin</a>
+    </div>`,
         ];
 
-        const postContainer = document.getElementById("post-container");
+        let current = 0;
+        const post = document.getElementById("post");
 
-        if (postURLs.length === 0 && postContainer) {
-          postContainer.remove();
-        } else {
-          // Nếu có link thì tiếp tục khởi động
-          let current = 0;
-          const post = document.getElementById("post");
-
-          function showPost(url) {
-            post.classList.remove("active");
-
-            setTimeout(function () {
-              post.setAttribute("data-href", url);
-              FB.XFBML.parse(document.getElementById("post-container"));
-              setTimeout(function () {
-                post.classList.add("active");
-              }, 500);
-            }, 500);
-          }
-
-          window.fbAsyncInit = function () {
-            showPost(postURLs[current]);
-
-            setInterval(function () {
-              current = (current + 1) % postURLs.length;
-              showPost(postURLs[current]);
-            }, 5000);
-          };
+        function showPost(index) {
+          post.innerHTML = posts[index];
         }
+
+        document.getElementById("prevBtn").addEventListener("click", () => {
+          current--;
+          if (current < 0) current = posts.length - 1;
+          showPost(current);
+        });
+
+        document.getElementById("nextBtn").addEventListener("click", () => {
+          current++;
+          if (current >= posts.length) current = 0;
+          showPost(current);
+        });
+
+        // Hiển thị post ban đầu
+        showPost(current);
       </script>
 
       <script>
