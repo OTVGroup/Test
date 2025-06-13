@@ -60,6 +60,7 @@
       .body-background {
         margin: 100px auto 0 auto;
         width: 100vw;
+        position: absolute;
         min-width: 480px;
         height: 100vh;
         font-family: "Segoe UI", sans-serif;
