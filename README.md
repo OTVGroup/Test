@@ -454,7 +454,7 @@
       }
 
       #post img {
-        width: 100%;
+        width: calc(100% - 4px);
         min-width: 380px;
         border: 2px solid #000000;
         height: auto;
@@ -1488,7 +1488,14 @@
             Thông Tin Chi Tiết!
           </div>
           <div style="text-align: left; width: 100%; font-size: 14px">
-            <ul style="list-style: none; margin: 5px 0 5px auto; padding: 0">
+            <ul
+              style="
+                list-style: none;
+                margin: 5px 0 5px auto;
+                padding: 0;
+                line-height: 1.1;
+              "
+            >
               <li>
                 🔴 Fanpage Chính Thức: OTISStore -
                 <a
