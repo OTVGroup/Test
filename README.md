@@ -1521,7 +1521,7 @@
               </li>
               <li>
                 🔴 Group Facebook:
-                <ul style="list-style: none; margin-left: 15px; padding: 0">
+                <ul style="list-style: none; margin-left: 10px; padding: 0">
                   <li>
                     🍀Khu Vườn Trên Mây🍀 -
                     <a
@@ -1586,7 +1586,7 @@
               </li>
               <li>
                 🔴 Hỗ Trợ Kỹ Thuật:
-                <ul style="list-style: none; margin-left: 15px">
+                <ul style="list-style: none; margin-left: 10px; padding: 0">
                   <li>
                     🟡 Facebook -
                     <a
