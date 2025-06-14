@@ -62,7 +62,7 @@
         transform: translateX(-50%); /* dịch tâm khối về chính giữa */
 
         width: 100vw;
-        min-width: 480px;
+        min-width: 420px;
         height: 100vh;
 
         font-family: "Segoe UI", sans-serif;
@@ -73,7 +73,7 @@
       /* Header */
       .header {
         width: 100vw;
-        min-width: 480px;
+        min-width: 420px;
         height: 90px;
         background-color: #000000;
         position: fixed;
@@ -103,8 +103,8 @@
 
       .header-section {
         width: calc(100% - 90px);
-        min-width: 380px;
-        max-width: 490px;
+        min-width: 320px;
+        max-width: 500px;
         height: auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -128,7 +128,7 @@
 
       .header-content {
         width: 100%;
-        min-width: 480px;
+        min-width: 420px;
         height: auto;
         min-height: 10px;
         background-color: #272727;
