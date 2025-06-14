@@ -139,7 +139,7 @@
       .products,
       .productss {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         gap: 5px;
         padding: 5px;
         justify-items: center; /* 👉 Canh giữa item trong mỗi ô */
@@ -455,12 +455,14 @@
 
       #post img {
         width: 100%;
+        min-width: 340px;
         border: 2px solid #000000;
         height: auto;
       }
 
       .post-content {
         width: 100%;
+        min-width: 340px;
         font-weight: 400;
         height: auto;
         display: flex;
@@ -511,14 +513,6 @@
         }
       }
 
-      /* Responsive */
-      @media (max-width: 600px) {
-        .products,
-        .productss {
-          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-          justify-items: center; /* 👉 Canh giữa item trong mỗi ô */
-        }
-      }
       html {
         scroll-behavior: smooth;
       }
@@ -550,8 +544,8 @@
           margin: auto;
           height: auto;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-          gap: 10px;
+          grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+          gap: 5px;
           justify-content: center;
           align-items: center;
           align-content: center;
