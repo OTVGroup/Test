@@ -62,7 +62,7 @@
         transform: translateX(-50%); /* dịch tâm khối về chính giữa */
 
         width: 100vw;
-        min-width: 420px;
+        min-width: 380px;
         height: 100vh;
 
         font-family: "Segoe UI", sans-serif;
@@ -73,7 +73,7 @@
       /* Header */
       .header {
         width: 100vw;
-        min-width: 420px;
+        min-width: 380px;
         height: 90px;
         background-color: #000000;
         position: fixed;
@@ -89,7 +89,8 @@
       }
 
       .header img {
-        height: 80px;
+        height: 60px;
+        margin: auto 0;
         border-radius: 50%;
         object-fit: contain;
       }
@@ -102,7 +103,7 @@
       }
 
       .header-section {
-        width: calc(100% - 90px);
+        width: calc(100% - 75px);
         min-width: 320px;
         max-width: 500px;
         height: auto;
@@ -128,7 +129,7 @@
 
       .header-content {
         width: 100%;
-        min-width: 420px;
+        min-width: 380px;
         height: auto;
         min-height: 10px;
         background-color: #272727;
