@@ -298,7 +298,7 @@
         position: fixed;
         bottom: 90px;
         right: 20px;
-        max-height: calc(100vh - 110px);
+        max-height: calc(100vh - 200px);
         min-width: 240px;
         max-width: 360px;
         width: calc(100vw - 40px);
@@ -308,6 +308,8 @@
         border-radius: 10px;
         padding: 15px;
         z-index: 1000;
+        overflow-y: auto; /* Cuộn dọc */
+        scroll-behavior: smooth;
         animation: slideUp 0.5s ease-in-out;
       }
 
@@ -568,24 +570,24 @@
       
     <div class="post-content">
       <b>🎯THU MUA ACC KVTM - GIÁ TỐT | CHỐT DEAL NGAY!🔥</b>
-      <b>🌿Acc Clone cắt xó? Không gì khó – đã có OTISStore!🔥</b>
-      <a>📌 OTISStore thu mua Acc KVTM các loại:</a>
+      <b>🌿Acc Clone cất xó? Không gì khó – đã có OTISStore!🔥</b>
+      <a>📌OTISStore thu mua Acc KVTM các loại:</a>
       <ul>
-        <li>✅ Level 60+ (Kèm chậu / Không chậu đều nhận)</li>
-        <li>✅ Sức chứa kho:
+        <li>✅Level 60+ (Kèm chậu / Không chậu đều nhận)</li>
+        <li>✅Sức chứa kho:
           <ul>
-            <li> ■ Kho 1: > 500 slot ■ Kho 2: > 500 slot</li>
-            <li> ■ Kho 3: > 400 slot ■ Kho 4: > 400 slot</li>
+            <li>▫️Kho 1: > 500 slot ▫️Kho 2: > 500 slot</li>
+            <li>▫️Kho 3: > 400 slot ▫️Kho 4: > 400 slot</li>
           </ul>
         </li>
       </ul>
       <a>⚡Giao dịch trực tiếp - Giá tốt, chốt deal - Uy tín 100%!</a>
-      <a>💬 Inbox để nhận thông báo trong 1 nốt nhạc!</a>
+      <a>💬Inbox để nhận thông báo trong 1 nốt nhạc!</a>
       <a href="tel:0329022431">📞 Hotline: 0329 022 431</a>
       <a href="https://otvgroup.github.io/OTISStore.com.vn" target="_blank" rel="nofollow noopener">
-        🌐 Website: https://otvgroup.github.io/OTISStore.com.vn
+        🌐Website: https://otvgroup.github.io/OTISStore.com.vn
       </a>
-      <b>✨ OTISSTORE - Uy Tín Tạo Nên Thương Hiệu!</b>
+      <b>✨OTISSTORE - Uy Tín Tạo Nên Thương Hiệu!</b>
       <a>#OTISStore #OTVGroup #ShopAcc #MuaAcc #BanAcc #AccGame #AccClone #KVTM #KhuVuonTrenMay #ChotDeal #GiaoDichUyTin</a>
     </div>`,
         ];
@@ -896,6 +898,28 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Keyword SEO -->
+      <div
+        style="
+          min-width: 380px;
+          max-width: 970px;
+          margin: auto;
+          padding: 20px 15px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 1.2;
+          color: #bbb;
+        "
+      >
+        <strong>Mọi người cũng tìm kiếm:</strong><br />
+        Shop Gaming | Shop Acc | Shop Acc Tân Thủ | Shop Uy Tín | Giao Dịch Trực
+        Tiếp | Bảo Mật An Toàn | Thông Tin Minh Bạch | Hỗ Trợ Bảo Hành | Mua Bán
+        Tài Khoản Game | Thanh Lý Acc Clone | Thu Acc Cũ | Acc Hiếm | Acc Chất
+        Lượng Cao | Acc Giá Rẻ | Hot Deal | Acc Sale | Acc Khu Vườn Trên Mây |
+        Acc Liên Quân Mobile | Acc Free Fire | Acc Clash of Clans | Acc Dragon
+        City | Acc Kim Cương | Acc Thách Đấu | Acc Full Tướng | Acc Full Skin
       </div>
     </div>
 
@@ -1459,38 +1483,159 @@
         />
       </div>
       <div class="contact-Content" id="contact-Content">
-        <div style="text-align: center; width: 100%">
-          <div style="font-size: 18px; font-weight: 600; color: white">
-            Hướng Dẫn!
+        <div style="text-align: center; width: 100%; color: white">
+          <div style="font-size: 18px; font-weight: 600">
+            Thông Tin Chi Tiết!
           </div>
-          <button
-            style="
-              position: absolute;
-              right: 5px;
-              top: 5px;
-              background-color: #202020;
-              color: white;
-              border: none;
-            "
-            onclick="toggleContact('contact-Content')"
-          >
-            x
-          </button>
-          <button
-            class="order"
-            style="
-              position: absolute;
-              left: 10px;
-              top: 10px;
-              font-size: 14px;
-              background-color: #404040;
-              color: white;
-              border-radius: 2px;
-            "
-            onclick="sendMessage('');"
-          >
-            Hỗ Trợ
-          </button>
+          <div style="text-align: left; width: 100%; font-size: 14px">
+            <ul style="list-style: none; margin: 5px 10px 5px auto">
+              <li>
+                🔴 Fanpage Chính Thức: OTISStore -
+                <a
+                  href="https://www.facebook.com/OtisGamerVN"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  style="
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: rgb(253, 22, 22);
+                  "
+                >
+                  TẠI ĐÂY
+                </a>
+              </li>
+              <li>
+                🔴 Kênh Youtube: OTISSTORE -
+                <a
+                  href="https://www.youtube.com/@otisstorevn"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  style="
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: rgb(253, 22, 22);
+                  "
+                >
+                  TẠI ĐÂY
+                </a>
+              </li>
+              <li>
+                🔴 Group Facebook:
+                <ul style="list-style: none; margin-left: 15px">
+                  <li>
+                    🍀Khu Vườn Trên Mây🍀 -
+                    <a
+                      href="https://www.facebook.com/share/g/1AeLKxH8R9/"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      style="
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: rgb(238, 223, 7);
+                      "
+                    >
+                      TRUY CẬP
+                    </a>
+                  </li>
+                  <li>
+                    🍀Liên Quân Mobile🍀 -
+                    <a
+                      href="https://www.facebook.com/share/g/1HSyoKB62D/"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      style="
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: rgb(238, 223, 7);
+                      "
+                    >
+                      TRUY CẬP
+                    </a>
+                  </li>
+                  <li>
+                    🍀Clash Of Clans🍀 -
+                    <a
+                      href="https://www.facebook.com/share/g/15yrvETXAx/"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      style="
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: rgb(238, 223, 7);
+                      "
+                    >
+                      TRUY CẬP
+                    </a>
+                  </li>
+                  <li>
+                    🍀Free Fire🍀 -
+                    <a
+                      href="https://www.facebook.com/share/g/15ipUB67z4/"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      style="
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: rgb(238, 223, 7);
+                      "
+                    >
+                      TRUY CẬP
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                🔴 Hỗ Trợ Kỹ Thuật:
+                <ul style="list-style: none; margin-left: 15px">
+                  <li>
+                    🟡 Facebook -
+                    <a
+                      href="https://www.messenger.com/t/488283351040349"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      style="
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: rgb(248, 59, 255);
+                      "
+                    >
+                      Admin: Otis Võ
+                    </a>
+                  </li>
+                  <li>
+                    🟡 Zalo -
+                    <a
+                      href="https://www.messenger.com/t/488283351040349"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      style="
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: rgb(1, 213, 251);
+                      "
+                    >
+                      Otis Võ: 0329.022.431
+                    </a>
+                  </li>
+                  <li>
+                    🟡 E-mail -
+                    <a
+                      href="mailto:thinhkvtm2006@gmail.com"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      style="
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: rgb(59, 255, 154);
+                      "
+                    >
+                      thinhkvtm2006@gmail.com
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
         <img
           src="https://i.pinimg.com/736x/d7/a9/bd/d7a9bd5d702fac221ee7b6f9994750bc.jpg"
