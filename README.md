@@ -62,7 +62,7 @@
         transform: translateX(-50%); /* dịch tâm khối về chính giữa */
 
         width: 100vw;
-        min-width: 340px;
+        min-width: 380px;
         height: 100vh;
 
         font-family: "Segoe UI", sans-serif;
@@ -73,7 +73,7 @@
       /* Header */
       .header {
         width: 100vw;
-        min-width: 340px;
+        min-width: 380px;
         height: 90px;
         background-color: #000000;
         position: fixed;
@@ -127,7 +127,7 @@
 
       .header-content {
         width: 100%;
-        min-width: 340px;
+        min-width: 380px;
         height: auto;
         min-height: 10px;
         background-color: #272727;
@@ -341,9 +341,8 @@
 
       .overlay {
         position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Giúp căn chính tâm */
+        top: 0;
+        left: 0;
         width: 100vw;
         height: 100vh;
         background: #fff;
@@ -351,7 +350,6 @@
         z-index: 999;
 
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         text-align: center;
 
@@ -455,14 +453,14 @@
 
       #post img {
         width: 100%;
-        min-width: 340px;
+        min-width: 380px;
         border: 2px solid #000000;
         height: auto;
       }
 
       .post-content {
         width: 100%;
-        min-width: 340px;
+        min-width: 380px;
         font-weight: 400;
         height: auto;
         display: flex;
@@ -1278,7 +1276,66 @@
 
       // Danh sách ACC - Game
       const categories = [
-        { id: 1, name: "Khu Vườn Trên Mây", productsss: [] },
+        {
+          id: 1,
+          name: "Khu Vườn Trên Mây",
+          productsss: [
+            {
+              id: "KVTM.N2501",
+              price: "112",
+              title: "",
+              image:
+                "https://i.pinimg.com/736x/c6/22/17/c62217c09ff9a1638071f50ef48f02a3.jpg",
+              image1:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image2:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image3:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image4:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image5:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image6:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image7:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image8:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image9:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image10:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+            },
+            {
+              id: "_ _ _ _",
+              price: "113",
+              title: "",
+              image:
+                "https://i.pinimg.com/736x/c6/22/17/c62217c09ff9a1638071f50ef48f02a3.jpg",
+              image1:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image2:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image3:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image4:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image5:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image6:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image7:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image8:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image9:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+              image10:
+                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
+            },
+          ],
+        },
         { id: 2, name: "Liên Quân Mobile", productsss: [] },
         { id: 3, name: "Clash Of Clans", productsss: [] },
         { id: 4, name: "Dragon City", productsss: [] },
