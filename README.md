@@ -62,7 +62,7 @@
         transform: translateX(-50%); /* dịch tâm khối về chính giữa */
 
         width: 100vw;
-        min-width: 380px;
+        min-width: 400px;
         height: 100vh;
 
         font-family: "Segoe UI", sans-serif;
@@ -73,7 +73,7 @@
       /* Header */
       .header {
         width: 100vw;
-        min-width: 380px;
+        min-width: 400px;
         height: 90px;
         background-color: #000000;
         position: fixed;
@@ -103,7 +103,7 @@
 
       .header-section {
         width: calc(100% - 75px);
-        min-width: 300px;
+        min-width: 320px;
         max-width: 500px;
         height: auto;
         display: grid;
@@ -127,7 +127,7 @@
 
       .header-content {
         width: 100%;
-        min-width: 380px;
+        min-width: 400px;
         height: auto;
         min-height: 10px;
         background-color: #272727;
@@ -456,7 +456,7 @@
       #post img {
         width: calc(100% - 4px);
         max-width: 440px;
-        min-width: 360px;
+        min-width: 330px;
         border: 2px solid #000000;
         height: auto;
       }
@@ -464,7 +464,7 @@
       .post-content {
         width: 100%;
         max-width: 440px;
-        min-width: 360px;
+        min-width: 330px;
         font-weight: 400;
         height: auto;
         display: flex;
