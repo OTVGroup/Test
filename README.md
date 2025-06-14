@@ -1588,9 +1588,24 @@
                 🔴 Hỗ Trợ Kỹ Thuật:
                 <ul style="list-style: none; margin-left: 10px; padding: 0">
                   <li>
-                    🟡 Facebook -
+                    🟡 Fanpage -
                     <a
                       href="https://www.messenger.com/t/488283351040349"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      style="
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: rgb(255, 105, 59);
+                      "
+                    >
+                      OTISSTORE
+                    </a>
+                  </li>
+                  <li>
+                    🟡 Facebook -
+                    <a
+                      href="https://www.messenger.com/t/8735423149883387"
                       target="_blank"
                       rel="nofollow noopener"
                       style="
@@ -1605,7 +1620,7 @@
                   <li>
                     🟡 Zalo -
                     <a
-                      href="https://www.messenger.com/t/488283351040349"
+                      href="https://zalo.me/0329022431"
                       target="_blank"
                       rel="nofollow noopener"
                       style="
