@@ -109,7 +109,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         justify-items: center; /* 👉 Canh giữa item trong mỗi ô */
-        line-height: 0.9;
+        line-height: 1.1;
       }
 
       .header-section a {
