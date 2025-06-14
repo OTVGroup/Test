@@ -423,8 +423,8 @@
       }
 
       #post-container button {
-        width: 15px;
-        height: 25px;
+        width: 10px;
+        height: 24px;
         border-radius: 2.5px;
         margin: auto 2.5px;
         position: absolute;
@@ -446,7 +446,7 @@
         transition: color 1s ease, transform 1s ease, opacity 1s ease;
         color: #000000;
         gap: 5px;
-        padding: 5px 20px;
+        padding: 5px 15px;
         overflow-y: scroll;
         display: flex;
         flex-direction: column;
@@ -455,6 +455,7 @@
 
       #post img {
         width: calc(100% - 4px);
+        max-width: 450px;
         min-width: 380px;
         border: 2px solid #000000;
         height: auto;
@@ -463,6 +464,7 @@
       .post-content {
         width: 100%;
         min-width: 380px;
+        max-width: 450px;
         font-weight: 400;
         height: auto;
         display: flex;
