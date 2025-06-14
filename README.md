@@ -456,15 +456,15 @@
       #post img {
         width: calc(100% - 4px);
         max-width: 440px;
-        min-width: 380px;
+        min-width: 360px;
         border: 2px solid #000000;
         height: auto;
       }
 
       .post-content {
         width: 100%;
-        min-width: 380px;
         max-width: 440px;
+        min-width: 360px;
         font-weight: 400;
         height: auto;
         display: flex;
