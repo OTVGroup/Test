@@ -62,7 +62,7 @@
         transform: translateX(-50%); /* dịch tâm khối về chính giữa */
 
         width: 100vw;
-        min-width: 380px;
+        min-width: 340px;
         height: 100vh;
 
         font-family: "Segoe UI", sans-serif;
@@ -73,7 +73,7 @@
       /* Header */
       .header {
         width: 100vw;
-        min-width: 380px;
+        min-width: 340px;
         height: 90px;
         background-color: #000000;
         position: fixed;
@@ -82,34 +82,32 @@
         right: 0;
         gap: 5px;
         z-index: 997;
-        padding: 5px;
+        padding: 5px 0;
         display: flex; /* dùng flexbox để căn giữa nội dung */
         align-items: center;
+        align-content: center;
         justify-content: center;
       }
 
       .header img {
         height: 60px;
-        margin: auto 0;
         border-radius: 50%;
         object-fit: contain;
       }
 
       .header img:hover {
-        transform: scale(1.05);
         border: 2px solid #ffffff; /* thêm kiểu border solid */
-        transition: transform 0.3s ease, border-color 0.3s ease;
+        transition: transform 0.5s ease, border-color 0.5s ease;
         cursor: pointer; /* thêm con trỏ khi hover */
       }
 
       .header-section {
         width: calc(100% - 75px);
-        min-width: 320px;
+        min-width: 300px;
         max-width: 500px;
         height: auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 5px;
         justify-items: center; /* 👉 Canh giữa item trong mỗi ô */
         line-height: 0.9;
       }
@@ -129,7 +127,7 @@
 
       .header-content {
         width: 100%;
-        min-width: 380px;
+        min-width: 340px;
         height: auto;
         min-height: 10px;
         background-color: #272727;
