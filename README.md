@@ -1488,7 +1488,7 @@
             Thông Tin Chi Tiết!
           </div>
           <div style="text-align: left; width: 100%; font-size: 14px">
-            <ul style="list-style: none; margin: 5px 0 5px auto">
+            <ul style="list-style: none; margin: 5px 0 5px auto; padding: 0">
               <li>
                 🔴 Fanpage Chính Thức: OTISStore -
                 <a
@@ -1521,7 +1521,7 @@
               </li>
               <li>
                 🔴 Group Facebook:
-                <ul style="list-style: none; margin-left: 5px">
+                <ul style="list-style: none; margin-left: 15px; padding: 0">
                   <li>
                     🍀Khu Vườn Trên Mây🍀 -
                     <a
