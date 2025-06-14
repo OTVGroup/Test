@@ -1645,7 +1645,15 @@
           src="https://i.pinimg.com/736x/61/88/a0/6188a0ed4358ad9c6b75ba65a879ddfb.jpg"
           alt="Hướng Dẫn 2"
         />
-        <p style="text-align: center; font-size: 14px; color: white">
+        <p
+          style="
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 0;
+            color: white;
+          "
+        >
           OTISStore | Uy Tín Tạo Nên Thương Hiệu!
         </p>
       </div>
