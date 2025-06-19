@@ -699,8 +699,8 @@
         />
       </div>
       <!-- Show VP - Khu Vườn Trên Mây -->
-      <!-- <div class="products" id="product-items_VP"></div> -->
-      <!-- <div style="width: 100%; height: 5px; background-color: #343434"></div> -->
+      <div class="products" id="product-items_VP"></div>
+      <div style="width: 100%; height: 5px; background-color: #343434"></div>
       <!-- Show COMBO - Khu Vườn Trên Mây -->
       <div class="products" id="product-items_CB"></div>
       <!-- <div style="width: 100%; height: 5px; background-color: #343434"></div> -->
@@ -936,32 +936,65 @@
 
     <script>
       // VP - Khu Vườn Trên Mây
-      // const products = [];
+      const products = [
+        {
+          name: "Lài Sấy",
+          image:
+            "https://i.pinimg.com/474x/bf/ca/31/bfca3109ec4d1139edd23d6cfa892064.jpg",
+          no: "100",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "H.Dương",
+          image:
+            "https://i.pinimg.com/474x/ec/10/23/ec102359c85185194c358439b198cdf7.jpg",
+          no: "350",
+          price: "1k",
+          quantity: "1",
+        },
+        {
+          name: "Thỏi Bạc",
+          image:
+            "https://i.pinimg.com/474x/f9/8f/19/f98f198b25c78d9edddfee506f253856.jpg",
+          no: "50",
+          price: "1k",
+          quantity: "2",
+        },
+        {
+          name: "Lọ N.Thần",
+          image:
+            "https://i.pinimg.com/474x/95/f8/0a/95f80ae795637d540e04105123cd216b.jpg",
+          no: "15",
+          price: "1k",
+          quantity: "2",
+        },
+      ];
 
-      // const containers = document.getElementById("product-items_VP");
-      // containers.innerHTML = products
-      //   .map(
-      //     (p) => `
-      //     <div class="items">
-      //       <img src="${p.image}" alt="${p.name}" />
-      //       <div class="items-content">
-      //         <div class="name">${p.name}</div>
-      //         <div class="flex-row">
-      //           <div class="infor">SL:</div>
-      //           <div class="no">${p.no}</div>
-      //         </div>
-      //         <div class="flex-row">
-      //           <div class="infor">Giá:</div>
-      //           <div class="price">${p.price}</div>
-      //         </div>
-      //         <div class="flex-row">
-      //           <div class="quantity">Còn: ${p.quantity}</div>
-      //           <button onclick='sendMessage("${p.name} x${p.no}")'>🛒</button>
-      //         </div>
-      //       </div>
-      //     </div>`
-      //   )
-      //   .join("");
+      const containers = document.getElementById("product-items_VP");
+      containers.innerHTML = products
+        .map(
+          (p) => `
+          <div class="items">
+            <img src="${p.image}" alt="${p.name}" />
+            <div class="items-content">
+              <div class="name">${p.name}</div>
+              <div class="flex-row">
+                <div class="infor">SL:</div>
+                <div class="no">${p.no}</div>
+              </div>
+              <div class="flex-row">
+                <div class="infor">Giá:</div>
+                <div class="price">${p.price}</div>
+              </div>
+              <div class="flex-row">
+                <div class="quantity">Còn: ${p.quantity}</div>
+                <button onclick='sendMessage("${p.name} x${p.no}")'>🛒</button>
+              </div>
+            </div>
+          </div>`
+        )
+        .join("");
 
       // === Combo Products === //
       const productss = [
@@ -1128,25 +1161,25 @@
         //   price: "1k",
         //   quantity: "1",
         // },
-        // {
-        //   name: "CB.Bọ-2",
-        //   image:
-        //     "https://i.pinimg.com/736x/2b/70/d9/2b70d9d15c7bd6eeb814c09080b1e706.jpg",
-        //   name1: "Ong Mật",
-        //   image1:
-        //     "https://i.pinimg.com/474x/5f/0e/76/5f0e76aae9169c4663d9a8759fdf7bc0.jpg",
-        //   no1: "27",
-        //   name2: "Chuồn Chuồn",
-        //   image2:
-        //     "https://i.pinimg.com/474x/02/8e/0e/028e0e144ec65a0c0673da30de975976.jpg",
-        //   no2: "27",
-        //   name3: "Bươm Bướm",
-        //   image3:
-        //     "https://i.pinimg.com/474x/98/d4/b8/98d4b83c4711d7781c08618317219397.jpg",
-        //   no3: "27",
-        //   price: "1k",
-        //   quantity: "1",
-        // },
+        {
+          name: "CB.Bọ-2",
+          image:
+            "https://i.pinimg.com/736x/2b/70/d9/2b70d9d15c7bd6eeb814c09080b1e706.jpg",
+          name1: "Ong Mật",
+          image1:
+            "https://i.pinimg.com/474x/5f/0e/76/5f0e76aae9169c4663d9a8759fdf7bc0.jpg",
+          no1: "27",
+          name2: "Chuồn Chuồn",
+          image2:
+            "https://i.pinimg.com/474x/02/8e/0e/028e0e144ec65a0c0673da30de975976.jpg",
+          no2: "27",
+          name3: "Bươm Bướm",
+          image3:
+            "https://i.pinimg.com/474x/98/d4/b8/98d4b83c4711d7781c08618317219397.jpg",
+          no3: "27",
+          price: "1k",
+          quantity: "1",
+        },
         // {
         //   name: "CB.Thỏi",
         //   image:
@@ -1171,7 +1204,7 @@
         //   quantity: "1",
         // },
         // {
-        //   name: "CB.Cám",
+        //   name: "CB.Chăn Nuôi",
         //   image:
         //     "https://i.pinimg.com/736x/48/a9/f2/48a9f28a149120c1f5445e7340fc6da9.jpg",
         //   name1: "Cám Gà",
@@ -1305,62 +1338,7 @@
         {
           id: 1,
           name: "Khu Vườn Trên Mây",
-          productsss: [
-            {
-              id: "KVTM.N2501",
-              price: "112",
-              title: "",
-              image:
-                "https://i.pinimg.com/736x/c6/22/17/c62217c09ff9a1638071f50ef48f02a3.jpg",
-              image1:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image2:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image3:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image4:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image5:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image6:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image7:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image8:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image9:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image10:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-            },
-            {
-              id: "_ _ _ _",
-              price: "113",
-              title: "",
-              image:
-                "https://i.pinimg.com/736x/c6/22/17/c62217c09ff9a1638071f50ef48f02a3.jpg",
-              image1:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image2:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image3:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image4:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image5:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image6:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image7:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image8:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image9:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-              image10:
-                "https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg",
-            },
-          ],
+          productsss: [],
         },
         { id: 2, name: "Liên Quân Mobile", productsss: [] },
         { id: 3, name: "Clash Of Clans", productsss: [] },
