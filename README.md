@@ -584,8 +584,9 @@
         </li>
       </ul>
       <a>⚡Giao dịch trực tiếp - Giá tốt, chốt deal - Uy tín 100%!</a>
-      <a>💬Inbox để nhận thông báo trong 1 nốt nhạc!</a>
-      <a href="tel:0329022431">📞 Hotline: 0329 022 431</a>
+      <a href="https://www.messenger.com/t/488283351040349" target="_blank">
+        💬Inbox để nhận thông báo trong 1 nốt nhạc!</a>
+      <a href="tel:0329022431">📞Hotline: 0329 022 431</a>
       <a href="https://otvgroup.github.io/OTISStore.com.vn" target="_blank" rel="nofollow noopener">
         🌐Website: https://otvgroup.github.io/OTISStore.com.vn
       </a>
@@ -938,22 +939,6 @@
       // VP - Khu Vườn Trên Mây
       const products = [
         {
-          name: "Lài Sấy",
-          image:
-            "https://i.pinimg.com/474x/bf/ca/31/bfca3109ec4d1139edd23d6cfa892064.jpg",
-          no: "100",
-          price: "1k",
-          quantity: "1",
-        },
-        {
-          name: "H.Dương",
-          image:
-            "https://i.pinimg.com/474x/ec/10/23/ec102359c85185194c358439b198cdf7.jpg",
-          no: "350",
-          price: "1k",
-          quantity: "1",
-        },
-        {
           name: "Thỏi Bạc",
           image:
             "https://i.pinimg.com/474x/f9/8f/19/f98f198b25c78d9edddfee506f253856.jpg",
@@ -961,6 +946,7 @@
           price: "1k",
           quantity: "2",
         },
+
         {
           name: "Lọ N.Thần",
           image:
