@@ -51,7 +51,7 @@
       /* Ngăn 2: Thông Tin */
       #event-streams {
         background: #363636; /* Màu xám chủ đạo */
-        width: 100%;
+        width: 100v;
         max-width: 1100px;
         min-width: 380px;
       }
@@ -59,7 +59,7 @@
       /* Ngăn 3: Youtube */
       #information {
         background: white; /* Màu trắng giúp nội dung nhẹ nhàng */
-        width: 100%;
+        width: 100vw;
         min-width: 380px;
         max-width: 1100px;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -79,7 +79,7 @@
       .heading img {
         width: 100%;
         height: auto;
-        max-width: 535px;
+        max-width: 360px;
         min-height: 45px;
         aspect-ratio: 851 / 315;
         object-fit: contain; /* Đảm bảo ảnh không bị méo và hiển thị toàn bộ */
