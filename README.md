@@ -434,44 +434,123 @@
       <section id="footer">
         <div
           style="
-            max-width: 1200px;
+            max-width: 1240px;
             margin: auto;
-            padding: 0 10px;
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
           "
         >
-          <h3>Donate</h3>
+          <div
+            style="
+              max-width: 400px;
+              margin: auto;
+              padding: 0 10px;
+              text-align: center;
+            "
+          >
+            <h3 style="margin: 15px auto">Chăm Sóc Khách Hàng</h3>
+
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+              "
+            >
+              <div
+                style="flex: 1 1 30%; max-width: 80px; aspect-ratio: 80 / 132"
+              >
+                <a href="https://www.messenger.com/t/OtisVo586" target="_blank">
+                  <img
+                    src="https://i.pinimg.com/736x/c6/75/4f/c6754f858018877052f6b25bb2918b83.jpg"
+                    alt="Facebook"
+                    style="width: 100%; border-radius: 50%"
+                  />
+                </a>
+              </div>
+
+              <div
+                style="flex: 1 1 30%; max-width: 80px; aspect-ratio: 80 / 132"
+              >
+                <a href="https://zalo.me/0329022431" target="_blank">
+                  <img
+                    src="https://i.pinimg.com/736x/e2/82/50/e28250e82662b0c5f4b137d910bd9bf5.jpg"
+                    alt="Zalo"
+                    style="width: 100%; border-radius: 50%"
+                  />
+                </a>
+              </div>
+
+              <div
+                style="flex: 1 1 30%; max-width: 80px; aspect-ratio: 80 / 132"
+              >
+                <a href="tel:0329022431" target="_blank">
+                  <img
+                    src="https://i.pinimg.com/736x/b1/9e/57/b19e5724574d749b152488fd7528c2dc.jpg"
+                    alt="Hotline"
+                    style="width: 100%; border-radius: 50%"
+                  />
+                </a>
+              </div>
+
+              <div
+                style="flex: 1 1 30%; max-width: 80px; aspect-ratio: 80 / 132"
+              >
+                <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
+                  <img
+                    src="https://i.pinimg.com/736x/96/4d/94/964d94ca6c98f9e3464060c31b220360.jpg"
+                    alt="Gmail"
+                    style="width: 100%; border-radius: 50%"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
 
           <div
             style="
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              gap: 10px;
+              max-width: 400px;
+              margin: auto;
+              padding: 0 10px;
+              text-align: center;
             "
           >
-            <div style="flex: 1 1 30%; max-width: 110px">
-              <img
-                src="https://i.pinimg.com/736x/40/05/9b/40059b9b00037529a0cad56eb5ae4d1d.jpg"
-                alt="Donate Agribank"
-                style="width: 100%; border-radius: 8px"
-              />
-            </div>
+            <h3 style="margin: 15px auto">Cổng Thanh Toán</h3>
 
-            <div style="flex: 1 1 30%; max-width: 110px">
-              <img
-                src="https://i.pinimg.com/736x/27/17/68/271768775d063a13b76b78bfb4b4befe.jpg"
-                alt="Donate MoMo"
-                style="width: 100%; border-radius: 8px"
-              />
-            </div>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+              "
+            >
+              <div style="flex: 1 1 30%; max-width: 110px">
+                <img
+                  src="https://i.pinimg.com/736x/40/05/9b/40059b9b00037529a0cad56eb5ae4d1d.jpg"
+                  alt="Donate Agribank"
+                  style="width: 100%; border-radius: 5%"
+                />
+              </div>
 
-            <div style="flex: 1 1 30%; max-width: 110px">
-              <img
-                src="https://i.pinimg.com/736x/15/81/ed/1581edcd2b862a72f316ce2b84cc0e15.jpg"
-                alt="Donate Zalopay"
-                style="width: 100%; border-radius: 8px"
-              />
+              <div style="flex: 1 1 30%; max-width: 110px">
+                <img
+                  src="https://i.pinimg.com/736x/27/17/68/271768775d063a13b76b78bfb4b4befe.jpg"
+                  alt="Donate MoMo"
+                  style="width: 100%; border-radius: 5%"
+                />
+              </div>
+
+              <div style="flex: 1 1 30%; max-width: 110px">
+                <img
+                  src="https://i.pinimg.com/736x/15/81/ed/1581edcd2b862a72f316ce2b84cc0e15.jpg"
+                  alt="Donate Zalopay"
+                  style="width: 100%; border-radius: 5%"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -509,6 +588,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 3px;
+            line-height: 1;
             padding: 0 10px;
             text-align: center;
             justify-content: center;
@@ -530,7 +610,7 @@
           <strong>
             • Hotline:
             <a
-              href="tel=0329022431"
+              href="tel:0329022431"
               style="color: #007aff; text-decoration: none"
               target="_blank"
             >
