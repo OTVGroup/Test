@@ -164,7 +164,7 @@
       }
 
       .h-img2 {
-        width: 80px;
+        width: 60px;
         border-radius: 50%;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       }
@@ -172,6 +172,7 @@
       .heading2 a {
         margin: 5px auto;
         color: #000000;
+        font-size: 15px;
         font-weight: 600;
         text-decoration: none;
       }
@@ -270,7 +271,6 @@
               <a href="https://www.facebook.com/OtisVo586" target="_blank">
                 <img
                   src="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
-                  width="80px"
                   class="h-img2"
                 />
                 <p>
@@ -285,7 +285,6 @@
               <a href="https://www.youtube.com/@otvchannelvn" target="_blank">
                 <img
                   src="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
-                  width="80px"
                   class="h-img2"
                 />
                 <p>
@@ -301,7 +300,6 @@
               <a href="https://www.youtube.com/@otvstoryvn" target="_blank">
                 <img
                   src="https://i.pinimg.com/736x/09/44/f6/0944f6cacd07b3a164a82d62f02d2709.jpg"
-                  width="80px"
                   class="h-img2"
                 />
                 <p>
@@ -327,7 +325,6 @@
               <a href="https://www.facebook.com/OtisSeller" target="_blank">
                 <img
                   src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-                  width="80px"
                   class="h-img2"
                 />
                 <p>
@@ -342,7 +339,6 @@
               <a href="https://www.instagram.com/otisshopvn" target="_blank">
                 <img
                   src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-                  width="80px"
                   class="h-img2"
                 />
                 <p>
@@ -357,7 +353,6 @@
               <a href="https://www.tiktok.com/@otisshop" target="_blank">
                 <img
                   src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-                  width="80px"
                   class="h-img2"
                 />
                 <p>
@@ -372,7 +367,6 @@
               <a href="https://www.threads.net/@otisshopvn" target="_blank">
                 <img
                   src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-                  width="80px"
                   class="h-img2"
                 />
                 <p>
@@ -399,7 +393,6 @@
               <a href="https://www.facebook.com/OtisGamerVN" target="_blank">
                 <img
                   src="https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
-                  width="80px"
                   class="h-img2"
                 />
                 <p>
@@ -415,7 +408,6 @@
               <a href="https://www.youtube.com/@otisstorevn" target="_blank">
                 <img
                   src="https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
-                  width="80px"
                   class="h-img2"
                 />
                 <p>
@@ -568,16 +560,11 @@
           "
         >
           <strong>Mọi người cũng tìm kiếm:</strong><br />
-          OTVGroup | Otis Võ | OTISShop | OTISStore | Chill | Music | Tâm Sự |
-          Tâm Trạng | Tình Yêu | Cặp Đôi | Xu Hướng | Viral | Buồn | Hạnh Phúc |
-          Cô Đơn | Lofi | Remix | Vinahouse | Deephouse | Thịnh Hành | Mạng Xã
-          Hội | Thành Công | Thành Đạt | Tâm Hồn | Ký Ức | Lắng Đọng | Cảm Xúc |
-          Nỗi Nhớ | Yêu Thương | Tổn Thương | Vỡ Tan | Bình Yên | Giải Tỏa | Cô
-          Độc | Vấp Ngã | Tự Sự | Acoustic | Ballad | EDM | Hiphop | Rap Việt |
-          Mashup | V-pop | Cover | Live Session | Trending Song | Nhạc Buồn |
-          Nhạc Tiktok | Soundtrack | Melody | Vocal | Động Lực | Đam Mê | Khởi
-          Nghiệp | Kinh Doanh | Truyền Cảm Hứng | Yêu Bản Thân | Công Nghệ |
-          Reaction | Bắt Trend | Thịnh Hành Tiktok | Drama Showbiz | Viral Video
+          OTVGroup | Otis Võ | OTISShop | OTISStore | Đa Dạng Nội Dung | Kinh
+          Doanh Sáng Tạo | Giải Trí Đa Nền Tảng | Dẫn Đầu Xu Hướng | Trải Nghiệm
+          Cuộc Sống | Học Cách Yêu Thương | Học Cách Khởi Nghiệp | Phát Triển
+          Bản Thân | Động Lực Sống | Giữ Lửa Đam Mê | Học Để Thành Công | Truyền
+          Cảm Hứng | Đổi Mới Tư Duy | Sáng Tạo Nội Dung | Giá Trị Cuộc Sống
         </div>
 
         <!-- Info Legal -->
@@ -596,7 +583,7 @@
             color: #888;
           "
         >
-          <strong>© 2024 - 2025 Công Ty TNHH MTV OTVGroup</strong>
+          <strong>© 2024 - Công Ty TNHH MTV OTVGroup</strong>
           <strong>
             • Địa chỉ:
             <a
