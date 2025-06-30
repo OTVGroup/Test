@@ -19,19 +19,19 @@
     />
     <style>
       /* body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #000000;
-        color: #000000;
-        user-select: none;
-        width: 100vw;
-        overflow-x: hidden;
-        box-sizing: border-box;
-        touch-action: manipulation;
-      } */
+              font-family: Arial, sans-serif;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              background-color: #000000;
+              color: #000000;
+              user-select: none;
+              width: 100vw;
+              overflow-x: hidden;
+              box-sizing: border-box;
+              touch-action: manipulation;
+            } */
 
       body {
         font-family: Arial, sans-serif;
@@ -130,7 +130,6 @@
       #information {
         display: flex;
         flex-wrap: wrap;
-        gap: 5px;
         justify-items: center; /* 👉 Canh giữa item trong mỗi ô */
         align-content: center;
         justify-content: center;
@@ -138,43 +137,88 @@
 
       .heading {
         width: auto;
-        min-width: 360px;
+        min-width: 358px;
         max-width: 480px;
         display: flex;
+        gap: 5px;
+        border: #000000 solid 1px;
         flex-direction: column;
         background: #ffffff;
         align-items: center;
       }
 
-      .heading2 {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        width: 100%;
-        flex-wrap: wrap;
-        padding: 5px;
-      }
-
-      .h-img1 {
+      .heading-img {
         width: 100%;
         height: auto;
         max-width: 480px;
         min-height: 50px;
         aspect-ratio: 851 / 315;
+        border-bottom: #000000 solid 1px;
       }
 
-      .h-img2 {
-        width: 60px;
+      .heading1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0 10px;
+      }
+
+      .heading1 a {
+        color: #3e3e3e;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      .heading1 b {
+        color: #000000;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .heading1 strong {
+        color: #000000;
+        font-size: 13px;
+        text-indent: 1cqh;
+        text-align: justify;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .heading2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: min-content;
+        flex-wrap: wrap;
+      }
+
+      .social {
+        width: auto;
+        min-width: 100px;
+        max-width: 150px;
+        text-align: center;
+        margin: 0 auto 5px auto;
+        color: #000000;
+        text-decoration: none;
+      }
+
+      .social img {
+        vertical-align: middle;
+        margin-right: 2px;
+        width: 15px;
+        height: 15px;
         border-radius: 50%;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       }
 
-      .heading2 a {
-        margin: 5px auto;
+      .social a {
         color: #000000;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 600;
-        text-decoration: none;
+        line-height: 1;
       }
 
       #footer {
@@ -203,9 +247,12 @@
             Hết Mình Với Đam Mê!
           </p>
         </h1>
-        <a href="" target="_blank">
+        <a
+          href="https://drive.google.com/file/d/17N1bAsvmtmM9ARnHNDBjAeW6TOfT2yXR/view?usp=sharing"
+          target="_blank"
+        >
           <img
-            src="https://i.pinimg.com/736x/36/09/f5/3609f52d98fa510538190e2345813f61.jpg"
+            src="https://i.pinimg.com/736x/29/4d/be/294dbeb6dad25f31f15d14a897af1849.jpg"
             alt="Logo-Profile"
             style="border-radius: 5%"
           />
@@ -263,51 +310,87 @@
           <img
             src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTVGroup.jpeg"
             alt="Poster-OTVGroup"
-            class="h-img1"
+            class="heading-img"
           />
-
+          <div class="heading1">
+            <a><b>OTVGroup</b> - Hết Mình Với Đam Mê!</a>
+            <div
+              style="
+                width: 100%;
+                height: 2px;
+                margin: 5px auto;
+                background-color: #000000;
+              "
+            ></div>
+            <strong>
+              OTVGroup is a vibrant, creative, and diverse content ecosystem
+              that stands out in the fields of entertainment, arts, and digital
+              innovation.
+            </strong>
+          </div>
           <div class="heading2">
-            <div style="width: 100px; text-align: center">
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/facebook-new.png" />
               <a href="https://www.facebook.com/OtisVo586" target="_blank">
-                <img
-                  src="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
-                  class="h-img2"
-                />
-                <p>
-                  <img
-                    src="https://img.icons8.com/color/20/facebook-new.png"
-                    style="vertical-align: middle; margin-right: 5px"
-                  />Otis Võ
-                </p>
+                Otis Võ
               </a>
             </div>
-            <div style="width: 100px; text-align: center">
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/youtube-play.png" />
               <a href="https://www.youtube.com/@otvchannelvn" target="_blank">
-                <img
-                  src="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
-                  class="h-img2"
-                />
-                <p>
-                  <img
-                    src="https://img.icons8.com/color/20/youtube-play.png"
-                    style="vertical-align: middle; margin-right: 5px"
-                  />OTV Channel
-                </p>
+                OTV Channel
               </a>
             </div>
 
-            <div style="width: 100px; text-align: center">
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/youtube-play.png" />
               <a href="https://www.youtube.com/@otvstoryvn" target="_blank">
-                <img
-                  src="https://i.pinimg.com/736x/09/44/f6/0944f6cacd07b3a164a82d62f02d2709.jpg"
-                  class="h-img2"
-                />
-                <p>
-                  <img
-                    src="https://img.icons8.com/color/20/youtube-play.png"
-                    style="vertical-align: middle; margin-right: 5px"
-                  />OTV Story
-                </p>
+                OTV Story
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ngăn 3: OTIS Music Studio -->
+        <div class="heading">
+          <img
+            src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISMusicStudio.jpg"
+            alt="Poster-OTVGroup"
+            class="heading-img"
+          />
+          <div class="heading1">
+            <a><b>OTIS Music Studio</b> - Nghệ Thuật Là Linh Hồn Cuộc Sống!</a>
+            <div
+              style="
+                width: 100%;
+                height: 2px;
+                margin: 5px auto;
+                background-color: #000000;
+              "
+            ></div>
+            <strong>
+              A dynamic brand specializing in the creation and distribution of
+              music videos-with a strong focus on quality, artistic vision, and
+              global engagement.
+            </strong>
+          </div>
+          <div class="heading2">
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/facebook-new.png" />
+              <a
+                href="https://www.facebook.com/OTISMusicStudio"
+                target="_blank"
+              >
+                OTIS Music Studio
+              </a>
+            </div>
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/youtube-play.png" />
+              <a
+                href="https://www.youtube.com/@otismusicstudiovn"
+                target="_blank"
+              >
+                OTIS Music Studio
               </a>
             </div>
           </div>
@@ -318,63 +401,49 @@
           <img
             src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISShop.jpeg"
             alt="Poster-OTISShop"
-            class="h-img1"
+            class="heading-img"
           />
+          <div class="heading1">
+            <a><b>OTISShop</b> - Chất Lượng, Uy Tín, Tin Cậy.</a>
+            <div
+              style="
+                width: 100%;
+                height: 2px;
+                margin: 5px auto;
+                background-color: #000000;
+              "
+            ></div>
+            <strong>
+              A digital commerce brand offering content-linked products and
+              experiences-connecting users with digital services and assets,
+              with quality as its top priority.
+            </strong>
+          </div>
           <div class="heading2">
-            <div style="width: 100px; text-align: center">
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/facebook-new.png" />
               <a href="https://www.facebook.com/OtisSeller" target="_blank">
-                <img
-                  src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-                  class="h-img2"
-                />
-                <p>
-                  <img
-                    src="https://img.icons8.com/color/20/facebook-new.png"
-                    style="vertical-align: middle; margin-right: 5px"
-                  />OTISShop
-                </p>
+                OTISShop
               </a>
             </div>
-            <div style="width: 100px; text-align: center">
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/instagram-new.png" />
               <a href="https://www.instagram.com/otisshopvn" target="_blank">
-                <img
-                  src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-                  class="h-img2"
-                />
-                <p>
-                  <img
-                    src="https://img.icons8.com/color/20/instagram-new.png"
-                    style="vertical-align: middle; margin-right: 5px"
-                  />OTISShop
-                </p>
+                OTISShop
               </a>
             </div>
-            <div style="width: 100px; text-align: center">
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/tiktok--v1.png" />
               <a href="https://www.tiktok.com/@otisshop" target="_blank">
-                <img
-                  src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-                  class="h-img2"
-                />
-                <p>
-                  <img
-                    src="https://img.icons8.com/color/20/tiktok--v1.png"
-                    style="vertical-align: middle; margin-right: 5px"
-                  />OTISShop
-                </p>
+                OTISShop
               </a>
             </div>
-            <div style="width: 100px; text-align: center">
+            <div class="social">
+              <img
+                src="https://img.icons8.com/ios-filled/20/000000/threads.png"
+              />
               <a href="https://www.threads.net/@otisshopvn" target="_blank">
-                <img
-                  src="https://i.pinimg.com/736x/ea/24/e1/ea24e1a0ed40857020ab39336b9fc78c.jpg"
-                  class="h-img2"
-                />
-                <p>
-                  <img
-                    src="https://img.icons8.com/ios-filled/20/000000/threads.png"
-                    style="vertical-align: middle; margin-right: 5px"
-                  />OTISShop
-                </p>
+                OTISShop
               </a>
             </div>
           </div>
@@ -383,39 +452,38 @@
         <!-- Ngăn 5: OTISSTORE -->
         <div class="heading">
           <img
-            src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background-OTISStore.jpeg"
+            src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISStore.jpeg"
             alt="Poster-OTISStore"
-            class="h-img1"
+            class="heading-img"
           />
-
+          <div class="heading1">
+            <a><b>OTISStore</b> - Uy Tín Tạo Nên Thương Hiệu!</a>
+            <div
+              style="
+                width: 100%;
+                height: 2px;
+                margin: 5px auto;
+                background-color: #000000;
+              "
+            ></div>
+            <strong>
+              An entertainment brand that engages users through content and
+              products focused on gaming, virtual experiences, and interactive
+              entertainment-with extensive reach.
+            </strong>
+          </div>
           <div class="heading2">
-            <div style="width: 100px; text-align: center">
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/facebook-new.png" />
               <a href="https://www.facebook.com/OtisGamerVN" target="_blank">
-                <img
-                  src="https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
-                  class="h-img2"
-                />
-                <p>
-                  <img
-                    src="https://img.icons8.com/color/20/facebook-new.png"
-                    style="vertical-align: middle; margin-right: 5px"
-                  />OTISStore
-                </p>
+                OTISStore
               </a>
             </div>
 
-            <div style="width: 100px; text-align: center">
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/youtube-play.png" />
               <a href="https://www.youtube.com/@otisstorevn" target="_blank">
-                <img
-                  src="https://i.pinimg.com/736x/34/59/6a/34596a4db3932a3855c872c2f4833e5d.jpg"
-                  class="h-img2"
-                />
-                <p>
-                  <img
-                    src="https://img.icons8.com/color/20/youtube-play.png"
-                    style="vertical-align: middle; margin-right: 5px"
-                  />OTISSTORE
-                </p>
+                OTISSTORE
               </a>
             </div>
           </div>
@@ -648,7 +716,7 @@
               const videoHTML = `
           <iframe width="100%" height="215" src="https://www.youtube.com/embed/${videoId}" 
             frameborder="0" allowfullscreen loading="lazy"></iframe>
-          <h3 style="font-size: 1rem; margin-top: 8px;">${item.title}</h3>
+          <h3 style="font-size: 13px; margin-top: 5px;">${item.title}</h3>
         `;
 
               const targetElement = document.getElementById(targetId);
