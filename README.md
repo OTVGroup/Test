@@ -158,23 +158,23 @@
 
       .heading1 {
         display: flex;
-        justify-content: center;
         width: 100%;
         flex-wrap: wrap;
         padding: 0 10px;
       }
 
       .heading1 a {
-        color: #3e3e3e;
+        color: #000000;
         font-size: 15px;
-        font-weight: 600;
+        justify-content: left;
+        font-weight: 400;
         line-height: 1;
       }
 
       .heading1 b {
         color: #000000;
         font-size: 15px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1;
       }
 
@@ -286,21 +286,21 @@
           <!-- OTVStory -->
           <div id="videosOTVStory1" class="video-streams"></div>
           <!-- OTVGaming -->
-          <div id="videosOTVGaming1" class="video-streams"></div>
+          <div id="videosOTISStore1" class="video-streams"></div>
 
           <!-- OTVChannel -->
           <div id="videosOTVChannel2" class="video-streams"></div>
           <!-- OTVStory -->
           <div id="videosOTVStory2" class="video-streams"></div>
           <!-- OTVGaming -->
-          <div id="videosOTVGaming2" class="video-streams"></div>
+          <div id="videosOTISStore2" class="video-streams"></div>
 
           <!-- OTVChannel -->
           <div id="videosOTVChannel3" class="video-streams"></div>
           <!-- OTVStory -->
           <div id="videosOTVStory3" class="video-streams"></div>
           <!-- OTVGaming -->
-          <div id="videosOTVGaming3" class="video-streams"></div>
+          <div id="videosOTISStore3" class="video-streams"></div>
         </div>
       </section>
 
@@ -326,6 +326,12 @@
               OTVGroup is a vibrant, creative, and diverse content ecosystem
               that stands out in the fields of entertainment, arts, and digital
               innovation.
+            </strong>
+            <br />
+            <strong>
+              OTVGroup là một hệ sinh thái nội dung sôi động, sáng tạo và đa
+              dạng nổi bật trong các lĩnh vực giải trí, nghệ thuật và đổi mới kỹ
+              thuật số.
             </strong>
           </div>
           <div class="heading2">
@@ -373,6 +379,12 @@
               music videos-with a strong focus on quality, artistic vision, and
               global engagement.
             </strong>
+            <br />
+            <strong>
+              Một thương hiệu năng động chuyên sáng tạo và phân phối video âm
+              nhạc - tập trung mạnh mẽ vào chất lượng, tầm nhìn nghệ thuật và sự
+              tham gia toàn cầu.
+            </strong>
           </div>
           <div class="heading2">
             <div class="social">
@@ -384,6 +396,7 @@
                 OTIS Music Studio
               </a>
             </div>
+
             <div class="social">
               <img src="https://img.icons8.com/color/20/youtube-play.png" />
               <a
@@ -391,6 +404,16 @@
                 target="_blank"
               >
                 OTIS Music Studio
+              </a>
+            </div>
+
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/domain.png" />
+              <a
+                href="https://otvgroup.github.io/OTISMusisStudio.com.vn"
+                target="_blank"
+              >
+                OTISMusicStudio.com
               </a>
             </div>
           </div>
@@ -418,6 +441,12 @@
               experiences-connecting users with digital services and assets,
               with quality as its top priority.
             </strong>
+            <br />
+            <strong>
+              Một thương hiệu thương mại điện tử cung cấp các sản phẩm liên kết
+              với nội dung và trải nghiệm kết nối người dùng với các dịch vụ và
+              tài sản kỹ thuật số, với chất lượng là ưu tiên hàng đầu.
+            </strong>
           </div>
           <div class="heading2">
             <div class="social">
@@ -426,24 +455,37 @@
                 OTISShop
               </a>
             </div>
+
             <div class="social">
               <img src="https://img.icons8.com/color/20/instagram-new.png" />
               <a href="https://www.instagram.com/otisshopvn" target="_blank">
                 OTISShop
               </a>
             </div>
+
             <div class="social">
               <img src="https://img.icons8.com/color/20/tiktok--v1.png" />
               <a href="https://www.tiktok.com/@otisshop" target="_blank">
                 OTISShop
               </a>
             </div>
+
             <div class="social">
               <img
                 src="https://img.icons8.com/ios-filled/20/000000/threads.png"
               />
               <a href="https://www.threads.net/@otisshopvn" target="_blank">
                 OTISShop
+              </a>
+            </div>
+
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/domain.png" />
+              <a
+                href="https://otvgroup.github.io/OTISShop.com.vn"
+                target="_blank"
+              >
+                OTISShop.com
               </a>
             </div>
           </div>
@@ -471,6 +513,12 @@
               products focused on gaming, virtual experiences, and interactive
               entertainment-with extensive reach.
             </strong>
+            <br />
+            <strong>
+              Một thương hiệu giải trí thu hút người dùng thông qua nội dung và
+              sản phẩm tập trung vào trò chơi, trải nghiệm ảo và giải trí tương
+              tác với phạm vi tiếp cận rộng rãi.
+            </strong>
           </div>
           <div class="heading2">
             <div class="social">
@@ -484,6 +532,16 @@
               <img src="https://img.icons8.com/color/20/youtube-play.png" />
               <a href="https://www.youtube.com/@otisstorevn" target="_blank">
                 OTISSTORE
+              </a>
+            </div>
+
+            <div class="social">
+              <img src="https://img.icons8.com/color/20/domain.png" />
+              <a
+                href="https://otvgroup.github.io/OTISStore.com.vn"
+                target="_blank"
+              >
+                OTISStore.com
               </a>
             </div>
           </div>
@@ -696,9 +754,9 @@
 
     <script>
       const channels = [
-        { id: "UCv-PFwjDGSfgozwLVCJEv0w", targetPrefix: "videosOTVChannel" }, // otvchannelvn
-        { id: "UC4UOBFi4HJHU_EhynZbrefw", targetPrefix: "videosOTVStory" }, // otvstoryvn
-        { id: "UCM8xwnvLQ60wfEgduDRzRMg", targetPrefix: "videosOTVGaming" }, // otvgamingvn
+        { id: "UCv-PFwjDGSfgozwLVCJEv0w", targetPrefix: "videosOTVChannel" },
+        { id: "UC4UOBFi4HJHU_EhynZbrefw", targetPrefix: "videosOTVStory" },
+        { id: "UCM8xwnvLQ60wfEgduDRzRMg", targetPrefix: "videosOTISStore" },
       ];
 
       channels.forEach((channel) => {
