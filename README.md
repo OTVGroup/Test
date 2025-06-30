@@ -159,6 +159,7 @@
       .heading1 {
         display: flex;
         width: 100%;
+        color: #000000;
         flex-wrap: wrap;
         padding: 0 10px;
       }
