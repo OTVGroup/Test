@@ -191,7 +191,7 @@
       .social {
         width: auto;
         min-width: 100px;
-        max-width: 150px;
+        max-width: 175px;
         text-align: center;
         margin: 0 auto 5px auto;
         color: #000000;
@@ -264,7 +264,7 @@
         >
           SWIPE TO EXPLORE OUR LATEST SHOWS.
         </p>
-        <div
+        <!-- <div
           style="
             display: flex;
             overflow-x: auto;
@@ -273,27 +273,31 @@
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
           "
+        > -->
+        <div
+          id="video-player"
+          style="width: calc(30%); margin: 0 auto; height: 240px"
         >
           <!-- OTVChannel -->
-          <div id="videosOTVChannel1" class="video-streams"></div>
+          <!-- <div id="videosOTVChannel1" class="video-streams"></div> -->
           <!-- OTVStory -->
-          <div id="videosOTVStory1" class="video-streams"></div>
+          <!-- <div id="videosOTVStory1" class="video-streams"></div> -->
           <!-- OTVGaming -->
-          <div id="videosOTISStore1" class="video-streams"></div>
+          <!-- <div id="videosOTISStore1" class="video-streams"></div> -->
 
           <!-- OTVChannel -->
-          <div id="videosOTVChannel2" class="video-streams"></div>
+          <!-- <div id="videosOTVChannel2" class="video-streams"></div> -->
           <!-- OTVStory -->
-          <div id="videosOTVStory2" class="video-streams"></div>
+          <!-- <div id="videosOTVStory2" class="video-streams"></div> -->
           <!-- OTVGaming -->
-          <div id="videosOTISStore2" class="video-streams"></div>
+          <!-- <div id="videosOTISStore2" class="video-streams"></div> -->
 
           <!-- OTVChannel -->
-          <div id="videosOTVChannel3" class="video-streams"></div>
+          <!-- <div id="videosOTVChannel3" class="video-streams"></div> -->
           <!-- OTVStory -->
-          <div id="videosOTVStory3" class="video-streams"></div>
+          <!-- <div id="videosOTVStory3" class="video-streams"></div> -->
           <!-- OTVGaming -->
-          <div id="videosOTISStore3" class="video-streams"></div>
+          <!-- <div id="videosOTISStore3" class="video-streams"></div> -->
         </div>
       </section>
 
@@ -320,7 +324,7 @@
               that stands out in the fields of entertainment, arts, and digital
               innovation.
             </strong>
-            <div style="width: 100%; height: 2px"></div>
+            <div style="width: 100%; height: 5px"></div>
             <strong>
               OTVGroup là một hệ sinh thái nội dung sôi động, sáng tạo và đa
               dạng nổi bật trong các lĩnh vực giải trí, nghệ thuật và đổi mới kỹ
@@ -372,7 +376,7 @@
               music videos-with a strong focus on quality, artistic vision, and
               global engagement.
             </strong>
-            <div style="width: 100%; height: 2px"></div>
+            <div style="width: 100%; height: 5px"></div>
             <strong>
               Một thương hiệu năng động chuyên sáng tạo và phân phối video âm
               nhạc - tập trung mạnh mẽ vào chất lượng, tầm nhìn nghệ thuật và sự
@@ -434,7 +438,7 @@
               experiences-connecting users with digital services and assets,
               with quality as its top priority.
             </strong>
-            <div style="width: 100%; height: 2px"></div>
+            <div style="width: 100%; height: 5px"></div>
             <strong>
               Một thương hiệu thương mại điện tử cung cấp các sản phẩm liên kết
               với nội dung và trải nghiệm kết nối người dùng với các dịch vụ và
@@ -506,7 +510,7 @@
               products focused on gaming, virtual experiences, and interactive
               entertainment-with extensive reach.
             </strong>
-            <div style="width: 100%; height: 2px"></div>
+            <div style="width: 100%; height: 5px"></div>
             <strong>
               Một thương hiệu giải trí thu hút người dùng thông qua nội dung và
               sản phẩm tập trung vào trò chơi, trải nghiệm ảo và giải trí tương
@@ -543,7 +547,7 @@
 
       <!-- Footer -->
       <section id="footer">
-        <div
+        <!-- <div
           style="
             max-width: 1240px;
             margin: auto;
@@ -552,11 +556,13 @@
             gap: 10px;
             justify-content: center;
           "
-        >
+        > -->
+        <div class="heading1">
           <div
             style="
               max-width: 400px;
-              margin: auto;
+              margin: 0 auto auto;
+              color: #ffffff;
               padding: 0 10px;
               text-align: center;
             "
@@ -572,49 +578,85 @@
               "
             >
               <div
-                style="flex: 1 1 30%; max-width: 80px; aspect-ratio: 80 / 132"
+                style="
+                  flex: 1 1 30%;
+                  max-width: 60px;
+                  /* aspect-ratio: 80 / 132; */
+                  align-content: center;
+                "
               >
                 <a href="https://www.messenger.com/t/OtisVo586" target="_blank">
                   <img
                     src="https://i.pinimg.com/736x/c6/75/4f/c6754f858018877052f6b25bb2918b83.jpg"
                     alt="Facebook"
-                    style="width: 100%; border-radius: 50%"
+                    style="
+                      width: 50px;
+                      margin: 0 5px 10px 5px;
+                      border-radius: 50%;
+                    "
                   />
                 </a>
               </div>
 
               <div
-                style="flex: 1 1 30%; max-width: 80px; aspect-ratio: 80 / 132"
+                style="
+                  flex: 1 1 30%;
+                  max-width: 60px;
+                  /* aspect-ratio: 80 / 132; */
+                  align-content: center;
+                "
               >
                 <a href="https://zalo.me/0329022431" target="_blank">
                   <img
                     src="https://i.pinimg.com/736x/e2/82/50/e28250e82662b0c5f4b137d910bd9bf5.jpg"
                     alt="Zalo"
-                    style="width: 100%; border-radius: 50%"
+                    style="
+                      width: 50px;
+                      margin: 0 5px 10px 5px;
+                      border-radius: 50%;
+                    "
                   />
                 </a>
               </div>
 
               <div
-                style="flex: 1 1 30%; max-width: 80px; aspect-ratio: 80 / 132"
+                style="
+                  flex: 1 1 30%;
+                  max-width: 60px;
+                  /* aspect-ratio: 80 / 132; */
+                  align-content: center;
+                "
               >
                 <a href="tel:0329022431" target="_blank">
                   <img
                     src="https://i.pinimg.com/736x/b1/9e/57/b19e5724574d749b152488fd7528c2dc.jpg"
                     alt="Hotline"
-                    style="width: 100%; border-radius: 50%"
+                    style="
+                      width: 50px;
+                      margin: 0 5px 10px 5px;
+                      border-radius: 50%;
+                    "
                   />
                 </a>
               </div>
 
               <div
-                style="flex: 1 1 30%; max-width: 80px; aspect-ratio: 80 / 132"
+                style="
+                  flex: 1 1 30%;
+                  max-width: 60px;
+                  /* aspect-ratio: 80 / 132; */
+                  align-content: center;
+                "
               >
                 <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
                   <img
                     src="https://i.pinimg.com/736x/96/4d/94/964d94ca6c98f9e3464060c31b220360.jpg"
                     alt="Gmail"
-                    style="width: 100%; border-radius: 50%"
+                    style="
+                      width: 50px;
+                      margin: 0 5px 10px 5px;
+                      border-radius: 50%;
+                    "
                   />
                 </a>
               </div>
@@ -625,6 +667,7 @@
             style="
               max-width: 400px;
               margin: auto;
+              color: #ffffff;
               padding: 0 10px;
               text-align: center;
             "
@@ -746,6 +789,65 @@
     </div>
 
     <script>
+      const autoPlayChannels = [
+        "UCv-PFwjDGSfgozwLVCJEv0w",
+        "UC4UOBFi4HJHU_EhynZbrefw",
+        "UCM8xwnvLQ60wfEgduDRzRMg",
+      ];
+      const autoPlayVideos = [];
+      let autoPlayIndex = 0,
+        autoPlayPlayer;
+
+      function autoPlayNext() {
+        const { videoId } = autoPlayVideos[autoPlayIndex];
+        if (autoPlayPlayer) {
+          autoPlayPlayer.loadVideoById(videoId);
+        } else {
+          document.getElementById("video-player").innerHTML =
+            '<div id="yt-auto-player"></div>';
+          autoPlayPlayer = new YT.Player("yt-auto-player", {
+            height: "240",
+            width: "100%",
+            videoId,
+            playerVars: { autoplay: 1, mute: 1, controls: 1 },
+            events: {
+              onReady: (e) => e.target.playVideo(),
+              onStateChange: (e) =>
+                e.data === YT.PlayerState.ENDED && autoPlayNextVideo(),
+            },
+          });
+        }
+      }
+
+      function autoPlayNextVideo() {
+        autoPlayIndex = (autoPlayIndex + 1) % autoPlayVideos.length;
+        autoPlayNext();
+      }
+
+      function loadYouTubeAPI() {
+        const tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.body.appendChild(tag);
+        window.onYouTubeIframeAPIReady = () => autoPlayNext();
+      }
+
+      autoPlayChannels.forEach((id) => {
+        fetch(
+          `https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${id}`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            data.items.slice(0, 3).forEach((item) => {
+              const videoId = item.guid.split(":")[2];
+              autoPlayVideos.push({ videoId });
+            });
+            if (!autoPlayPlayer && autoPlayVideos.length) loadYouTubeAPI();
+          })
+          .catch(console.error);
+      });
+    </script>
+
+    <!-- <script>
       const channels = [
         { id: "UCv-PFwjDGSfgozwLVCJEv0w", targetPrefix: "videosOTVChannel" },
         { id: "UC4UOBFi4HJHU_EhynZbrefw", targetPrefix: "videosOTVStory" },
@@ -791,6 +893,6 @@
             }
           });
       });
-    </script>
+    </script> -->
   </body>
 </html>
