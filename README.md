@@ -170,16 +170,11 @@
         line-height: 1.3;
       }
 
-      .heading1 b {
-        color: #000000;
-        font-size: 15px;
-        line-height: 1.3;
-      }
-
       .heading1 strong {
         color: #000000;
         font-size: 13px;
         text-indent: 1cqh;
+        font-weight: 400;
         text-align: justify;
         line-height: 1.3;
       }
