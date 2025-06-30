@@ -167,15 +167,13 @@
         color: #000000;
         font-size: 15px;
         justify-content: left;
-        font-weight: 400;
-        line-height: 1;
+        line-height: 1.3;
       }
 
       .heading1 b {
         color: #000000;
         font-size: 15px;
-        font-weight: 600;
-        line-height: 1;
+        line-height: 1.3;
       }
 
       .heading1 strong {
@@ -183,8 +181,7 @@
         font-size: 13px;
         text-indent: 1cqh;
         text-align: justify;
-        font-weight: 400;
-        line-height: 1;
+        line-height: 1.3;
       }
 
       .heading2 {
@@ -327,7 +324,7 @@
               that stands out in the fields of entertainment, arts, and digital
               innovation.
             </strong>
-            <br />
+            <div style="width: 100%; height: 2px"></div>
             <strong>
               OTVGroup là một hệ sinh thái nội dung sôi động, sáng tạo và đa
               dạng nổi bật trong các lĩnh vực giải trí, nghệ thuật và đổi mới kỹ
@@ -379,7 +376,7 @@
               music videos-with a strong focus on quality, artistic vision, and
               global engagement.
             </strong>
-            <br />
+            <div style="width: 100%; height: 2px"></div>
             <strong>
               Một thương hiệu năng động chuyên sáng tạo và phân phối video âm
               nhạc - tập trung mạnh mẽ vào chất lượng, tầm nhìn nghệ thuật và sự
@@ -441,7 +438,7 @@
               experiences-connecting users with digital services and assets,
               with quality as its top priority.
             </strong>
-            <br />
+            <div style="width: 100%; height: 2px"></div>
             <strong>
               Một thương hiệu thương mại điện tử cung cấp các sản phẩm liên kết
               với nội dung và trải nghiệm kết nối người dùng với các dịch vụ và
@@ -513,7 +510,7 @@
               products focused on gaming, virtual experiences, and interactive
               entertainment-with extensive reach.
             </strong>
-            <br />
+            <div style="width: 100%; height: 2px"></div>
             <strong>
               Một thương hiệu giải trí thu hút người dùng thông qua nội dung và
               sản phẩm tập trung vào trò chơi, trải nghiệm ảo và giải trí tương
