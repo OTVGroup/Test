@@ -404,7 +404,7 @@
             style="background: linear-gradient(to right, #9e3dff, #4992ff)"
           >
             <img
-              src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISMusicStudio.jpg"
+              src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/BackGround%20-%20OTISMusicStudio.jpg"
               alt="Poster-OTVGroup"
             />
           </div>
