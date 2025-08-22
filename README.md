@@ -161,6 +161,7 @@
 
       .nav-2 a:hover {
         text-decoration: underline;
+        color: #fff;
       }
 
       /* Submenu */
