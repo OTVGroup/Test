@@ -144,17 +144,18 @@
       .nav-1 {
         list-style: none;
         display: flex;
-        color: #ffffff;
         margin: 0;
         padding: 0;
       }
 
       .nav-2 {
+        color: #fff;
         margin: 0 5px;
         position: relative;
       }
 
       .nav-2 a {
+        color: #fff;
         font-size: 16px;
         text-decoration: none;
       }
@@ -379,7 +380,6 @@
           </div>
           <div class="nav-2">
             <a><i class="fa-solid fa-star"></i> Thương hiệu</a>
-
             <div class="nav-3">
               <div class="nav-4">
                 <a
