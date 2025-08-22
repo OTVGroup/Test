@@ -210,7 +210,7 @@
       }
 
       .search-button {
-        width: 24;
+        width: 24px;
         height: 100%;
         border: none; /* bỏ viền */
         cursor: pointer;
