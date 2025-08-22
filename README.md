@@ -92,9 +92,10 @@
       }
 
       .contact-marquee marquee {
-        font-size: 15px;
+        font-size: 18px;
         color: #fff;
         font-weight: 500;
+        line-height: 1.2;
       }
 
       .social-icon {
@@ -280,7 +281,7 @@
         left: 0;
         bottom: 0;
         width: 100%; /* full chiều ngang */
-        font-size: 24px;
+        font-size: calc(10px + 3vh);
         color: #fff;
         background-color: rgba(0, 0, 0, 0.4); /* nền mờ */
         padding: 10px 20px;
