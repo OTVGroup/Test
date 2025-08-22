@@ -141,30 +141,30 @@
       }
 
       /* Menu */
-      nav ul {
+      .nav-1 {
         list-style: none;
         display: flex;
         margin: 0;
         padding: 0;
       }
 
-      nav ul li {
+      .nav-2 {
         margin: 0 5px;
         position: relative;
       }
 
-      nav ul li a {
+      .nav-2 a {
         color: #fff;
         font-size: 16px;
         text-decoration: none;
       }
 
-      nav ul li a:hover {
+      .nav-2 a:hover {
         text-decoration: underline;
       }
 
       /* Submenu */
-      nav ul li ul {
+      .nav-3 {
         display: none;
         position: absolute;
         top: 100%;
@@ -177,11 +177,11 @@
         border-radius: 5px;
       }
 
-      nav ul li:hover ul {
+      .nav-2:hover .nav-3 {
         display: block;
       }
 
-      nav ul li ul li a {
+      .nav-4 a {
         display: block;
         color: #fff;
         padding: 5px 10px;
@@ -189,7 +189,7 @@
         white-space: nowrap;
       }
 
-      nav ul li ul li a:hover {
+      .nav-4 a:hover {
         background: #282f3e;
       }
 
@@ -368,48 +368,49 @@
 
       <!-- Navbar -->
       <nav>
-        <ul style="min-width: 360px">
-          <li>
-            <a href="#banner"><i class="fa-solid fa-house"></i> Home</a>
-          </li>
-          <li>
-            <a href="#introduce"
-              ><i class="fa-solid fa-info-circle"></i> Giới thiệu</a
+        <div class="nav-1" style="min-width: 360px">
+          <div class="nav-2">
+            <a href="#banner"> <i class="fa-solid fa-house"></i> Home</a>
+          </div>
+          <div class="nav-2">
+            <a href="#introduce">
+              <i class="fa-solid fa-info-circle"></i> Giới thiệu</a
             >
-          </li>
-          <li>
+          </div>
+          <div class="nav-2">
             <a><i class="fa-solid fa-star"></i> Thương hiệu</a>
-            <ul style="width: 180px">
-              <li>
+
+            <div class="nav-3">
+              <div class="nav-4">
                 <a
                   href="https://otvgroup.github.io/OTISShop.com.vn/"
                   target="_blank"
                 >
                   OTISShop
                 </a>
-              </li>
-              <li>
+              </div>
+              <div class="nav-4">
                 <a
                   href="https://otvgroup.github.io/OTISStore.com.vn/"
                   target="_blank"
                 >
                   OTISStore
                 </a>
-              </li>
-              <li>
+              </div>
+              <div class="nav-4">
                 <a
                   href="https://otvgroup.github.io/OTISMusisStudio.com.vn/"
                   target="_blank"
                 >
                   OTISMusisStudio
                 </a>
-              </li>
-            </ul>
-          </li>
-          <li>
+              </div>
+            </div>
+          </div>
+          <div class="nav-2">
             <a href="#"><i class="fa-solid fa-envelope"></i> Liên hệ</a>
-          </li>
-        </ul>
+          </div>
+        </div>
         <div class="search-box">
           <input type="text" id="searchInput" placeholder="Tìm kiếm ..." />
           <button class="search-button" onclick="searchText()">🔍</button>
