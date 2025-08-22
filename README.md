@@ -144,13 +144,13 @@
       .nav-1 {
         list-style: none;
         display: flex;
+        color: #ffffff;
         margin: 0;
         padding: 0;
       }
 
       .nav-2 {
         margin: 0 5px;
-        color: #ffffff;
         position: relative;
       }
 
