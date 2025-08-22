@@ -170,7 +170,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background: #0035a7;
+        background: #ececec;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -184,14 +184,10 @@
 
       .nav-4 a {
         display: block;
-        color: #fff;
+        color: #000000;
         padding: 5px 10px;
         text-decoration: none;
         white-space: nowrap;
-      }
-
-      .nav-4 a:hover {
-        background: #282f3e;
       }
 
       .search-box {
@@ -218,6 +214,7 @@
         height: 100%;
         border: none; /* bỏ viền */
         cursor: pointer;
+        padding: 0;
         background: transparent; /* nền trong suốt */
         display: flex;
         justify-items: center;
