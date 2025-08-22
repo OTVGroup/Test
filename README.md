@@ -150,18 +150,17 @@
 
       .nav-2 {
         margin: 0 5px;
+        color: #ffffff;
         position: relative;
       }
 
       .nav-2 a {
-        color: #fff;
         font-size: 16px;
         text-decoration: none;
       }
 
       .nav-2 a:hover {
         text-decoration: underline;
-        color: #fff;
       }
 
       /* Submenu */
