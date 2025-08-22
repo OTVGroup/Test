@@ -71,6 +71,8 @@
         margin: 0;
         font-size: 16px;
         font-weight: bold;
+        text-decoration: none;
+        padding: 0;
       }
 
       .logo-text p {
@@ -93,7 +95,7 @@
         font-weight: 500;
       }
 
-      .social-icons {
+      .social-icon {
         display: flex;
         padding: 0 10px;
         margin-left: 10px;
@@ -104,25 +106,21 @@
       }
 
       .icon a {
-        font-size: 18px;
+        font-size: 24px;
         color: #fff;
         display: flex; /* dùng flex để căn giữa icon */
         align-items: center;
         justify-content: center;
-        width: 25px; /* ô icon đều nhau */
+        width: 38px; /* ô icon đều nhau */
         text-decoration: none;
         transition: color 0.3s;
       }
 
-      .icons a i {
-        width: 30px;
-      }
-
-      .icons a:last-child {
+      .icon a:last-child {
         border-right: none;
       }
 
-      .icons a:hover {
+      .icon a:hover {
         color: #333;
       }
 
@@ -340,7 +338,7 @@
           </marquee>
         </div>
         <!-- Icon mạng xã hội -->
-        <div class="social-icons">
+        <div class="social-icon">
           <div class="icon">
             <a href="https://www.facebook.com/OtisVo586" target="_blank">
               <i class="fab fa-facebook-f"></i>
