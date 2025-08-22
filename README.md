@@ -71,7 +71,7 @@
         margin: 0;
         font-size: 16px;
         font-weight: bold;
-        text-decoration: none;
+        line-height: 1;
         padding: 0;
       }
 
@@ -79,6 +79,8 @@
         margin: 0;
         font-size: 10px;
         font-style: italic;
+        line-height: 1;
+        padding: 0;
         color: #333;
       }
 
