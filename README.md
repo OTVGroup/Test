@@ -447,9 +447,12 @@
         position: absolute;
         top: 100%; /* nằm ngay dưới skill */
         left: 0;
+        margin-bottom: 5px;
         background: #ececec;
-        padding: 0px 5px 0px 0px;
+        padding: 0px 5px 0px 5px;
         width: 100%; /* điều chỉnh theo ý bạn */
+        height: 120px;
+        overflow-y: auto; /* cuộn dọc */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         z-index: 10;
       }
@@ -461,18 +464,24 @@
 
       .skill-content p {
         margin: 0;
-        padding: 5px 5px 1px 5px;
+        line-height: 1.1;
+        padding: 5px 5px 2px 5px;
         font-size: calc(5px + 0.6vh + 0.5vw);
         color: #000;
       }
 
       .skill-content a {
-        padding: 0 5px 1px 5px;
+        padding: 0 5px 2px 5px;
         margin-left: 5px;
         width: calc(100% - 15px);
         font-size: calc(5px + 0.4vh + 0.5vw);
         color: #000;
+        line-height: 1.1;
         text-decoration: none;
+      }
+
+      .skill-content a:hover {
+        color: #000;
       }
     </style>
   </head>
