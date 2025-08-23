@@ -198,6 +198,7 @@
         border-radius: 3px; /* bo góc toàn khung */
         overflow: hidden; /* ẩn tràn viền */
         margin: 0;
+        font-size: 20px;
         width: 200px;
       }
 
@@ -408,11 +409,6 @@
         transition: background 0.5s ease;
       }
 
-      .skill:hover {
-        background: #888888;
-        color: #ffffff;
-      }
-
       .skill i {
         font-size: calc(5px + 0.6vh + 0.5vw);
         width: calc(7px + 0.6vh + 0.5vw);
@@ -432,11 +428,6 @@
         transition: all 0.5s ease;
       }
 
-      .button:hover {
-        background-color: white;
-        transform: scale(1.1); /* phóng to 110% khi hover */
-      }
-
       .button.open i {
         transform: rotate(180deg); /* mũi tên lật khi mở */
       }
@@ -447,11 +438,11 @@
         position: absolute;
         top: 100%; /* nằm ngay dưới skill */
         left: 0;
-        margin-bottom: 5px;
+        gap: 2px;
         background: #ececec;
-        padding: 0px 5px 0px 5px;
+        padding: 5px;
         width: 100%; /* điều chỉnh theo ý bạn */
-        height: 120px;
+        max-height: 120px;
         overflow-y: auto; /* cuộn dọc */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         z-index: 10;
@@ -462,26 +453,12 @@
         display: block;
       }
 
-      .skill-content p {
-        margin: 0;
-        line-height: 1.1;
-        padding: 5px 5px 2px 5px;
-        font-size: calc(5px + 0.6vh + 0.5vw);
-        color: #000;
-      }
-
-      .skill-content a {
-        padding: 0 5px 2px 5px;
+      .skill-content a,
+      .skill-content i {
         margin-left: 5px;
-        width: calc(100% - 15px);
         font-size: calc(5px + 0.4vh + 0.5vw);
         color: #000;
-        line-height: 1.1;
         text-decoration: none;
-      }
-
-      .skill-content a:hover {
-        color: #000;
       }
     </style>
   </head>
@@ -591,7 +568,7 @@
     <div class="body-bottom">
       <!-- Banner -->
       <div class="banner" id="banner">
-        <div class="banner-text" id="bannerText">WELCOME</div>
+        <div class="banner-text" id="bannerText"></div>
         <button class="prev">❮</button>
         <button class="next">❯</button>
       </div>
@@ -608,25 +585,26 @@
               <i class="fa-solid fa-lightbulb"></i> Đổi mới
             </div>
             <div class="description">
-              Không ngừng sáng tạo, áp dụng giải pháp mới để mang lại giá trị
-              tối ưu.
+              Luôn tiên phong sáng tạo và ứng dụng giải pháp đột phá để mang lại
+              lợi thế cạnh tranh.
             </div>
           </div>
 
           <div class="box">
             <div class="mains"><i class="fa-solid fa-gem"></i> Chất lượng</div>
             <div class="description">
-              Cam kết chất lượng tốt nhất với quy trình minh bạch và chuyên
-              nghiệp.
+              Cam kết sản phẩm và dịch vụ đạt chuẩn cao nhất với quy trình minh
+              bạch, chuyên nghiệp.
             </div>
           </div>
 
           <div class="box">
             <div class="mains">
-              <i class="fa-solid fa-handshake"></i> Tin cậy
+              <i class="fa-solid fa-user-check"></i> Tin cậy
             </div>
             <div class="description">
-              Xây dựng niềm tin bằng sự tận tâm, trách nhiệm và đúng cam kết.
+              Xây dựng niềm tin bằng sự tận tâm, trách nhiệm và đảm bảo đúng cam
+              kết với khách hàng.
             </div>
           </div>
         </div>
@@ -637,141 +615,12 @@
         <div class="about-content">
           <div class="mains">Chúng tôi có thể?</div>
           <div class="description">
-            Chúng tôi là một cơ quan tiếp thị kỹ thuật số và SEO chuyên giúp các
-            doanh nghiệp phát triển sự hiện diện trực tuyến và thực sự phát
-            triển.
+            "Chúng tôi mang đến giải pháp tiếp thị kỹ thuật số và SEO toàn diện,
+            kết hợp chiến lược sáng tạo và công nghệ tối ưu, để doanh nghiệp
+            phát triển mạnh mẽ trong kỷ nguyên số."
           </div>
           <div class="skills">
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-laptop-code"></i><a>Kỹ thuật số</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <p>Nội dung chi tiết về Phát triển</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <p>Có thể thêm nhiều thông tin khác</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a>
-                </div>
-              </div>
-            </div>
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-cart-shopping"></i><a>Thương mại</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <p>Nội dung chi tiết về Phát triển</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <p>Có thể thêm nhiều thông tin khác</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a>
-                </div>
-              </div>
-            </div>
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-lightbulb"></i><a>Sáng tạo</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <p>Nội dung chi tiết về Phát triển</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <p>Có thể thêm nhiều thông tin khác</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a>
-                </div>
-              </div>
-            </div>
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-people-roof"></i><a>Dịch vụ</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <p>Nội dung chi tiết về Phát triển</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <p>Có thể thêm nhiều thông tin khác</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a>
-                </div>
-              </div>
-            </div>
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-film"></i><a>Giải trí</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <p>Nội dung chi tiết về Phát triển</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <p>Có thể thêm nhiều thông tin khác</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a>
-                </div>
-              </div>
-            </div>
+            <!-- Truyền thông -->
             <div class="skill-wrapper">
               <div class="skill">
                 <i class="fa-solid fa-network-wired"></i><a>Truyền thông</a>
@@ -779,30 +628,108 @@
                   <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="skill-content">
-                  <p>Nội dung chi tiết về Phát triển</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <p>Có thể thêm nhiều thông tin khác</p>
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a><br />
-                  <a>Idea</a>
+                  <a>Nghiên Cứu & Phân Tích Thị Trường</a>
+                  <i class="fa-solid fa-chart-line"></i><br />
+                  <a>Chiến Lược Truyền Thông Tổng Thể</a>
+                  <i class="fa-solid fa-bullseye"></i><br />
+                  <a>Tối Ưu Hiệu Quả Truyền Thông</a>
+                  <i class="fa-solid fa-share-nodes"></i><br />
+                  <a>Sản Xuất & Quảng Cáo</a>
+                  <i class="fa-solid fa-photo-film"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Giải trí & Nội dung số -->
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-film"></i><a>Giải trí</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <a>Phát Triển Game & Trải Nghiệm Số</a>
+                  <i class="fa-solid fa-gamepad"></i><br />
+                  <a>Xây Dựng Cộng Đồng & Fanbase</a>
+                  <i class="fa-solid fa-users"></i><br />
+                  <a>Âm Nhạc & Giải Trí Trực Tuyến</a>
+                  <i class="fa-solid fa-music"></i><br />
+                  <a>Thiết Kế & Sáng Tạo Nội Dung</a>
+                  <i class="fa-solid fa-palette"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thương mại -->
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-cart-shopping"></i><a>Thương mại</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <a>Xây Dựng & Phát Triển Thương Hiệu</a>
+                  <i class="fa-solid fa-star"></i><br />
+                  <a>Hoạch Định Chiến Lược Kinh Doanh</a>
+                  <i class="fa-solid fa-lightbulb"></i><br />
+                  <a>Chuyển Đổi Công Nghệ Số</a>
+                  <i class="fa-solid fa-diagram-project"></i><br />
+                  <a>Giải Pháp Pháp Lý</a>
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Học thuật & Nghiên cứu -->
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-graduation-cap"></i><a>Học thuật</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <a>Tư Liệu & Nghiên Cứu Khoa Học</a>
+                  <i class="fa-solid fa-book-open"></i><br />
+                  <a>Báo Cáo & Phân Tích Dữ Liệu</a>
+                  <i class="fa-solid fa-chart-pie"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kỹ thuật & Công nghệ -->
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-microchip"></i><a>Kỹ thuật</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <a>Cải Tiến & Triển Khai & Ứng Dụng</a>
+                  <i class="fa-solid fa-gears"></i><br />
+                  <a>Đào Tạo & Thiết Kế & Phát Triển</a>
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dịch vụ khách hàng -->
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-handshake-angle"></i><a>Dịch vụ</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <a>Chăm Sóc & Tư Vấn & Hỗ Trợ</a>
+                  <i class="fa-solid fa-headset"></i><br />
+                  <a>Bảo Hành & Bảo Trì</a>
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <section id="trademark">Thương Hiệu</section>
     </div>
 
     <script>
@@ -838,15 +765,19 @@
       const banners = [
         {
           img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTVGroup.jpeg",
-          text: "Khám phá thế giới",
+          text: "OTVGroup | Hết Mình Với Đam Mê!",
         },
         {
           img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/BackGround%20-%20OTISMusicStudio.jpg",
-          text: "Ưu đãi hấp dẫn",
+          text: "OTVMusic | Nghệ Thuật Là Linh Hồn Cuộc Sống.",
         },
         {
           img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISShop.jpeg",
-          text: "Chào đón trải nghiệm mới",
+          text: "OTISShop | Uy Tín - Chất Lượng - Tin Cậy.",
+        },
+        {
+          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISStore.jpeg",
+          text: "OTISStore | Uy Tín Tạo Nên Thương Hiệu.",
         },
       ];
 
