@@ -415,7 +415,7 @@
 
       .skill i {
         font-size: calc(5px + 0.6vh + 0.5vw);
-        width: 24px;
+        width: 20px;
         text-align: center;
       }
 
@@ -427,7 +427,7 @@
         padding: 0 1px;
         border-radius: 20%;
         font-weight: 600;
-        font-size: calc(5px + 0.6vh + 0.5vw);
+        font-size: calc(5px + 0.4vh + 0.5vw);
         cursor: pointer;
         transition: all 0.5s ease;
       }
