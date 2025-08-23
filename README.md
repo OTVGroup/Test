@@ -415,7 +415,7 @@
 
       .skill i {
         font-size: calc(5px + 0.6vh + 0.5vw);
-        width: 20px;
+        width: calc(7px + 0.6vh + 0.5vw);
         text-align: center;
       }
 
