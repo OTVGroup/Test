@@ -32,11 +32,11 @@
       /* Nội dung bên dưới */
       .body-bottom {
         position: fixed;
-        top: 86px; /* đúng bằng chiều cao header */
+        top: 92px; /* đúng bằng chiều cao header */
         left: 0;
         padding-bottom: 5px;
         width: 100vw;
-        height: calc(100vh - 86px); /* chiếm phần còn lại */
+        height: calc(100vh - 92px); /* chiếm phần còn lại */
         overflow-y: auto; /* cuộn dọc */
         background: #ffffff;
       }
@@ -237,8 +237,8 @@
         }
 
         .body-bottom {
-          top: 111px; /* đúng bằng chiều cao header */
-          height: calc(100vh - 111px); /* chiếm phần còn lại */
+          top: 121px; /* đúng bằng chiều cao header */
+          height: calc(100vh - 121px); /* chiếm phần còn lại */
         }
       }
 
