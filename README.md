@@ -33,10 +33,10 @@
       /* Nội dung bên dưới */
       .body-bottom {
         position: fixed;
-        top: 80px; /* đúng bằng chiều cao header */
+        top: 86px; /* đúng bằng chiều cao header */
         left: 0;
         width: 100vw;
-        height: calc(100vh - 90px); /* chiếm phần còn lại */
+        height: calc(100vh - 86px); /* chiếm phần còn lại */
         overflow-y: auto; /* cuộn dọc */
         background: #ffffff;
       }
@@ -298,7 +298,7 @@
       }
 
       section {
-        width: max(400px, calc(100% - 20px));
+        width: max(380px, 100%);
         padding: 10px;
         background: radial-gradient(
             150% 30px at 50% 0,
@@ -874,4 +874,3 @@
     </script>
   </body>
 </html>
-
