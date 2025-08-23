@@ -184,7 +184,7 @@
         display: block;
         color: #000000;
         padding: 5px;
-        font-size: min(18px, calc(5px + 1vh + 0.9vw));
+        font-size: min(18px, calc(5px + 0.8vh + 0.9vw));
         text-decoration: none;
         white-space: nowrap;
       }
@@ -229,7 +229,7 @@
         }
 
         nav .search-box {
-          width: 380px;
+          width: 360px;
         }
 
         .search-box input {
@@ -264,7 +264,7 @@
         left: 0;
         bottom: 0;
         width: 100%; /* full chiều ngang */
-        font-size: calc(5px + 1vh + 1.5vw);
+        font-size: calc(5px + 1vh + 1.2vw);
         color: #fff;
         background-color: rgba(0, 0, 0, 0.3); /* nền mờ */
         padding: 5px 10px;
@@ -298,7 +298,7 @@
       }
 
       section {
-        width: max(380px, 100%);
+        width: max(360px, 100%);
         padding: 10px;
         background: radial-gradient(
             150% 30px at 50% 0,
@@ -333,7 +333,7 @@
       }
 
       .about-introduce .box .icon {
-        font-size: calc(5px + 1vh + 2vw);
+        font-size: calc(5px + 0.8vh + 2vw);
         text-align: center;
       }
 
@@ -343,7 +343,7 @@
       }
 
       .about-introduce .box .idea-box {
-        font-size: calc(5px + 1vh + 0.6vw);
+        font-size: calc(5px + 0.8vh + 0.9vw);
         text-align: center;
         color: #929191;
         line-height: 1;
@@ -375,7 +375,7 @@
       }
 
       .description {
-        font-size: calc(5px + 1vh + 0.6vw);
+        font-size: calc(5px + 0.8vh + 0.9vw);
         color: #555;
         text-align: center;
       }
@@ -400,7 +400,7 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        font-size: calc(5px + 1vh + 0.6vw);
+        font-size: calc(5px + 0.8vh + 0.9vw);
         color: #333;
         background: #f9f9f9;
         padding: 5px;
@@ -414,7 +414,7 @@
       }
 
       .skill i {
-        width: calc(5px + 1vh + 1.2vw);
+        width: calc(5px + 0.8vh + 0.9vw);
         text-align: center;
       }
 
@@ -426,7 +426,7 @@
         padding: 0 1px;
         border-radius: 20%;
         font-weight: 600;
-        font-size: calc(5px + 1vh + 0.6vw);
+        font-size: calc(5px + 0.8vh + 0.9vw);
         cursor: pointer;
         transition: all 0.5s ease;
       }
@@ -460,7 +460,7 @@
 
       .skill-content p {
         margin: 0;
-        font-size: calc(5px + 0.8vh + 0.6vw);
+        font-size: calc(5px + 0.6vh + 0.9vw);
         padding: 5px 5px 1px 5px;
         color: #000;
       }
@@ -469,7 +469,7 @@
         padding: 0 5px 1px 5px;
         margin-left: 5px;
         width: calc(100% - 15px);
-        font-size: calc(5px + 0.6vh + 0.6vw);
+        font-size: calc(5px + 0.4vh + 0.9vw);
         color: #000;
         text-decoration: none;
       }
