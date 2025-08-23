@@ -236,8 +236,8 @@
         }
 
         .body-bottom {
-          top: 121px; /* đúng bằng chiều cao header */
-          height: calc(100vh - 121px); /* chiếm phần còn lại */
+          top: 111px; /* đúng bằng chiều cao header */
+          height: calc(100vh - 111px); /* chiếm phần còn lại */
         }
       }
 
@@ -873,4 +873,3 @@
     </script>
   </body>
 </html>
-
