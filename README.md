@@ -33,10 +33,10 @@
       /* Nội dung bên dưới */
       .body-bottom {
         position: fixed;
-        top: 93px; /* đúng bằng chiều cao header */
+        top: 80px; /* đúng bằng chiều cao header */
         left: 0;
         width: 100vw;
-        height: calc(100vh - 93px); /* chiếm phần còn lại */
+        height: calc(100vh - 90px); /* chiếm phần còn lại */
         overflow-y: auto; /* cuộn dọc */
         background: #ffffff;
       }
@@ -92,7 +92,7 @@
       }
 
       .contact-marquee marquee {
-        font-size: 18px;
+        font-size: 16px;
         color: #fff;
         font-weight: 500;
         line-height: 1.2;
@@ -134,30 +134,28 @@
         width: 100%;
         align-items: center;
         justify-content: center;
-        padding: 10px 0;
-        gap: 10px;
+        padding: 5px 0;
+        gap: 5px;
         flex: 1;
         flex-wrap: wrap;
-        flex-direction: row; /* xếp dọc */
       }
 
       /* Menu */
       .nav-1 {
         list-style: none;
         display: flex;
-        margin: 0;
         padding: 0;
       }
 
       .nav-2 {
         color: #fff;
-        margin: 0 5px;
+        margin: 0 auto;
         position: relative;
       }
 
       .nav-2 a {
         color: #fff;
-        font-size: 16px;
+        font-size: 20px;
         text-decoration: none;
       }
 
@@ -170,12 +168,11 @@
         display: none;
         position: absolute;
         top: 100%;
-        left: 0;
-        background: #ececec;
+        right: -18px;
+        background: #efefef;
         padding: 0;
-        margin: 0;
         list-style: none;
-        width: 160px;
+        width: min-content;
         border-radius: 5px;
       }
 
@@ -186,13 +183,14 @@
       .nav-4 a {
         display: block;
         color: #000000;
-        padding: 5px 10px;
+        padding: 5px;
+        font-size: min(18px, calc(5px + 1vh + 0.9vw));
         text-decoration: none;
         white-space: nowrap;
       }
 
       .search-box {
-        height: 25px;
+        height: 20px;
         background-color: rgb(255, 255, 255);
         display: flex; /* xếp ngang */
         align-items: center; /* căn giữa theo chiều dọc */
@@ -205,15 +203,15 @@
 
       .search-box input {
         height: 100%;
-        padding: 2px 3px;
+        padding: 2px 5px 2px 7px;
+        width: calc(100% - 30px);
         border: none; /* bỏ viền riêng */
         outline: none;
       }
 
-      .search-button {
-        width: 24px;
-        height: 100%;
-        border: none; /* bỏ viền */
+      .search-box a {
+        width: 20px;
+
         cursor: pointer;
         padding: 0;
         background: transparent; /* nền trong suốt */
@@ -244,24 +242,9 @@
         }
       }
 
-      section {
-        border: 1px solid #ccc;
-        padding: 20px;
-        width: 100vw;
-        min-width: 380px;
-      }
-
-      section h2 {
-        margin-bottom: 20px;
-      }
-
-      mark {
-        background: yellow; /* tô màu kết quả tìm */
-      }
-
       .banner {
-        width: 100%;
-        max-width: 1200px;
+        width: calc(100% - 2px);
+        /* max-width: 1200px; */
         aspect-ratio: 851 / 315;
         display: flex;
         align-items: center;
@@ -281,11 +264,11 @@
         left: 0;
         bottom: 0;
         width: 100%; /* full chiều ngang */
-        font-size: calc(10px + 3vh);
+        font-size: calc(5px + 1vh + 1.5vw);
         color: #fff;
-        background-color: rgba(0, 0, 0, 0.4); /* nền mờ */
-        padding: 10px 20px;
-        text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.3); /* nền mờ */
+        padding: 5px 10px;
+        text-shadow: 2px 4px 8px rgba(0, 0, 0, 1);
         text-align: left;
         box-sizing: border-box; /* đảm bảo padding không phá layout */
         border-bottom-left-radius: 5px;
@@ -299,17 +282,196 @@
         background: rgba(0, 0, 0, 0.4);
         color: #fff;
         border: none;
-        padding: 8px 12px;
-        font-size: 20px;
+        padding: 4px 8px;
+        font-size: 18px;
         cursor: pointer;
         border-radius: 50%;
         z-index: 3;
       }
+
       .banner .prev {
         left: 10px;
       }
+
       .banner .next {
         right: 10px;
+      }
+
+      section {
+        width: max(400px, calc(100% - 20px));
+        padding: 10px;
+        background: radial-gradient(
+            150% 30px at 50% 0,
+            var(--shadow) 0%,
+            rgba(0, 0, 0, 0.2) 25%,
+            rgba(0, 0, 0, 0.12) 50%,
+            rgba(0, 0, 0, 0.08) 75%,
+            transparent 100%
+          ),
+          var(--background);
+        box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.06);
+      }
+
+      .about-introduce {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .about-introduce .box {
+        flex: 1 1 120px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.5s ease;
+      }
+
+      .about-introduce .box:hover {
+        transform: translateY(-10px);
+      }
+
+      .about-introduce .box .icon {
+        font-size: calc(5px + 1vh + 2vw);
+        text-align: center;
+      }
+
+      .about-introduce .box .mains {
+        text-align: center;
+        margin: 5px auto;
+      }
+
+      .about-introduce .box .idea-box {
+        font-size: calc(5px + 1vh + 0.6vw);
+        text-align: center;
+        color: #929191;
+        line-height: 1;
+      }
+
+      /* Nội dung */
+      .about-content {
+        width: 100%;
+        min-width: 240px;
+      }
+
+      .main {
+        font-size: calc(5px + 1vh + 1.2vw);
+        font-weight: 600;
+        line-height: 1.2;
+        color: #000;
+        text-align: center;
+        margin: 0 auto 10px auto;
+      }
+
+      .mains {
+        font-size: calc(5px + 1vh + 0.9vw);
+        font-weight: 600;
+        line-height: 1;
+        width: calc(100% - 20px);
+        color: #1e1e1e;
+        text-align: center;
+        margin: 0 auto 5px auto;
+      }
+
+      .description {
+        font-size: calc(5px + 1vh + 0.6vw);
+        color: #555;
+        text-align: center;
+      }
+
+      /* Kỹ năng */
+      .skills {
+        display: grid;
+        width: min(1500px, 100%);
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(clamp(120px, 30%, 480px), 1fr)
+        );
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .skill-wrapper {
+        position: relative; /* dùng để skill-content định vị tương đối */
+      }
+
+      .skill {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: calc(5px + 1vh + 0.6vw);
+        color: #333;
+        background: #f9f9f9;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background 0.5s ease;
+      }
+
+      .skill:hover {
+        background: #888888;
+        color: #ffffff;
+      }
+
+      .skill i {
+        width: calc(5px + 1vh + 1.2vw);
+        text-align: center;
+      }
+
+      .skill .button {
+        margin-left: auto;
+        align-items: center;
+        background: none;
+        color: #000000;
+        padding: 0 1px;
+        border-radius: 20%;
+        font-weight: 600;
+        font-size: calc(5px + 1vh + 0.6vw);
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+
+      .button:hover {
+        background-color: white;
+        transform: scale(1.1); /* phóng to 110% khi hover */
+      }
+
+      .button.open i {
+        transform: rotate(180deg); /* mũi tên lật khi mở */
+      }
+
+      /* Nội dung ẩn */
+      .skill-content {
+        display: none; /* mặc định ẩn */
+        position: absolute;
+        top: 100%; /* nằm ngay dưới skill */
+        left: 0;
+        background: #ececec;
+        padding: 0px 5px 0px 0px;
+        width: calc(100% - 5px); /* điều chỉnh theo ý bạn */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+      }
+
+      /* Hiển thị khi mở */
+      .skill-wrapper.open .skill-content {
+        display: block;
+      }
+
+      .skill-content p {
+        margin: 0;
+        font-size: calc(5px + 0.8vh + 0.6vw);
+        padding: 5px 5px 1px 5px;
+        color: #000;
+      }
+
+      .skill-content a {
+        padding: 0 5px 1px 5px;
+        margin-left: 5px;
+        width: calc(100% - 15px);
+        font-size: calc(5px + 0.6vh + 0.6vw);
+        color: #000;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -369,15 +531,13 @@
       <nav>
         <div class="nav-1" style="min-width: 360px">
           <div class="nav-2">
-            <a href="#banner"> <i class="fa-solid fa-house"></i> Home</a>
+            <a href="#banner"> <i class="fa-solid fa-house"></i></a>
           </div>
           <div class="nav-2">
-            <a href="#introduce">
-              <i class="fa-solid fa-info-circle"></i> Giới thiệu</a
-            >
+            <a href="#introduce"> <i class="fa-solid fa-info-circle"></i></a>
           </div>
           <div class="nav-2">
-            <a><i class="fa-solid fa-star"></i> Thương hiệu</a>
+            <a><i class="fa-solid fa-star"></i></a>
             <div class="nav-3">
               <div class="nav-4">
                 <a
@@ -406,12 +566,14 @@
             </div>
           </div>
           <div class="nav-2">
-            <a href="#"><i class="fa-solid fa-envelope"></i> Liên hệ</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
           </div>
         </div>
         <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Tìm kiếm ..." />
-          <button class="search-button" onclick="searchText()">🔍</button>
+          <input type="text" id="searchInput" placeholder="Nhập từ khóa ..." />
+          <a onclick="searchText()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
         </div>
       </nav>
     </div>
@@ -425,120 +587,214 @@
       </div>
 
       <!-- Nội dung -->
-      <section class="content" id="introduce">
-        <h2>GIỚI THIỆU</h2>
-        <p>
-          OTVGroup là một hệ sinh thái nội dung sôi động, sáng tạo và đa dạng,
-          nổi bật trong các lĩnh vực giải trí, nghệ thuật và đổi mới kỹ thuật
-          số.
-        </p>
+      <section
+        style="--background: rgb(246, 225, 143); --shadow: rgba(0, 0, 0, 0.4)"
+        id="introduce"
+      >
+        <div class="main">GIỚI THIỆU</div>
+        <div class="about-introduce">
+          <div class="box">
+            <div class="mains">
+              <i class="fa-solid fa-lightbulb"></i> Đổi mới
+            </div>
+            <div class="description">
+              Không ngừng sáng tạo, áp dụng giải pháp mới để mang lại giá trị
+              tối ưu.
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="mains"><i class="fa-solid fa-gem"></i> Chất lượng</div>
+            <div class="description">
+              Cam kết chất lượng tốt nhất với quy trình minh bạch và chuyên
+              nghiệp.
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="mains">
+              <i class="fa-solid fa-handshake"></i> Tin cậy
+            </div>
+            <div class="description">
+              Xây dựng niềm tin bằng sự tận tâm, trách nhiệm và đúng cam kết.
+            </div>
+          </div>
+        </div>
       </section>
+      <section
+        style="--background: rgb(143, 217, 246); --shadow: rgba(0, 0, 0, 0.4)"
+      >
+        <div class="about-content">
+          <div class="mains">Chúng tôi có thể?</div>
+          <div class="description">
+            Chúng tôi là một cơ quan tiếp thị kỹ thuật số và SEO chuyên giúp các
+            doanh nghiệp phát triển sự hiện diện trực tuyến và thực sự phát
+            triển.
+          </div>
+          <div class="skills">
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-laptop-code"></i><a>Kỹ thuật số</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <p>Nội dung chi tiết về Phát triển</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <p>Có thể thêm nhiều thông tin khác</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a>
+                </div>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-cart-shopping"></i><a>Thương mại</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <p>Nội dung chi tiết về Phát triển</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <p>Có thể thêm nhiều thông tin khác</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a>
+                </div>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-lightbulb"></i><a>Sáng tạo</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <p>Nội dung chi tiết về Phát triển</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <p>Có thể thêm nhiều thông tin khác</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a>
+                </div>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-people-roof"></i><a>Dịch vụ</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <p>Nội dung chi tiết về Phát triển</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <p>Có thể thêm nhiều thông tin khác</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a>
+                </div>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-film"></i><a>Giải trí</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <p>Nội dung chi tiết về Phát triển</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <p>Có thể thêm nhiều thông tin khác</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a>
+                </div>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <div class="skill">
+                <i class="fa-solid fa-network-wired"></i><a>Truyền thông</a>
+                <div class="button">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="skill-content">
+                  <p>Nội dung chi tiết về Phát triển</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <p>Có thể thêm nhiều thông tin khác</p>
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a><br />
+                  <a>Idea</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="trademark">Thương Hiệu</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
-      <section>LIÊN HỆ</section>
     </div>
 
-    <!-- <script>
-      function searchText() {
-        // Xóa highlight cũ
-        document
-          .querySelectorAll("mark")
-          .forEach((m) => m.replaceWith(m.textContent));
-
-        const keyword = document.getElementById("searchInput").value.trim();
-        if (!keyword) return;
-
-        // KHÔNG dùng flag g ở đây
-        const regex = new RegExp(keyword, "i");
-        let foundEl = null;
-
-        function highlight(node) {
-          if (node.nodeType === 3) {
-            // text node
-            if (regex.test(node.textContent)) {
-              const newHTML = node.textContent.replace(
-                new RegExp(keyword, "gi"),
-                (match) => `<mark>${match}</mark>`
-              );
-              const span = document.createElement("span");
-              span.innerHTML = newHTML;
-              node.replaceWith(...span.childNodes);
-              if (!foundEl) foundEl = span.querySelector("mark");
-            }
-          } else {
-            node.childNodes.forEach(highlight);
-          }
-        }
-
-        document.querySelectorAll("section").forEach((sec) => highlight(sec));
-
-        if (foundEl) {
-          foundEl.scrollIntoView({ behavior: "smooth", block: "center" });
-        } else {
-          alert("Không tìm thấy kết quả!");
-        }
-      }
-    </script> -->
     <script>
       function searchText() {
         const keyword = document.getElementById("searchInput").value.trim();
@@ -559,6 +815,13 @@
           alert("Không tìm thấy kết quả!");
         }
       }
+
+      // Lắng nghe Enter
+      document
+        .getElementById("searchInput")
+        .addEventListener("keydown", (e) => {
+          if (e.key === "Enter") searchText();
+        });
     </script>
 
     <script>
@@ -599,5 +862,16 @@
       // auto chuyển
       setInterval(() => showBanner(idx + 1), 5999);
     </script>
+
+    <script>
+      document.querySelectorAll(".skill .button").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const wrapper = btn.closest(".skill-wrapper");
+          wrapper.classList.toggle("open");
+          btn.classList.toggle("open");
+        });
+      });
+    </script>
   </body>
 </html>
+
