@@ -34,6 +34,7 @@
         position: fixed;
         top: 86px; /* đúng bằng chiều cao header */
         left: 0;
+        padding-bottom: 5px;
         width: 100vw;
         height: calc(100vh - 86px); /* chiếm phần còn lại */
         overflow-y: auto; /* cuộn dọc */
@@ -154,7 +155,7 @@
 
       .nav-2 a {
         color: #fff;
-        font-size: 20px;
+        font-size: 24px;
         text-decoration: none;
       }
 
@@ -189,7 +190,7 @@
       }
 
       .search-box {
-        height: 20px;
+        height: 24px;
         background-color: rgb(255, 255, 255);
         display: flex; /* xếp ngang */
         align-items: center; /* căn giữa theo chiều dọc */
@@ -447,7 +448,7 @@
         left: 0;
         background: #ececec;
         padding: 0px 5px 0px 0px;
-        width: calc(100% - 5px); /* điều chỉnh theo ý bạn */
+        width: 100%; /* điều chỉnh theo ý bạn */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         z-index: 10;
       }
