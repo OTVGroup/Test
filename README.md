@@ -198,7 +198,7 @@
         border-radius: 3px; /* bo góc toàn khung */
         overflow: hidden; /* ẩn tràn viền */
         margin: 0;
-        font-size: 20px;
+        font-size: 15px;
         width: 200px;
       }
 
@@ -212,14 +212,12 @@
 
       .search-box a {
         width: 20px;
-
         cursor: pointer;
         padding: 0;
         background: transparent; /* nền trong suốt */
         display: flex;
         justify-items: center;
         justify-content: center;
-        font-size: 15px; /* chỉnh to nhỏ icon/chữ */
       }
 
       /* Responsive */
@@ -313,91 +311,35 @@
         box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.06);
       }
 
-      .about-introduce {
+      .section-introduce {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
-        justify-content: center;
+        margin: 0 auto;
       }
 
-      .about-introduce .box {
-        flex: 1 1 120px;
-        padding: 5px 10px;
+      /* Kỹ năng */
+      .section-skill {
+        display: grid;
+        width: min(1500px, 100%);
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(clamp(240px, 30%, 480px), 1fr)
+        );
+        gap: 10px;
+        margin: 0 auto;
+      }
+
+      .box-introduce {
+        flex: 1 1 240px;
+        padding: 5px;
         border-radius: 10px;
         background: #fff;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         transition: transform 0.5s ease;
       }
 
-      .about-introduce .box:hover {
-        transform: translateY(-10px);
-      }
-
-      .about-introduce .box .icon {
-        font-size: calc(5px + 0.8vh + 1.5vw);
-        text-align: center;
-      }
-
-      .about-introduce .box .mains {
-        text-align: center;
-        margin: 5px auto;
-      }
-
-      .about-introduce .box .idea-box {
-        font-size: calc(5px + 0.6vh + 0.5vw);
-        text-align: center;
-        color: #929191;
-        line-height: 1;
-      }
-
-      /* Nội dung */
-      .about-content {
-        width: 100%;
-        min-width: 240px;
-      }
-
-      .main {
-        font-size: calc(5px + 0.6vh + 1vw);
-        font-weight: 600;
-        line-height: 1.2;
-        color: #000;
-        text-align: center;
-        margin: 0 auto 10px auto;
-      }
-
-      .mains {
-        font-size: calc(5px + 0.6vh + 0.75vw);
-        font-weight: 600;
-        line-height: 1;
-        width: calc(100% - 20px);
-        color: #1e1e1e;
-        text-align: center;
-        margin: 0 auto 5px auto;
-      }
-
-      .description {
-        font-size: calc(5px + 0.6vh + 0.5vw);
-        color: #555;
-        text-align: center;
-      }
-
-      /* Kỹ năng */
-      .skills {
-        display: grid;
-        width: min(1500px, 100%);
-        grid-template-columns: repeat(
-          auto-fit,
-          minmax(clamp(120px, 30%, 480px), 1fr)
-        );
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .skill-wrapper {
-        position: relative; /* dùng để skill-content định vị tương đối */
-      }
-
-      .skill {
+      .box-skill {
         display: flex;
         align-items: center;
         gap: 5px;
@@ -409,19 +351,62 @@
         transition: background 0.5s ease;
       }
 
-      .skill i {
+      .box-introduce:hover {
+        transform: scale(1.05);
+      }
+
+      .box-skill:hover .button {
+        background-color: #383838;
+        color: #efefef;
+      }
+
+      .h1 {
+        font-size: calc(5px + 0.6vh + 1vw);
+        font-weight: 600;
+        line-height: 1.2;
+        color: #000;
+        text-align: center;
+        margin: 0px auto 7.5px auto;
+      }
+
+      .h2 {
+        font-size: calc(5px + 0.6vh + 0.75vw);
+        font-weight: 600;
+        line-height: 1.1;
+        width: max-content;
+        color: #1e1e1e;
+        text-align: center;
+        margin: 0px auto 5px auto;
+      }
+
+      .h3 {
         font-size: calc(5px + 0.6vh + 0.5vw);
-        width: calc(7px + 0.6vh + 0.5vw);
+        color: #555;
+        line-height: 1;
         text-align: center;
       }
 
-      .skill .button {
+      .note {
+        font-size: calc(5px + 0.7vh + 0.5vw);
+        color: #555;
+        line-height: 1;
+        text-align: center;
+        margin: 0px auto 5px auto;
+      }
+
+      .box-introduce i,
+      .box-skill i {
+        width: calc(9px + 0.6vh + 0.5vw);
+        text-align: center;
+      }
+
+      .box-skill .button {
         margin-left: auto;
         align-items: center;
         background: none;
         color: #000000;
-        padding: 0 1px;
-        border-radius: 20%;
+        padding: 1px;
+        border-radius: 10%;
         font-weight: 600;
         font-size: calc(5px + 0.4vh + 0.5vw);
         cursor: pointer;
@@ -430,6 +415,10 @@
 
       .button.open i {
         transform: rotate(180deg); /* mũi tên lật khi mở */
+      }
+
+      .wrapper {
+        position: relative; /* dùng để skill-content định vị tương đối */
       }
 
       /* Nội dung ẩn */
@@ -449,7 +438,7 @@
       }
 
       /* Hiển thị khi mở */
-      .skill-wrapper.open .skill-content {
+      .wrapper.open .skill-content {
         display: block;
       }
 
@@ -578,31 +567,33 @@
         style="--background: rgb(246, 225, 143); --shadow: rgba(0, 0, 0, 0.4)"
         id="introduce"
       >
-        <div class="main">GIỚI THIỆU</div>
-        <div class="about-introduce">
-          <div class="box">
-            <div class="mains">
-              <i class="fa-solid fa-lightbulb"></i> Đổi mới
+        <div class="h1">GIỚI THIỆU</div>
+        <div class="section-introduce">
+          <div class="box-introduce">
+            <div class="h2">
+              <i class="fa-solid fa-lightbulb"></i> <a>Đổi mới</a>
             </div>
-            <div class="description">
+            <div class="h3">
               Luôn tiên phong sáng tạo và ứng dụng giải pháp đột phá để mang lại
               lợi thế cạnh tranh.
             </div>
           </div>
 
-          <div class="box">
-            <div class="mains"><i class="fa-solid fa-gem"></i> Chất lượng</div>
-            <div class="description">
+          <div class="box-introduce">
+            <div class="h2">
+              <i class="fa-solid fa-gem"></i> <a>Chất lượng</a>
+            </div>
+            <div class="h3">
               Cam kết sản phẩm và dịch vụ đạt chuẩn cao nhất với quy trình minh
               bạch, chuyên nghiệp.
             </div>
           </div>
 
-          <div class="box">
-            <div class="mains">
-              <i class="fa-solid fa-user-check"></i> Tin cậy
+          <div class="box-introduce">
+            <div class="h2">
+              <i class="fa-solid fa-user-check"></i> <a>Tin cậy</a>
             </div>
-            <div class="description">
+            <div class="h3">
               Xây dựng niềm tin bằng sự tận tâm, trách nhiệm và đảm bảo đúng cam
               kết với khách hàng.
             </div>
@@ -611,120 +602,119 @@
       </section>
       <section
         style="--background: rgb(143, 217, 246); --shadow: rgba(0, 0, 0, 0.4)"
+        id="skill"
       >
-        <div class="about-content">
-          <div class="mains">Chúng tôi có thể?</div>
-          <div class="description">
-            "Chúng tôi mang đến giải pháp tiếp thị kỹ thuật số và SEO toàn diện,
-            kết hợp chiến lược sáng tạo và công nghệ tối ưu, để doanh nghiệp
-            phát triển mạnh mẽ trong kỷ nguyên số."
+        <div class="h2">Chúng tôi có thể?</div>
+        <div class="note">
+          "Chúng tôi mang đến giải pháp tiếp thị kỹ thuật số và SEO toàn diện,
+          kết hợp chiến lược sáng tạo và công nghệ tối ưu, để doanh nghiệp phát
+          triển mạnh mẽ trong kỷ nguyên số."
+        </div>
+        <div class="section-skill">
+          <!-- Truyền thông -->
+          <div class="wrapper">
+            <div class="box-skill">
+              <i class="fa-solid fa-network-wired"></i><a>Truyền thông</a>
+              <div class="button">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="skill-content">
+                <a>Nghiên Cứu & Phân Tích Thị Trường</a>
+                <i class="fa-solid fa-chart-line"></i><br />
+                <a>Chiến Lược Truyền Thông Tổng Thể</a>
+                <i class="fa-solid fa-bullseye"></i><br />
+                <a>Tối Ưu Hiệu Quả Truyền Thông</a>
+                <i class="fa-solid fa-share-nodes"></i><br />
+                <a>Sản Xuất & Quảng Cáo</a>
+                <i class="fa-solid fa-photo-film"></i>
+              </div>
+            </div>
           </div>
-          <div class="skills">
-            <!-- Truyền thông -->
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-network-wired"></i><a>Truyền thông</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <a>Nghiên Cứu & Phân Tích Thị Trường</a>
-                  <i class="fa-solid fa-chart-line"></i><br />
-                  <a>Chiến Lược Truyền Thông Tổng Thể</a>
-                  <i class="fa-solid fa-bullseye"></i><br />
-                  <a>Tối Ưu Hiệu Quả Truyền Thông</a>
-                  <i class="fa-solid fa-share-nodes"></i><br />
-                  <a>Sản Xuất & Quảng Cáo</a>
-                  <i class="fa-solid fa-photo-film"></i>
-                </div>
+
+          <!-- Giải trí & Nội dung số -->
+          <div class="wrapper">
+            <div class="box-skill">
+              <i class="fa-solid fa-film"></i><a>Giải trí</a>
+              <div class="button">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="skill-content">
+                <a>Phát Triển Game & Trải Nghiệm Số</a>
+                <i class="fa-solid fa-gamepad"></i><br />
+                <a>Xây Dựng Cộng Đồng & Fanbase</a>
+                <i class="fa-solid fa-users"></i><br />
+                <a>Âm Nhạc & Giải Trí Trực Tuyến</a>
+                <i class="fa-solid fa-music"></i><br />
+                <a>Thiết Kế & Sáng Tạo Nội Dung</a>
+                <i class="fa-solid fa-palette"></i>
               </div>
             </div>
+          </div>
 
-            <!-- Giải trí & Nội dung số -->
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-film"></i><a>Giải trí</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <a>Phát Triển Game & Trải Nghiệm Số</a>
-                  <i class="fa-solid fa-gamepad"></i><br />
-                  <a>Xây Dựng Cộng Đồng & Fanbase</a>
-                  <i class="fa-solid fa-users"></i><br />
-                  <a>Âm Nhạc & Giải Trí Trực Tuyến</a>
-                  <i class="fa-solid fa-music"></i><br />
-                  <a>Thiết Kế & Sáng Tạo Nội Dung</a>
-                  <i class="fa-solid fa-palette"></i>
-                </div>
+          <!-- Thương mại -->
+          <div class="wrapper">
+            <div class="box-skill">
+              <i class="fa-solid fa-cart-shopping"></i><a>Thương mại</a>
+              <div class="button">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="skill-content">
+                <a>Xây Dựng & Phát Triển Thương Hiệu</a>
+                <i class="fa-solid fa-star"></i><br />
+                <a>Hoạch Định Chiến Lược Kinh Doanh</a>
+                <i class="fa-solid fa-lightbulb"></i><br />
+                <a>Chuyển Đổi Công Nghệ Số</a>
+                <i class="fa-solid fa-diagram-project"></i><br />
+                <a>Giải Pháp Pháp Lý</a>
+                <i class="fa-solid fa-scale-balanced"></i>
               </div>
             </div>
+          </div>
 
-            <!-- Thương mại -->
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-cart-shopping"></i><a>Thương mại</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <a>Xây Dựng & Phát Triển Thương Hiệu</a>
-                  <i class="fa-solid fa-star"></i><br />
-                  <a>Hoạch Định Chiến Lược Kinh Doanh</a>
-                  <i class="fa-solid fa-lightbulb"></i><br />
-                  <a>Chuyển Đổi Công Nghệ Số</a>
-                  <i class="fa-solid fa-diagram-project"></i><br />
-                  <a>Giải Pháp Pháp Lý</a>
-                  <i class="fa-solid fa-scale-balanced"></i>
-                </div>
+          <!-- Học thuật & Nghiên cứu -->
+          <div class="wrapper">
+            <div class="box-skill">
+              <i class="fa-solid fa-graduation-cap"></i><a>Học thuật</a>
+              <div class="button">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="skill-content">
+                <a>Tư Liệu & Nghiên Cứu Khoa Học</a>
+                <i class="fa-solid fa-book-open"></i><br />
+                <a>Báo Cáo & Phân Tích Dữ Liệu</a>
+                <i class="fa-solid fa-chart-pie"></i>
               </div>
             </div>
+          </div>
 
-            <!-- Học thuật & Nghiên cứu -->
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-graduation-cap"></i><a>Học thuật</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <a>Tư Liệu & Nghiên Cứu Khoa Học</a>
-                  <i class="fa-solid fa-book-open"></i><br />
-                  <a>Báo Cáo & Phân Tích Dữ Liệu</a>
-                  <i class="fa-solid fa-chart-pie"></i>
-                </div>
+          <!-- Kỹ thuật & Công nghệ -->
+          <div class="wrapper">
+            <div class="box-skill">
+              <i class="fa-solid fa-microchip"></i><a>Kỹ thuật</a>
+              <div class="button">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="skill-content">
+                <a>Cải Tiến & Triển Khai & Ứng Dụng</a>
+                <i class="fa-solid fa-gears"></i><br />
+                <a>Đào Tạo & Thiết Kế & Phát Triển</a>
+                <i class="fa-solid fa-chalkboard-user"></i>
               </div>
             </div>
+          </div>
 
-            <!-- Kỹ thuật & Công nghệ -->
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-microchip"></i><a>Kỹ thuật</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <a>Cải Tiến & Triển Khai & Ứng Dụng</a>
-                  <i class="fa-solid fa-gears"></i><br />
-                  <a>Đào Tạo & Thiết Kế & Phát Triển</a>
-                  <i class="fa-solid fa-chalkboard-user"></i>
-                </div>
+          <!-- Dịch vụ khách hàng -->
+          <div class="wrapper">
+            <div class="box-skill">
+              <i class="fa-solid fa-handshake-angle"></i><a>Dịch vụ</a>
+              <div class="button">
+                <i class="fa-solid fa-chevron-down"></i>
               </div>
-            </div>
-
-            <!-- Dịch vụ khách hàng -->
-            <div class="skill-wrapper">
-              <div class="skill">
-                <i class="fa-solid fa-handshake-angle"></i><a>Dịch vụ</a>
-                <div class="button">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="skill-content">
-                  <a>Chăm Sóc & Tư Vấn & Hỗ Trợ</a>
-                  <i class="fa-solid fa-headset"></i><br />
-                  <a>Bảo Hành & Bảo Trì</a>
-                  <i class="fa-solid fa-screwdriver-wrench"></i>
-                </div>
+              <div class="skill-content">
+                <a>Chăm Sóc & Tư Vấn & Hỗ Trợ</a>
+                <i class="fa-solid fa-headset"></i><br />
+                <a>Bảo Hành & Bảo Trì</a>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
               </div>
             </div>
           </div>
@@ -764,19 +754,19 @@
     <script>
       const banners = [
         {
-          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTVGroup.jpeg",
+          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/h1/Background%20-%20OTVGroup.jpeg",
           text: "OTVGroup | Hết Mình Với Đam Mê!",
         },
         {
-          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/BackGround%20-%20OTISMusicStudio.jpg",
+          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/h1/BackGround%20-%20OTISMusicStudio.jpg",
           text: "OTVMusic | Nghệ Thuật Là Linh Hồn Cuộc Sống.",
         },
         {
-          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISShop.jpeg",
+          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/h1/Background%20-%20OTISShop.jpeg",
           text: "OTISShop | Uy Tín - Chất Lượng - Tin Cậy.",
         },
         {
-          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISStore.jpeg",
+          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/h1/Background%20-%20OTISStore.jpeg",
           text: "OTISStore | Uy Tín Tạo Nên Thương Hiệu.",
         },
       ];
@@ -805,10 +795,20 @@
     </script>
 
     <script>
-      document.querySelectorAll(".skill .button").forEach((btn) => {
+      document.querySelectorAll(".box-skill .button").forEach((btn) => {
         btn.addEventListener("click", (e) => {
-          const wrapper = btn.closest(".skill-wrapper");
-          wrapper.classList.toggle("open");
+          const currentWrapper = btn.closest(".wrapper");
+
+          // Đóng tất cả wrapper khác
+          document.querySelectorAll(".wrapper.open").forEach((wrapper) => {
+            if (wrapper !== currentWrapper) {
+              wrapper.classList.remove("open");
+              wrapper.querySelector(".button.open")?.classList.remove("open");
+            }
+          });
+
+          // Toggle wrapper hiện tại
+          currentWrapper.classList.toggle("open");
           btn.classList.toggle("open");
         });
       });
