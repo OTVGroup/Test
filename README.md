@@ -360,8 +360,8 @@
         color: #efefef;
       }
 
-      .h1 {
-        font-size: calc(5px + 0.8vh + 0.8vw);
+      .main1 {
+        font-size: calc(5px + 0.9vh + 0.9vw);
         font-weight: 600;
         line-height: 1.2;
         color: #000;
@@ -369,8 +369,8 @@
         margin: 0px auto 7.5px auto;
       }
 
-      .h2 {
-        font-size: calc(5px + 0.7vh + 0.7vw);
+      .main2 {
+        font-size: calc(5px + 0.8vh + 0.8vw);
         font-weight: 600;
         line-height: 1.1;
         width: max-content;
@@ -379,15 +379,15 @@
         margin: 0px auto 5px auto;
       }
 
-      .h3 {
-        font-size: calc(5px + 0.6vh + 0.6vw);
+      .main3 {
+        font-size: calc(5px + 0.7vh + 0.7vw);
         color: #1a1a1a;
         line-height: 1;
         text-align: center;
       }
 
       .note {
-        font-size: calc(5px + 0.6vh + 0.5vw);
+        font-size: calc(5px + 0.6vh + 0.6vw);
         color: #0a0a0a;
         line-height: 1;
         text-align: center;
@@ -401,6 +401,7 @@
       .box-skill i {
         width: calc(7px + 0.5vh + 0.5vw);
         text-align: center;
+        line-height: 1;
       }
 
       .box-skill .button {
@@ -570,33 +571,33 @@
         style="--background: rgb(246, 225, 143); --shadow: rgba(0, 0, 0, 0.4)"
         id="introduce"
       >
-        <div class="h1">GIỚI THIỆU</div>
+        <div class="main1">GIỚI THIỆU</div>
         <div class="section-introduce">
           <div class="box-introduce">
-            <div class="h2">
+            <div class="main2">
               <i class="fa-solid fa-lightbulb"></i> <a>Đổi mới</a>
             </div>
-            <div class="h3">
+            <div class="main3">
               Luôn tiên phong sáng tạo và ứng dụng giải pháp đột phá để mang lại
               lợi thế cạnh tranh.
             </div>
           </div>
 
           <div class="box-introduce">
-            <div class="h2">
+            <div class="main2">
               <i class="fa-solid fa-gem"></i> <a>Chất lượng</a>
             </div>
-            <div class="h3">
+            <div class="main3">
               Cam kết sản phẩm và dịch vụ đạt chuẩn cao nhất với quy trình minh
               bạch, chuyên nghiệp.
             </div>
           </div>
 
           <div class="box-introduce">
-            <div class="h2">
+            <div class="main2">
               <i class="fa-solid fa-user-check"></i> <a>Tin cậy</a>
             </div>
-            <div class="h3">
+            <div class="main3">
               Xây dựng niềm tin bằng sự tận tâm, trách nhiệm và đảm bảo đúng cam
               kết với khách hàng.
             </div>
@@ -607,7 +608,7 @@
         style="--background: rgb(143, 217, 246); --shadow: rgba(0, 0, 0, 0.4)"
         id="skill"
       >
-        <div class="h2">Chúng tôi có thể?</div>
+        <div class="main2">Chúng tôi có thể?</div>
         <div class="note">
           "Chúng tôi mang đến giải pháp tiếp thị kỹ thuật số và SEO toàn diện,
           kết hợp chiến lược sáng tạo và công nghệ tối ưu, để doanh nghiệp phát
