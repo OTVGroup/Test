@@ -324,7 +324,7 @@
         width: min(1500px, 100%);
         grid-template-columns: repeat(
           auto-fit,
-          minmax(clamp(240px, 30%, 480px), 1fr)
+          minmax(clamp(160px, 30%, 480px), 1fr)
         );
         gap: 10px;
         margin: 0 auto;
@@ -343,7 +343,7 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        font-size: calc(5px + 0.6vh + 0.5vw);
+        font-size: calc(5px + 0.6vh + 0.6vw);
         color: #333;
         background: #f9f9f9;
         padding: 5px;
@@ -361,7 +361,7 @@
       }
 
       .h1 {
-        font-size: calc(5px + 0.6vh + 1vw);
+        font-size: calc(5px + 0.8vh + 0.8vw);
         font-weight: 600;
         line-height: 1.2;
         color: #000;
@@ -370,33 +370,36 @@
       }
 
       .h2 {
-        font-size: calc(5px + 0.6vh + 0.75vw);
+        font-size: calc(5px + 0.7vh + 0.7vw);
         font-weight: 600;
         line-height: 1.1;
         width: max-content;
-        color: #1e1e1e;
+        color: #0a0a0a;
         text-align: center;
         margin: 0px auto 5px auto;
       }
 
       .h3 {
-        font-size: calc(5px + 0.6vh + 0.5vw);
-        color: #555;
+        font-size: calc(5px + 0.6vh + 0.6vw);
+        color: #1a1a1a;
         line-height: 1;
         text-align: center;
       }
 
       .note {
-        font-size: calc(5px + 0.7vh + 0.5vw);
-        color: #555;
+        font-size: calc(5px + 0.6vh + 0.5vw);
+        color: #0a0a0a;
         line-height: 1;
         text-align: center;
-        margin: 0px auto 5px auto;
+        margin: 0px auto 7.5px auto;
       }
 
-      .box-introduce i,
+      .box-introduce i {
+        width: calc(9px + 0.5vh + 0.5vw);
+        text-align: center;
+      }
       .box-skill i {
-        width: calc(9px + 0.6vh + 0.5vw);
+        width: calc(7px + 0.5vh + 0.5vw);
         text-align: center;
       }
 
@@ -408,7 +411,7 @@
         padding: 1px;
         border-radius: 10%;
         font-weight: 600;
-        font-size: calc(5px + 0.4vh + 0.5vw);
+        font-size: calc(5px + 0.5vh + 0.5vw);
         cursor: pointer;
         transition: all 0.5s ease;
       }
@@ -445,7 +448,7 @@
       .skill-content a,
       .skill-content i {
         margin-left: 5px;
-        font-size: calc(5px + 0.4vh + 0.5vw);
+        font-size: calc(5px + 0.5vh + 0.5vw);
         color: #000;
         text-decoration: none;
       }
