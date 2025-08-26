@@ -10,6 +10,38 @@
     />
 
     <style>
+      :root {
+        --bg-color-header: #00509e;
+        --text-color-header: white;
+
+        --bg-color-menu: #8bb7d6;
+        --text-color-menu: black;
+
+        --bg-color-intro-1: #fffbea;
+        --bg-color-intro-2: #fff1b8;
+        --bg-color-intro-3: #ffe066;
+        --bg-color-intro-4: #fcd34d;
+        --bg-color-intro-5: #fbbf24;
+        --text-color-intro: #fff;
+
+        --bg-color-0: #b3e0e5;
+        --text-color-0: white;
+
+        --bg-color-brand: #b3e0e5;
+        --text-color-brand: white;
+
+        --bg-color-contact: #00509e;
+        --text-color-contact: white;
+
+        --bg-color-box: #f9f9f9;
+
+        --bg-color-bottom: #00509e;
+      }
+
+      html {
+        scroll-behavior: smooth; /* cuộn mượt khi click link */
+      }
+
       body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -17,8 +49,9 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
-        width: 100vw;
         justify-content: center;
+        width: 100vw;
+        height: 100vh;
       }
 
       .body-top {
@@ -34,17 +67,16 @@
         position: fixed;
         top: 92px; /* đúng bằng chiều cao header */
         left: 0;
-        padding-bottom: 5px;
+        padding-bottom: 0;
         width: 100vw;
         height: calc(100vh - 92px); /* chiếm phần còn lại */
         overflow-y: auto; /* cuộn dọc */
-        background: #ffffff;
       }
 
       /* Thanh hotline + email */
       .contact-bar {
-        background: #17c0c9;
-        color: #fff;
+        background: var(--bg-color-header);
+        color: var(--text-color-header);
         display: flex;
         height: 45px;
         justify-content: space-between;
@@ -57,7 +89,6 @@
         height: 100%;
         background: #adf4f82e;
         padding: 0 10px;
-        margin-right: 10px;
       }
 
       .logo-img {
@@ -81,55 +112,83 @@
         font-style: italic;
         line-height: 1;
         padding: 0;
-        color: #333;
+        color: #000000;
       }
 
-      .contact-marquee {
-        flex: 1; /* chiếm hết không gian giữa */
-        padding: 0;
-        text-align: center;
-        border: none; /* không viền */
+      .marquee {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
       }
 
-      .contact-marquee marquee {
-        font-size: 16px;
-        color: #fff;
-        font-weight: 500;
-        line-height: 1.2;
+      .marquee-inner {
+        display: inline-block;
+        white-space: nowrap;
+        padding: 15px 0;
+        animation: scrollLeft linear infinite;
       }
 
-      .social-icon {
+      .marquee .link {
+        display: inline-block;
+        margin-right: 50px; /* khoảng cách giữa các link */
+      }
+
+      .marquee .link a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        line-height: 15px;
+      }
+
+      .marquee .link a .see-more {
+        color: rgb(0, 0, 0);
+      }
+
+      @keyframes scrollLeft {
+        0% {
+          transform: translateX(50%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .social {
         display: flex;
         padding: 0 10px;
-        margin-left: 10px;
         height: 100%;
         background: #adf4f82e;
         justify-content: center; /* căn giữa ngang */
         align-items: center;
       }
 
-      .icon a {
-        font-size: 24px;
+      .social-icon {
+        width: 145px;
+        display: flex;
+        justify-content: center; /* căn giữa ngang */
+        align-items: center;
+      }
+
+      .social-icon a {
+        font-size: 20px;
         color: #fff;
         display: flex; /* dùng flex để căn giữa icon */
         align-items: center;
         justify-content: center;
-        width: 38px; /* ô icon đều nhau */
+        width: 36.25px; /* ô icon đều nhau */
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color 0.5s;
       }
 
-      .icon a:last-child {
-        border-right: none;
-      }
-
-      .icon a:hover {
+      .social-icon a:hover {
         color: #333;
       }
 
       /* Navbar chính */
       nav {
-        background: #012b86;
+        background: var(--bg-color-menu);
         display: flex;
         width: 100%;
         align-items: center;
@@ -148,13 +207,13 @@
       }
 
       .nav-2 {
-        color: #fff;
+        color: var(--text-color-menu);
         margin: 0 auto;
         position: relative;
       }
 
       .nav-2 a {
-        color: #fff;
+        color: var(--text-color-menu);
         font-size: 24px;
         text-decoration: none;
       }
@@ -199,7 +258,7 @@
         overflow: hidden; /* ẩn tràn viền */
         margin: 0;
         font-size: 15px;
-        width: 200px;
+        width: 320px;
       }
 
       .search-box input {
@@ -221,14 +280,42 @@
       }
 
       /* Responsive */
-      @media (max-width: 720px) {
+      @media (max-width: 500px) {
+        .logo-text {
+          display: none;
+        }
+
+        .social {
+          padding: 0 10px;
+        }
+
+        .social-icon {
+          display: grid;
+          grid-template-columns: 1fr 1fr; /* 2 cột */
+          grid-template-rows: 1fr 1fr; /* 2 hàng */
+          width: 36px;
+          height: 36px;
+          padding: 2px;
+          justify-items: center;
+          justify-content: center;
+        }
+
+        .social-icon a {
+          font-size: 14px;
+          width: 18px;
+          height: 18px;
+          justify-items: center;
+          justify-content: center;
+          color: #fff;
+          text-decoration: none;
+        }
+        .social-icon a:hover {
+          color: #a4a4a4;
+        }
+
         nav {
           display: flex;
           flex-direction: column; /* xếp dọc */
-        }
-
-        nav .search-box {
-          width: 360px;
         }
 
         .search-box input {
@@ -263,7 +350,7 @@
         left: 0;
         bottom: 0;
         width: 100%; /* full chiều ngang */
-        font-size: calc(5px + 0.8vh + 1vw);
+        font-size: calc(5px + 0.8vh + 0.8vw);
         color: #fff;
         background-color: rgba(0, 0, 0, 0.3); /* nền mờ */
         padding: 5px 10px;
@@ -281,8 +368,8 @@
         background: rgba(0, 0, 0, 0.4);
         color: #fff;
         border: none;
-        padding: 4px 8px;
-        font-size: 18px;
+        padding: 3px 6px;
+        font-size: 14px;
         cursor: pointer;
         border-radius: 50%;
         z-index: 3;
@@ -331,12 +418,21 @@
       }
 
       .box-introduce {
-        flex: 1 1 240px;
+        flex: 1 1 160px;
         padding: 5px;
         border-radius: 10px;
-        background: #fff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        background-color: var(--bg-color-box);
         transition: transform 0.5s ease;
+      }
+
+      .box-introduce:hover {
+        transform: scale(1.05);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .box-introduce i {
+        width: calc(10px + 0.5vh + 0.5vw);
+        text-align: center;
       }
 
       .box-skill {
@@ -345,14 +441,10 @@
         gap: 5px;
         font-size: calc(5px + 0.6vh + 0.6vw);
         color: #333;
-        background: #f9f9f9;
+        background-color: var(--bg-color-box);
         padding: 5px;
         border-radius: 5px;
         transition: background 0.5s ease;
-      }
-
-      .box-introduce:hover {
-        transform: scale(1.05);
       }
 
       .box-skill:hover .button {
@@ -374,32 +466,28 @@
         font-weight: 600;
         line-height: 1.1;
         width: max-content;
-        color: #0a0a0a;
+        color: #202020;
         text-align: center;
         margin: 0px auto 5px auto;
       }
 
       .main3 {
         font-size: calc(5px + 0.7vh + 0.7vw);
-        color: #1a1a1a;
+        color: #404040;
         line-height: 1;
         text-align: center;
       }
 
       .note {
         font-size: calc(5px + 0.6vh + 0.6vw);
-        color: #0a0a0a;
+        color: #404040;
         line-height: 1;
         text-align: center;
         margin: 0px auto 7.5px auto;
       }
 
-      .box-introduce i {
-        width: calc(9px + 0.5vh + 0.5vw);
-        text-align: center;
-      }
       .box-skill i {
-        width: calc(7px + 0.5vh + 0.5vw);
+        width: calc(7px + 0.6vh + 0.6vw);
         text-align: center;
         line-height: 1;
       }
@@ -409,7 +497,7 @@
         align-items: center;
         background: none;
         color: #000000;
-        padding: 1px;
+        padding: 0 1px;
         border-radius: 10%;
         font-weight: 600;
         font-size: calc(5px + 0.5vh + 0.5vw);
@@ -417,12 +505,12 @@
         transition: all 0.5s ease;
       }
 
-      .button.open i {
+      .box-skill .button.open i {
         transform: rotate(180deg); /* mũi tên lật khi mở */
       }
 
       .wrapper {
-        position: relative; /* dùng để skill-content định vị tương đối */
+        position: relative;
       }
 
       /* Nội dung ẩn */
@@ -432,7 +520,7 @@
         top: 100%; /* nằm ngay dưới skill */
         left: 0;
         gap: 2px;
-        background: #ececec;
+        background: #f9f9f9;
         padding: 5px;
         width: 100%; /* điều chỉnh theo ý bạn */
         max-height: 120px;
@@ -449,7 +537,7 @@
       .skill-content a,
       .skill-content i {
         margin-left: 5px;
-        font-size: calc(5px + 0.5vh + 0.5vw);
+        font-size: calc(5px + 0.45vh + 0.45vw);
         color: #000;
         text-decoration: none;
       }
@@ -473,33 +561,25 @@
           </div>
         </div>
         <!-- Phần thông báo chạy giữa -->
-        <div class="contact-marquee">
-          <marquee behavior="scroll" direction="left" scrollamount="5">
-            <nav style="background: none">
-              OTVGroup là một hệ sinh thái nội dung sôi động, sáng tạo và đa
-              dạng, nổi bật trong các lĩnh vực giải trí, nghệ thuật và đổi mới
-              kỹ thuật số.
-            </nav>
-          </marquee>
+        <div class="marquee">
+          <div class="marquee-inner" id="marquee"></div>
         </div>
+
         <!-- Icon mạng xã hội -->
-        <div class="social-icon">
-          <div class="icon">
+        <div class="social">
+          <div class="social-icon">
             <a href="https://www.facebook.com/OtisVo586" target="_blank">
               <i class="fab fa-facebook-f"></i>
             </a>
-          </div>
-          <div class="icon">
+
             <a href="https://www.youtube.com/@otvchannelvn" target="_blank">
               <i class="fab fa-youtube"></i>
             </a>
-          </div>
-          <div class="icon">
+
             <a href="https://www.tiktok.com/@otvgroup" target="_blank">
               <i class="fab fa-tiktok"></i>
             </a>
-          </div>
-          <div class="icon">
+
             <a href="https://www.instagram.com/otvgroup/" target="_blank">
               <i class="fab fa-instagram"></i>
             </a>
@@ -568,7 +648,10 @@
 
       <!-- Nội dung -->
       <section
-        style="--background: rgb(246, 225, 143); --shadow: rgba(0, 0, 0, 0.4)"
+        style="
+          --background: var(--bg-color-intro-1);
+          --shadow: rgba(0, 0, 0, 0.4);
+        "
         id="introduce"
       >
         <div class="main1">GIỚI THIỆU</div>
@@ -577,7 +660,7 @@
             <div class="main2">
               <i class="fa-solid fa-lightbulb"></i> <a>Đổi mới</a>
             </div>
-            <div class="main3">
+            <div class="main3 marquee" id="marquee-change">
               Luôn tiên phong sáng tạo và ứng dụng giải pháp đột phá để mang lại
               lợi thế cạnh tranh.
             </div>
@@ -587,9 +670,9 @@
             <div class="main2">
               <i class="fa-solid fa-gem"></i> <a>Chất lượng</a>
             </div>
-            <div class="main3">
-              Cam kết sản phẩm và dịch vụ đạt chuẩn cao nhất với quy trình minh
-              bạch, chuyên nghiệp.
+            <div class="main3 marquee" id="marquee-quality">
+              Cam kết sản phẩm và dịch vụ đạt chuẩn cao với quy trình minh bạch,
+              chuyên nghiệp.
             </div>
           </div>
 
@@ -597,15 +680,19 @@
             <div class="main2">
               <i class="fa-solid fa-user-check"></i> <a>Tin cậy</a>
             </div>
-            <div class="main3">
+            <div class="main3 marquee" id="marquee-reputation">
               Xây dựng niềm tin bằng sự tận tâm, trách nhiệm và đảm bảo đúng cam
               kết với khách hàng.
             </div>
           </div>
         </div>
       </section>
+
       <section
-        style="--background: rgb(143, 217, 246); --shadow: rgba(0, 0, 0, 0.4)"
+        style="
+          --background: var(--bg-color-intro-2);
+          --shadow: rgba(0, 0, 0, 0.4);
+        "
         id="skill"
       >
         <div class="main2">Chúng tôi có thể?</div>
@@ -724,7 +811,102 @@
           </div>
         </div>
       </section>
+
+      <section
+        style="
+          --background: var(--bg-color-intro-3);
+          --shadow: rgba(0, 0, 0, 0.4);
+        "
+        id="skill"
+      >
+        <div class="main2">Mani2</div>
+        <div class="note">"Note"</div>
+      </section>
+
+      <section
+        style="
+          --background: var(--bg-color-intro-4);
+          --shadow: rgba(0, 0, 0, 0.4);
+        "
+        id="skill"
+      >
+        <div class="main2">Mani2</div>
+        <div class="note">"Note"</div>
+      </section>
+
+      <section
+        style="
+          --background: var(--bg-color-intro-5);
+          --shadow: rgba(0, 0, 0, 0.4);
+        "
+        id="skill"
+      >
+        <div class="main2">Mani2</div>
+        <div class="note">"Note"</div>
+      </section>
+
+      <section
+        style="
+          --background: var(--bg-color-bottom);
+          --shadow: rgba(0, 0, 0, 0.4);
+          height: var(--height-bottom);
+        "
+        id="skill"
+      >
+        <div class="main2">Bottom</div>
+        <div class="note">"Note"</div>
+      </section>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const contents = document.querySelectorAll("div[id^='marquee-']");
+        const marqueeInner = document.getElementById("marquee");
+
+        const timePerItem = 20; // giây / item
+        const total = contents.length;
+
+        contents.forEach((el) => {
+          const div = document.createElement("div");
+          div.classList.add("link");
+
+          const id = el.id;
+          let text = el.textContent.trim() || id.replace("marquee-", "");
+
+          // 🔹 Giới hạn 25 từ
+          let words = text.split(/\s+/);
+          let mainText = words.slice(0, 20).join(" ");
+
+          // 🔹 Xóa dấu câu cuối
+          mainText = mainText.replace(/[.,!?;]+$/, "");
+
+          // 🔹 Thêm " ... Xem thêm."
+          const extra = `<span class="see-more">...Xem thêm.</span>`;
+
+          div.innerHTML = `<a href="#${id}" title="${el.textContent.trim()}">${mainText}${extra}</a>`;
+          marqueeInner.appendChild(div);
+        });
+
+        // set tốc độ cuộn (dựa trên số lượng item)
+        const duration = total * timePerItem;
+        marqueeInner.style.animationDuration = `${duration}s`;
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
 
     <script>
       function searchText() {
@@ -758,19 +940,19 @@
     <script>
       const banners = [
         {
-          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/h1/Background%20-%20OTVGroup.jpeg",
+          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTVGroup.jpeg",
           text: "OTVGroup | Hết Mình Với Đam Mê!",
         },
         {
-          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/h1/BackGround%20-%20OTISMusicStudio.jpg",
+          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/BackGround%20-%20OTISMusicStudio.jpg",
           text: "OTVMusic | Nghệ Thuật Là Linh Hồn Cuộc Sống.",
         },
         {
-          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/h1/Background%20-%20OTISShop.jpeg",
+          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISShop.jpeg",
           text: "OTISShop | Uy Tín - Chất Lượng - Tin Cậy.",
         },
         {
-          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/h1/Background%20-%20OTISStore.jpeg",
+          img: "https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/Background%20-%20OTISStore.jpeg",
           text: "OTISStore | Uy Tín Tạo Nên Thương Hiệu.",
         },
       ];
