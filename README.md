@@ -217,7 +217,7 @@
 
     <script>
       const scriptURL =
-        "AKfycbzFxrKrkJ2Mp3oG0eAkZpo6AKJ0m6LOrfEq1LQy3M2ZZvWVwtFWNQY0oAPwHbAlFkBM4g"; // dán URL Apps Script ở đây
+        "https://script.google.com/macros/s/AKfycbzFxrKrkJ2Mp3oG0eAkZpo6AKJ0m6LOrfEq1LQy3M2ZZvWVwtFWNQY0oAPwHbAlFkBM4g/exec"; // dán URL Apps Script ở đây
       const form = document.getElementById("reviewForm");
 
       form.addEventListener("submit", (e) => {
