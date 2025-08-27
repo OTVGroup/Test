@@ -461,6 +461,7 @@
         color: #404040;
         line-height: 1;
         text-align: center;
+        padding: 0 10px;
         margin: 0px auto 7.5px auto;
       }
 
@@ -473,9 +474,8 @@
       }
 
       .box-introduce {
-        flex: 1 1 clamp(90px, 30%, 120px); /* min-width 120px */
+        flex: 1 1 clamp(80px, 15%, 120px);
         text-align: center;
-        max-width: 180px;
       }
 
       .box-introduce a {
@@ -574,7 +574,7 @@
 
       .box-target {
         flex: 1 1 160px;
-        margin: 0 10px;
+        margin: 0 15px;
         padding: 5px;
         border-radius: 10px;
         background-color: var(--bg-color-box);
@@ -706,6 +706,7 @@
       .contact-left i {
         font-size: calc(5px + 0.7vh + 0.7vw);
         width: calc(5px + 0.7vh + 0.7vw);
+        line-height: 1;
         margin-right: 5px;
         color: white;
         text-align: center;
@@ -714,6 +715,7 @@
       .contact-left a {
         font-size: calc(5px + 0.7vh + 0.7vw);
         text-decoration: none;
+        line-height: 1;
         color: white;
       }
 
@@ -725,6 +727,7 @@
         font-size: calc(5px + 1.5vh + 1.5vw);
         margin: 0 clamp(10px, 10%, 20px);
         color: white;
+        line-height: 1;
         text-align: center;
       }
 
