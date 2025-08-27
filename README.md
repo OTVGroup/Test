@@ -265,7 +265,7 @@
         border-radius: 5px;
       }
 
-      .nav-2:hover .nav-3 {
+      .nav-2.hover:hover .nav-3 {
         display: block;
       }
 
@@ -812,7 +812,7 @@
           <div class="nav-2">
             <a href="#introduce"> <i class="fa-solid fa-info-circle"></i></a>
           </div>
-          <div class="nav-2">
+          <div class="nav-2 hover">
             <a><i class="fa-solid fa-star"></i></a>
             <div class="nav-3">
               <div class="nav-4">
