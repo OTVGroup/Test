@@ -105,18 +105,18 @@
 
       .review-form input,
       .review-form textarea {
-        padding: 4px;
+        padding: 5px;
         border: 1px solid #ccc;
         border-radius: 5px;
         font-size: calc(5px + 0.7vh + 0.7vw);
-        width: calc(100% - 10px);
+        width: 100%;
         resize: vertical; /* chỉ cho phép kéo dọc, KHÓA kéo ngang */
         overflow-y: hidden; /* ẩn thanh cuộn ngang */
         white-space: pre-wrap; /* tự xuống dòng khi chữ dài */
         word-wrap: break-word; /* bẻ dòng khi từ quá dài */
       }
 
-      .review button {
+      .review-form button {
         padding: 5px;
         margin-top: 5px;
         background: #00d90e;
@@ -129,7 +129,7 @@
         font-weight: 600;
       }
 
-      .review button:hover {
+      .review-form button:hover {
         background: #2db500;
       }
 
@@ -206,8 +206,8 @@
             placeholder="Nội dung đánh giá..."
             required
           ></textarea>
+          <button type="submit">Gửi đánh giá</button>
         </form>
-        <button type="submit">Gửi đánh giá</button>
       </div>
     </section>
 
@@ -216,38 +216,40 @@
     </script>
 
     <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzUlr2jsa5yDTAy3-HE-JYEDjmYjleTlNTnID1_PPJLVsOTdCW03uYii4EgiXgQCvUOQw/exec";
       const form = document.getElementById("reviewForm");
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxCk3E18We3JyqL_TIZHlmRjirRiDtXobuWWS8ziCFerzkNuhIxzjTmL3fk45fEvmUb/exec"; // dán URL Web App
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        // Dùng URLSearchParams để tránh preflight CORS
-        const params = new URLSearchParams();
-        params.append("source", "OTVGroup");
-        params.append("name", form.name.value);
-        params.append("email", form.email.value);
-        params.append("message", form.message.value);
+        const formData = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          message: form.message.value.trim(),
+          source: "OTVGroup", // nguồn gửi cố định
+        };
+
+        if (!formData.name || !formData.email || !formData.message) {
+          alert("Vui lòng điền đầy đủ thông tin!");
+          return;
+        }
 
         fetch(scriptURL, {
           method: "POST",
-          body: params, // NO headers -> content-type sẽ là application/x-www-form-urlencoded
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
         })
           .then((res) => res.json())
-          .then((res) => {
-            if (res.result === "success") {
-              alert("Gửi Thành Công!");
+          .then((data) => {
+            if (data.status === "success") {
+              alert("Cảm ơn bạn đã gửi đánh giá!");
               form.reset();
             } else {
-              alert("Lỗi server: " + (res.message || "Không rõ"));
-              console.log("Server response:", res);
+              alert("Có lỗi: " + data.message);
             }
           })
-          .catch((err) => {
-            console.error("Fetch error:", err);
-            alert("Gửi Thất Bại. Kiểm tra console (F12) để xem lỗi.");
-          });
+          .catch((err) => alert("Lỗi gửi feedback: " + err));
       });
     </script>
   </body>
