@@ -217,34 +217,36 @@
 
     <script>
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzFxrKrkJ2Mp3oG0eAkZpo6AKJ0m6LOrfEq1LQy3M2ZZvWVwtFWNQY0oAPwHbAlFkBM4g/exec"; // dán URL Apps Script ở đây
+        "https://script.google.com/macros/s/AKfycbzUlr2jsa5yDTAy3-HE-JYEDjmYjleTlNTnID1_PPJLVsOTdCW03uYii4EgiXgQCvUOQw/exec";
       const form = document.getElementById("reviewForm");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const data = {
-          source: "OTVGroup",
-          name: form.name.value,
-          email: form.email.value,
-          message: form.message.value,
-        };
+        // Dùng URLSearchParams để tránh preflight CORS
+        const params = new URLSearchParams();
+        params.append("source", "OTVGroup");
+        params.append("name", form.name.value);
+        params.append("email", form.email.value);
+        params.append("message", form.message.value);
 
         fetch(scriptURL, {
           method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" },
+          body: params, // NO headers -> content-type sẽ là application/x-www-form-urlencoded
         })
           .then((res) => res.json())
           .then((res) => {
             if (res.result === "success") {
               alert("Gửi Thành Công!");
               form.reset();
+            } else {
+              alert("Lỗi server: " + (res.message || "Không rõ"));
+              console.log("Server response:", res);
             }
           })
           .catch((err) => {
-            console.error(err);
-            alert("Gửi Thất Bại!");
+            console.error("Fetch error:", err);
+            alert("Gửi Thất Bại. Kiểm tra console (F12) để xem lỗi.");
           });
       });
     </script>
