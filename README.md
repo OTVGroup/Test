@@ -310,7 +310,7 @@
       }
 
       /* Responsive */
-      @media (max-width: 500px) {
+      @media (max-width: 600px) {
         .logo-text {
           display: none;
         }
@@ -570,11 +570,12 @@
         display: flex;
         flex-wrap: wrap;
         margin: 0 auto;
+        padding: 0 10px;
       }
 
       .box-target {
         flex: 1 1 160px;
-        margin: 0 15px;
+        margin: 5px 5px;
         padding: 5px;
         border-radius: 10px;
         background-color: var(--bg-color-box);
@@ -740,6 +741,17 @@
         text-align: center;
         margin-top: 10px;
         opacity: 0.8;
+      }
+
+      @media (max-width: 600px) {
+        .contact-left {
+          border-right: none;
+        }
+
+        .contact-right {
+          border-left: none;
+          margin-top: 10px;
+        }
       }
     </style>
   </head>
