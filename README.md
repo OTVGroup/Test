@@ -1,14 +1,26 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mẫu XD01</title>
-    <!-- Chèn Font Awesome CDN vào <head> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="description" content="Hết Mình Với Đam Mê!" />
+    <meta name="author" content="OTVGroup" />
+    <meta
+      name="image"
+      content="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
+    />
+    <title>OTVGroup | Hết Mình Với Đam Mê!</title>
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="https://i.pinimg.com/736x/15/c2/33/15c233ab5cce7b9e60094a36653a3dc5.jpg"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <style>
       :root {
         /*
@@ -35,7 +47,7 @@
 
         --bg-color-box: #f9f9f9;
 
-        --bg-color-bottom: #00509e; */
+        --bg-color-contact: #00509e; */
 
         /* Header & Bottom */
         --bg-color-header: #015dba; /* xanh đậm dịu hơn */
@@ -47,7 +59,7 @@
         --bg-color-contact: #1e3a8a;
         --text-color-contact: white;
 
-        --bg-color-bottom: #2253d7;
+        --bg-color-contact: #2253d7;
 
         /* Giới thiệu (Intro) */
         --bg-color-intro: #24bcac; /* màu chủ đạo */
@@ -244,38 +256,11 @@
         color: white;
         font-size: 24px;
         text-decoration: none;
-        transition: color 0.5s;
+        transition: color 0.5s ease;
       }
 
       .nav-2 a:hover {
-        text-decoration: underline;
-        color: #333;
-      }
-
-      /* Submenu */
-      .nav-3 {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: -18px;
-        background: #efefef;
-        padding: 0;
-        list-style: none;
-        width: min-content;
-        border-radius: 5px;
-      }
-
-      .nav-2.hover:hover .nav-3 {
-        display: block;
-      }
-
-      .nav-4 a {
-        display: block;
-        color: #000000;
-        padding: 5px;
-        font-size: min(18px, calc(5px + 0.8vh + 0.9vw));
-        text-decoration: none;
-        white-space: nowrap;
+        color: #000;
       }
 
       .search-box {
@@ -592,8 +577,8 @@
         text-align: center;
       }
 
-      /* Kỹ năng */
-      .section-activity {
+      /* Giải Pháp */
+      .section-solution {
         display: grid;
         width: min(1500px, 100%);
         grid-template-columns: repeat(
@@ -601,12 +586,17 @@
           minmax(clamp(160px, 30%, 480px), 1fr)
         );
         margin: 0 auto;
+        gap: 10px;
+        padding: 0 10px;
       }
 
-      .box-activity {
+      .wrapper {
+        position: relative;
+      }
+
+      .box-solution {
         display: flex;
         align-items: center;
-        margin: 10px;
         gap: 5px;
         font-size: calc(5px + 0.6vh + 0.6vw);
         color: #333;
@@ -616,18 +606,18 @@
         transition: background 0.5s ease;
       }
 
-      .box-activity:hover .button {
+      .box-solution:hover .button {
         background-color: #383838;
         color: #efefef;
       }
 
-      .box-activity i {
+      .box-solution i {
         width: calc(7px + 0.7vh + 0.7vw);
         text-align: center;
         line-height: 1;
       }
 
-      .box-activity .button {
+      .box-solution .button {
         margin-left: auto;
         align-items: center;
         background: none;
@@ -640,24 +630,21 @@
         transition: all 0.5s ease;
       }
 
-      .box-activity .button.open i {
+      .box-solution .button.open i {
         transform: rotate(180deg); /* mũi tên lật khi mở */
       }
 
-      .wrapper {
-        position: relative;
-      }
-
       /* Nội dung ẩn */
-      .activity-content {
+      .solution-content {
         display: none; /* mặc định ẩn */
         position: absolute;
-        top: 100%; /* nằm ngay dưới activity */
-        left: 0;
+        top: 100%; /* nằm ngay dưới solution */
+        left: 50%;
+        transform: translateX(-50%);
         gap: 2px;
         background: #f9f9f9;
-        padding: 5px;
-        width: 100%; /* điều chỉnh theo ý bạn */
+        padding: 2.5px 3px;
+        width: calc(100% - 5px); /* điều chỉnh theo ý bạn */
         max-height: 120px;
         overflow-y: auto; /* cuộn dọc */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -665,13 +652,13 @@
       }
 
       /* Hiển thị khi mở */
-      .wrapper.open .activity-content {
+      .wrapper.open .solution-content {
         display: block;
       }
 
-      .activity-content a,
-      .activity-content i {
-        margin-left: 5px;
+      .solution-content a,
+      .solution-content i {
+        margin-left: 2.5px;
         font-size: calc(5px + 0.5vh + 0.5vw);
         color: #202020;
         text-decoration: none;
@@ -680,78 +667,41 @@
       .section-contact {
         display: flex;
         flex-wrap: wrap; /* để khi màn hình nhỏ thì tự xuống hàng */
-        padding-top: 10px;
-        border-top: 1px dashed white;
       }
 
-      .contact-left {
+      .contact-meta {
         flex: 1;
-        min-width: 280px;
+        min-width: 180px;
         display: flex;
-        border-right: 1px dashed white;
         flex-direction: column;
-        align-items: center;
+        padding: 0 clamp(20px, 12vw, 120px) 10px clamp(20px, 12vw, 120px);
+        align-items: flex-start;
         justify-content: center;
       }
 
-      .contact-right {
-        flex: 1;
-        min-width: 280px;
-        display: flex;
-        border-left: 1px dashed white;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-      }
-
-      .contact-left i {
+      .contact-meta strong {
         font-size: calc(5px + 0.7vh + 0.7vw);
-        width: calc(5px + 0.7vh + 0.7vw);
-        line-height: 1;
-        margin-right: 5px;
-        color: white;
-        text-align: center;
-      }
-
-      .contact-left a {
-        font-size: calc(5px + 0.7vh + 0.7vw);
+        line-height: 1.2;
+        font-weight: 400;
         text-decoration: none;
-        line-height: 1;
         color: white;
       }
 
-      .contact-left a:hover {
-        color: black;
-      }
-
-      .contact-right i {
-        font-size: calc(5px + 1.5vh + 1.5vw);
-        margin: 0 clamp(10px, 10%, 20px);
+      .contact-meta a {
+        font-size: calc(5px + 0.7vh + 0.7vw);
+        line-height: 1.2;
+        text-decoration: none;
         color: white;
-        line-height: 1;
-        text-align: center;
       }
 
-      .contact-right i:hover {
-        color: rgb(0, 0, 0);
+      .section-meta a:hover {
+        text-decoration: block;
       }
 
       .contact-copyright {
         font-size: calc(5px + 0.7vh + 0.7vw);
         text-align: center;
-        margin-top: 10px;
         opacity: 0.8;
-      }
-
-      @media (max-width: 600px) {
-        .contact-left {
-          border-right: none;
-        }
-
-        .contact-right {
-          border-left: none;
-          margin-top: 10px;
-        }
       }
     </style>
   </head>
@@ -812,34 +762,8 @@
           <div class="nav-2">
             <a href="#introduce"> <i class="fa-solid fa-info-circle"></i></a>
           </div>
-          <div class="nav-2 hover">
-            <a><i class="fa-solid fa-star"></i></a>
-            <div class="nav-3">
-              <div class="nav-4">
-                <a
-                  href="https://otvgroup.github.io/OTISShop.com.vn/"
-                  target="_blank"
-                >
-                  OTISShop
-                </a>
-              </div>
-              <div class="nav-4">
-                <a
-                  href="https://otvgroup.github.io/OTISStore.com.vn/"
-                  target="_blank"
-                >
-                  OTISStore
-                </a>
-              </div>
-              <div class="nav-4">
-                <a
-                  href="https://otvgroup.github.io/OTISMusisStudio.com.vn/"
-                  target="_blank"
-                >
-                  OTISMusisStudio
-                </a>
-              </div>
-            </div>
+          <div class="nav-2">
+            <a href="#trademark"><i class="fa-solid fa-star"></i></a>
           </div>
           <div class="nav-2">
             <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
@@ -883,11 +807,11 @@
           </div>
 
           <div class="box-introduce">
-            <a href="#activity">
+            <a href="#solution">
               <div class="introduce-shape rounded">
                 <i class="fa-solid fa-briefcase"></i>
               </div>
-              <span>Hoạt Động</span>
+              <span>Giải Pháp</span>
             </a>
           </div>
 
@@ -943,8 +867,8 @@
               <i class="fa-solid fa-lightbulb"></i> <a>Đổi Mới Liên Tục</a>
             </div>
             <div class="main3 marquee" id="marquee-change">
-              Luôn đi đầu trong việc áp dụng các giải pháp sáng tạo và công nghệ
-              tiên tiến, mang lại lợi thế cạnh tranh bền vững cho khách hàng.
+              Áp dụng giải pháp sáng tạo và công nghệ tiên tiến, mang lại lợi
+              thế cạnh tranh bền vững.
             </div>
           </div>
 
@@ -969,35 +893,32 @@
           </div>
         </div>
       </section>
-      <!-- Hoạt Động -->
+      <!-- Giải Pháp -->
       <section
         style="
           --background: var(--bg-color-intro-2);
           --shadow: rgba(0, 0, 0, 0.4);
           --boder: var(--bg-color-intro);
         "
-        id="activity"
+        id="solution"
       >
-        <div class="main2">Hoạt Động</div>
+        <div class="main2">Giải Pháp</div>
         <div class="note">
-          "Chúng tôi mang đến giải pháp tiếp thị kỹ thuật số và SEO toàn diện,
-          kết hợp chiến lược sáng tạo và công nghệ tối ưu, để doanh nghiệp phát
-          triển mạnh mẽ trong kỷ nguyên số."
+          "Kết hợp công nghệ, sáng tạo và chiến lược để tạo giá trị bền vững."
         </div>
-        <div class="section-activity">
+
+        <div class="section-solution">
           <!-- Truyền thông -->
           <div class="wrapper">
-            <div class="box-activity">
+            <div class="box-solution">
               <i class="fa-solid fa-network-wired"></i><a>Truyền thông</a>
               <div class="button">
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
-              <div class="activity-content">
-                <a>Nghiên Cứu & Phân Tích Thị Trường</a>
+              <div class="solution-content">
+                <a>Nghiên Cứu Thị Trường</a>
                 <i class="fa-solid fa-chart-line"></i><br />
-                <a>Chiến Lược Truyền Thông Tổng Thể</a>
-                <i class="fa-solid fa-bullseye"></i><br />
-                <a>Tối Ưu Hiệu Quả Truyền Thông</a>
+                <a>Truyền Thông Tổng Thể</a>
                 <i class="fa-solid fa-share-nodes"></i><br />
                 <a>Sản Xuất & Quảng Cáo</a>
                 <i class="fa-solid fa-photo-film"></i>
@@ -1007,19 +928,17 @@
 
           <!-- Giải trí & Nội dung số -->
           <div class="wrapper">
-            <div class="box-activity">
+            <div class="box-solution">
               <i class="fa-solid fa-film"></i><a>Giải trí</a>
               <div class="button">
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
-              <div class="activity-content">
-                <a>Phát Triển Game & Trải Nghiệm Số</a>
+              <div class="solution-content">
+                <a>Phát Triển Game</a>
                 <i class="fa-solid fa-gamepad"></i><br />
-                <a>Xây Dựng Cộng Đồng & Fanbase</a>
-                <i class="fa-solid fa-users"></i><br />
-                <a>Âm Nhạc & Giải Trí Trực Tuyến</a>
+                <a>Âm Nhạc & Giải Trí</a>
                 <i class="fa-solid fa-music"></i><br />
-                <a>Thiết Kế & Sáng Tạo Nội Dung</a>
+                <a>Sáng Tạo Nội Dung</a>
                 <i class="fa-solid fa-palette"></i>
               </div>
             </div>
@@ -1027,35 +946,33 @@
 
           <!-- Thương mại -->
           <div class="wrapper">
-            <div class="box-activity">
+            <div class="box-solution">
               <i class="fa-solid fa-cart-shopping"></i><a>Thương mại</a>
               <div class="button">
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
-              <div class="activity-content">
-                <a>Xây Dựng & Phát Triển Thương Hiệu</a>
+              <div class="solution-content">
+                <a>Xây Dựng Thương Hiệu</a>
                 <i class="fa-solid fa-star"></i><br />
-                <a>Hoạch Định Chiến Lược Kinh Doanh</a>
+                <a>Hoạch Định Chiến Lược</a>
                 <i class="fa-solid fa-lightbulb"></i><br />
-                <a>Chuyển Đổi Công Nghệ Số</a>
-                <i class="fa-solid fa-diagram-project"></i><br />
-                <a>Giải Pháp Pháp Lý</a>
-                <i class="fa-solid fa-scale-balanced"></i>
+                <a>Chuyển Đổi Công Nghệ</a>
+                <i class="fa-solid fa-diagram-project"></i>
               </div>
             </div>
           </div>
 
           <!-- Học thuật & Nghiên cứu -->
           <div class="wrapper">
-            <div class="box-activity">
+            <div class="box-solution">
               <i class="fa-solid fa-graduation-cap"></i><a>Học thuật</a>
               <div class="button">
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
-              <div class="activity-content">
-                <a>Tư Liệu & Nghiên Cứu Khoa Học</a>
+              <div class="solution-content">
+                <a>Giải Pháp Nghiên Cứu</a>
                 <i class="fa-solid fa-book-open"></i><br />
-                <a>Báo Cáo & Phân Tích Dữ Liệu</a>
+                <a>Báo Cáo & Phân Tích</a>
                 <i class="fa-solid fa-chart-pie"></i>
               </div>
             </div>
@@ -1063,29 +980,29 @@
 
           <!-- Kỹ thuật & Công nghệ -->
           <div class="wrapper">
-            <div class="box-activity">
+            <div class="box-solution">
               <i class="fa-solid fa-microchip"></i><a>Kỹ thuật</a>
               <div class="button">
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
-              <div class="activity-content">
-                <a>Cải Tiến & Triển Khai & Ứng Dụng</a>
-                <i class="fa-solid fa-gears"></i><br />
-                <a>Đào Tạo & Thiết Kế & Phát Triển</a>
-                <i class="fa-solid fa-chalkboard-user"></i>
+              <div class="solution-content">
+                <a>Thiết Kế & Phát Triển</a>
+                <i class="fa-solid fa-chalkboard-user"></i><br />
+                <a>Cải Tiến & Ứng Dụng</a>
+                <i class="fa-solid fa-gears"></i>
               </div>
             </div>
           </div>
 
           <!-- Dịch vụ khách hàng -->
           <div class="wrapper">
-            <div class="box-activity">
+            <div class="box-solution">
               <i class="fa-solid fa-handshake-angle"></i><a>Dịch vụ</a>
               <div class="button">
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
-              <div class="activity-content">
-                <a>Chăm Sóc & Tư Vấn & Hỗ Trợ</a>
+              <div class="solution-content">
+                <a>Chăm Sóc & Tư Vấn</a>
                 <i class="fa-solid fa-headset"></i><br />
                 <a>Bảo Hành & Bảo Trì</a>
                 <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -1133,62 +1050,50 @@
       <!-- Contact -->
       <section
         style="
-          --background: var(--bg-color-bottom);
+          --background: var(--bg-color-contact);
           --shadow: rgba(0, 0, 0, 0.4);
           color: white;
         "
         id="contact"
       >
-        <div class="main2" style="color: white">LIÊN HỆ</div>
-        <!-- Wrapper bao cả 2 bên -->
         <div class="section-contact">
-          <!-- Bên trái: Liên hệ -->
-          <div class="contact-left">
-            <div class="contact-meta">
-              <i class="fa-solid fa-phone"></i>
-              <a href="tel:0329022431">+84 329 022 431</a>
-            </div>
-            <div class="contact-meta">
-              <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:thinhkvtm2k6@gmail.com">thinhkvtm2k6@gmail.com</a>
-            </div>
-            <div class="contact-meta">
-              <i class="fa-solid fa-location-dot"></i>
-              <a href="https://maps.app.goo.gl/La6cgkz2bDgJ1uqe7"
-                >Ho Chi Minh, Việt Nam</a
-              >
-            </div>
+          <!-- Dịch Vụ -->
+          <div class="contact-meta">
+            <a href="#shopping">Mua sắm</a>
+            <a href="#design">Thiết kế</a>
+            <a href="#entertain">Giải trí</a>
+            <a href="#education">Đào tạo</a>
+            <a href="#repair">Bảo trì</a>
           </div>
 
-          <!-- Bên phải: Social -->
-          <div class="contact-right">
-            <a
-              href="https://facebook.com/"
-              target="_blank"
-              aria-label="Facebook"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="https://tiktok.com/" target="_blank" aria-label="TikTok">
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <a
-              href="https://instagram.com/"
-              target="_blank"
-              aria-label="Instagram"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://threads.com" target="_blank" aria-label="Threads">
-              <i class="fa-brands fa-threads"></i>
-            </a>
+          <!-- Liên Hệ -->
+          <div class="contact-meta">
+            <strong>
+              Website:
+              <a href="https://otvgroup.github.io/OTVGroup.com.vn"
+                >OTVGroup.com
+              </a>
+            </strong>
+            <strong>
+              Hotline: <a href="tel:0329022431">+84 329 022 431</a>
+            </strong>
+            <strong>
+              Email:
+              <a href="mailto:thinhkvtm2k6@gmail.com">thinhkvtm2k6@...</a>
+            </strong>
+            <strong>
+              Facebook: <a href="https://facebook.com/OtisVo568">Otis Võ</a>
+            </strong>
+            <strong>
+              Zalo: <a href="https://zalo.me/0329022431">0329022431</a>
+            </strong>
           </div>
         </div>
+
         <!-- Copyright -->
-        <div class="contact-copyright">© <span id="year"></span> OTVGroup</div>
+        <div class="contact-copyright">
+          Copyright © <span id="year"></span> OTVGroup
+        </div>
         <script>
           document.getElementById("year").textContent =
             new Date().getFullYear();
@@ -1196,6 +1101,7 @@
       </section>
     </div>
 
+    <!-- Marquee -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const contents = document.querySelectorAll("div[id^='marquee-']");
@@ -1230,7 +1136,7 @@
         marqueeInner.style.animationDuration = `${duration}s`;
       });
     </script>
-
+    <!-- Menu -->
     <script>
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
@@ -1245,7 +1151,7 @@
         });
       });
     </script>
-
+    <!-- Research -->
     <script>
       function searchText() {
         const keyword = document.getElementById("searchInput").value.trim();
@@ -1274,7 +1180,7 @@
           if (e.key === "Enter") searchText();
         });
     </script>
-
+    <!-- Banner -->
     <script>
       const banners = [
         {
@@ -1317,9 +1223,9 @@
       // auto chuyển
       setInterval(() => showBanner(idx + 1), 5999);
     </script>
-
+    <!-- Giải Pháp -->
     <script>
-      document.querySelectorAll(".box-activity .button").forEach((btn) => {
+      document.querySelectorAll(".box-solution .button").forEach((btn) => {
         btn.addEventListener("click", (e) => {
           const currentWrapper = btn.closest(".wrapper");
 
