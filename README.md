@@ -59,7 +59,7 @@
       }
 
       /* Thẻ phủ toàn màn hình */
-      .full-screen {
+      .full_screen {
         position: fixed;
         inset: 0; /* top right bottom left = 0 */
         z-index: 1;
@@ -121,13 +121,13 @@
         position: relative;
       }
 
-      .post .p-1,
-      .post .p-2 {
+      .post .p_1,
+      .post .p_2 {
         width: calc(100% / 3 - 2px);
         height: min-content;
         min-width: 300px;
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
         display: flex;
         align-items: center; /* Căn giữa theo chiều dọc */
         align-content: center;
@@ -138,13 +138,13 @@
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
-      .post .p-1 iframe {
+      .post .p_1 iframe {
         width: 100%; /* Chiều rộng đầy div */
         aspect-ratio: 16/9;
         border: none;
       }
 
-      .post .p-header {
+      .post .p_header {
         width: 100%;
         height: 30px;
         margin: 0;
@@ -161,7 +161,7 @@
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
-      .post .p-content {
+      .post .p_content {
         width: 100%;
         height: 22px;
         margin: 0;
@@ -175,7 +175,7 @@
         text-align: justify;
       }
 
-      .post .p-bottom {
+      .post .p_bottom {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -183,8 +183,8 @@
         gap: 2%;
       }
 
-      .post .p-bottom .p-infor,
-      .post .p-bottom .p-btn {
+      .post .p_bottom .p_infor,
+      .post .p_bottom .p_btn {
         width: 47%;
         padding: 5px 10px;
         margin: 5px 0;
@@ -197,23 +197,23 @@
         border-radius: 5px;
       }
 
-      .post .p-bottom .p-btn:hover a {
+      .post .p_bottom .p_btn:hover a {
         color: #000;
       }
 
       @media (max-width: 990px) {
-        .post .p-1 {
+        .post .p_1 {
           width: calc(100% / 2 - 2px);
         }
 
-        .post .p-2 {
+        .post .p_2 {
           width: calc(100% - 2px);
         }
       }
 
       @media (max-width: 660px) {
-        .post .p-1,
-        .post .p-2 {
+        .post .p_1,
+        .post .p_2 {
           width: calc(100% - 2px);
         }
       }
@@ -233,9 +233,9 @@
         position: relative;
       }
 
-      .footer .f-left,
-      .footer .f-center,
-      .footer .f-right {
+      .footer .f_left,
+      .footer .f_center,
+      .footer .f_right {
         width: calc(100% / 3);
         height: min-content;
         min-width: 300px;
@@ -249,7 +249,7 @@
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
-      .footer .f-header {
+      .footer .f_header {
         width: 100%;
         height: 30px;
         min-width: 300px;
@@ -266,7 +266,7 @@
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
-      .footer .f-content {
+      .footer .f_content {
         width: 100%;
         height: fit-content;
         min-height: 30px;
@@ -282,7 +282,7 @@
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
-      .f-content a {
+      .f_content a {
         color: rgb(195, 195, 195);
         width: 100%;
         display: flex;
@@ -291,7 +291,7 @@
         text-decoration: none;
       }
 
-      .f-content a i {
+      .f_content a i {
         margin-right: 3px;
         width: 20px;
         display: flex;
@@ -300,26 +300,26 @@
         justify-items: center;
       }
 
-      .f-content a:hover,
-      .f-content a:active {
+      .f_content a:hover,
+      .f_content a:active {
         color: #ededed;
       }
 
       @media (max-width: 990px) {
-        .footer .f-left,
-        .footer .f-center {
+        .footer .f_left,
+        .footer .f_center {
           width: calc(100% / 2);
         }
 
-        .footer .f-right {
+        .footer .f_right {
           width: 100%;
         }
       }
 
       @media (max-width: 660px) {
-        .footer .f-left,
-        .footer .f-center,
-        .footer .f-right {
+        .footer .f_left,
+        .footer .f_center,
+        .footer .f_right {
           width: 100%;
         }
       }
@@ -333,26 +333,26 @@
     </style>
   </head>
   <body>
-    <div class="full-screen">
+    <div class="full_screen">
       <!-- Form Bottom -->
       <div class="bottom">
         <!-- NEWS -->
-        <section class="s-news active">
+        <section class="s_news active">
           <div class="post">
-            <div class="p-header" style="--font-size: 18px">GROUP FACEBOOK</div>
-            <div class="p-2" style="background: #daf3ffdd">
+            <div class="p_header" style="--font-size: 18px">GROUP FACEBOOK</div>
+            <div class="p_2" style="background: #daf3ffdd">
               <img
                 src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468426620_122122770164552182_2194104395195010555_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeFpOB3VIGTT4g_qysqdEcSiKYy0lgannDYpjLSWBqecNkO2NVfb_lcSm6Bs-dYOCy5koTp3ax8x-6cq6EOlYKSD&_nc_ohc=S9hlq0vaxdYQ7kNvwES5iYW&_nc_oc=AdmWSFaPrPEZilHH_z4SYod0nonHbRTpNdhJ_br7wXEn8D68jNpJrX0Kdpz4WP5NXyE&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=Rdaf6jsLOVUcZToF_omH6Q&oh=00_Afn6d7VW44ATevy2kkEqt0Lq4d7E0FIucchuWEXcwfkhTw&oe=6957C30B"
-                alt="Facebook Group-1"
+                alt="Facebook Group_1"
                 style="width: 100%; aspect-ratio: 2.5"
               />
               <div
-                class="p-header"
+                class="p_header"
                 style="align-items: center; --font-size: 15px"
               >
                 GÓC NHỎ
               </div>
-              <div class="p-content" id="box-1">
+              <div class="p_content" id="box_1">
                 <span>
                   Góc Nhỏ - nơi mỗi câu chuyện, mỗi chia sẻ đều được lắng nghe.
                   Nơi chúng ta cùng nhau trò chuyện, học hỏi, và gắn kết. Dù bạn
@@ -368,15 +368,15 @@
                   display: flex;
                   justify-content: right;
                 "
-                onclick="changeHeight('box-1', this)"
+                onclick="changeHeight('box_1', this)"
               >
                 ...Xem thêm
               </i>
-              <div class="p-bottom">
-                <div class="p-infor" style="background: #55ad4d">
+              <div class="p_bottom">
+                <div class="p_infor" style="background: #55ad4d">
                   Thành Viên: <i>144</i>
                 </div>
-                <div class="p-btn" style="background: #1877f2">
+                <div class="p_btn" style="background: #1877f2">
                   <a
                     href="https://www.facebook.com/share/g/1QXWdsNv8d/"
                     target="_blank"
@@ -386,19 +386,19 @@
                 </div>
               </div>
             </div>
-            <div class="p-1" style="background: #daf3ffdd">
+            <div class="p_1" style="background: #daf3ffdd">
               <img
                 src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/588843585_122194789730552182_3801606182584356093_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeET72wqB2PkWp5i-Eb2iazOICeMEY6D7rcgJ4wRjoPutwO6LcPdGjZxJL-7FQXHE-txqJ5_ssbteAiGICKqmFvy&_nc_ohc=bwvxe8HnjvkQ7kNvwGfXbqW&_nc_oc=Adns_rMQCbcy3r5ganyXlzQOjkrbKrRH3lW-YVzTqe0GMN9Lvui93F_imMGbreqC5nk&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=ipZ87KIAmDn253sSlTWzMg&oh=00_AflhSREcArHCyFb3WAsvEvpkqRibpAe3mqmQ38pvabm_1g&oe=6957F3EE"
-                alt="Facebook Group-1"
+                alt="Facebook Group_1"
                 style="width: 100%; aspect-ratio: 2.5"
               />
               <div
-                class="p-header"
+                class="p_header"
                 style="align-items: center; --font-size: 15px"
               >
                 THƯ VIỆN CẢM XÚC
               </div>
-              <div class="p-content" id="box-2">
+              <div class="p_content" id="box_2">
                 <span>
                   Thư Viện Cảm Xúc - nơi mọi tâm tư, suy nghĩ, và cảm xúc đều
                   được trân trọng. Nơi để bạn chia sẻ những câu chuyện vui, nỗi
@@ -414,15 +414,15 @@
                   display: flex;
                   justify-content: right;
                 "
-                onclick="changeHeight('box-2', this)"
+                onclick="changeHeight('box_2', this)"
               >
                 ...Xem thêm
               </i>
-              <div class="p-bottom">
-                <div class="p-infor" style="background: #55ad4d">
+              <div class="p_bottom">
+                <div class="p_infor" style="background: #55ad4d">
                   Thành Viên: <i>120</i>
                 </div>
-                <div class="p-btn" style="background: #1877f2">
+                <div class="p_btn" style="background: #1877f2">
                   <a
                     href="https://www.facebook.com/share/g/1ALyzrv8bd/"
                     target="_blank"
@@ -432,19 +432,19 @@
                 </div>
               </div>
             </div>
-            <div class="p-1" style="background: #daf3ffdd">
+            <div class="p_1" style="background: #daf3ffdd">
               <img
                 src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/604517169_122194791110552182_1561466510739720352_n.webp?stp=dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeECUNinpN2JCsmcfKo5N-uFd2TGhEt5aiF3ZMaES3lqIcoBz3-ti_HX7e3LcZ2MEwrYId0p9kLLuA4gAW2ov36E&_nc_ohc=1b83OYf-hqAQ7kNvwGdtsNU&_nc_oc=AdlcGOssn0D1_bIeJ8DmkjIDSIMWYiFF9oCWzrX6y3nZq-7eqguskc4Jpph5CK8YFzA&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=BdoxFdiz-5WpbxYk60wkNQ&oh=00_AfnhO86UD8Ni0smAWJL4QPtuLej7KB3qSyb-4BpSohyMnw&oe=6957C9DE"
-                alt="Facebook Group-1"
+                alt="Facebook Group_1"
                 style="width: 100%; aspect-ratio: 2.5"
               />
               <div
-                class="p-header"
+                class="p_header"
                 style="align-items: center; --font-size: 15px"
               >
                 TÂM THƯ GỬI NGƯỜI
               </div>
-              <div class="p-content" id="box-3">
+              <div class="p_content" id="box_3">
                 <span>
                   Tâm Thư Gửi Người - nơi mọi tâm tư, nỗi niềm và cảm xúc đều
                   được gửi gắm và trân trọng. Nơi những lá thư chưa từng gửi đi,
@@ -461,15 +461,15 @@
                   display: flex;
                   justify-content: right;
                 "
-                onclick="changeHeight('box-3', this)"
+                onclick="changeHeight('box_3', this)"
               >
                 ...Xem thêm
               </i>
-              <div class="p-bottom">
-                <div class="p-infor" style="background: #55ad4d">
+              <div class="p_bottom">
+                <div class="p_infor" style="background: #55ad4d">
                   Thành Viên: <i>122</i>
                 </div>
-                <div class="p-btn" style="background: #1877f2">
+                <div class="p_btn" style="background: #1877f2">
                   <a
                     href="https://www.facebook.com/share/g/1AbU625DZz/"
                     target="_blank"
@@ -496,8 +496,8 @@
           </script>
 
           <div id="playlist" class="post">
-            <div class="p-header">YOUTUBE SHORTS</div>
-            <!-- Các video sẽ tự động tạo div .p-1 và nhúng iframe ở đây -->
+            <div class="p_header">YOUTUBE SHORTS</div>
+            <!-- Các video sẽ tự động tạo div .p_1 và nhúng iframe ở đây -->
           </div>
 
           <script>
@@ -523,7 +523,7 @@
 
                 container.insertAdjacentHTML(
                   "beforeend",
-                  `<div class="p-1">
+                  `<div class="p_1">
                      <iframe
                        src="https://www.youtube.com/embed/videoseries?list=${listId}"
                        allowfullscreen>
@@ -536,9 +536,9 @@
 
           <!-- F - CONTACT -->
           <div class="footer">
-            <div class="f-left">
-              <a class="f-header" style="align-items: left">OTVGroup</a>
-              <div class="f-content">
+            <div class="f_left">
+              <a class="f_header" style="align-items: left">OTVGroup</a>
+              <div class="f_content">
                 <a
                   href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
                   target="_blank"
@@ -553,9 +553,9 @@
                 </a>
               </div>
             </div>
-            <div class="f-center">
-              <a class="f-header" style="align-items: left">MENU</a>
-              <div class="f-content">
+            <div class="f_center">
+              <a class="f_header" style="align-items: left">MENU</a>
+              <div class="f_content">
                 <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
                 <a href=""
                   ><i class="fa-solid fa-address-card"></i>Giới Thiệu</a
@@ -563,9 +563,9 @@
                 <a href=""><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
               </div>
             </div>
-            <div class="f-right">
-              <a class="f-header" style="align-items: left">LIÊN KẾT</a>
-              <div class="f-content">
+            <div class="f_right">
+              <a class="f_header" style="align-items: left">LIÊN KẾT</a>
+              <div class="f_content">
                 <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
                 <a href=""><i class="fab fa-youtube"></i>YouTube</a>
                 <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
