@@ -56,33 +56,24 @@
       body {
         font-family: sans-serif;
         margin: 0;
-      }
-
-      /* Thẻ phủ toàn màn hình */
-      .full-screen {
-        position: fixed;
-        inset: 0;
-        z-index: 1;
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         background: #1e1e1e;
       }
 
       .top {
+        position: fixed;
         display: flex;
         flex-direction: row;
         align-items: center;
         height: 75px;
+        top: 0;
+        left: 2.5vw;
+        right: 2.5vw;
         padding: 0;
         background: #000000;
         width: 95vw;
+        z-index: 1;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        border-bottom: 2px solid #2a2a2a;
       }
 
       .top .img {
@@ -149,7 +140,7 @@
         background: #0f0;
         transition: left 0.5s ease, box-shadow 0.5s ease;
         pointer-events: none;
-        z-index: 0;
+        z-index: 2;
       }
 
       .top .tab-menu {
@@ -163,7 +154,7 @@
         height: 100%;
         border-top-right-radius: 10px;
         background: rgb(0, 0, 0);
-        z-index: 0;
+        z-index: 2;
       }
 
       .top .tab-menu i {
@@ -189,7 +180,7 @@
         display: none;
         position: absolute;
         top: 75px;
-        right: 2.5vw;
+        right: 0;
         width: 250px;
         height: auto;
         background: #111;
@@ -297,12 +288,14 @@
       }
 
       .bottom {
+        position: fixed;
         display: flex;
-        position: relative;
         flex-direction: row;
         align-items: center;
-        margin-top: 3px;
-        height: calc(100vh - 77px);
+        top: 80px;
+        left: 2.5vw;
+        right: 2.5vw;
+        height: calc(100vh - 80px);
         padding: 0;
         background: #000000;
         width: 95vw;
@@ -310,7 +303,8 @@
 
       @media (max-width: 540px) {
         .bottom {
-          height: calc(100vh - 52px);
+          top: 55px;
+          height: calc(100vh - 55px);
         }
       }
 
@@ -676,982 +670,966 @@
     </style>
   </head>
   <body>
-    <div class="full-screen">
-      <!-- Form Top -->
-      <div class="top">
-        <div class="img">
-          <img
-            src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
-            alt="Logo"
-          />
-        </div>
-        <nav class="menu">
-          <div class="indicator"></div>
-
-          <label class="active" id="id-home">
-            <i class="fa fa-home"></i>
-            <span>Trang chủ</span>
-          </label>
-          <label id="id-info">
-            <i class="fa-solid fa-address-card"></i>
-            <span>Giới Thiệu</span>
-          </label>
-          <label id="id-news">
-            <i class="fa-solid fa-newspaper"></i>
-            <span>Tin Tức</span>
-          </label>
-          <label id="id-contact">
-            <i class="fa-solid fa-headset"></i>
-            <span>Liên hệ</span>
-          </label>
-
-          <div class="tab-menu">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </nav>
-        <div class="tab-content">
-          <ul class="accordion">
-            <!-- Cấp 1 -->
-
-            <li>
-              <span>About</span>
-              <!-- Cấp 2 -->
-              <ul class="submenu1">
-                <li>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTVGroup.com</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://otvgroup.github.io/OTISShop" target="_blank">
-                    <span>OTISShop.com</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://otvgroup.github.io/OTISStore"
-                    target="_blank"
-                  >
-                    <span>OTISStore.com</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://otvgroup.github.io/OTISStudy"
-                    target="_blank"
-                  >
-                    <span>OTISStudy.com</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://otvgroup.github.io/OTISStudio.com.vn"
-                    target="_blank"
-                  >
-                    <span>OTISStudio.com</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <span>Services</span>
-              <!-- Cấp 2 -->
-              <ul class="submenu1">
-                <li>
-                  <span>Truyền thông & Giải trí</span>
-                  <!-- Cấp 3 -->
-                  <ul class="submenu2">
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Nghiên Cứu Thị Trường</span>
-                      </a>
-                      <i class="fa-solid fa-chart-line"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Truyền Thông Tổng Thể</span>
-                      </a>
-                      <i class="fa-solid fa-share-nodes"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Sản Xuất & Quảng Cáo</span>
-                      </a>
-                      <i class="fa-solid fa-photo-film"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Phát Triển Game</span>
-                      </a>
-                      <i class="fa-solid fa-gamepad"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Âm Nhạc & Giải Trí</span>
-                      </a>
-                      <i class="fa-solid fa-music"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Sáng Tạo Nội Dung</span>
-                      </a>
-                      <i class="fa-solid fa-palette"></i>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Thương mại</span>
-                  <!-- Cấp 3 -->
-                  <ul class="submenu2">
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Xây Dựng Thương Hiệu</span>
-                      </a>
-                      <i class="fa-solid fa-star"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Hoạch Định Chiến Lược</span>
-                      </a>
-                      <i class="fa-solid fa-lightbulb"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Chuyển Đổi Công Nghệ</span>
-                      </a>
-                      <i class="fa-solid fa-diagram-project"></i>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Học thuật</span>
-                  <!-- Cấp 3 -->
-                  <ul class="submenu2">
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Tư Liệu Nghiên Cứu</span>
-                      </a>
-                      <i class="fa-solid fa-book-open"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Báo Cáo & Phân Tích</span>
-                      </a>
-                      <i class="fa-solid fa-chart-pie"></i>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Kỹ thuật</span>
-                  <!-- Cấp 3 -->
-                  <ul class="submenu2">
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Thiết Kế & Phát Triển</span>
-                      </a>
-                      <i class="fa-solid fa-chalkboard-user"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Cải Tiến & Ứng Dụng</span>
-                      </a>
-                      <i class="fa-solid fa-gears"></i>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Dịch vụ</span>
-                  <!-- Cấp 3 -->
-                  <ul class="submenu2">
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Chăm Sóc & Tư Vấn</span>
-                      </a>
-                      <i class="fa-solid fa-headset"></i>
-                    </li>
-                    <li>
-                      <a href="https://otvgroup.github.io/#">
-                        <span>Bảo Hành & Bảo Trì</span>
-                      </a>
-                      <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <span>Contact</span>
-              <!-- Cấp 2 -->
-              <ul class="submenu1">
-                <li>
-                  <a href="https://facebook.com/OtisVo586" target="_blank">
-                    <span> Facebook </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:0329022431" target="_blank">
-                    <span> Hotline </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
-                    <span> E-mail </span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+    <!-- Form Top -->
+    <div class="top">
+      <div class="img">
+        <img
+          src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
+          alt="Logo"
+        />
       </div>
-      <script>
-        const labels = document.querySelectorAll(".menu label");
-        const indicator = document.querySelector(".indicator");
-        labels.forEach((label, index) => {
-          label.addEventListener("click", () => {
-            document.querySelector(".active").classList.remove("active");
-            label.classList.add("active");
-            indicator.style.left = `calc(${index} * (95vw * 0.75 / 4) + 10px)`;
-          });
+      <nav class="menu">
+        <div class="indicator"></div>
+
+        <label class="active" id="id-home">
+          <i class="fa fa-home"></i>
+          <span>Trang chủ</span>
+        </label>
+        <label id="id-info">
+          <i class="fa-solid fa-address-card"></i>
+          <span>Giới Thiệu</span>
+        </label>
+        <label id="id-news">
+          <i class="fa-solid fa-newspaper"></i>
+          <span>Tin Tức</span>
+        </label>
+        <label id="id-contact">
+          <i class="fa-solid fa-headset"></i>
+          <span>Liên hệ</span>
+        </label>
+
+        <div class="tab-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <div class="tab-content">
+        <ul class="accordion">
+          <!-- Cấp 1 -->
+
+          <li>
+            <span>About</span>
+            <!-- Cấp 2 -->
+            <ul class="submenu1">
+              <li>
+                <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <span>OTVGroup.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://otvgroup.github.io/OTISShop" target="_blank">
+                  <span>OTISShop.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://otvgroup.github.io/OTISStore" target="_blank">
+                  <span>OTISStore.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://otvgroup.github.io/OTISStudy" target="_blank">
+                  <span>OTISStudy.com</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://otvgroup.github.io/OTISStudio.com.vn"
+                  target="_blank"
+                >
+                  <span>OTISStudio.com</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <span>Services</span>
+            <!-- Cấp 2 -->
+            <ul class="submenu1">
+              <li>
+                <span>Truyền thông & Giải trí</span>
+                <!-- Cấp 3 -->
+                <ul class="submenu2">
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Nghiên Cứu Thị Trường</span>
+                    </a>
+                    <i class="fa-solid fa-chart-line"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Truyền Thông Tổng Thể</span>
+                    </a>
+                    <i class="fa-solid fa-share-nodes"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Sản Xuất & Quảng Cáo</span>
+                    </a>
+                    <i class="fa-solid fa-photo-film"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Phát Triển Game</span>
+                    </a>
+                    <i class="fa-solid fa-gamepad"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Âm Nhạc & Giải Trí</span>
+                    </a>
+                    <i class="fa-solid fa-music"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Sáng Tạo Nội Dung</span>
+                    </a>
+                    <i class="fa-solid fa-palette"></i>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>Thương mại</span>
+                <!-- Cấp 3 -->
+                <ul class="submenu2">
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Xây Dựng Thương Hiệu</span>
+                    </a>
+                    <i class="fa-solid fa-star"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Hoạch Định Chiến Lược</span>
+                    </a>
+                    <i class="fa-solid fa-lightbulb"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Chuyển Đổi Công Nghệ</span>
+                    </a>
+                    <i class="fa-solid fa-diagram-project"></i>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>Học thuật</span>
+                <!-- Cấp 3 -->
+                <ul class="submenu2">
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Tư Liệu Nghiên Cứu</span>
+                    </a>
+                    <i class="fa-solid fa-book-open"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Báo Cáo & Phân Tích</span>
+                    </a>
+                    <i class="fa-solid fa-chart-pie"></i>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>Kỹ thuật</span>
+                <!-- Cấp 3 -->
+                <ul class="submenu2">
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Thiết Kế & Phát Triển</span>
+                    </a>
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Cải Tiến & Ứng Dụng</span>
+                    </a>
+                    <i class="fa-solid fa-gears"></i>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>Dịch vụ</span>
+                <!-- Cấp 3 -->
+                <ul class="submenu2">
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Chăm Sóc & Tư Vấn</span>
+                    </a>
+                    <i class="fa-solid fa-headset"></i>
+                  </li>
+                  <li>
+                    <a href="https://otvgroup.github.io/#">
+                      <span>Bảo Hành & Bảo Trì</span>
+                    </a>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <span>Contact</span>
+            <!-- Cấp 2 -->
+            <ul class="submenu1">
+              <li>
+                <a href="https://facebook.com/OtisVo586" target="_blank">
+                  <span> Facebook </span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:0329022431" target="_blank">
+                  <span> Hotline </span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
+                  <span> E-mail </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const labels = document.querySelectorAll(".menu label");
+      const indicator = document.querySelector(".indicator");
+      labels.forEach((label, index) => {
+        label.addEventListener("click", () => {
+          document.querySelector(".active").classList.remove("active");
+          label.classList.add("active");
+          indicator.style.left = `calc(${index} * (95vw * 0.75 / 4) + 10px)`;
         });
-      </script>
-      <script>
-        const icons = document.querySelectorAll(".tab-menu i");
-        const contents = document.querySelectorAll(".tab-content");
+      });
+    </script>
+    <script>
+      const icons = document.querySelectorAll(".tab-menu i");
+      const contents = document.querySelectorAll(".tab-content");
 
-        icons.forEach((icon, index) => {
-          icon.addEventListener("click", () => {
-            // Nếu tab này đang mở thì ẩn đi
-            if (contents[index].classList.contains("active")) {
-              contents[index].classList.remove("active");
-              icon.classList.remove("active");
-              return;
-            }
+      icons.forEach((icon, index) => {
+        icon.addEventListener("click", () => {
+          // Nếu tab này đang mở thì ẩn đi
+          if (contents[index].classList.contains("active")) {
+            contents[index].classList.remove("active");
+            icon.classList.remove("active");
+            return;
+          }
 
-            // Ẩn hết các tab khác
-            contents.forEach((c) => c.classList.remove("active"));
-            icons.forEach((i) => i.classList.remove("active"));
+          // Ẩn hết các tab khác
+          contents.forEach((c) => c.classList.remove("active"));
+          icons.forEach((i) => i.classList.remove("active"));
 
-            // Mở tab được chọn
-            contents[index].classList.add("active");
-            icon.classList.add("active");
-          });
+          // Mở tab được chọn
+          contents[index].classList.add("active");
+          icon.classList.add("active");
         });
-      </script>
-      <script>
-        const accordionItems = document.querySelectorAll(".accordion > li");
+      });
+    </script>
+    <script>
+      const accordionItems = document.querySelectorAll(".accordion > li");
 
-        // Cấp 1
-        accordionItems.forEach((item) => {
-          const submenu1 = item.querySelector(".submenu1");
+      // Cấp 1
+      accordionItems.forEach((item) => {
+        const submenu1 = item.querySelector(".submenu1");
 
-          item.addEventListener("click", (e) => {
-            e.stopPropagation();
+        item.addEventListener("click", (e) => {
+          e.stopPropagation();
 
-            if (!submenu1) return; // nếu không có cấp 2 thì bỏ qua
+          if (!submenu1) return; // nếu không có cấp 2 thì bỏ qua
 
-            const isOpen = item.classList.contains("active");
+          const isOpen = item.classList.contains("active");
 
-            // Đóng tất cả cấp 1 khác
-            accordionItems.forEach((i) => {
-              if (i !== item) {
-                i.classList.remove("active");
-                const sm1 = i.querySelector(".submenu1");
-                if (sm1) sm1.style.display = "none";
+          // Đóng tất cả cấp 1 khác
+          accordionItems.forEach((i) => {
+            if (i !== item) {
+              i.classList.remove("active");
+              const sm1 = i.querySelector(".submenu1");
+              if (sm1) sm1.style.display = "none";
 
-                // đóng luôn cấp 3 bên trong nó
-                const sm2 = i.querySelectorAll(".submenu2");
-                sm2.forEach((s) => (s.style.display = "none"));
-              }
-            });
-
-            // Toggle item được bấm
-            if (isOpen) {
-              item.classList.remove("active");
-              submenu1.style.display = "none";
-            } else {
-              item.classList.add("active");
-              submenu1.style.display = "block";
+              // đóng luôn cấp 3 bên trong nó
+              const sm2 = i.querySelectorAll(".submenu2");
+              sm2.forEach((s) => (s.style.display = "none"));
             }
           });
 
-          // Cấp 2
-          if (submenu1) {
-            const submenu2Items = submenu1.querySelectorAll("li");
-
-            submenu2Items.forEach((subItem) => {
-              const submenu2 = subItem.querySelector(".submenu2");
-
-              subItem.addEventListener("click", (e2) => {
-                e2.stopPropagation();
-
-                if (!submenu2) return;
-
-                const isOpen = subItem.classList.contains("active");
-
-                // Đóng tất cả cấp 3 khác trong cùng cấp 2
-                submenu2Items.forEach((i) => {
-                  if (i !== subItem) {
-                    i.classList.remove("active");
-                    const sm2 = i.querySelector(".submenu2");
-                    if (sm2) sm2.style.display = "none";
-                  }
-                });
-
-                // Toggle cấp 3
-                if (isOpen) {
-                  subItem.classList.remove("active");
-                  submenu2.style.display = "none";
-                } else {
-                  subItem.classList.add("active");
-                  submenu2.style.display = "block";
-                }
-              });
-            });
+          // Toggle item được bấm
+          if (isOpen) {
+            item.classList.remove("active");
+            submenu1.style.display = "none";
+          } else {
+            item.classList.add("active");
+            submenu1.style.display = "block";
           }
         });
-      </script>
 
-      <!-- Form Bottom -->
-      <div class="bottom">
-        <section class="s-home active">
-          <!-- VIDEO -->
-          <div id="video-container"></div>
-          <script>
-            const channels = [
-              { id: "UCv-PFwjDGSfgozwLVCJEv0w", num: 2 },
-              { id: "UC4UOBFi4HJHU_EhynZbrefw", num: 1 },
-            ];
+        // Cấp 2
+        if (submenu1) {
+          const submenu2Items = submenu1.querySelectorAll("li");
 
-            const fixedVideo = "-lIuqy0Rycw"; // Video cố định
-            let playlist = [];
-            let currentvideo = 0;
-            let player;
+          submenu2Items.forEach((subItem) => {
+            const submenu2 = subItem.querySelector(".submenu2");
 
-            // Load YouTube API
-            function loadYouTubeAPI() {
-              return new Promise((resolve) => {
-                if (window.YT && YT.Player) return resolve();
-                const tag = document.createElement("script");
-                tag.src = "https://www.youtube.com/iframe_api";
-                document.body.appendChild(tag);
-                window.onYouTubeIframeAPIReady = () => resolve();
+            subItem.addEventListener("click", (e2) => {
+              e2.stopPropagation();
+
+              if (!submenu2) return;
+
+              const isOpen = subItem.classList.contains("active");
+
+              // Đóng tất cả cấp 3 khác trong cùng cấp 2
+              submenu2Items.forEach((i) => {
+                if (i !== subItem) {
+                  i.classList.remove("active");
+                  const sm2 = i.querySelector(".submenu2");
+                  if (sm2) sm2.style.display = "none";
+                }
               });
-            }
 
-            // Lấy video ID từ guid (chuẩn hơn)
-            function getVideoIdFromItem(item) {
-              // guid: yt:video:VIDEO_ID
-              return item.guid.split(":")[2] || null;
-            }
-
-            async function getLatestVideos(channel) {
-              try {
-                const res = await fetch(
-                  `https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`
-                );
-                const data = await res.json();
-                return data.items
-                  .slice(0, channel.num) // <-- số video riêng cho từng kênh
-                  .map((item) => item.guid.split(":")[2])
-                  .filter((v) => v);
-              } catch (err) {
-                console.error("Lỗi RSS:", err);
-                return [];
+              // Toggle cấp 3
+              if (isOpen) {
+                subItem.classList.remove("active");
+                submenu2.style.display = "none";
+              } else {
+                subItem.classList.add("active");
+                submenu2.style.display = "block";
               }
-            }
+            });
+          });
+        }
+      });
+    </script>
 
-            async function buildPlaylist() {
-              const allVideoLists = await Promise.all(
-                channels.map((c) => getLatestVideos(c))
+    <!-- Form Bottom -->
+    <div class="bottom">
+      <section class="s-home active">
+        <!-- VIDEO -->
+        <div id="video-container"></div>
+        <script>
+          const channels = [
+            { id: "UCv-PFwjDGSfgozwLVCJEv0w", num: 2 },
+            { id: "UC4UOBFi4HJHU_EhynZbrefw", num: 1 },
+          ];
+
+          const fixedVideo = "-lIuqy0Rycw"; // Video cố định
+          let playlist = [];
+          let currentvideo = 0;
+          let player;
+
+          // Load YouTube API
+          function loadYouTubeAPI() {
+            return new Promise((resolve) => {
+              if (window.YT && YT.Player) return resolve();
+              const tag = document.createElement("script");
+              tag.src = "https://www.youtube.com/iframe_api";
+              document.body.appendChild(tag);
+              window.onYouTubeIframeAPIReady = () => resolve();
+            });
+          }
+
+          // Lấy video ID từ guid (chuẩn hơn)
+          function getVideoIdFromItem(item) {
+            // guid: yt:video:VIDEO_ID
+            return item.guid.split(":")[2] || null;
+          }
+
+          async function getLatestVideos(channel) {
+            try {
+              const res = await fetch(
+                `https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`
               );
-              return [fixedVideo, ...allVideoLists.flat()].filter((v) => v);
+              const data = await res.json();
+              return data.items
+                .slice(0, channel.num) // <-- số video riêng cho từng kênh
+                .map((item) => item.guid.split(":")[2])
+                .filter((v) => v);
+            } catch (err) {
+              console.error("Lỗi RSS:", err);
+              return [];
             }
+          }
 
-            function createPlayer() {
-              player = new YT.Player("video-container", {
-                videoId: playlist[currentvideo],
-                playerVars: {
-                  autoplay: 1,
-                  mute: 1,
-                  controls: 1, // ẩn controls YouTube
-                  modestbranding: 1,
-                  rel: 0,
-                },
-                events: {
-                  onReady: (e) => e.target.playVideo(),
-                  onStateChange: (e) => {
-                    if (e.data === YT.PlayerState.ENDED) {
-                      currentvideo = (currentvideo + 1) % playlist.length;
-                      player.loadVideoById(playlist[currentvideo]);
-                    }
-                  },
-                  // ✅ Thêm phần này
-                  onError: (e) => {
-                    console.warn(
-                      "Video lỗi, chuyển sang video tiếp theo:",
-                      e.data
-                    );
+          async function buildPlaylist() {
+            const allVideoLists = await Promise.all(
+              channels.map((c) => getLatestVideos(c))
+            );
+            return [fixedVideo, ...allVideoLists.flat()].filter((v) => v);
+          }
+
+          function createPlayer() {
+            player = new YT.Player("video-container", {
+              videoId: playlist[currentvideo],
+              playerVars: {
+                autoplay: 1,
+                mute: 1,
+                controls: 1, // ẩn controls YouTube
+                modestbranding: 1,
+                rel: 0,
+              },
+              events: {
+                onReady: (e) => e.target.playVideo(),
+                onStateChange: (e) => {
+                  if (e.data === YT.PlayerState.ENDED) {
                     currentvideo = (currentvideo + 1) % playlist.length;
                     player.loadVideoById(playlist[currentvideo]);
-                  },
+                  }
                 },
-              });
-            }
+                // ✅ Thêm phần này
+                onError: (e) => {
+                  console.warn(
+                    "Video lỗi, chuyển sang video tiếp theo:",
+                    e.data
+                  );
+                  currentvideo = (currentvideo + 1) % playlist.length;
+                  player.loadVideoById(playlist[currentvideo]);
+                },
+              },
+            });
+          }
 
-            async function init() {
-              playlist = await buildPlaylist();
-              if (!playlist.length) return console.error("Playlist rỗng");
-              await loadYouTubeAPI();
-              createPlayer();
-            }
+          async function init() {
+            playlist = await buildPlaylist();
+            if (!playlist.length) return console.error("Playlist rỗng");
+            await loadYouTubeAPI();
+            createPlayer();
+          }
 
-            init();
-          </script>
+          init();
+        </script>
 
-          <!-- INTRO -->
+        <!-- INTRO -->
 
-          <!-- POST -->
-          <div class="post">
-            <div class="p_header" style="--font-size: 18px">GROUP FACEBOOK</div>
-            <div class="p_2" style="background: #daf3ffdd">
-              <img
-                src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468426620_122122770164552182_2194104395195010555_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeFpOB3VIGTT4g_qysqdEcSiKYy0lgannDYpjLSWBqecNkO2NVfb_lcSm6Bs-dYOCy5koTp3ax8x-6cq6EOlYKSD&_nc_ohc=S9hlq0vaxdYQ7kNvwES5iYW&_nc_oc=AdmWSFaPrPEZilHH_z4SYod0nonHbRTpNdhJ_br7wXEn8D68jNpJrX0Kdpz4WP5NXyE&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=Rdaf6jsLOVUcZToF_omH6Q&oh=00_Afn6d7VW44ATevy2kkEqt0Lq4d7E0FIucchuWEXcwfkhTw&oe=6957C30B"
-                alt="Facebook Group_1"
-                style="width: 100%; aspect-ratio: 2.5"
-              />
-              <div
-                class="p_header"
-                style="align-items: center; --font-size: 15px"
-              >
-                GÓC NHỎ
-              </div>
-              <div class="p_content" id="box_1">
-                <span>
-                  Góc Nhỏ - nơi mỗi câu chuyện, mỗi chia sẻ đều được lắng nghe.
-                  Nơi chúng ta cùng nhau trò chuyện, học hỏi, và gắn kết. Dù bạn
-                  đến để tâm sự, tìm cảm hứng hay đơn giản chỉ để ghé thăm, ở
-                  đây luôn có một chỗ dành cho bạn.
-                </span>
-              </div>
-              <i
-                style="
-                  color: #1877f2;
-                  width: 100%;
-                  padding: 0 10px;
-                  display: flex;
-                  justify-content: right;
-                "
-                onclick="changeHeight('box_1', this)"
-              >
-                ...Xem thêm
-              </i>
-              <div class="p_bottom">
-                <div class="p_infor" style="background: #55ad4d">
-                  Thành Viên: <i>144</i>
-                </div>
-                <div class="p_btn" style="background: #1877f2">
-                  <a
-                    href="https://www.facebook.com/share/g/1QXWdsNv8d/"
-                    target="_blank"
-                  >
-                    👉 Tham gia
-                  </a>
-                </div>
-              </div>
+        <!-- POST -->
+        <div class="post">
+          <div class="p_header" style="--font-size: 18px">GROUP FACEBOOK</div>
+          <div class="p_2" style="background: #daf3ffdd">
+            <img
+              src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468426620_122122770164552182_2194104395195010555_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeFpOB3VIGTT4g_qysqdEcSiKYy0lgannDYpjLSWBqecNkO2NVfb_lcSm6Bs-dYOCy5koTp3ax8x-6cq6EOlYKSD&_nc_ohc=S9hlq0vaxdYQ7kNvwES5iYW&_nc_oc=AdmWSFaPrPEZilHH_z4SYod0nonHbRTpNdhJ_br7wXEn8D68jNpJrX0Kdpz4WP5NXyE&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=Rdaf6jsLOVUcZToF_omH6Q&oh=00_Afn6d7VW44ATevy2kkEqt0Lq4d7E0FIucchuWEXcwfkhTw&oe=6957C30B"
+              alt="Facebook Group_1"
+              style="width: 100%; aspect-ratio: 2.5"
+            />
+            <div
+              class="p_header"
+              style="align-items: center; --font-size: 15px"
+            >
+              GÓC NHỎ
             </div>
-            <div class="p_1" style="background: #daf3ffdd">
-              <img
-                src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/588843585_122194789730552182_3801606182584356093_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeET72wqB2PkWp5i-Eb2iazOICeMEY6D7rcgJ4wRjoPutwO6LcPdGjZxJL-7FQXHE-txqJ5_ssbteAiGICKqmFvy&_nc_ohc=bwvxe8HnjvkQ7kNvwGfXbqW&_nc_oc=Adns_rMQCbcy3r5ganyXlzQOjkrbKrRH3lW-YVzTqe0GMN9Lvui93F_imMGbreqC5nk&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=ipZ87KIAmDn253sSlTWzMg&oh=00_AflhSREcArHCyFb3WAsvEvpkqRibpAe3mqmQ38pvabm_1g&oe=6957F3EE"
-                alt="Facebook Group_2"
-                style="width: 100%; aspect-ratio: 2.5"
-              />
-              <div
-                class="p_header"
-                style="align-items: center; --font-size: 15px"
-              >
-                THƯ VIỆN CẢM XÚC
-              </div>
-              <div class="p_content" id="box_2">
-                <span>
-                  Thư Viện Cảm Xúc - nơi mọi tâm tư, suy nghĩ, và cảm xúc đều
-                  được trân trọng. Nơi để bạn chia sẻ những câu chuyện vui, nỗi
-                  buồn, những khoảnh khắc nhỏ trong cuộc sống, hoặc đơn giản là
-                  tìm một không gian để lắng nghe và được lắng nghe.
-                </span>
-              </div>
-              <i
-                style="
-                  color: #1877f2;
-                  width: 100%;
-                  padding: 0 10px;
-                  display: flex;
-                  justify-content: right;
-                "
-                onclick="changeHeight('box_2', this)"
-              >
-                ...Xem thêm
-              </i>
-              <div class="p_bottom">
-                <div class="p_infor" style="background: #55ad4d">
-                  Thành Viên: <i>120</i>
-                </div>
-                <div class="p_btn" style="background: #1877f2">
-                  <a
-                    href="https://www.facebook.com/share/g/1ALyzrv8bd/"
-                    target="_blank"
-                  >
-                    👉 Tham gia
-                  </a>
-                </div>
-              </div>
+            <div class="p_content" id="box_1">
+              <span>
+                Góc Nhỏ - nơi mỗi câu chuyện, mỗi chia sẻ đều được lắng nghe.
+                Nơi chúng ta cùng nhau trò chuyện, học hỏi, và gắn kết. Dù bạn
+                đến để tâm sự, tìm cảm hứng hay đơn giản chỉ để ghé thăm, ở đây
+                luôn có một chỗ dành cho bạn.
+              </span>
             </div>
-            <div class="p_1" style="background: #daf3ffdd">
-              <img
-                src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/604517169_122194791110552182_1561466510739720352_n.webp?stp=dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeECUNinpN2JCsmcfKo5N-uFd2TGhEt5aiF3ZMaES3lqIcoBz3-ti_HX7e3LcZ2MEwrYId0p9kLLuA4gAW2ov36E&_nc_ohc=1b83OYf-hqAQ7kNvwGdtsNU&_nc_oc=AdlcGOssn0D1_bIeJ8DmkjIDSIMWYiFF9oCWzrX6y3nZq-7eqguskc4Jpph5CK8YFzA&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=BdoxFdiz-5WpbxYk60wkNQ&oh=00_AfnhO86UD8Ni0smAWJL4QPtuLej7KB3qSyb-4BpSohyMnw&oe=6957C9DE"
-                alt="Facebook Group_3"
-                style="width: 100%; aspect-ratio: 2.5"
-              />
-              <div
-                class="p_header"
-                style="align-items: center; --font-size: 15px"
-              >
-                TÂM THƯ GỬI NGƯỜI
+            <i
+              style="
+                color: #1877f2;
+                width: 100%;
+                padding: 0 10px;
+                display: flex;
+                justify-content: right;
+              "
+              onclick="changeHeight('box_1', this)"
+            >
+              ...Xem thêm
+            </i>
+            <div class="p_bottom">
+              <div class="p_infor" style="background: #55ad4d">
+                Thành Viên: <i>144</i>
               </div>
-              <div class="p_content" id="box_3">
-                <span>
-                  Tâm Thư Gửi Người - nơi mọi tâm tư, nỗi niềm và cảm xúc đều
-                  được gửi gắm và trân trọng. Nơi những lá thư chưa từng gửi đi,
-                  những câu chuyện đời thường, niềm vui giản đơn, thậm chí cả
-                  nỗi buồn hay những suy nghĩ sâu sắc về cuộc sống đều được lắng
-                  nghe và đồng cảm.
-                </span>
-              </div>
-              <i
-                style="
-                  color: #1877f2;
-                  width: 100%;
-                  padding: 0 10px;
-                  display: flex;
-                  justify-content: right;
-                "
-                onclick="changeHeight('box_3', this)"
-              >
-                ...Xem thêm
-              </i>
-              <div class="p_bottom">
-                <div class="p_infor" style="background: #55ad4d">
-                  Thành Viên: <i>122</i>
-                </div>
-                <div class="p_btn" style="background: #1877f2">
-                  <a
-                    href="https://www.facebook.com/share/g/1AbU625DZz/"
-                    target="_blank"
-                  >
-                    👉 Tham gia
-                  </a>
-                </div>
+              <div class="p_btn" style="background: #1877f2">
+                <a
+                  href="https://www.facebook.com/share/g/1QXWdsNv8d/"
+                  target="_blank"
+                >
+                  👉 Tham gia
+                </a>
               </div>
             </div>
           </div>
-          <script>
-            function changeHeight(ID, el) {
-              const box = document.getElementById(ID);
-              const currentHeight = getComputedStyle(box).height;
-
-              if (currentHeight === "22px") {
-                box.style.height = "max-content";
-                el.innerText = "Thu gọn";
-              } else {
-                box.style.height = "22px";
-                el.innerText = "...Xem thêm";
-              }
-            }
-          </script>
-
-          <div id="playlist" class="post">
-            <div class="p_header">YOUTUBE SHORTS</div>
-            <!-- Các video sẽ tự động tạo div .p_1 và nhúng iframe ở đây -->
+          <div class="p_1" style="background: #daf3ffdd">
+            <img
+              src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/588843585_122194789730552182_3801606182584356093_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeET72wqB2PkWp5i-Eb2iazOICeMEY6D7rcgJ4wRjoPutwO6LcPdGjZxJL-7FQXHE-txqJ5_ssbteAiGICKqmFvy&_nc_ohc=bwvxe8HnjvkQ7kNvwGfXbqW&_nc_oc=Adns_rMQCbcy3r5ganyXlzQOjkrbKrRH3lW-YVzTqe0GMN9Lvui93F_imMGbreqC5nk&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=ipZ87KIAmDn253sSlTWzMg&oh=00_AflhSREcArHCyFb3WAsvEvpkqRibpAe3mqmQ38pvabm_1g&oe=6957F3EE"
+              alt="Facebook Group_2"
+              style="width: 100%; aspect-ratio: 2.5"
+            />
+            <div
+              class="p_header"
+              style="align-items: center; --font-size: 15px"
+            >
+              THƯ VIỆN CẢM XÚC
+            </div>
+            <div class="p_content" id="box_2">
+              <span>
+                Thư Viện Cảm Xúc - nơi mọi tâm tư, suy nghĩ, và cảm xúc đều được
+                trân trọng. Nơi để bạn chia sẻ những câu chuyện vui, nỗi buồn,
+                những khoảnh khắc nhỏ trong cuộc sống, hoặc đơn giản là tìm một
+                không gian để lắng nghe và được lắng nghe.
+              </span>
+            </div>
+            <i
+              style="
+                color: #1877f2;
+                width: 100%;
+                padding: 0 10px;
+                display: flex;
+                justify-content: right;
+              "
+              onclick="changeHeight('box_2', this)"
+            >
+              ...Xem thêm
+            </i>
+            <div class="p_bottom">
+              <div class="p_infor" style="background: #55ad4d">
+                Thành Viên: <i>120</i>
+              </div>
+              <div class="p_btn" style="background: #1877f2">
+                <a
+                  href="https://www.facebook.com/share/g/1ALyzrv8bd/"
+                  target="_blank"
+                >
+                  👉 Tham gia
+                </a>
+              </div>
+            </div>
           </div>
+          <div class="p_1" style="background: #daf3ffdd">
+            <img
+              src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/604517169_122194791110552182_1561466510739720352_n.webp?stp=dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeECUNinpN2JCsmcfKo5N-uFd2TGhEt5aiF3ZMaES3lqIcoBz3-ti_HX7e3LcZ2MEwrYId0p9kLLuA4gAW2ov36E&_nc_ohc=1b83OYf-hqAQ7kNvwGdtsNU&_nc_oc=AdlcGOssn0D1_bIeJ8DmkjIDSIMWYiFF9oCWzrX6y3nZq-7eqguskc4Jpph5CK8YFzA&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=BdoxFdiz-5WpbxYk60wkNQ&oh=00_AfnhO86UD8Ni0smAWJL4QPtuLej7KB3qSyb-4BpSohyMnw&oe=6957C9DE"
+              alt="Facebook Group_3"
+              style="width: 100%; aspect-ratio: 2.5"
+            />
+            <div
+              class="p_header"
+              style="align-items: center; --font-size: 15px"
+            >
+              TÂM THƯ GỬI NGƯỜI
+            </div>
+            <div class="p_content" id="box_3">
+              <span>
+                Tâm Thư Gửi Người - nơi mọi tâm tư, nỗi niềm và cảm xúc đều được
+                gửi gắm và trân trọng. Nơi những lá thư chưa từng gửi đi, những
+                câu chuyện đời thường, niềm vui giản đơn, thậm chí cả nỗi buồn
+                hay những suy nghĩ sâu sắc về cuộc sống đều được lắng nghe và
+                đồng cảm.
+              </span>
+            </div>
+            <i
+              style="
+                color: #1877f2;
+                width: 100%;
+                padding: 0 10px;
+                display: flex;
+                justify-content: right;
+              "
+              onclick="changeHeight('box_3', this)"
+            >
+              ...Xem thêm
+            </i>
+            <div class="p_bottom">
+              <div class="p_infor" style="background: #55ad4d">
+                Thành Viên: <i>122</i>
+              </div>
+              <div class="p_btn" style="background: #1877f2">
+                <a
+                  href="https://www.facebook.com/share/g/1AbU625DZz/"
+                  target="_blank"
+                >
+                  👉 Tham gia
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          function changeHeight(ID, el) {
+            const box = document.getElementById(ID);
+            const currentHeight = getComputedStyle(box).height;
 
-          <script>
-            document.addEventListener("DOMContentLoaded", () => {
-              const playlists = [
-                // Kênh 1
-                "https://www.youtube.com/playlist?list=PLr-nq1_tAgasf6lDFzZ34LCXk7WIScTmu",
-                "https://www.youtube.com/playlist?list=PLr-nq1_tAgatx2oBmmzTCDbT3fknqYlYU",
-                "https://www.youtube.com/playlist?list=PLr-nq1_tAgas2QA44VzY93Z6GqXpBt_vv",
+            if (currentHeight === "22px") {
+              box.style.height = "max-content";
+              el.innerText = "Thu gọn";
+            } else {
+              box.style.height = "22px";
+              el.innerText = "...Xem thêm";
+            }
+          }
+        </script>
 
-                // Kênh 2
-                "https://www.youtube.com/playlist?list=PL038F8U56LOuuPeCx2Yee_qXY9oWD-KNG",
-                "https://www.youtube.com/playlist?list=PL038F8U56LOsyRWTAlSywFzqmx8NwYl5g",
-                "https://www.youtube.com/playlist?list=PL038F8U56LOtvUTkMDYTZA7xaCHLHdVky",
-              ];
+        <div id="playlist" class="post">
+          <div class="p_header">YOUTUBE SHORTS</div>
+          <!-- Các video sẽ tự động tạo div .p_1 và nhúng iframe ở đây -->
+        </div>
 
-              const container = document.getElementById("playlist");
-              if (!container) return;
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const playlists = [
+              // Kênh 1
+              "https://www.youtube.com/playlist?list=PLr-nq1_tAgasf6lDFzZ34LCXk7WIScTmu",
+              "https://www.youtube.com/playlist?list=PLr-nq1_tAgatx2oBmmzTCDbT3fknqYlYU",
+              "https://www.youtube.com/playlist?list=PLr-nq1_tAgas2QA44VzY93Z6GqXpBt_vv",
 
-              playlists.forEach((link) => {
-                const listId = new URL(link).searchParams.get("list");
-                if (!listId) return;
+              // Kênh 2
+              "https://www.youtube.com/playlist?list=PL038F8U56LOuuPeCx2Yee_qXY9oWD-KNG",
+              "https://www.youtube.com/playlist?list=PL038F8U56LOsyRWTAlSywFzqmx8NwYl5g",
+              "https://www.youtube.com/playlist?list=PL038F8U56LOtvUTkMDYTZA7xaCHLHdVky",
+            ];
 
-                container.insertAdjacentHTML(
-                  "beforeend",
-                  `<div class="p_1">
+            const container = document.getElementById("playlist");
+            if (!container) return;
+
+            playlists.forEach((link) => {
+              const listId = new URL(link).searchParams.get("list");
+              if (!listId) return;
+
+              container.insertAdjacentHTML(
+                "beforeend",
+                `<div class="p_1">
                      <iframe
                        src="https://www.youtube.com/embed/videoseries?list=${listId}"
                        allowfullscreen>
                      </iframe>
                    </div>`
-                );
-              });
+              );
             });
-          </script>
+          });
+        </script>
 
-          <!-- F - CONTACT -->
-          <div class="footer">
-            <div class="f-left">
-              <a class="f-header" style="align-items: left">OTVGroup</a>
-              <div class="f-content">
-                <a
-                  href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
-                  target="_blank"
-                >
-                  <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
-                </a>
-                <a href="tel:+84329022431" target="_blank">
-                  <i class="fa fa-phone"></i>0329 022 431
-                </a>
-                <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
-                  <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
-                </a>
-              </div>
-            </div>
-            <div class="f-center">
-              <a class="f-header" style="align-items: left">MENU</a>
-              <div class="f-content">
-                <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
-                <a href=""
-                  ><i class="fa-solid fa-address-card"></i>Giới Thiệu</a
-                >
-                <a href=""><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
-              </div>
-            </div>
-            <div class="f-right">
-              <a class="f-header" style="align-items: left">LIÊN KẾT</a>
-              <div class="f-content">
-                <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
-                <a href=""><i class="fab fa-youtube"></i>YouTube</a>
-                <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
-              </div>
+        <!-- F - CONTACT -->
+        <div class="footer">
+          <div class="f-left">
+            <a class="f-header" style="align-items: left">OTVGroup</a>
+            <div class="f-content">
+              <a
+                href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
+                target="_blank"
+              >
+                <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
+              </a>
+              <a href="tel:+84329022431" target="_blank">
+                <i class="fa fa-phone"></i>0329 022 431
+              </a>
+              <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
+              </a>
             </div>
           </div>
+          <div class="f-center">
+            <a class="f-header" style="align-items: left">MENU</a>
+            <div class="f-content">
+              <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
+              <a href=""><i class="fa-solid fa-address-card"></i>Giới Thiệu</a>
+              <a href=""><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
+            </div>
+          </div>
+          <div class="f-right">
+            <a class="f-header" style="align-items: left">LIÊN KẾT</a>
+            <div class="f-content">
+              <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
+              <a href=""><i class="fab fa-youtube"></i>YouTube</a>
+              <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
+            </div>
+          </div>
+        </div>
 
-          <div class="copyright">
-            © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
-          </div>
-        </section>
-        <section class="s-info">
-          <!-- F - CONTACT -->
-          <div class="footer">
-            <div class="f-left">
-              <a class="f-header" style="align-items: left">OTVGroup</a>
-              <div class="f-content">
-                <a
-                  href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
-                  target="_blank"
-                >
-                  <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
-                </a>
-                <a href="tel:+84329022431" target="_blank">
-                  <i class="fa fa-phone"></i>0329 022 431
-                </a>
-                <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
-                  <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
-                </a>
-              </div>
-            </div>
-            <div class="f-center">
-              <a class="f-header" style="align-items: left">MENU</a>
-              <div class="f-content">
-                <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
-                <a href=""
-                  ><i class="fa-solid fa-address-card"></i>Giới Thiệu</a
-                >
-                <a href=""><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
-              </div>
-            </div>
-            <div class="f-right">
-              <a class="f-header" style="align-items: left">LIÊN KẾT</a>
-              <div class="f-content">
-                <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
-                <a href=""><i class="fab fa-youtube"></i>YouTube</a>
-                <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
-              </div>
+        <div class="copyright">
+          © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
+        </div>
+      </section>
+      <section class="s-info">
+        <!-- F - CONTACT -->
+        <div class="footer">
+          <div class="f-left">
+            <a class="f-header" style="align-items: left">OTVGroup</a>
+            <div class="f-content">
+              <a
+                href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
+                target="_blank"
+              >
+                <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
+              </a>
+              <a href="tel:+84329022431" target="_blank">
+                <i class="fa fa-phone"></i>0329 022 431
+              </a>
+              <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
+              </a>
             </div>
           </div>
+          <div class="f-center">
+            <a class="f-header" style="align-items: left">MENU</a>
+            <div class="f-content">
+              <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
+              <a href=""><i class="fa-solid fa-address-card"></i>Giới Thiệu</a>
+              <a href=""><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
+            </div>
+          </div>
+          <div class="f-right">
+            <a class="f-header" style="align-items: left">LIÊN KẾT</a>
+            <div class="f-content">
+              <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
+              <a href=""><i class="fab fa-youtube"></i>YouTube</a>
+              <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
+            </div>
+          </div>
+        </div>
 
-          <div class="copyright">
-            © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
-          </div>
-        </section>
-        <section class="s-news">
-          <!-- F - CONTACT -->
-          <div class="footer">
-            <div class="f-left">
-              <a class="f-header" style="align-items: left">OTVGroup</a>
-              <div class="f-content">
-                <a
-                  href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
-                  target="_blank"
-                >
-                  <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
-                </a>
-                <a href="tel:+84329022431" target="_blank">
-                  <i class="fa fa-phone"></i>0329 022 431
-                </a>
-                <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
-                  <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
-                </a>
-              </div>
-            </div>
-            <div class="f-center">
-              <a class="f-header" style="align-items: left">MENU</a>
-              <div class="f-content">
-                <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
-                <a href=""
-                  ><i class="fa-solid fa-address-card"></i>Giới Thiệu</a
-                >
-                <a href=""><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
-              </div>
-            </div>
-            <div class="f-right">
-              <a class="f-header" style="align-items: left">LIÊN KẾT</a>
-              <div class="f-content">
-                <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
-                <a href=""><i class="fab fa-youtube"></i>YouTube</a>
-                <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
-              </div>
+        <div class="copyright">
+          © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
+        </div>
+      </section>
+      <section class="s-news">
+        <!-- F - CONTACT -->
+        <div class="footer">
+          <div class="f-left">
+            <a class="f-header" style="align-items: left">OTVGroup</a>
+            <div class="f-content">
+              <a
+                href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
+                target="_blank"
+              >
+                <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
+              </a>
+              <a href="tel:+84329022431" target="_blank">
+                <i class="fa fa-phone"></i>0329 022 431
+              </a>
+              <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
+              </a>
             </div>
           </div>
+          <div class="f-center">
+            <a class="f-header" style="align-items: left">MENU</a>
+            <div class="f-content">
+              <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
+              <a href=""><i class="fa-solid fa-address-card"></i>Giới Thiệu</a>
+              <a href=""><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
+            </div>
+          </div>
+          <div class="f-right">
+            <a class="f-header" style="align-items: left">LIÊN KẾT</a>
+            <div class="f-content">
+              <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
+              <a href=""><i class="fab fa-youtube"></i>YouTube</a>
+              <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
+            </div>
+          </div>
+        </div>
 
-          <div class="copyright">
-            © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
-          </div>
-        </section>
-        <section class="s-contact">
-          <div class="content">
-            <div class="c-left">
+        <div class="copyright">
+          © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
+        </div>
+      </section>
+      <section class="s-contact">
+        <div class="content">
+          <div class="c-left">
+            <div
+              class="c-form"
+              onclick="window.open('#')"
+              style="
+                width: calc(90% + 10px);
+                background: #272727;
+                box-shadow: 2px 2px 2px #000000;
+              "
+            >
+              <span>LIÊN HỆ NGAY</span>
               <div
-                class="c-form"
-                onclick="window.open('#')"
                 style="
-                  width: calc(90% + 10px);
-                  background: #272727;
-                  box-shadow: 2px 2px 2px #000000;
+                  width: 100%;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  align-items: center;
+                  justify-content: center;
+                  justify-items: center;
                 "
               >
-                <span>LIÊN HỆ NGAY</span>
+                <img
+                  src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
+                  alt="Logo"
+                  style="
+                    width: 30%;
+                    min-width: 90px;
+                    max-width: 120px;
+                    aspect-ratio: 1;
+                    margin-right: clamp(5px, 1vw, 30px);
+                  "
+                />
                 <div
                   style="
-                    width: 100%;
+                    width: 70%;
+                    min-width: 180px;
+                    max-width: 230px;
+                    margin-left: clamp(5px, 1vw, 30px);
                     display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    align-items: center;
-                    justify-content: center;
-                    justify-items: center;
+                    gap: 15px;
+                    flex-direction: column;
                   "
                 >
-                  <img
-                    src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
-                    alt="Logo"
-                    style="
-                      width: 30%;
-                      min-width: 90px;
-                      max-width: 120px;
-                      aspect-ratio: 1;
-                      margin-right: clamp(5px, 1vw, 30px);
-                    "
-                  />
-                  <div
-                    style="
-                      width: 70%;
-                      min-width: 180px;
-                      max-width: 230px;
-                      margin-left: clamp(5px, 1vw, 30px);
-                      display: flex;
-                      gap: 15px;
-                      flex-direction: column;
-                    "
+                  <a
+                    href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
+                    target="_blank"
+                    style="width: fit-content; font-size: 16px"
                   >
-                    <a
-                      href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
-                      target="_blank"
-                      style="width: fit-content; font-size: 16px"
-                    >
-                      <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
-                    </a>
-                    <a
-                      href="mailto:thinhkvtm2006@gmail.com"
-                      target="_blank"
-                      style="width: fit-content; font-size: 16px"
-                    >
-                      <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
-                    </a>
-                    <a
-                      href="tel:+84329022431"
-                      target="_blank"
-                      style="width: fit-content; font-size: 16px"
-                    >
-                      <i class="fa fa-phone"></i>0329 022 431
-                    </a>
-                  </div>
+                    <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
+                  </a>
+                  <a
+                    href="mailto:thinhkvtm2006@gmail.com"
+                    target="_blank"
+                    style="width: fit-content; font-size: 16px"
+                  >
+                    <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
+                  </a>
+                  <a
+                    href="tel:+84329022431"
+                    target="_blank"
+                    style="width: fit-content; font-size: 16px"
+                  >
+                    <i class="fa fa-phone"></i>0329 022 431
+                  </a>
                 </div>
               </div>
-              <div
-                class="c-form"
-                onclick="window.open('#')"
-                onmouseout=" this.style.transform='scale(1)';"
-                onmouseover="this.style.transform='scale(1.02)';"
-                style="
-                  width: calc(90% / 2);
-                  transition: ease 0.5s;
-                  background: #2232c2;
-                  box-shadow: 2px 2px 2px #000000;
-                "
-              >
-                <span>ĐÁNH GIÁ</span>
-                <a>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </a>
-              </div>
-              <div
-                class="c-form"
-                onclick="window.open('#')"
-                onmouseout=" this.style.transform='scale(1)';"
-                onmouseover="this.style.transform='scale(1.02)';"
-                style="
-                  width: calc(90% / 2);
-                  transition: ease 0.5s;
-                  background: #2a9f00;
-                  box-shadow: 2px 2px 2px #000000;
-                "
-              >
-                <span>ĐỀ XUẤT</span>
-                <a>
-                  <i class="fa-solid fa-book-open"></i>
-                  <i class="fa-solid fa-check"></i>
-                  <i class="fa-solid fa-note-sticky"></i>
-                  <i class="fa-solid fa-check"></i>
-                  <i class="fa-solid fa-book-open"></i>
-                </a>
-              </div>
-              <div
-                class="c-form"
-                onclick="window.open('#')"
-                onmouseout=" this.style.transform='scale(1)';"
-                onmouseover="this.style.transform='scale(1.02)';"
-                style="
-                  width: calc(90% + 10px);
-                  transition: ease 0.5s;
-                  background: #c22222;
-                  box-shadow: 2px 2px 2px #000000;
-                "
-              >
-                <span>ĐĂNG KÝ THÀNH VIÊN</span>
-                <a>
-                  <i class="fa-solid fa-paper-plane"></i>
-                  <i class="fa-solid fa-paper-plane"></i>
-                  <i class="fa-solid fa-paper-plane"></i>
-                  <i class="fa-solid fa-paper-plane"></i>
-                  <i class="fa-solid fa-paper-plane"></i>
-                </a>
-              </div>
             </div>
-
-            <div class="c-right">
-              <iframe
-                style="width: calc(90% + 10px); aspect-ratio: 1"
-                loading="lazy"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15673.237375022063!2d106.61597899409112!3d10.864059701878784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a1dd5849c15%3A0x74da5b070b51174e!2zVMOibiBDaMOhbmggSGnhu4dwLCBRdeG6rW4gMTIsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1765463292309!5m2!1svi!2s"
-                title="Tân Chánh Hiệp, Quận 12, Thành phố Hồ Chí Minh, Việt Nam"
-                aria-label="Tân Chánh Hiệp, Quận 12, Thành phố Hồ Chí Minh, Việt Nam"
-              ></iframe>
+            <div
+              class="c-form"
+              onclick="window.open('#')"
+              onmouseout=" this.style.transform='scale(1)';"
+              onmouseover="this.style.transform='scale(1.02)';"
+              style="
+                width: calc(90% / 2);
+                transition: ease 0.5s;
+                background: #2232c2;
+                box-shadow: 2px 2px 2px #000000;
+              "
+            >
+              <span>ĐÁNH GIÁ</span>
+              <a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </a>
+            </div>
+            <div
+              class="c-form"
+              onclick="window.open('#')"
+              onmouseout=" this.style.transform='scale(1)';"
+              onmouseover="this.style.transform='scale(1.02)';"
+              style="
+                width: calc(90% / 2);
+                transition: ease 0.5s;
+                background: #2a9f00;
+                box-shadow: 2px 2px 2px #000000;
+              "
+            >
+              <span>ĐỀ XUẤT</span>
+              <a>
+                <i class="fa-solid fa-book-open"></i>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-note-sticky"></i>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-book-open"></i>
+              </a>
+            </div>
+            <div
+              class="c-form"
+              onclick="window.open('#')"
+              onmouseout=" this.style.transform='scale(1)';"
+              onmouseover="this.style.transform='scale(1.02)';"
+              style="
+                width: calc(90% + 10px);
+                transition: ease 0.5s;
+                background: #c22222;
+                box-shadow: 2px 2px 2px #000000;
+              "
+            >
+              <span>ĐĂNG KÝ THÀNH VIÊN</span>
+              <a>
+                <i class="fa-solid fa-paper-plane"></i>
+                <i class="fa-solid fa-paper-plane"></i>
+                <i class="fa-solid fa-paper-plane"></i>
+                <i class="fa-solid fa-paper-plane"></i>
+                <i class="fa-solid fa-paper-plane"></i>
+              </a>
             </div>
           </div>
 
-          <!-- F - CONTACT -->
-          <div class="footer">
-            <div class="f-left">
-              <a class="f-header" style="align-items: left">OTVGroup</a>
-              <div class="f-content">
-                <a
-                  href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
-                  target="_blank"
-                >
-                  <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
-                </a>
-                <a href="tel:+84329022431" target="_blank">
-                  <i class="fa fa-phone"></i>0329 022 431
-                </a>
-                <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
-                  <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
-                </a>
-              </div>
-            </div>
-            <div class="f-center">
-              <a class="f-header" style="align-items: left">MENU</a>
-              <div class="f-content">
-                <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
-                <a href=""
-                  ><i class="fa-solid fa-address-card"></i>Giới Thiệu</a
-                >
-                <a href=""><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
-              </div>
-            </div>
-            <div class="f-right">
-              <a class="f-header" style="align-items: left">LIÊN KẾT</a>
-              <div class="f-content">
-                <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
-                <a href=""><i class="fab fa-youtube"></i>YouTube</a>
-                <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
-              </div>
+          <div class="c-right">
+            <iframe
+              style="width: calc(90% + 10px); aspect-ratio: 1"
+              loading="lazy"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15673.237375022063!2d106.61597899409112!3d10.864059701878784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a1dd5849c15%3A0x74da5b070b51174e!2zVMOibiBDaMOhbmggSGnhu4dwLCBRdeG6rW4gMTIsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1765463292309!5m2!1svi!2s"
+              title="Tân Chánh Hiệp, Quận 12, Thành phố Hồ Chí Minh, Việt Nam"
+              aria-label="Tân Chánh Hiệp, Quận 12, Thành phố Hồ Chí Minh, Việt Nam"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- F - CONTACT -->
+        <div class="footer">
+          <div class="f-left">
+            <a class="f-header" style="align-items: left">OTVGroup</a>
+            <div class="f-content">
+              <a
+                href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
+                target="_blank"
+              >
+                <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
+              </a>
+              <a href="tel:+84329022431" target="_blank">
+                <i class="fa fa-phone"></i>0329 022 431
+              </a>
+              <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>thinhkvtm2006@gmail.com
+              </a>
             </div>
           </div>
-
-          <div class="copyright">
-            © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
+          <div class="f-center">
+            <a class="f-header" style="align-items: left">MENU</a>
+            <div class="f-content">
+              <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
+              <a href=""><i class="fa-solid fa-address-card"></i>Giới Thiệu</a>
+              <a href=""><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
+            </div>
           </div>
-        </section>
-      </div>
-      <script>
-        // ánh xạ id button -> class section
-        const map = {
-          "id-home": "s-home",
-          "id-info": "s-info",
-          "id-news": "s-news",
-          "id-contact": "s-contact",
-        };
+          <div class="f-right">
+            <a class="f-header" style="align-items: left">LIÊN KẾT</a>
+            <div class="f-content">
+              <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
+              <a href=""><i class="fab fa-youtube"></i>YouTube</a>
+              <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
+            </div>
+          </div>
+        </div>
 
-        // Lặp qua từng nút
-        Object.keys(map).forEach((id) => {
-          document.getElementById(id).addEventListener("click", () => {
-            // Ẩn hết section
-            document.querySelectorAll(".bottom section").forEach((sec) => {
-              sec.classList.remove("active");
-            });
-
-            // Hiện đúng section
-            document.querySelector("." + map[id]).classList.add("active");
-          });
-        });
-      </script>
+        <div class="copyright">
+          © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
+        </div>
+      </section>
     </div>
+    <script>
+      // ánh xạ id button -> class section
+      const map = {
+        "id-home": "s-home",
+        "id-info": "s-info",
+        "id-news": "s-news",
+        "id-contact": "s-contact",
+      };
+
+      // Lặp qua từng nút
+      Object.keys(map).forEach((id) => {
+        document.getElementById(id).addEventListener("click", () => {
+          // Ẩn hết section
+          document.querySelectorAll(".bottom section").forEach((sec) => {
+            sec.classList.remove("active");
+          });
+
+          // Hiện đúng section
+          document.querySelector("." + map[id]).classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>
