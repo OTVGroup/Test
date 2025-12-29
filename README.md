@@ -63,10 +63,10 @@
         position: fixed;
         inset: 0; /* top right bottom left = 0 */
         z-index: 1;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         background: #1e1e1e;
       }
 
@@ -488,7 +488,7 @@
           </script>
 
           <div id="playlist" class="post">
-            <div class="p-header">PLAYLISTS</div>
+            <div class="p-header">YOUTUBE SHORTS</div>
             <!-- Các video sẽ tự động tạo div .p-1 và nhúng iframe ở đây -->
           </div>
 
