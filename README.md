@@ -64,6 +64,7 @@
         inset: 0; /* top right bottom left = 0 */
         z-index: 1;
         display: flex;
+        height: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
