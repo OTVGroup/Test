@@ -225,7 +225,7 @@
         color: #ddd;
         font-size: 15px;
         cursor: pointer;
-        padding: 5px 10px 5px 5px;
+        padding: 5px 0px;
         border-bottom: 1px solid #333;
       }
 
@@ -233,7 +233,7 @@
         color: #ddd;
         font-size: 12px;
         cursor: pointer;
-        padding: 5px 15px 5px 0;
+        padding: 5px 0;
         border-bottom: 1px solid #333;
       }
 
