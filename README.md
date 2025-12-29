@@ -197,13 +197,16 @@
 
       /* Reset cơ bản */
       .accordion {
-        padding: 0;
+        margin-left: 0;
+        padding-left: 0;
         list-style: none;
       }
 
       /* Cấp 1 */
       .accordion > li {
         position: relative;
+        margin-left: 0;
+        padding-left: 0;
         padding-top: 5px;
         cursor: pointer;
         background: none;
@@ -217,6 +220,8 @@
       .submenu1,
       .submenu2 {
         display: none;
+        margin-left: 0;
+        padding-left: 0;
         list-style: none;
         transition: all 0.3s ease;
       }
@@ -224,6 +229,7 @@
       .submenu1 li {
         color: #ddd;
         font-size: 15px;
+        margin-left: 0;
         cursor: pointer;
         padding: 5px 0px;
         border-bottom: 1px solid #333;
@@ -232,8 +238,9 @@
       .submenu1 li .submenu2 li {
         color: #ddd;
         font-size: 12px;
+        margin-left: 0;
         cursor: pointer;
-        padding: 5px 0;
+        padding: 5px 0px;
         border-bottom: 1px solid #333;
       }
 
