@@ -235,7 +235,7 @@
         border-bottom: 1px solid #333;
       }
 
-      .submenu1 li .submenu2 li {
+      .submenu1 > li > .submenu2 > li {
         color: #ddd;
         font-size: 12px;
         margin-left: 0;
@@ -684,7 +684,6 @@
       <div class="tab-content">
         <ul class="accordion">
           <!-- Cấp 1 -->
-
           <li>
             <span>About</span>
             <!-- Cấp 2 -->
