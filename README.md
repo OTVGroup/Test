@@ -61,7 +61,7 @@
       /* Thẻ phủ toàn màn hình */
       .full-screen {
         position: fixed;
-        margin: 0;
+        inset: 0;
         z-index: 1;
         display: flex;
         width: 100vw;
