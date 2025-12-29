@@ -61,10 +61,11 @@
       /* Thẻ phủ toàn màn hình */
       .full-screen {
         position: fixed;
-        inset: 0; /* top right bottom left = 0 */
+        margin: 0;
         z-index: 1;
         display: flex;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         flex-direction: column;
         align-items: center;
         justify-content: center;
