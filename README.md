@@ -197,7 +197,6 @@
 
       /* Reset cơ bản */
       .accordion {
-        margin-left: 15px;
         padding: 0;
         list-style: none;
       }
@@ -214,15 +213,6 @@
         transition: background 0.2s;
       }
 
-      /* Mũi tên cho cấp 1 và 2 */
-      .accordion li > span::before {
-        content: "▶";
-        position: absolute;
-        left: -15px;
-        transition: transform 0.3s;
-        font-size: 12px;
-      }
-
       /* Submenu */
       .submenu1,
       .submenu2 {
@@ -235,7 +225,7 @@
         color: #ddd;
         font-size: 15px;
         cursor: pointer;
-        padding: 5px 15px 5px 5px;
+        padding: 5px 10px 5px 5px;
         border-bottom: 1px solid #333;
       }
 
@@ -250,24 +240,6 @@
       .submenu1 li:hover,
       .submenu2 li:hover {
         color: #fff;
-      }
-
-      .submenu1 li > span::before {
-        content: "▶";
-        position: absolute;
-        left: -5px;
-        transition: transform 0.3s;
-        font-size: 10px;
-      }
-
-      .submenu2 li > span::before {
-        display: none;
-      }
-
-      /* Xoay khi active */
-      .accordion li.active > span::before,
-      .submenu1 li.active > span::before {
-        transform: rotate(90deg);
       }
 
       @media (max-width: 540px) {
