@@ -344,7 +344,7 @@
               <img
                 src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468426620_122122770164552182_2194104395195010555_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeFpOB3VIGTT4g_qysqdEcSiKYy0lgannDYpjLSWBqecNkO2NVfb_lcSm6Bs-dYOCy5koTp3ax8x-6cq6EOlYKSD&_nc_ohc=S9hlq0vaxdYQ7kNvwES5iYW&_nc_oc=AdmWSFaPrPEZilHH_z4SYod0nonHbRTpNdhJ_br7wXEn8D68jNpJrX0Kdpz4WP5NXyE&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=Rdaf6jsLOVUcZToF_omH6Q&oh=00_Afn6d7VW44ATevy2kkEqt0Lq4d7E0FIucchuWEXcwfkhTw&oe=6957C30B"
                 alt="Facebook Group-1"
-                style="width: 100%; aspect-ratio: 5/2"
+                style="width: 100%; aspect-ratio: 2.5"
               />
               <div
                 class="p-header"
@@ -353,10 +353,12 @@
                 GÓC NHỎ
               </div>
               <div class="p-content" id="box-1">
-                Góc Nhỏ - nơi mỗi câu chuyện, mỗi chia sẻ đều được lắng nghe.
-                Nơi chúng ta cùng nhau trò chuyện, học hỏi, và gắn kết. Dù bạn
-                đến để tâm sự, tìm cảm hứng hay đơn giản chỉ để ghé thăm, ở đây
-                luôn có một chỗ dành cho bạn.
+                <span>
+                  Góc Nhỏ - nơi mỗi câu chuyện, mỗi chia sẻ đều được lắng nghe.
+                  Nơi chúng ta cùng nhau trò chuyện, học hỏi, và gắn kết. Dù bạn
+                  đến để tâm sự, tìm cảm hứng hay đơn giản chỉ để ghé thăm, ở
+                  đây luôn có một chỗ dành cho bạn.
+                </span>
               </div>
               <i
                 style="
@@ -388,7 +390,7 @@
               <img
                 src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/588843585_122194789730552182_3801606182584356093_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeET72wqB2PkWp5i-Eb2iazOICeMEY6D7rcgJ4wRjoPutwO6LcPdGjZxJL-7FQXHE-txqJ5_ssbteAiGICKqmFvy&_nc_ohc=bwvxe8HnjvkQ7kNvwGfXbqW&_nc_oc=Adns_rMQCbcy3r5ganyXlzQOjkrbKrRH3lW-YVzTqe0GMN9Lvui93F_imMGbreqC5nk&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=ipZ87KIAmDn253sSlTWzMg&oh=00_AflhSREcArHCyFb3WAsvEvpkqRibpAe3mqmQ38pvabm_1g&oe=6957F3EE"
                 alt="Facebook Group-1"
-                style="width: 100%; aspect-ratio: 5/2"
+                style="width: 100%; aspect-ratio: 2.5"
               />
               <div
                 class="p-header"
@@ -397,10 +399,12 @@
                 THƯ VIỆN CẢM XÚC
               </div>
               <div class="p-content" id="box-2">
-                Thư Viện Cảm Xúc - nơi mọi tâm tư, suy nghĩ, và cảm xúc đều được
-                trân trọng. Nơi để bạn chia sẻ những câu chuyện vui, nỗi buồn,
-                những khoảnh khắc nhỏ trong cuộc sống, hoặc đơn giản là tìm một
-                không gian để lắng nghe và được lắng nghe.
+                <span>
+                  Thư Viện Cảm Xúc - nơi mọi tâm tư, suy nghĩ, và cảm xúc đều
+                  được trân trọng. Nơi để bạn chia sẻ những câu chuyện vui, nỗi
+                  buồn, những khoảnh khắc nhỏ trong cuộc sống, hoặc đơn giản là
+                  tìm một không gian để lắng nghe và được lắng nghe.
+                </span>
               </div>
               <i
                 style="
@@ -432,7 +436,7 @@
               <img
                 src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/604517169_122194791110552182_1561466510739720352_n.webp?stp=dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeECUNinpN2JCsmcfKo5N-uFd2TGhEt5aiF3ZMaES3lqIcoBz3-ti_HX7e3LcZ2MEwrYId0p9kLLuA4gAW2ov36E&_nc_ohc=1b83OYf-hqAQ7kNvwGdtsNU&_nc_oc=AdlcGOssn0D1_bIeJ8DmkjIDSIMWYiFF9oCWzrX6y3nZq-7eqguskc4Jpph5CK8YFzA&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=BdoxFdiz-5WpbxYk60wkNQ&oh=00_AfnhO86UD8Ni0smAWJL4QPtuLej7KB3qSyb-4BpSohyMnw&oe=6957C9DE"
                 alt="Facebook Group-1"
-                style="width: 100%; aspect-ratio: 5/2"
+                style="width: 100%; aspect-ratio: 2.5"
               />
               <div
                 class="p-header"
@@ -441,11 +445,13 @@
                 TÂM THƯ GỬI NGƯỜI
               </div>
               <div class="p-content" id="box-3">
-                Tâm Thư Gửi Người - nơi mọi tâm tư, nỗi niềm và cảm xúc đều được
-                gửi gắm và trân trọng. Nơi những lá thư chưa từng gửi đi, những
-                câu chuyện đời thường, niềm vui giản đơn, thậm chí cả nỗi buồn
-                hay những suy nghĩ sâu sắc về cuộc sống đều được lắng nghe và
-                đồng cảm.
+                <span>
+                  Tâm Thư Gửi Người - nơi mọi tâm tư, nỗi niềm và cảm xúc đều
+                  được gửi gắm và trân trọng. Nơi những lá thư chưa từng gửi đi,
+                  những câu chuyện đời thường, niềm vui giản đơn, thậm chí cả
+                  nỗi buồn hay những suy nghĩ sâu sắc về cuộc sống đều được lắng
+                  nghe và đồng cảm.
+                </span>
               </div>
               <i
                 style="
