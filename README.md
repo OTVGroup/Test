@@ -126,7 +126,8 @@
         width: calc(100% / 3 - 2px);
         height: min-content;
         min-width: 300px;
-        margin: 0 auto;
+        margin: 0;
+        padding: 0;
         display: flex;
         align-items: center; /* Căn giữa theo chiều dọc */
         align-content: center;
@@ -147,6 +148,7 @@
         width: 100%;
         height: 30px;
         margin: 0;
+        line-height: 1;
         display: flex;
         padding: 0 15px;
         font-size: var(--font-size);
