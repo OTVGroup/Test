@@ -271,10 +271,10 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        top: 80px;
+        bottom: 0;
         left: 2.5vw;
         right: 2.5vw;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 75px);
         padding: 0;
         background: #000000;
         width: 95vw;
@@ -282,7 +282,6 @@
 
       @media (max-width: 540px) {
         .bottom {
-          top: 55px;
           height: calc(100vh - 55px);
         }
       }
@@ -682,192 +681,146 @@
         </div>
       </nav>
       <div class="tab-content">
-        <ul class="accordion">
+        <div class="accordion">
           <!-- Cấp 1 -->
-          <li>
+          <div class="submenu0">
             <span>About</span>
             <!-- Cấp 2 -->
-            <ul class="submenu1">
-              <li>
-                <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                  <span>OTVGroup.com</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://otvgroup.github.io/OTISShop" target="_blank">
-                  <span>OTISShop.com</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://otvgroup.github.io/OTISStore" target="_blank">
-                  <span>OTISStore.com</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://otvgroup.github.io/OTISStudy" target="_blank">
-                  <span>OTISStudy.com</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://otvgroup.github.io/OTISStudio.com.vn"
-                  target="_blank"
-                >
-                  <span>OTISStudio.com</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li>
+            <div class="submenu1">
+              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                <span>OTVGroup.com</span>
+              </a>
+              <a href="https://otvgroup.github.io/OTISShop" target="_blank">
+                <span>OTISShop.com</span>
+              </a>
+              <a href="https://otvgroup.github.io/OTISStore" target="_blank">
+                <span>OTISStore.com</span>
+              </a>
+              <a href="https://otvgroup.github.io/OTISStudy" target="_blank">
+                <span>OTISStudy.com</span>
+              </a>
+              <a href="https://otvgroup.github.io/OTISStudio" target="_blank">
+                <span>OTISStudio.com</span>
+              </a>
+            </div>
+          </div>
+          <!-- Cấp 1 -->
+          <div class="submenu0">
             <span>Services</span>
             <!-- Cấp 2 -->
-            <ul class="submenu1">
-              <li>
+            <div class="submenu1">
+              <div>
                 <span>Truyền thông & Giải trí</span>
                 <!-- Cấp 3 -->
-                <ul class="submenu2">
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Nghiên Cứu Thị Trường</span>
-                    </a>
+                <div class="submenu2">
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Nghiên Cứu Thị Trường</span>
                     <i class="fa-solid fa-chart-line"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Truyền Thông Tổng Thể</span>
-                    </a>
+                  </a>
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Truyền Thông Tổng Thể</span>
                     <i class="fa-solid fa-share-nodes"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Sản Xuất & Quảng Cáo</span>
-                    </a>
+                  </a>
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Sản Xuất & Quảng Cáo</span>
                     <i class="fa-solid fa-photo-film"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Phát Triển Game</span>
-                    </a>
+                  </a>
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Phát Triển Game</span>
                     <i class="fa-solid fa-gamepad"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Âm Nhạc & Giải Trí</span>
-                    </a>
+                  </a>
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Âm Nhạc & Giải Trí</span>
                     <i class="fa-solid fa-music"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Sáng Tạo Nội Dung</span>
-                    </a>
+                  </a>
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Sáng Tạo Nội Dung</span>
                     <i class="fa-solid fa-palette"></i>
-                  </li>
-                </ul>
-              </li>
-              <li>
+                  </a>
+                </div>
+              </div>
+              <div>
                 <span>Thương mại</span>
                 <!-- Cấp 3 -->
-                <ul class="submenu2">
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Xây Dựng Thương Hiệu</span>
-                    </a>
+                <div class="submenu2">
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Xây Dựng Thương Hiệu</span>
                     <i class="fa-solid fa-star"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Hoạch Định Chiến Lược</span>
-                    </a>
+                  </a>
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Hoạch Định Chiến Lược</span>
                     <i class="fa-solid fa-lightbulb"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Chuyển Đổi Công Nghệ</span>
-                    </a>
+                  </a>
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Chuyển Đổi Công Nghệ</span>
                     <i class="fa-solid fa-diagram-project"></i>
-                  </li>
-                </ul>
-              </li>
-              <li>
+                  </a>
+                </div>
+              </div>
+              <div>
                 <span>Học thuật</span>
                 <!-- Cấp 3 -->
-                <ul class="submenu2">
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Tư Liệu Nghiên Cứu</span>
-                    </a>
+                <div class="submenu2">
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Tư Liệu Nghiên Cứu</span>
                     <i class="fa-solid fa-book-open"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Báo Cáo & Phân Tích</span>
-                    </a>
+                  </a>
+
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Báo Cáo & Phân Tích</span>
                     <i class="fa-solid fa-chart-pie"></i>
-                  </li>
-                </ul>
-              </li>
-              <li>
+                  </a>
+                </div>
+              </div>
+              <div>
                 <span>Kỹ thuật</span>
                 <!-- Cấp 3 -->
-                <ul class="submenu2">
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Thiết Kế & Phát Triển</span>
-                    </a>
+                <div class="submenu2">
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Thiết Kế & Phát Triển</span>
                     <i class="fa-solid fa-chalkboard-user"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Cải Tiến & Ứng Dụng</span>
-                    </a>
+                  </a>
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Cải Tiến & Ứng Dụng</span>
                     <i class="fa-solid fa-gears"></i>
-                  </li>
-                </ul>
-              </li>
-              <li>
+                  </a>
+                </div>
+              </div>
+              <div>
                 <span>Dịch vụ</span>
                 <!-- Cấp 3 -->
-                <ul class="submenu2">
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Chăm Sóc & Tư Vấn</span>
-                    </a>
+                <div class="submenu2">
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Chăm Sóc & Tư Vấn</span>
                     <i class="fa-solid fa-headset"></i>
-                  </li>
-                  <li>
-                    <a href="https://otvgroup.github.io/#">
-                      <span>Bảo Hành & Bảo Trì</span>
-                    </a>
+                  </a>
+                  <a href="https://otvgroup.github.io/#">
+                    <span>Bảo Hành & Bảo Trì</span>
                     <i class="fa-solid fa-screwdriver-wrench"></i>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-
-          <li>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Cấp 1 -->
+          <div class="submenu0">
             <span>Contact</span>
             <!-- Cấp 2 -->
-            <ul class="submenu1">
-              <li>
-                <a href="https://facebook.com/OtisVo586" target="_blank">
-                  <span> Facebook </span>
-                </a>
-              </li>
-              <li>
-                <a href="tel:0329022431" target="_blank">
-                  <span> Hotline </span>
-                </a>
-              </li>
-              <li>
+            <div class="submenu1">
+              <a href="https://facebook.com/OtisVo586" target="_blank">
+                <span> Facebook </span>
+              </a>
+              <a href="tel:0329022431" target="_blank">
+                <span> Hotline </span>
+              </a>
+              <div>
                 <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
                   <span> E-mail </span>
                 </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script>
