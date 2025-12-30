@@ -77,7 +77,7 @@
       }
 
       .top .img {
-        width: calc(95vw * 0.125);
+        width: calc(100vw * 0.125);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -99,13 +99,13 @@
         border-top-right-radius: 10px;
         background: #181818;
         align-items: flex-end;
-        width: 95vw;
+        width: 100vw;
       }
 
       .top nav.menu label {
         color: #aaa;
         text-align: center;
-        width: calc(95vw * 0.75 / 4);
+        width: calc(100vw * 0.75 / 4);
         cursor: pointer;
         transition: color 0.3s ease;
         display: flex;
@@ -135,7 +135,7 @@
         position: absolute;
         bottom: 0;
         left: 10px;
-        width: calc(95vw * 0.75 / 4 - 20px);
+        width: calc(100vw * 0.75 / 4 - 20px);
         height: 5px;
         background: #0f0;
         transition: left 0.5s ease, box-shadow 0.5s ease;
@@ -150,7 +150,7 @@
         align-items: center;
         bottom: 0;
         right: 0;
-        width: calc(95vw * 0.125);
+        width: calc(100vw * 0.125);
         height: 100%;
         border-top-right-radius: 10px;
         background: rgb(0, 0, 0);
@@ -162,7 +162,7 @@
         transition: 0.3s;
         color: #aaa;
         text-align: center;
-        width: calc(95vw * 0.75 / 4);
+        width: calc(100vw * 0.75 / 4);
         cursor: pointer;
         transition: color 0.3s ease;
         display: flex;
@@ -273,7 +273,7 @@
         height: calc(100vh - 75px);
         padding: 0;
         background: #000000;
-        width: 95vw;
+        width: 100vw;
       }
 
       @media (max-width: 540px) {
@@ -828,7 +828,7 @@
           label.addEventListener("click", () => {
             document.querySelector(".active").classList.remove("active");
             label.classList.add("active");
-            indicator.style.left = `calc(${index} * (95vw * 0.75 / 4) + 10px)`;
+            indicator.style.left = `calc(${index} * (100vw * 0.75 / 4) + 10px)`;
           });
         });
       </script>
@@ -1571,3 +1571,4 @@
     </div>
   </body>
 </html>
+s
