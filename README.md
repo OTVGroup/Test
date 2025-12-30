@@ -636,6 +636,7 @@
 
       /* COPYRIGHT */
       .copyright {
+        height: 20px;
         font-size: 15px;
         text-align: center;
         opacity: 0.8;
