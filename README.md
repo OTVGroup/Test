@@ -59,7 +59,7 @@
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100vh;
+        height: 100dvh;
         background: #1e1e1e;
       }
 
@@ -270,7 +270,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        height: calc(100vh - 75px);
+        height: calc(100dvh - 75px);
         padding: 0;
         background: #000000;
         width: 100vw;
@@ -278,7 +278,7 @@
 
       @media (max-width: 540px) {
         .bottom {
-          height: calc(100vh - 55px);
+          height: calc(100dvh - 55px);
         }
       }
 
@@ -1571,4 +1571,3 @@
     </div>
   </body>
 </html>
-s
