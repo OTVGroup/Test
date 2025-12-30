@@ -280,7 +280,7 @@
 
       @media (max-width: 540px) {
         .bottom {
-          height: calc(100dvh - 55px);
+          height: calc(100dvh - 50px);
         }
       }
 
@@ -1187,12 +1187,10 @@
             }
           }
         </script>
-
         <div id="playlist" class="post">
           <div class="p_header">YOUTUBE SHORTS</div>
           <!-- Các video sẽ tự động tạo div .p_1 và nhúng iframe ở đây -->
         </div>
-
         <script>
           document.addEventListener("DOMContentLoaded", () => {
             const playlists = [
@@ -1263,7 +1261,6 @@
             </div>
           </div>
         </div>
-
         <div class="copyright">
           © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
         </div>
@@ -1272,7 +1269,7 @@
         <!-- F - CONTACT -->
         <div class="footer">
           <div class="f-left">
-            <a class="f-header" style="align-items: left">OTVGroup</a>
+            <a class="f-header">OTVGroup</a>
             <div class="f-content">
               <a
                 href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
@@ -1289,7 +1286,7 @@
             </div>
           </div>
           <div class="f-center">
-            <a class="f-header" style="align-items: left">MENU</a>
+            <a class="f-header">MENU</a>
             <div class="f-content">
               <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
               <a href=""><i class="fa-solid fa-address-card"></i>Giới Thiệu</a>
@@ -1297,7 +1294,7 @@
             </div>
           </div>
           <div class="f-right">
-            <a class="f-header" style="align-items: left">LIÊN KẾT</a>
+            <a class="f-header">LIÊN KẾT</a>
             <div class="f-content">
               <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
               <a href=""><i class="fab fa-youtube"></i>YouTube</a>
@@ -1314,7 +1311,7 @@
         <!-- F - CONTACT -->
         <div class="footer">
           <div class="f-left">
-            <a class="f-header" style="align-items: left">OTVGroup</a>
+            <a class="f-header">OTVGroup</a>
             <div class="f-content">
               <a
                 href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
@@ -1331,7 +1328,7 @@
             </div>
           </div>
           <div class="f-center">
-            <a class="f-header" style="align-items: left">MENU</a>
+            <a class="f-header">MENU</a>
             <div class="f-content">
               <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
               <a href=""><i class="fa-solid fa-address-card"></i>Giới Thiệu</a>
@@ -1339,7 +1336,7 @@
             </div>
           </div>
           <div class="f-right">
-            <a class="f-header" style="align-items: left">LIÊN KẾT</a>
+            <a class="f-header">LIÊN KẾT</a>
             <div class="f-content">
               <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
               <a href=""><i class="fab fa-youtube"></i>YouTube</a>
@@ -1347,7 +1344,6 @@
             </div>
           </div>
         </div>
-
         <div class="copyright">
           © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
         </div>
@@ -1501,7 +1497,7 @@
         <!-- F - CONTACT -->
         <div class="footer">
           <div class="f-left">
-            <a class="f-header" style="align-items: left">OTVGroup</a>
+            <a class="f-header">OTVGroup</a>
             <div class="f-content">
               <a
                 href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9"
@@ -1518,7 +1514,7 @@
             </div>
           </div>
           <div class="f-center">
-            <a class="f-header" style="align-items: left">MENU</a>
+            <a class="f-header">MENU</a>
             <div class="f-content">
               <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
               <a href=""><i class="fa-solid fa-address-card"></i>Giới Thiệu</a>
@@ -1526,7 +1522,7 @@
             </div>
           </div>
           <div class="f-right">
-            <a class="f-header" style="align-items: left">LIÊN KẾT</a>
+            <a class="f-header">LIÊN KẾT</a>
             <div class="f-content">
               <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
               <a href=""><i class="fab fa-youtube"></i>YouTube</a>
@@ -1534,14 +1530,13 @@
             </div>
           </div>
         </div>
-
         <div class="copyright">
           © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
         </div>
       </section>
     </div>
     <script>
-      // ánh xạ id button -> class section
+      // id button -> class section
       const map = {
         "id-home": "s-home",
         "id-info": "s-info",
@@ -1556,7 +1551,6 @@
           document.querySelectorAll(".bottom section").forEach((sec) => {
             sec.classList.remove("active");
           });
-
           // Hiện đúng section
           document.querySelector("." + map[id]).classList.add("active");
         });
