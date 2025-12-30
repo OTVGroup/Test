@@ -195,58 +195,59 @@
 
       /* Reset cơ bản */
       .accordion {
-        margin-left: 0;
-        padding-left: 0;
-        list-style: none;
+        margin: 0;
+        padding: 0;
       }
 
-      /* Cấp 1 */
-      .accordion > li {
-        position: relative;
-        margin-left: 0;
-        padding-left: 0;
-        padding-top: 5px;
-        cursor: pointer;
-        background: none;
-        color: #fff;
-        font-size: 18px;
+      /* ===== CẤP 1 ===== */
+      .submenu0 {
+        padding: 8px 0;
         border-bottom: 1px solid #444;
-        transition: background 0.2s;
+        color: #fff;
+        cursor: pointer;
+        font-size: 18px;
       }
 
-      /* Submenu */
-      .submenu1,
+      /* ===== CẤP 2 ===== */
+      .submenu1 {
+        display: none;
+        padding-left: 12px;
+      }
+
+      .submenu1 > a,
+      .submenu1 > div > span {
+        display: block;
+        padding: 6px 0;
+        font-size: 15px;
+        color: #ddd;
+      }
+
+      /* ===== CẤP 3 ===== */
       .submenu2 {
         display: none;
-        margin-left: 0;
-        padding-left: 0;
-        list-style: none;
-        transition: all 0.3s ease;
+        padding-left: 12px;
       }
 
-      .submenu1 li {
-        color: #ddd;
-        font-size: 15px;
-        margin-left: 0;
-        cursor: pointer;
-        padding: 5px 0px;
-        border-bottom: 1px solid #333;
+      .submenu2 a {
+        display: flex;
+        justify-content: left;
+        align-content: center;
+        padding: 5px 0;
+        font-size: 13px;
+        color: #ccc;
       }
 
-      .submenu1 > li > .submenu2 > li {
-        color: #ddd;
-        font-size: 12px;
-        margin-left: 0;
-        cursor: pointer;
-        padding: 5px 0px;
-        border-bottom: 1px solid #333;
+      .submenu2 i {
+        margin-right: 5px;
+        width: 15px;
+        font-size: 13px;
+        color: #ccc;
       }
 
-      .submenu1 li:hover,
-      .submenu2 li:hover {
+      .submenu1 a:hover,
+      .submenu2 a:hover {
         color: #fff;
       }
-
       @media (max-width: 540px) {
         .top {
           height: 50px;
@@ -454,7 +455,7 @@
       .s-contact .content .c-right {
         width: calc(100% / 2);
         min-width: 300px;
-        max-width: 540px;
+        max-width: 480px;
         gap: 10px;
         display: flex;
         flex-wrap: wrap;
@@ -714,28 +715,28 @@
                 <!-- Cấp 3 -->
                 <div class="submenu2">
                   <a href="https://otvgroup.github.io/#">
-                    <span>Nghiên Cứu Thị Trường</span>
                     <i class="fa-solid fa-chart-line"></i>
+                    <span>Nghiên Cứu Thị Trường</span>
                   </a>
                   <a href="https://otvgroup.github.io/#">
-                    <span>Truyền Thông Tổng Thể</span>
                     <i class="fa-solid fa-share-nodes"></i>
+                    <span>Truyền Thông Tổng Thể</span>
                   </a>
                   <a href="https://otvgroup.github.io/#">
-                    <span>Sản Xuất & Quảng Cáo</span>
                     <i class="fa-solid fa-photo-film"></i>
+                    <span>Sản Xuất & Quảng Cáo</span>
                   </a>
                   <a href="https://otvgroup.github.io/#">
-                    <span>Phát Triển Game</span>
                     <i class="fa-solid fa-gamepad"></i>
+                    <span>Phát Triển Game</span>
                   </a>
                   <a href="https://otvgroup.github.io/#">
-                    <span>Âm Nhạc & Giải Trí</span>
                     <i class="fa-solid fa-music"></i>
+                    <span>Âm Nhạc & Giải Trí</span>
                   </a>
                   <a href="https://otvgroup.github.io/#">
-                    <span>Sáng Tạo Nội Dung</span>
                     <i class="fa-solid fa-palette"></i>
+                    <span>Sáng Tạo Nội Dung</span>
                   </a>
                 </div>
               </div>
@@ -744,16 +745,16 @@
                 <!-- Cấp 3 -->
                 <div class="submenu2">
                   <a href="https://otvgroup.github.io/#">
-                    <span>Xây Dựng Thương Hiệu</span>
                     <i class="fa-solid fa-star"></i>
+                    <span>Xây Dựng Thương Hiệu</span>
                   </a>
                   <a href="https://otvgroup.github.io/#">
-                    <span>Hoạch Định Chiến Lược</span>
                     <i class="fa-solid fa-lightbulb"></i>
+                    <span>Hoạch Định Chiến Lược</span>
                   </a>
                   <a href="https://otvgroup.github.io/#">
-                    <span>Chuyển Đổi Công Nghệ</span>
                     <i class="fa-solid fa-diagram-project"></i>
+                    <span>Chuyển Đổi Công Nghệ</span>
                   </a>
                 </div>
               </div>
@@ -762,13 +763,13 @@
                 <!-- Cấp 3 -->
                 <div class="submenu2">
                   <a href="https://otvgroup.github.io/#">
-                    <span>Tư Liệu Nghiên Cứu</span>
                     <i class="fa-solid fa-book-open"></i>
+                    <span>Tư Liệu Nghiên Cứu</span>
                   </a>
 
                   <a href="https://otvgroup.github.io/#">
-                    <span>Báo Cáo & Phân Tích</span>
                     <i class="fa-solid fa-chart-pie"></i>
+                    <span>Báo Cáo & Phân Tích</span>
                   </a>
                 </div>
               </div>
@@ -777,12 +778,12 @@
                 <!-- Cấp 3 -->
                 <div class="submenu2">
                   <a href="https://otvgroup.github.io/#">
-                    <span>Thiết Kế & Phát Triển</span>
                     <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>Thiết Kế & Phát Triển</span>
                   </a>
                   <a href="https://otvgroup.github.io/#">
-                    <span>Cải Tiến & Ứng Dụng</span>
                     <i class="fa-solid fa-gears"></i>
+                    <span>Cải Tiến & Ứng Dụng</span>
                   </a>
                 </div>
               </div>
@@ -791,12 +792,12 @@
                 <!-- Cấp 3 -->
                 <div class="submenu2">
                   <a href="https://otvgroup.github.io/#">
-                    <span>Chăm Sóc & Tư Vấn</span>
                     <i class="fa-solid fa-headset"></i>
+                    <span>Chăm Sóc & Tư Vấn</span>
                   </a>
                   <a href="https://otvgroup.github.io/#">
-                    <span>Bảo Hành & Bảo Trì</span>
                     <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>Bảo Hành & Bảo Trì</span>
                   </a>
                 </div>
               </div>
@@ -813,11 +814,9 @@
               <a href="tel:0329022431" target="_blank">
                 <span> Hotline </span>
               </a>
-              <div>
-                <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
-                  <span> E-mail </span>
-                </a>
-              </div>
+              <a href="mailto:thinhkvtm2006@gmail.com" target="_blank">
+                <span> E-mail </span>
+              </a>
             </div>
           </div>
         </div>
@@ -858,76 +857,38 @@
       });
     </script>
     <script>
-      const accordionItems = document.querySelectorAll(".accordion > li");
+      /* ===== CẤP 1: submenu0 → submenu1 ===== */
+      document.querySelectorAll(".submenu0").forEach((level1) => {
+        const submenu1 = level1.querySelector(".submenu1");
 
-      // Cấp 1
-      accordionItems.forEach((item) => {
-        const submenu1 = item.querySelector(".submenu1");
-
-        item.addEventListener("click", (e) => {
+        level1.addEventListener("click", (e) => {
           e.stopPropagation();
+          if (!submenu1) return;
 
-          if (!submenu1) return; // nếu không có cấp 2 thì bỏ qua
-
-          const isOpen = item.classList.contains("active");
-
-          // Đóng tất cả cấp 1 khác
-          accordionItems.forEach((i) => {
-            if (i !== item) {
-              i.classList.remove("active");
-              const sm1 = i.querySelector(".submenu1");
-              if (sm1) sm1.style.display = "none";
-
-              // đóng luôn cấp 3 bên trong nó
-              const sm2 = i.querySelectorAll(".submenu2");
-              sm2.forEach((s) => (s.style.display = "none"));
-            }
+          document.querySelectorAll(".submenu1").forEach((sm) => {
+            if (sm !== submenu1) sm.style.display = "none";
           });
 
-          // Toggle item được bấm
-          if (isOpen) {
-            item.classList.remove("active");
-            submenu1.style.display = "none";
-          } else {
-            item.classList.add("active");
-            submenu1.style.display = "block";
-          }
+          submenu1.style.display =
+            submenu1.style.display === "block" ? "none" : "block";
         });
+      });
 
-        // Cấp 2
-        if (submenu1) {
-          const submenu2Items = submenu1.querySelectorAll("li");
+      /* ===== CẤP 2: span → submenu2 ===== */
+      document.querySelectorAll(".submenu1 > div").forEach((level2) => {
+        const submenu2 = level2.querySelector(".submenu2");
 
-          submenu2Items.forEach((subItem) => {
-            const submenu2 = subItem.querySelector(".submenu2");
+        level2.querySelector("span")?.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (!submenu2) return;
 
-            subItem.addEventListener("click", (e2) => {
-              e2.stopPropagation();
-
-              if (!submenu2) return;
-
-              const isOpen = subItem.classList.contains("active");
-
-              // Đóng tất cả cấp 3 khác trong cùng cấp 2
-              submenu2Items.forEach((i) => {
-                if (i !== subItem) {
-                  i.classList.remove("active");
-                  const sm2 = i.querySelector(".submenu2");
-                  if (sm2) sm2.style.display = "none";
-                }
-              });
-
-              // Toggle cấp 3
-              if (isOpen) {
-                subItem.classList.remove("active");
-                submenu2.style.display = "none";
-              } else {
-                subItem.classList.add("active");
-                submenu2.style.display = "block";
-              }
-            });
+          level2.parentElement.querySelectorAll(".submenu2").forEach((sm) => {
+            if (sm !== submenu2) sm.style.display = "none";
           });
-        }
+
+          submenu2.style.display =
+            submenu2.style.display === "block" ? "none" : "block";
+        });
       });
     </script>
 
